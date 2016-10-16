@@ -1,0 +1,125 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: "Source Sans Pro", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   20px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #F7F7F7;
+$brand-color:      #00C;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    1000px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting",
+	"tango"
+;
+
+// Fonts
+pre, tt, code { font-family: Consolas, Inconsolata, 'Droid Sans Mono', monospace; }
+h1 code, h2 code, h3 code, h4 code { border: none; background: none; }
+
+// Definition lists
+dt { font-weight: bold }
+dd { padding-left: 1em; }
+
+// Fork on github banner
+#forkongithub a {
+    background:#00C;
+    color:#fff;
+    text-decoration:none;
+    border:none;
+    font-family:Collegiate,Roboto,'Droid Sans',Arial,sans-serif;
+    text-align:center;
+    font-weight:bold;
+    padding:3px 20px;
+    font-size:.8rem;
+    line-height:1.2rem;
+    position:relative;
+    transition: background 0.5s;
+}
+#forkongithub a:hover{
+    background:#66F;
+    color:#fff;
+}
+#forkongithub a::before, #forkongithub a::after {
+    content:"";
+    width:100%;
+    display:block;
+    position:absolute;
+    top:1px;
+    left:0;
+    height:1px;
+    background:#fff;
+}
+#forkongithub a::after{bottom:1px;
+    top:auto;
+}
+@media screen and (min-width:800px) {
+  #forkongithub {
+    position:fixed;
+    display:block;
+    top:0;
+    right:0;
+    width:150px;
+    overflow:hidden;
+    height:150px;
+    z-index:9999;
+  }
+  #forkongithub a {
+    width:150px;
+    position:absolute;
+    top:40px;
+    right:-40px;
+    transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    text-rendering: geometricPrecision;
+    word-spacing: 1px;
+    box-shadow:4px 4px 10px rgba(0,0,0,0.8);
+  }
+}
+
+.maillink {
+    color: $brand-color;
+}

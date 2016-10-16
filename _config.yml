@@ -1,0 +1,14 @@
+# Site settings
+title: ELKI Data Mining Framework
+email: elki@dbs.ifi.lmu.de
+description: >
+  Open-Source Data Mining with Java.
+baseurl: ""
+url: "http://elki-project.github.io"
+github_username:  elki-project
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+sass:
+  compress: true
