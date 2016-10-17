@@ -6,7 +6,7 @@ title: ELKI Data Mining Framework
 ELKI: Environment for Developing KDD-Applications Supported by Index-Structures
 ===============================================================================
 
-<div style="float:right"><a href="/team"><img src="elki-fulllogo-400.png" class="elklogo"></a></div>
+<div style="float:right"><a href="/team"><img src="img/elki-fulllogo-400.png" class="elklogo"></a></div>
 
 Quick Summary
 -------------
@@ -20,6 +20,7 @@ Background
 ----------
 
 Data mining research leads to many algorithms for similar tasks. A fair and useful comparison of these algorithms is difficult due to several reasons:
+
 * Implementations of comparison partners are not at hand.
 * If implementations of different authors are provided, an evaluation in terms of efficiency is biased to evaluate the efforts of different authors in efficient programming instead of evaluating algorithmic merits.
 
@@ -48,6 +49,15 @@ ELKI uses the AGPLv3 [license](/license), a well-known open source license.
 
 ELKI is available on [GitHub](https://github.com/elki-project/elki) and [Maven](https://search.maven.org/#artifactdetails%7Cde.lmu.ifi.dbs.elki%7Celki%7C0.7.0%7Cjar). You can [clone an example project](https://github.com/elki-project/example-elki-project) to get started.
 
+{% highlight xml %}
+<!-- https://mvnrepository.com/artifact/de.lmu.ifi.dbs.elki/elki -->
+<dependency>
+    <groupId>de.lmu.ifi.dbs.elki</groupId>
+    <artifactId>elki</artifactId>
+    <version>0.7.1</version>
+</dependency>
+{% endhighlight %}
+
 There is a list of [publications](/publications) that accompany the ELKI releases. When using ELKI in your scientific work, you should cite the publication corresponding to the ELKI release you are using, to give credit. This also helps to improve the repeatability of your experiments. We would also appreciate if you contributed your algorithm to ELKI to allow others to reproduce your results and compare with your algorithm (which in turn will likely get you citations). We try to document every publication used for implementing ELKI: the page [related publications](/related) lists over 220 publications that we used for implementing ELKI, and is generated from annotations in the source code. Also we list publications that used or cited ELKI, see [references](/references).
 
 Efficiency Benchmarking with ELKI
@@ -65,7 +75,7 @@ You can contact the core development team by e-mail: <span class="maillink">elki
 
 You can also [subscribe to the user mailing list](https://tools.rz.ifi.lmu.de/mailman/listinfo/elki-user) of ELKI, to exchange questions and ideas among other users or to get announcements (e.g., new releases, major changes) by the ELKI team. If the web interface is still inaccessible, you can also subscribe via <span class="maillink">elki-user-request () lists ifi lmu de</span> (use subject "subscribe" or "unsubscribe").
 
-Our primary "support" medium is this *community* mailing list. We appreciate if you share experiences and also success stories there that might help other users. This project makes a lot of progress, and information can get outdated rather quickly. If you prefer a web forum, you can *try* asking at [StackOverflow](http://stackoverflow.com/), but you should understand that this is a general (and third-party operated) *programming* community; questions just on how to use it may be considered off-topic there.
+Our primary "support" medium is this *community* mailing list. We appreciate if you share experiences and also success stories there that might help other users. This project makes a lot of progress, and information can get outdated rather quickly. If you prefer a web forum, you can *try* asking at [StackOverflow](http://stackoverflow.com/questions/tagged/elki), but you should understand that this is a general (and third-party operated) *programming* community; questions just on how to use it may be considered off-topic there.
 
 Design Goals
 ------------
