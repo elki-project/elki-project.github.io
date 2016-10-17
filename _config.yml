@@ -12,3 +12,7 @@ markdown: kramdown
 highlighter: rouge
 sass:
   compress: true
+compress_html:
+  clippings: all #[div, p, ul, ol, li, aside, nav, footer, article, tr, td, dd, dt h1, h2]
+  comments: ["<!-- ", " -->"]
+  blanklines: true

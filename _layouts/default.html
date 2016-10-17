@@ -1,12 +1,15 @@
+---
+layout: compress
+---
 <!DOCTYPE html>
 <html>
-{% capture head %}{% include head.html %}{% endcapture %}{{ head | strip_newlines }}
+{% include head.html %}
 <body>
-{% capture header %}{% include header.html %}{% endcapture %}{{ header | strip_newlines }}
+{% include header.html %}
 <div class="content">
   {{ content }}
 </div>
-{% capture footer %}{% include footer.html %}{% endcapture %}{{ footer | strip_newlines }}
+{% include footer.html %}
 <script src="/js/maillink.js" type="text/javascript"></script>
 </body>
 </html>
