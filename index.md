@@ -60,6 +60,10 @@ ELKI is available on [GitHub](https://github.com/elki-project/elki) and [Maven](
 
 There is a list of [publications](/publications) that accompany the ELKI releases. When using ELKI in your scientific work, you should cite the publication corresponding to the ELKI release you are using, to give credit. This also helps to improve the repeatability of your experiments. We would also appreciate if you contributed your algorithm to ELKI to allow others to reproduce your results and compare with your algorithm (which in turn will likely get you citations). We try to document every publication used for implementing ELKI: the page [related publications](/related) lists over 220 publications that we used for implementing ELKI, and is generated from annotations in the source code. Also we list publications that used or cited ELKI, see [references](/references).
 
+Compiling ELKI
+--------------
+ELKI is compiled using Maven and Python. The [compilation process is explained here](/compiling).
+
 Efficiency Benchmarking with ELKI
 ---------------------------------
 

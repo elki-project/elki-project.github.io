@@ -7,10 +7,10 @@
 
 // Our variables
 $base-font-family: "Source Sans Pro", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   20px;
+$base-font-size:   18px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-line-height: 1.35;
 
 $spacing-unit:     30px;
 
@@ -54,8 +54,9 @@ $on-laptop:        800px;
 ;
 
 // Fonts
-pre, tt, code { font-family: Consolas, Inconsolata, 'Droid Sans Mono', monospace; }
+pre, tt, code { font-family: Inconsolata, Consolas, 'Droid Sans Mono', monospace; background-color: white; }
 h1 code, h2 code, h3 code, h4 code { border: none; background: none; }
+blockquote { color: $grey-color-dark; }
 
 // Definition lists
 dt { font-weight: bold }
