@@ -1,0 +1,62 @@
+// Fork on github banner
+#forkongithub {
+    a {
+        background:#00C;
+        color:#fff;
+        text-decoration:none;
+        border:none;
+        font-family:Collegiate,Roboto,$base-font-family;
+        text-align:center;
+        font-weight:bold;
+        padding:3px 20px;
+        font-size:.8rem;
+        line-height:1.2rem;
+        position:relative;
+        transition: background 0.5s;
+    }
+    a:hover{
+        background:#66F;
+        color:#fff;
+    }
+    a::before, a::after {
+        content:"";
+        width:100%;
+        display:block;
+        position:absolute;
+        top:1px;
+        left:0;
+        height:1px;
+        background:#fff;
+    }
+    a::after{
+        bottom:1px;
+        top:auto;
+    }
+}
+@media screen and (min-width:800px) {
+  #forkongithub {
+    position:fixed;
+    display:block;
+    top:0;
+    right:0;
+    width:150px;
+    overflow:hidden;
+    height:150px;
+    z-index:9999;
+    a {
+        width:150px;
+        position:absolute;
+        top:40px;
+        right:-40px;
+        transform:rotate(45deg);
+        -webkit-transform:rotate(45deg);
+        -ms-transform:rotate(45deg);
+        -moz-transform:rotate(45deg);
+        -o-transform:rotate(45deg);
+        text-rendering: geometricPrecision;
+        word-spacing: 1px;
+        box-shadow:4px 4px 10px rgba(0,0,0,0.8);
+    }
+  }
+}
+

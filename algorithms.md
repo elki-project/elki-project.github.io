@@ -1,6 +1,9 @@
 ---
 layout: page
 title: Data Mining Algorithms in ELKI
+short: Algorithms
+navigation: 9
+section: algorithms
 ---
 
 Data Mining Algorithms in ELKI

@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
-{% include head.html %}
+{% capture head %}{% include head.html %}{% endcapture %}{{ head | strip_newlines }}
 <body>
-{% include header.html %}
-<div class="page-content">
-  <div class="wrapper">
-    {{ content }}
-  </div>
+{% capture header %}{% include header.html %}{% endcapture %}{{ header | strip_newlines }}
+<div class="content">
+  {{ content }}
 </div>
-{% include footer.html %}
+{% capture footer %}{% include footer.html %}{% endcapture %}{{ footer | strip_newlines }}
 <script src="/js/maillink.js" type="text/javascript"></script>
 </body>
 </html>

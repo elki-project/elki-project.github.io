@@ -1,15 +1,14 @@
 ---
 layout: page
 title: 3D Parallel Coordinates
+parent: examples
 ---
 # 3D Parallel Coordinates
 
 This page provides more information on the publication:
 
- Elke Achtert, Hans-Peter Kriegel, Erich Schubert, Arthur Zimek:  
-
- **Interactive Data Mining with 3D-Parallel-Coordinate-Trees**.  
-
+ Elke Achtert, Hans-Peter Kriegel, Erich Schubert, Arthur Zimek:\\
+ **Interactive Data Mining with 3D-Parallel-Coordinate-Trees**.\\
  Proceedings of the ACM International Conference on Management of Data (SIGMOD), New York City, NY, 2013.  
 
  

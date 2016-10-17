@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Releases
+navigation: 1
 ---
 
 

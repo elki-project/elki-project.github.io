@@ -1,6 +1,8 @@
 ---
 layout: page
 title: ELKI License -- AGPLv3
+short: AGPLv3 License
+navigation: 2
 ---
 
 

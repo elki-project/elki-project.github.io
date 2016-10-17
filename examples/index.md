@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Examples
+section: examples
+navigation: 10
 ---
 
 

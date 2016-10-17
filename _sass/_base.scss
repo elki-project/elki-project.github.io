@@ -8,8 +8,6 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
-
 /**
  * Basic styling
  */
@@ -23,9 +21,8 @@ body {
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
+    text-rendering: optimizeLegibility;
 }
-
-
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -37,8 +34,6 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
-
-
 /**
  * Images
  */
@@ -46,8 +41,6 @@ img {
     max-width: 100%;
     vertical-align: middle;
 }
-
-
 
 /**
  * Figures
@@ -59,8 +52,6 @@ figure > img {
 figcaption {
     font-size: $small-font-size;
 }
-
-
 
 /**
  * Lists
@@ -76,16 +67,12 @@ li {
     }
 }
 
-
-
 /**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
     font-weight: $base-font-weight;
 }
-
-
 
 /**
  * Links
@@ -104,16 +91,13 @@ a {
     }
 }
 
-
-
 /**
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
+    color: $quote-color;
+    border-left: 4px solid $quote-border-color;
     padding-left: $spacing-unit / 2;
-    font-size: 18px;
     letter-spacing: -1px;
     font-style: italic;
 
@@ -122,17 +106,14 @@ blockquote {
     }
 }
 
-
-
 /**
  * Code formatting
  */
-pre,
-code {
-    //font-size: 15px;
-    border: 1px solid $grey-color-light;
+pre, code {
+    font-family: $tt-font-family;
+    border: 1px solid $tt-border-color;
     border-radius: 3px;
-    background-color: #eef;
+    background-color: $tt-background-color;
 }
 
 code {
@@ -149,12 +130,18 @@ pre {
         padding-left: 0;
     }
 }
-
+h1, h2, h3, h4, h5, h6 {
+    code {
+        border: none;
+        background: none;
+    }
+}
 
 
 /**
  * Wrapper
  */
+/*
 .wrapper {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
@@ -170,37 +157,15 @@ pre {
         padding-right: $spacing-unit / 2;
         padding-left: $spacing-unit / 2;
     }
-}
-
-
+}*/
 
 /**
  * Clearfix
  */
 %clearfix {
-
     &:after {
         content: "";
         display: table;
         clear: both;
-    }
-}
-
-
-
-/**
- * Icons
- */
-.icon {
-
-    > svg {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
-
-        path {
-            fill: $grey-color;
-        }
     }
 }

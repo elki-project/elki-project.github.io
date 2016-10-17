@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Visualization in ELKI
+parent: algorithms
 ---
 
 

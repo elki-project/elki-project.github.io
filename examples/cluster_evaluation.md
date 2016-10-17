@@ -1,26 +1,28 @@
 ---
 layout: page
-title: Examples%2FClusterEvaluation
+title: Cluster Evaluation using Pair Segments
+short: Segmented Cluster Evaluation
+parent: examples
 ---
 
 
 Cluster Evaluation using Pair Segments
 ======================================
 
-At ICDE 2012 we presented an experimental cluster evaluation tool based in pair segments. Details can be found in (see also [Publications](./Publications)):
+At ICDE 2012 we presented an experimental cluster evaluation tool based in pair segments. Details can be found in (see also [Publications](/publications)):
 
-[0.5](./release):: Elke Achtert, Sascha Goldhofer, Hans-Peter Kriegel, Erich Schubert, Arthur Zimek:
+[0.5](/releases)
 
-**Evaluation of Clusterings – Metrics and Visual Support**.
-
-Proceedings of the 28th International Conference on Data Engineering (ICDE), Washington, DC, 2012.
+: Elke Achtert, Sascha Goldhofer, Hans-Peter Kriegel, Erich Schubert, Arthur Zimek\\
+  **Evaluation of Clusterings – Metrics and Visual Support**.\\
+  Proceedings of the 28th International Conference on Data Engineering (ICDE), Washington, DC, 2012.
 
 Setup
 -----
 
-For this experiment, you will need at least version 0.5.0 ([Releases](./Releases)).
+For this experiment, you will need at least version 0.5.0 ([Releases](/releases)).
 
-Launch the [MiniGUI](./MiniGUI) as usual and setup your clustering algorithms as usual (if you want to compare to a ground truth labeling, add a `clustering.trivial.TrivialByLabelClustering`!).
+Launch the MiniGUI as usual and setup your clustering algorithms as usual (if you want to compare to a ground truth labeling, add a `clustering.trivial.TrivialByLabelClustering`!).
 
 As evaluator choose `clustering.pairsegments.ClusterPairSegmentAnalysis`, and the UI should automatically include the circle segments visualization. Also add `clustering.EvaluateClustering` to see cluster scores.
 

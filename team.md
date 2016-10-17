@@ -1,6 +1,8 @@
 ---
 layout: page
 title: The ELKI Team
+short: ELKI Team
+navigation: 100
 ---
 
 The ELKI Team

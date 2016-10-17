@@ -1,9 +1,11 @@
 ---
 layout: page
-title: Publications implemented or referenced by ELKI
+title: Publications Implemented or Referenced by ELKI
+short: Implemented Papers
+parent: algorithms
 ---
 
-Publications implemented or referenced by ELKI
+Publications Implemented or Referenced by ELKI
 ==============================================
 
 The following publications are cited by classes in ELKI (as of ELKI 0.7.1):

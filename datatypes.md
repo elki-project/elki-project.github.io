@@ -1,9 +1,11 @@
 ---
 layout: page
-title: Data types supported by ELKI
+title: Data Types Supported by ELKI
+short: Data Types
+parent: algorithms
 ---
 
-Data types supported by ELKI
+Data Types Supported by ELKI
 ============================
 
 See package [de.lmu.ifi.dbs.elki.data](/releases/current/doc/de/lmu/ifi/dbs/elki/data.html) for a class hierarchy diagram.

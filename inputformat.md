@@ -1,6 +1,8 @@
 ---
 layout: page
 title: ELKI Input Format
+short: Input Format
+parent: docs
 ---
 
 
@@ -32,12 +34,12 @@ A more detailed description and *an example file* can be found in the package do
 ARFF files
 ----------
 
-Since ELKI 0.4.0~beta2, a simple [de.lmu.ifi.dbs.elki.datasource.parser.ArffParser](/releases/current/doc/de/lmu/ifi/dbs/elki/datasource/parser/ArffParser.html) is included. It does not yet include support for sparse vectors, since we want to avoid materializing them, and mixing dense and sparse vectors in relations is currently deliberately not allowed. We are however planning to at least have support for all-dense and all-sparse files soon. Additionally the ArffParser includes some code to automatically convert certain relations into the ELKI types of ExternalID and ClassLabel that are semantically stronger than regular labels.
+Since ELKI 0.4.0~beta2, a simple [ArffParser](/releases/current/doc/de/lmu/ifi/dbs/elki/datasource/parser/ArffParser.html) is included. It does not yet include support for sparse vectors, since we want to avoid materializing them, and mixing dense and sparse vectors in relations is currently deliberately not allowed. We are however planning to at least have support for all-dense and all-sparse files soon. Additionally the ArffParser includes some code to automatically convert certain relations into the ELKI types of ExternalID and ClassLabel that are semantically stronger than regular labels.
 
 LibSVM format
 -------------
 
-ELKI 0.6.5 can read files in libSVM format via [de.lmu.ifi.dbs.elki.datasource.parser.LibSVMFormatParser](/releases/current/doc/de/lmu/ifi/dbs/elki/datasource/parser/LibSVMFormatParser.html)
+ELKI 0.6.5 can read files in libSVM format via [LibSVMFormatParser](/releases/current/doc/de/lmu/ifi/dbs/elki/datasource/parser/LibSVMFormatParser.html)
 
 Custom input formats
 --------------------

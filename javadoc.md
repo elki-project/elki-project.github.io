@@ -1,6 +1,9 @@
 ---
 layout: page
 title: ELKI JavaDoc
+short: JavaDoc
+navigation: 2
+section: docs
 ---
 
 
@@ -29,7 +32,7 @@ Some essential packages
 
 | [de.lmu.ifi.dbs.elki](/releases/current/doc/de/lmu/ifi/dbs/elki.html)                                     | starting page                                        |
 |-----------------------------------------------------------------------------------------------------------|------------------------------------------------------|
-| [de.lmu.ifi.dbs.elki.datasource.parser](/releases/current/doc/de/lmu/ifi/dbs/elki/datasource/parser.html) | parsers and [InputFormat](./InputFormat) description |
+| [de.lmu.ifi.dbs.elki.datasource.parser](/releases/current/doc/de/lmu/ifi/dbs/elki/datasource/parser.html) &nbsp; | parsers and [InputFormat](/inputformat) description |
 | [de.lmu.ifi.dbs.elki.distance](/releases/current/doc/de/lmu/ifi/dbs/elki/distance.html)                   |                                                      |
 | [de.lmu.ifi.dbs.elki.algorithm](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm.html)                 |                                                      |
 | [de.lmu.ifi.dbs.elki.index](/releases/current/doc/de/lmu/ifi/dbs/elki/index.html)                         | index structures                                     |

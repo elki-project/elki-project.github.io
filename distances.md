@@ -1,10 +1,11 @@
 ---
 layout: page
-title: DistanceFunctions
+title: Distance Functions
+parent: algorithms
 ---
 
 
-Distance functions
+Distance Functions
 ==================
 
 ELKI release 0.6.0~20141030 includes the following distance functions

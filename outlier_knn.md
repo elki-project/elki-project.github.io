@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Outlier Algorithms with k-Nearest-Neighbors
+short: kNN-based Outlier
+parent: algorithms
 ---
 
 

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Scientific Work Using or Referencing ELKI
+short: Citations
+parent: publications
 ---
 
 

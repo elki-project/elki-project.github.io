@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Examples%2FGreedyEnsemble
+title: Greedy Outlier Ensemble
+parent: examples
 ---
 
 
@@ -9,10 +10,8 @@ Greedy Ensemble
 
 Example for building a greedy ensemble, as published in
 
-Erich Schubert, Remigius Wojdanowski, Arthur Zimek, Hans-Peter Kriegel
-
-**On Evaluation of Outlier Rankings and Outlier Scores**
-
+Erich Schubert, Remigius Wojdanowski, Arthur Zimek, Hans-Peter Kriegel\\
+**On Evaluation of Outlier Rankings and Outlier Scores**\\
 In Proceedings of the 12th SIAM International Conference on Data Mining (SDM), Anaheim, CA, 2012
 
 The code for this experiment will be released with Version 0.5 of ELKI, in the package [de.lmu.ifi.dbs.elki.application.greedyensemble](./releases/current/doc/de/lmu/ifi/dbs/elki/application/greedyensemble.html).
@@ -22,20 +21,52 @@ This experiment is split into two parts: computing the ensemble members, and the
 Computing the ensemble members
 ------------------------------
 
-To compute a mixed array, we will use the main class [de.lmu.ifi.dbs.elki.application.greedyensemble.ComputeKNNOutlierScores](./releases/current/doc/de/lmu/ifi/dbs/elki/application/greedyensemble/ComputeKNNOutlierScores.html). It has a number of required and optional parameters that can be found using `--help`. The usual options for setting filters and indexes are also available. Important parameters for this experiment are:
+To compute a mixed array, we will use the main class [ComputeKNNOutlierScores](./releases/current/doc/de/lmu/ifi/dbs/elki/application/greedyensemble/ComputeKNNOutlierScores.html). It has a number of required and optional parameters that can be found using `--help`. The usual options for setting filters and indexes are also available. Important parameters for this experiment are:
 
-`-dbc.in`:: The input file (data points) `-startk`:: The start value for the `k` parameter `-maxk`:: The maximum value for the `k` parameter `-stepk`:: The step size for the `k` parameter `-app.out`:: Output file, with the score vectors. `-outlier.pattern`:: Pattern to deduce the ground truth vector for the data set `-algorithm.distancefunction`:: Distance function to use.
 
-So for a first experiment, we'll use the command line: `de.lmu.ifi.dbs.elki.application.greedyensemble.ComputeKNNOutlierScores -startk 3 -stepk 2 -maxk 30 -dbc.in aloi-27d-50000-max5-tot1508.csv.gz -app.out /tmp/aloi-results.ascii -algorithm.distancefunction colorhistogram.HistogramIntersectionDistanceFunction -db.index tree.spatial.rstarvariants.rstar.RStarTreeFactory -verbose`
+`-dbc.in`
 
-The output file will contain one algorithm output per line, consisting of a label and then one ("unified") score for each object in the input file. This application computes kNN-based outlier detection methods (kNN, weighted kNN, LOF, LDOF, [LoOP](./LoOP)) for multiple values of `k` quite efficiently, by precomputing the kNN just once for the maximum `k` required. As distance function, we chose to use histogram intersection distance (since this data set are color histograms). In verbose note, you will notice that it spends a large share of the time on this step - this is to be expected, as this step is of complexity O(n log n).
+:  The input file (data points)
+
+`-startk`
+
+:  The start value for the `k` parameter
+
+`-maxk`
+
+:  The maximum value for the `k` parameter
+
+`-stepk`
+
+:  The step size for the `k` parameter
+
+`-app.out`
+
+:  Output file, with the score vectors.
+
+`-outlier.pattern`
+
+:  Pattern to deduce the ground truth vector for the data set
+
+`-algorithm.distancefunction`
+
+:  Distance function to use.
+
+So for a first experiment, we'll use the command line:
+```
+de.lmu.ifi.dbs.elki.application.greedyensemble.ComputeKNNOutlierScores \
+-startk 3 -stepk 2 -maxk 30 -dbc.in aloi-27d-50000-max5-tot1508.csv.gz \
+-app.out /tmp/aloi-results.ascii -verbose \
+-algorithm.distancefunction colorhistogram.HistogramIntersectionDistanceFunction \
+-db.index tree.spatial.rstarvariants.rstar.RStarTreeFactory
+```
+
+The output file will contain one algorithm output per line, consisting of a label and then one ("unified") score for each object in the input file. This application computes kNN-based outlier detection methods (kNN, weighted kNN, LOF, LDOF, LoOP) for multiple values of `k` quite efficiently, by precomputing the kNN just once for the maximum `k` required. As distance function, we chose to use histogram intersection distance (since this data set are color histograms). In verbose note, you will notice that it spends a large share of the time on this step - this is to be expected, as this step is of complexity O(n log n).
 
 Details on the applied unification of scores can be found in:
 
-H.-P. Kriegel, P. Kröger, E. Schubert, A. Zimek
-
-**Interpreting and Unifying Outlier Scores**
-
+H.-P. Kriegel, P. Kröger, E. Schubert, A. Zimek\\
+**Interpreting and Unifying Outlier Scores**\\
 In Proceedings of the 11th SIAM International Conference on Data Mining (SDM), Mesa, AZ: 13–24, 2011.
 
 Building the ensemble
@@ -43,7 +74,13 @@ Building the ensemble
 
 Note: the ensemble is built and evaluated; but you cannot directly apply this to a data set to detect outliers. This implementation is closely tied to the evaluation, and the actually detected outliers will not be printed.
 
-The main class for this experiment is [de.lmu.ifi.dbs.elki.application.greedyensemble.GreedyEnsembleExperiment](./releases/current/doc/de/lmu/ifi/dbs/elki/application/greedyensemble/GreedyEnsembleExperiment.html). For this example, we will read and process the result of the previous step using `de.lmu.ifi.dbs.elki.application.greedyensemble.GreedyEnsembleExperiment -dbc.in /tmp/aloi-results.ascii -dbc.filter [ByLabelFilter](./ByLabelFilter) -patternfilter.invert -patternfilter.pattern ".*outliers" -verbose`
+The main class for this experiment is [GreedyEnsembleExperiment](./releases/current/doc/de/lmu/ifi/dbs/elki/application/greedyensemble/GreedyEnsembleExperiment.html). For this example, we will read and process the result of the previous step using
+```
+de.lmu.ifi.dbs.elki.application.greedyensemble.GreedyEnsembleExperiment \
+-dbc.in /tmp/aloi-results.ascii -dbc.filter ByLabelFilter \
+-patternfilter.invert -patternfilter.pattern ".*outliers" \
+-verbose
+```
 
 The filter we added is because the data set produced in the previous step contains two control "algorithms", one that assigns every object an outlierness of 0, and one that assigns 1 each. They are called "all-outliers" and "no-outliers", and will be removed by this filter.
 
@@ -85,14 +122,14 @@ Finally, it will compare the ensemble performance to individual algorithms and n
     Random ensemble Gain to naive: -0.04611656271969555 cost gain: -0.033246303867615845
     Greedy ensemble Gain to random: 0.17860122582933202 cost gain: 0.11384212698194973
 
-So [LoOP](./LoOP) (Local Outlier Probabilities) performed really well on this data set. With both respect to the ROC AUC and to the cost it had the best method. A naive ensemble, averaging all 70 methods, is significantly worse than this (negative gain). The greedy ensemble however slightly improved over the best method with respect to ROC, although not with respect to cost (which actually is not surprising, as it is still only an average, which in general will only make costs worse).
+So LoOP (Local Outlier Probabilities) performed really well on this data set. With both respect to the ROC AUC and to the cost it had the best method. A naive ensemble, averaging all 70 methods, is significantly worse than this (negative gain). The greedy ensemble however slightly improved over the best method with respect to ROC, although not with respect to cost (which actually is not surprising, as it is still only an average, which in general will only make costs worse).
 
 While the greedy ensemble improved only very slightly against the best individual method, it clearly outperforms both the full naive ensemble, and randomized ensembles of the same size. This is in particular nice, as it did not even include the best individual methods.
 
 Visualizing pairwise gains
 --------------------------
 
-To see the benefits from combining two methods, use the class [de.lmu.ifi.dbs.elki.application.greedyensemble.VisualizePairwiseGainMatrix](./releases/current/doc/de/lmu/ifi/dbs/elki/application/greedyensemble/VisualizePairwiseGainMatrix.html):
+To see the benefits from combining two methods, use the class [VisualizePairwiseGainMatrix](./releases/current/doc/de/lmu/ifi/dbs/elki/application/greedyensemble/VisualizePairwiseGainMatrix.html):
 
 `de.lmu.ifi.dbs.elki.application.greedyensemble.VisualizePairwiseGainMatrix -dbc.in /tmp/aloi-results.ascii`
 
@@ -101,4 +138,4 @@ will open a visualization window that computes the pairwise gain from combining 
 Continuing this research
 ------------------------
 
-Of course, this is still a very heuristic approach of building ensembles, and leaves research questions open. For example, the estimated set of outliers will have errors and might need refinement during the process. Similarly, the "target vector" could be updated during pruning. You are invited to explore more advanced methods, and we would appreciate if you cite both the scientific work for this greedy ensemble method (SDM 2012, at the top of this page), as well as ELKI itself (see [Publications](./Publications)).
+Of course, this is still a very heuristic approach of building ensembles, and leaves research questions open. For example, the estimated set of outliers will have errors and might need refinement during the process. Similarly, the "target vector" could be updated during pruning. You are invited to explore more advanced methods, and we would appreciate if you cite both the scientific work for this greedy ensemble method (SDM 2012, at the top of this page), as well as ELKI itself (see [ELKI publications](/publications)).

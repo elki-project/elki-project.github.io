@@ -1,5 +1,23 @@
+<aside class="sidebar"><div class="container">
+  <h1><a href="{{ site.baseurl }}">ELKI&nbsp;Data&nbsp;Mining</a></h1>
+  <nav>
+    {% assign pages_list = site.pages | sort: 'navigation' %}
+    {% for node in pages_list %}
+      {% if node.title != null and (node.navigation or (node.section and node.section == page.parent)) %}
+        <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{% if node.short %}{{ node.short }}{% else %}{{ node.title }}{% endif %}</a>
+	{% if node.section and (node.section == page.section or node.section == page.parent) %}
+        {% for sub in pages_list %}
+          {% if sub.parent == node.section %}
+            <a class="sidebar-nav-subitem" href="{{ sub.url }}">{% if sub.short %}{{ sub.short }}{% else %}{{ sub.title }}{% endif %}</a>
+          {% endif %}
+        {% endfor %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </nav>
+</div></aside>
+{% comment %}
 <footer class="site-footer">
-
   <div class="wrapper">
 
     <h2 class="footer-heading">{{ site.title }}</h2>
@@ -34,5 +52,5 @@
     </div>
 
   </div>
-
 </footer>
+{% endcomment %}
