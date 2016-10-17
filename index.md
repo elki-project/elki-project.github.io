@@ -19,7 +19,8 @@ ELKI aims at providing a large collection of highly parameterizable algorithms, 
 Background
 ----------
 
-Data mining research leads to many algorithms for similar tasks. A fair and useful comparison of these algorithms is difficult due to several reasons:
+Data mining research leads to many algorithms for similar tasks.\\
+A fair and useful comparison of these algorithms is difficult due to several reasons:
 
 * Implementations of comparison partners are not at hand.
 * If implementations of different authors are provided, an evaluation in terms of efficiency is biased to evaluate the efforts of different authors in efficient programming instead of evaluating algorithmic merits.
@@ -35,9 +36,7 @@ The people behind ELKI are documented on the [team page](/team).
 The ELKI wiki: Tutorials, HowTos, Documentation
 -----------------------------------------------
 
-Beginners may want to start at the [HowTo](/howto) documents, [Examples](/examples) and [Tutorials](/tutorial) to help with difficult configuration scenarios and beginning with ELKI development.
-
-This website serves as community development hub and task tracker for both [bug reports](https://github.com/elki-project/elki/issues), [Tutorials](/tutorial), [FAQ](/faq), general issues and development tasks.
+Beginners may want to start at the [HowTo](/howto) documents, [Examples](/examples), [Tutorials](/tutorial), and [FAQ](/faq) to help with difficult configuration scenarios and beginning with ELKI development.
 
 The most important documentation pages are: [Tutorial](/tutorial), searchable [JavaDoc](/javadoc), [FAQ](/faq), [InputFormat](/inputformat), [DataTypes](/datatypes), [DistanceFunctions](/distances), [DataSets](/datasets), [Development](/dev), [Parameterization](/dev/parameterization), [Visualization](/visualization), [Benchmarking](/benchmarking), and the list of [Algorithms](/algorithms) and [publications implemented in ELKI](/related).
 
@@ -64,17 +63,19 @@ Compiling ELKI
 --------------
 ELKI is compiled using Maven and Python. The [compilation process is explained here](/compiling).
 
+Information on ELKI APIs and coding styles is collected at the [development starting page](/dev). Please contribute!
+
 Efficiency Benchmarking with ELKI
 ---------------------------------
 
-ELKI is fast (see [some of our benchmark results](/benchmarking)) but the focus lies on a *broad coverage of algorithms and variations*. We discourage cross-platform benchmarking, because it is easy to produce misleading results by comparing apples and oranges. For fair comparability, you should implement all algorithms within ELKI, and use the same APIs. We have also observed Java JDK versions have a large impact on the runtime performance. To make your results reproducible, please [cite](/publications) the publication of the version, which you have been using. See also [benchmarking](/benchmarking).
+ELKI is fast (see [some of our benchmark results](/benchmarking)) but the focus lies on a *broad coverage of algorithms and variations*. We discourage cross-platform benchmarking, because it is easy to produce misleading results by comparing apples and oranges. For fair comparability, you should implement all algorithms within ELKI, and use the same APIs. We have also observed Java JDK versions have a large impact on the runtime performance. To make your results reproducible, please [cite](/publications) the publication of the version, which you have been using.
 
 Bug Reports and Contact
 -----------------------
 
 You can [browse the open bug reports and create new issues](https://github.com/elki-project/elki/issues).
 
-We also appreciate any comments, suggestions and code contributions.
+We also appreciate any comments, suggestions and code contributions.\\
 You can contact the core development team by e-mail: <span class="maillink">elki () dbs ifi lmu de</span>
 
 You can also [subscribe to the user mailing list](https://tools.rz.ifi.lmu.de/mailman/listinfo/elki-user) of ELKI, to exchange questions and ideas among other users or to get announcements (e.g., new releases, major changes) by the ELKI team. If the web interface is still inaccessible, you can also subscribe via <span class="maillink">elki-user-request () lists ifi lmu de</span> (use subject "subscribe" or "unsubscribe").
@@ -84,11 +85,11 @@ Our primary "support" medium is this *community* mailing list. We appreciate if 
 Design Goals
 ------------
 
--   Extensibility - ELKI has a very modular design. We want to allow arbitrary combinations of data types, distance functions, algorithms, input formats, index structures and evaluations methods
--   Contributions - ELKI grows only as fast as people contribute. By having a modular design that allows small contributions such as single distance functions and single algorithms, we can have students and external contributors participate in the progress of ELKI
--   Completeness - for an exhaustive comparison of methods, we aim at covering as much published and credited work as we can
--   Fairness - It is easy to do an unfair comparison by badly implementing a competitor. We try to implement every method as good as we can, and by publishing the source code allow for external improvements. We try to add all proposed improvements, such as index structures for faster range and kNN queries
--   Performance - the modular architecture of ELKI allows optimized versions of algorithms and index structures for acceleration
--   Progress - ELKI is changing with every release. To accomodate new features and enhance performance, API breakages are unavoidable. We hope to get a stable API with the 1.0 release, but we are not there yet.
+-   **Extensibility:** ELKI has a very modular design. We want to allow arbitrary combinations of data types, distance functions, algorithms, input formats, index structures and evaluations methods
+-   **Contributions:** ELKI grows only as fast as people contribute. By having a modular design that allows small contributions such as single distance functions and single algorithms, we can have students and external contributors participate in the progress of ELKI
+-   **Completeness:** - for an exhaustive comparison of methods, we aim at covering as much published and credited work as we can
+-   **Fairness:** - It is easy to do an unfair comparison by badly implementing a competitor. We try to implement every method as good as we can, and by publishing the source code allow for external improvements. We try to add all proposed improvements, such as index structures for faster range and kNN queries
+-   **Performance:** - the modular architecture of ELKI allows optimized versions of algorithms and index structures for acceleration
+-   **Development Progress:** - ELKI is changing with every release. To accomodate new features and enhance performance, API breakages are unavoidable. We hope to get a stable API with the 1.0 release, but we are not there yet.
 
 <div style="float:right; clear:right"><span id="forkongithub"><a href="https://github.com/elki-project/elki">Fork me on GitHub</a></span></div>

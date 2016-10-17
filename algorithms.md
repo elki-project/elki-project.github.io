@@ -9,7 +9,8 @@ Data Mining Algorithms in ELKI
 The following data-mining algorithms are included in the ELKI 0.7.1 release.
 For literature references, click on the individual algorithms or the references overview in the [JavaDoc](/javadoc) documentation. See also [RelatedPublications](/related)
 
-- Clustering Algorithms:
+Clustering Algorithms:
+
 - [AffinityPropagationClusteringAlgorithm](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/clustering/affinitypropagation/AffinityPropagationClusteringAlgorithm.html)
 - [CanopyPreClustering](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/clustering/CanopyPreClustering.html)
 - Density-based clustering:
@@ -89,7 +90,9 @@ For literature references, click on the individual algorithms or the references 
   - [UKMeans](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/clustering/uncertain/UKMeans.html)
   - [RepresentativeUncertainClustering](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/clustering/uncertain/RepresentativeUncertainClustering.html)
   - [CenterOfMassMetaClustering](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/clustering/uncertain/CenterOfMassMetaClustering.html)
-- Outlier Detection
+
+Outlier Detection
+
 - Distance-based outlier detection:
   - [DBOutlierDetection](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/distance/DBOutlierDetection.html)
   - [DBOutlierScore](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/distance/DBOutlierScore.html)
@@ -160,10 +163,14 @@ For literature references, click on the individual algorithms or the references 
   - [TrivialNoOutlier](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/trivial/TrivialNoOutlier.html)
   - [TrivialGeneratedOutlier](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/trivial/TrivialGeneratedOutlier.html)
   - [TrivialAverageCoordinateOutlier](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/trivial/TrivialAverageCoordinateOutlier.html)
-- Classification algorithms (for use with [ClassifierHoldoutEvaluationTask](/releases/current/doc/de/lmu/ifi/dbs/elki/application/ClassifierHoldoutEvaluationTask.html))
+  
+Classification algorithms (for use with [ClassifierHoldoutEvaluationTask](/releases/current/doc/de/lmu/ifi/dbs/elki/application/ClassifierHoldoutEvaluationTask.html))
+
 - [KNNClassifier](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/classification/KNNClassifier.html)
 - [PriorProbabilityClassifier](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/classification/PriorProbabilityClassifier.html)
-- Frequent itemset mining:
+
+Frequent Itemset Mining:
+
 - [APRIORI](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/itemsetmining/APRIORI.html)
 - [Eclat](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/itemsetmining/Eclat.html)
 - [FPGrowth](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/itemsetmining/FPGrowth.html)
@@ -171,11 +178,15 @@ For literature references, click on the individual algorithms or the references 
 - [KNNDistanceOrder](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/KNNDistanceOrder.html)
 - [KNNJoin](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/KNNJoin.html)
 - [MaterializeDistances](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/MaterializeDistances.html)
-- Benchmarking algorithms:
+
+Benchmarking algorithms:
+
 - [KNNBenchmarkAlgorithm](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/benchmark/KNNBenchmarkAlgorithm.html)
 - [RangeQueryBenchmarkAlgorithm](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/benchmark/RangeQueryBenchmarkAlgorithm.html)
 - [ValidateApproximativeKNNIndex](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/benchmark/ValidateApproximativeKNNIndex.html)
-- Data set statistics:
+
+Data set statistics:
+
 - [AveragePrecisionAtK](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/statistics/AveragePrecisionAtK.html)
 - [DistanceStatisticsWithClasses](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/statistics/DistanceStatisticsWithClasses.html)
 - [EstimateIntrinsicDimensionality](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/statistics/EstimateIntrinsicDimensionality.html)
