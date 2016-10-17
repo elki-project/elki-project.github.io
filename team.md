@@ -13,13 +13,10 @@ The core team for development and maintenance of ELKI is consisting of:
 
 <table width="100%">
   <tr>
-    <td align="center"><img src="http://www.dbs.ifi.lmu.de/Mitarbeiter/Fotos/achtert.jpg" alt="Elke" width="160"></td>
     <td align="center"><img src="http://www.dbs.ifi.lmu.de/Mitarbeiter/Fotos/schuberte.jpg" width="160" alt="Erich"></td>
-    <td align="center"><img src="http://www.dbs.ifi.lmu.de/Mitarbeiter/Fotos/zimek.JPG" width="160" alt="Arthur"></td>
+    <td align="center"><img src="http://www.imada.sdu.dk/~zimek/pics/zimek.jpg" width="160" alt="Arthur"></td>
   </tr>
   <tr>
-    <td align="center"><a href="http://www.dbs.ifi.lmu.de/cms/Elke_Achtert">Elke Achtert</a></td>
-
     <td align="center"><a href="http://www.dbs.ifi.lmu.de/cms/Erich_Schubert">Erich Schubert</a></td>
     <td align="center"><a href="http://www.imada.sdu.dk/~zimek">Arthur Zimek</a></td>
   </tr>
