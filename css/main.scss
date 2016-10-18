@@ -69,11 +69,11 @@ $on-laptop:        800px;
     font-size: 20px;
   }
 }
-@media (min-width: 68em) {
+/*@media (min-width: 68em) {
   html, body {
     font-size: 22px;
   }
-}
+}*/
 
 $sidebar-color: darken($brand-color, 25%);
 $sidebar-background-color: mix(lighten($brand-color, 50%), $background-color, 50%);
@@ -86,9 +86,6 @@ $sidebar-sep-color: mix(lighten($brand-color, 25%), $background-color, 25%);
   // background-color: darken($brand-color, 25%);
   color: $sidebar-color;
   background-color: $sidebar-background-color;
-  // border-right: 3px solid $sidebar-sep-color; 
-  box-shadow: inset -14px 0px 5px -12px #ccc;
-  //box-shadow: 0px 0px 8px 8px #ccc;
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -98,6 +95,7 @@ $sidebar-sep-color: mix(lighten($brand-color, 25%), $background-color, 25%);
     bottom: 0;
     width: 14rem;
     text-align: left;
+    box-shadow: inset -2.5ex -1ex 1ex -2ex rgba(0,0,0,.4);
   }
 }
 .sidebar .elk {
@@ -180,6 +178,9 @@ dd { padding-left: 1em; }
 // Protected email links
 .maillink {
     color: $brand-color;
+}
+div.elklogo {
+  text-align: center;
 }
 @media (min-width: 58em) {
   div.elklogo {
