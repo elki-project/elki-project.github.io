@@ -125,11 +125,13 @@ $sidebar-sep-color: mix(lighten($brand-color, 25%), $background-color, 25%);
       display: block;
       line-height: 1.5;
       padding-left: .5rem;
+      padding-right: .5rem;
     }
     .subitem {
       display: block;
       line-height: 1.5;
       padding-left: 1rem;
+      padding-right: .5rem;
     }
     a:hover, a:focus {
       text-decoration: underline;
@@ -137,7 +139,7 @@ $sidebar-sep-color: mix(lighten($brand-color, 25%), $background-color, 25%);
     a.active {
       font-weight: bold;
       background: $background-color;
-      margin-right: -1px;
+      margin-right: 0px;
       border-bottom: 1px solid #ccc;
       border-top: 1px solid #ccc;
     }
@@ -193,6 +195,19 @@ div.elklogo {
 @media (min-width: 80em) {
   img.elklogo {
     max-width: 30rem;
+  }
+}
+// Static ELK for navigation
+.navelk {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  img { width: 2em; }
+}
+@media (min-width: 48em) {
+  .navelk {
+    display: none;
   }
 }
 
