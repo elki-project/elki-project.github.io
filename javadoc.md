@@ -2,8 +2,7 @@
 layout: page
 title: ELKI JavaDoc
 short: JavaDoc
-navigation: 2
-section: docs
+parent: dev
 ---
 
 

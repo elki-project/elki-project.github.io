@@ -1,6 +1,9 @@
 ---
 layout: page
 title: ELKI Tutorial
+short: Tutorial
+section: docs
+navigation: 3
 ---
 
 

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: ApiViz
+parent: dev
 ---
 
 ApiViz is a [JavaDoc](/javadoc) doclet that inserts class diagrams.

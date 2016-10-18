@@ -7,7 +7,7 @@
 // Our variables
 $base-font-family: "Source Sans Pro", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $tt-font-family:   Inconsolata, Consolas, 'Droid Sans Mono', monospace;
-$base-font-size:   18px;
+$base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.35;
@@ -60,28 +60,35 @@ $on-laptop:        800px;
 ;
 
 @media (min-width: 48em) {
-  html {
+  html, body {
     font-size: 16px;
   }
 }
 @media (min-width: 58em) {
-  html {
+  html, body {
     font-size: 20px;
   }
 }
+@media (min-width: 68em) {
+  html, body {
+    font-size: 22px;
+  }
+}
 
-$sidebar-color: black;
+$sidebar-color: darken($brand-color, 25%);
 $sidebar-background-color: mix(lighten($brand-color, 50%), $background-color, 50%);
 $sidebar-sep-color: mix(lighten($brand-color, 25%), $background-color, 25%);
 
 .sidebar {
   text-align: center;
-  padding: 1rem .5rem;
+  //padding: 1rem .5rem;
   // color: rgba(255,255,255,.5);
   // background-color: darken($brand-color, 25%);
   color: $sidebar-color;
   background-color: $sidebar-background-color;
-  border-right: 3px solid $sidebar-sep-color; 
+  // border-right: 3px solid $sidebar-sep-color; 
+  box-shadow: inset -14px 0px 5px -12px #ccc;
+  //box-shadow: 0px 0px 8px 8px #ccc;
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -93,6 +100,12 @@ $sidebar-sep-color: mix(lighten($brand-color, 25%), $background-color, 25%);
     text-align: left;
   }
 }
+.sidebar .elk {
+  text-align: center;
+}
+.sidebar .elk img {
+  width: 6em;
+}
 .sidebar {
   /* Sidebar links */
   a {
@@ -103,28 +116,32 @@ $sidebar-sep-color: mix(lighten($brand-color, 25%), $background-color, 25%);
   h1 {
     color: $sidebar-color;
     margin-top: 0;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    text-align: center;
   }
 
   nav {
     margin-bottom: 1rem;
 
-    .sidebar-nav-item {
+    .item {
       display: block;
       line-height: 1.5;
-      font-weight: bold;
+      padding-left: .5rem;
     }
-    .sidebar-nav-subitem {
+    .subitem {
       display: block;
       line-height: 1.5;
-      font-weight: bold;
-      margin-left: .5rem;
+      padding-left: 1rem;
     }
     a:hover, a:focus {
       text-decoration: underline;
     }
     a.active {
       font-weight: bold;
+      background: $background-color;
+      margin-right: -1px;
+      border-bottom: 1px solid #ccc;
+      border-top: 1px solid #ccc;
     }
   }
 }
@@ -132,20 +149,22 @@ $sidebar-sep-color: mix(lighten($brand-color, 25%), $background-color, 25%);
 .content {
   padding-top:    2rem;
   padding-bottom: 2rem;
+  margin-left:    .5rem;
+  margin-right:    .5rem;
 }
 
 @media (min-width: 48em) {
   .content {
-    max-width: 38rem;
-    margin-left: 20rem;
-    margin-right: 2rem;
+    max-width: 48rem;
+    margin-left: 16rem;
+    margin-right: 1rem;
   }
 }
 
 @media (min-width: 64em) {
   .content {
-    margin-left: 22rem;
-    margin-right: 4rem;
+    margin-left: 20rem;
+    margin-right: 2rem;
   }
 }
 
@@ -162,7 +181,19 @@ dd { padding-left: 1em; }
 .maillink {
     color: $brand-color;
 }
-
+@media (min-width: 58em) {
+  div.elklogo {
+    float: right;
+  }
+  img.elklogo {
+    max-width: 16rem;
+  }
+}
+@media (min-width: 80em) {
+  img.elklogo {
+    max-width: 30rem;
+  }
+}
 
 // Fork on github banner
 /*

@@ -9,8 +9,8 @@
         text-align:center;
         font-weight:bold;
         padding:3px 20px;
-        font-size:.8rem;
-        line-height:1.2rem;
+        font-size:.8em;
+        line-height:1.2em;
         position:relative;
         transition: background 0.5s;
     }
@@ -33,21 +33,21 @@
         top:auto;
     }
 }
-@media screen and (min-width:800px) {
+@media screen and (min-width:48em) {
   #forkongithub {
     position:fixed;
     display:block;
     top:0;
     right:0;
-    width:150px;
+    width:12em;
     overflow:hidden;
-    height:150px;
+    height:12em;
     z-index:9999;
     a {
-        width:150px;
+        width:12em;
         position:absolute;
-        top:40px;
-        right:-40px;
+        top:3em;
+        right:-3em;
         transform:rotate(45deg);
         -webkit-transform:rotate(45deg);
         -ms-transform:rotate(45deg);

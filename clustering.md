@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Clustering
-parent: algorithms
+parent: docs
 ---
 
 
