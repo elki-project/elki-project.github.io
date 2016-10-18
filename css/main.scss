@@ -177,6 +177,24 @@ $sidebar-sep-color: mix(lighten($brand-color, 25%), $background-color, 25%);
 dt { font-weight: bold }
 dd { padding-left: 1em; }
 
+// Warning boxes
+.version-info {
+  font-size: x-small;
+  text-align: right;
+}
+.box-recommend {
+  margin: .2em;
+  padding: .2em;
+  border: 4px solid DarkGreen;
+  background: mix($background-color, green, 95%);
+}
+.box-warn {
+  margin: .2em;
+  padding: .2em;
+  border: 4px solid DarkRed;
+  background: mix($background-color, red, 95%);
+}
+
 // Protected email links
 .maillink {
     color: $brand-color;

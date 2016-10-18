@@ -14,24 +14,18 @@ The XML files are data sets specifications for use with the [DataSetGenerator](.
 Artificial data sets
 --------------------
 
-| **Data set name** | **Size** | **Dim.** |
-|-------------------|----------|----------|
-| Vary Density      | 150      | 2        |
+| **Data set name** | **Size** | **Dim.** | **Parameters** | **Files** |
+|-------------------|----------|----------|-|-|
+| Vary Density      | 150      | 2        |3 Gaussian clusters with variable density<br>Easy for EM, hard for density clustering|em.k=3|[CSV](https://github.com/elki-project/elki/blob/master/data/synthetic/ABC-publication/pov.csv), [XML](https://github.com/elki-project/elki/blob/master/data/synthetic/ABC-publication/pov.xml)|
+|Mouse|500|2|3 Gaussian clusters and noise<br>For comparing EM and kMeans|em.k=3|kmeans.k=3|[CSV](https://github.com/elki-project/elki/blob/master/data/synthetic/Vorlesung/mickey-mouse.csv), [XML](https://github.com/elki-project/elki/blob/master/data/synthetic/Vorlesung/mickey-mouse.xml)|
 
-3 Gaussian clusters with variable density
-Easy for EM, hard for density clustering|em.k=3|\[/datasets/vary-density.csv CSV\], \[/datasets/vary-density.xml XML\]| |---|---|---| |Mouse|500|2|
-
-3 Gaussian clusters and noise
-For comparing EM and kMeans||em.k=3
-kmeans.k=3|[CSV](.//datasets/mouse.csv), [XML](.//datasets/mouse.xml)|
-
-\[browser:elki/data/synthetic/LoOP-publication Data sets used in [LoOP](./LoOP) publication\]
+[Data sets used in LoOP publication](https://github.com/elki-project/elki/blob/master/data/synthetic/LoOP-publication)
 
 See [SNN data sets](http://www.dbs.ifi.lmu.de/cms/Research/SNN/DataSets) for a number of high dimensional artificial data sets.
 
 Real data sets
 --------------
 
-See DataSets/MultiView for data sets such as the ALOI data set.
+See [multi-view](multi_view) for data sets such as the ALOI data set.
 
 More to come!

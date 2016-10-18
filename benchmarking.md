@@ -12,6 +12,7 @@ Setup
 -----
 
 For benchmarking, *do NOT set `-verbose`* as the verbose output will often come at cost in computation time, and verbosity varies a lot from algorithm to algorithm. Instead use `-time` to get timing information of the actual algorithms. To disable automatic evaluation, use `-evaluator NoAutomaticEvaluation`.
+{: class="box-warn" }
 
 Fair benchmarking
 -----------------
@@ -32,12 +33,13 @@ Therefore, **we strongly encourage you to implement all comparison methods in EL
 Of course we try to make ELKI as fast as possible (but we will not sacrifice extendability or code readability for this).
 
 We also strongly encourage reviewers to pay attention to fair benchmarks, and outright reject papers when these are not done in a sound way. Unfortunately, many articles do lack when it comes to fair experiments.
-{: style="margin:1ex; padding:1ex; border: solid 2px DarkGreen" }
+{: class="box-recommend" }
 
 Performance of ELKI versions
 ----------------------------
 
 If you are not convinced, here is an empiric example of how huge implementation differences are.
+{: class="box-warn" }
 
 For this, we will compare ELKI with ELKI, just using different versions.
 
@@ -67,7 +69,8 @@ However, we cannot remove all boxing/unboxing in Java without losing much of the
 ELKI in comparison to other software
 ------------------------------------
 
-As mentioned above, we advocate _not_ comparing algorithms from different frameworks with each other. Implementation details can make a huge difference. For example k-means from the R "flexclus" package seems to be about half as fast as the R native kmeans. In the most extreme example of this benchmark, **the same algorithm is 280x faster in one implementation than the other** (LOF in ELKI vs. LOF in "Data mining with R"). So from a scientific point of view, **even a performance difference of three orders of magnitude can be explained with implementation differences**.
+We advocate to _not_ compare algorithms from different frameworks with each other. Implementation details can make a huge difference. For example k-means from the R "flexclus" package seems to be about half as fast as the R native kmeans. In the most extreme example of this benchmark, **the same algorithm is 280x faster in one implementation than the other** (LOF in ELKI vs. LOF in "Data mining with R"). So from a scientific point of view, **even a performance difference of three orders of magnitude can be explained with implementation differences**.
+{: class="box-warn" }
 
 2.67 GHz Intel Xenon X5650 (single-threaded, memory limit 32 GB)
 
@@ -90,3 +93,4 @@ As mentioned above, we advocate _not_ comparing algorithms from different framew
 Single-Link clustering could not be run in Weka or R. Weka crashes with an IllegalArgumentException, due to an integer overflow. R detects the overflow, and fails with "vector size specified is too large". This is not surprising, as both use an implementation that needs quadratic memory and cubic time. The implementation in ELKI is the SLINK algorithm, which needs linear memory and quadratic time only, and is thus expected to be significantly faster on a large data set such as this. But hierarchical clustering is not sensible for large data sets anyway. R also fails with the same error on EM (because it pre-clusters the data with hierarchical clustering), and OPTICS in Weka is an incomplete implementation only and does not extract clusters from the plot. k-means results have a high variance, with a standard deviation of more than 15 seconds for ELKI - depending on the random seed, it may converge quickly.
 
 Weka DBSCAN and OPTICS runtime has decreased 8x with extension version 1.0.3, by removing unnecessary safety checks. ELKI's DBSCAN has become 5x faster across versions. **Do not do runtime benchmarking on code that you did not profile and optimize to the same extent - the result will be meaningless!**
+{: class="box-warn" }

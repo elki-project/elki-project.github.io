@@ -67,12 +67,12 @@ In this example, we will use the well known [attachment:wines.dat Wine] data set
 
 In the MiniGUI, we set the following parameters:
 
-```
+<pre>
 -dbc.in wine.data
 -algorithm NullAlgorithm
 -resulthandler de.lmu.ifi.dbs.elki.visualization.parallel3d.OpenGL3DParallelCoordinates
 -parallel3d.layout CompactCircularMSTLayout3DPC
-```
+</pre>
 
 The first specifies the input file. The second will side-step the analysis and visualize only (an automatic by-label clustering will be run instead). The third then chooses the 3DPC visualization, while the fourth choses a slightly more compact axis arrangement. You should see a result such as this:
 

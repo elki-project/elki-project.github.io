@@ -10,7 +10,7 @@ ELKI License
 ============
 
 Important Note: This page documents the *default* license applied to the ELKI source code only (i.e. classes in the de.lmu.ifi.dbs.elki namespace). The ELKI 0.4 tarball **includes parts that are licensed using different terms**, such as the [Apache License](http://en.wikipedia.org/wiki/Apache_License), [BSD licenses](http://en.wikipedia.org/wiki/BSD_licenses) or also public domain. We tried to document the legal status of the included files in the subdirectory "`legal`" or "`license`" of the jar file. It remains your responsibility to verify the license status when using or redistributing any of the files included. Using any of these files is WITHOUT ANY WARRANTY.
-{: style="margin: .2em; padding: .2em; border: 4px solid DarkRed" }
+{: class="box-warn" }
 
 ELKI release 0.4 and onward source code is licensed using the well-known\\
 **GNU Affero General Public Licence Version 3**.
@@ -25,7 +25,7 @@ The GNU AGPLv3 license is an **open source** and **copyleft** license that inclu
 The Free Software Foundation has a [GPL FAQ](http://www.gnu.org/licenses/gpl-faq.html) that also covers the AGPL license.
 
 Note: For licensing other versions of ELKI, using parts of the code under a different license (e.g. in a commercial product without the AGPL restrictions), you must get into contact with the authors of the affected code directly.
-{: style="margin: .2em; padding: .2em; border: 4px solid DarkRed" }
+{: class="box-warn" }
 
 Full license text
 -----------------

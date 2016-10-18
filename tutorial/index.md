@@ -16,23 +16,23 @@ There are additional tutorials available for developing with ELKI.
 
 Tutorials for ELKI:
 
--   [Implementing a custom distance function](./tutorial/distance_functions), a variable exponent Minkowski-norm
--   [Implementing a new outlier detection algorithm](./tutorial/outlier), using the distances standard deviation
--   [Implementing a k-means clustering variant](./tutorial/same-size_k_means), producing clusters of the same size
--   [Implementing hierarchical clustering](./tutorial/hierarchical_clustering), refining the implementation to improve performance and allow other linkage methods
--   [Implementing an index accelerated distance function](./tutorial/spatial_distance_functions) for R-tree and similar indexes.
--   [Implementing the kNN graph based outlier detection method ODIN](./tutorial/outlier_ODIN) (with automatic index acceleration).
--   [Implementing a custom output format using the result handler API](./tutorial/result_handler).
--   (more to come ...)
+- [Implementing a custom distance function](/tutorial/distance_functions), a variable exponent Minkowski-norm
+- [Implementing a new outlier detection algorithm](/tutorial/outlier), using the distances standard deviation
+- [Implementing a k-means clustering variant](/tutorial/same-size_k_means), producing clusters of the same size
+- [Implementing hierarchical clustering](/tutorial/hierarchical_clustering), refining the implementation to improve performance and allow other linkage methods
+- [Implementing an index accelerated distance function](/tutorial/spatial_distance_functions) for R-tree and similar indexes.
+- [Implementing the kNN graph based outlier detection method ODIN](/tutorial/outlier_ODIN) (with automatic index acceleration).
+- [Implementing a custom output format using the result handler API](/tutorial/result_handler).
+- (more to come ...)
 
 Also see the [HowTo](/howto) and [Examples](/examples) section, which covers more topics, but in less detail.
 
 Preparation
 -----------
 
-This tutorial uses [Release 0.4](/releases) of ELKI, however the [Release 0.5.0](./releases) works essentially the same way (but there may be some additional options available).
+This tutorial uses [Release 0.4](/releases) of ELKI, however the [Release 0.5.0](/releases) works essentially the same way (but there may be some additional options available).
 
-We analyze the ['"mouse" data set'](./datasets) you can find on the [DataSets](./datasets) page.
+We analyze the ['"mouse" data set'](/datasets) you can find on the [DataSets](/datasets) page.
 
 You should have the files "`elki.jar`" and "`mouse.csv`".
 
@@ -122,4 +122,4 @@ The MiniGUI will by default use the result visualizer to visually display the re
 Extending ELKI
 --------------
 
-In Tutorial/DistanceFunctions you will learn how to implement a custom distance function for ELKI, Tutorial/Outlier shows how to add a new outlier detection method, [Tutorial/SameSizeKMeans](/tutorial/same-size_k_means) constructs a k-means variation.
+In the [distance function tutorial](/tutorial/distance_functions) you will learn how to implement a custom distance function for ELKI, the [outlier tutorial](/tutorial/outlier) shows how to add a new outlier detection method, the [same-size k-Means tutorial](/tutorial/same-size_k_means) constructs a k-means variation.

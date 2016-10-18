@@ -68,7 +68,7 @@ Maven Problem MDEP-187
 
 Unfortunately, there is a long-standing design problem ([MDEP-187](https://issues.apache.org/jira/browse/MDEP-187)) in Maven that makes compilation fail often with the error message.
 
->     [ERROR] Failed to execute goal org.apache.maven.plugins:maven-dependency-plugin:2.8:copy-dependencies (copy-dependencies) on project elki-core-util: Artifact has not been packaged yet. When used on reactor artifact, copy should be executed after packaging: see MDEP-187. -> [Help 1]
+> [ERROR] Failed to execute goal org.apache.maven.plugins:maven-dependency-plugin:2.8:copy-dependencies (copy-dependencies) on project elki-core-util: Artifact has not been packaged yet. When used on reactor artifact, copy should be executed after packaging: see MDEP-187. -> [Help 1]
 
 Because of this other Maven goals such as `mvn compile` tend to *not* work, unfortunately.
 

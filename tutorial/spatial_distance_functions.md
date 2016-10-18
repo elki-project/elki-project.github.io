@@ -42,36 +42,36 @@ Implementing the distance
 First of all, we will implement the regular distance function. To minimize the amount of work we need to do, we will use the most specific abstract base class: [AbstractNumberVectorDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/AbstractNumberVectorDistanceFunction.html) which is good for distance functions that have continuous numerical vectors as input and return double valued results.
 
 {% highlight java %}
-    package tutorial;
+package tutorial;
 
-    import de.lmu.ifi.dbs.elki.distance.distancefunction.AbstractNumberVectorDistanceFunction;
+import de.lmu.ifi.dbs.elki.distance.distancefunction.AbstractNumberVectorDistanceFunction;
 
-    public class BrayCurtisDistanceFunction extends AbstractNumberVectorDistanceFunction {
-      @Override
-      public double distance(NumberVector v1, NumberVector v2) {
-        // TODO
-        return 0;
-      }
-    }
+public class BrayCurtisDistanceFunction extends AbstractNumberVectorDistanceFunction {
+  @Override
+  public double distance(NumberVector v1, NumberVector v2) {
+    // TODO
+    return 0;
+  }
+}
 {% endhighlight %}
 
 this very simple signature is all that we need to fill. We can pretty much straightforward use the definition above. We add a safety check to ensure vectors have the same dimensionality.
 
 {% highlight java %}
-      @Override
-      public double distance(NumberVector v1, NumberVector v2) {
-        final int dim1 = v1.getDimensionality();
-        if (dim1 != v2.getDimensionality()) {
-          throw new IllegalArgumentException("Dimensionalities do not agree!");
-        }
-        double sumdiff = 0., sumsum = 0.;
-        for (int d = 0; d < dim1; d++) {
-          double xd = v1.doubleValue(d), yd = v2.doubleValue(d);
-          sumdiff += Math.abs(xd - yd);
-          sumsum += Math.abs(xd) + Math.abs(yd);
-        }
-        return sumdiff / sumsum;
-      }
+  @Override
+  public double distance(NumberVector v1, NumberVector v2) {
+    final int dim1 = v1.getDimensionality();
+    if (dim1 != v2.getDimensionality()) {
+      throw new IllegalArgumentException("Dimensionalities do not agree!");
+    }
+    double sumdiff = 0., sumsum = 0.;
+    for (int d = 0; d < dim1; d++) {
+      double xd = v1.doubleValue(d), yd = v2.doubleValue(d);
+      sumdiff += Math.abs(xd - yd);
+      sumsum += Math.abs(xd) + Math.abs(yd);
+    }
+    return sumdiff / sumsum;
+  }
 {% endhighlight %}
 
 After implementing this class, we can immediately run our algorithms with it. Since it has an (implicit) public constructor and no parameters, the GUI will automatically add it to its drop down menus.
@@ -82,43 +82,43 @@ Support for spatial indexes
 In order to accelerate distance based algorithms (e.g. DBSCAN, LOF) using this distance function, we need to implent a **lower-bound on the rectangle-to-rectangle distances**. This is often called the "minDist". In order to implement this method, we change the parent class to [AbstractSpatialDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/AbstractSpatialDistanceFunction.html), and have eclipse generate the missing method. After adding the usual safety checks, it looks like this:
 
 {% highlight java %}
-      @Override
-      public double minDist(SpatialComparable mbr1, SpatialComparable mbr2) {
-        if (mbr1 instanceof NumberVector && mbr2 instanceof NumberVector) {
-          return distance((NumberVector) mbr1, (NumberVector) mbr2);
-        }
-        final int dim1 = mbr1.getDimensionality();
-        if (dim1 != mbr2.getDimensionality()) {
-          throw new IllegalArgumentException("Dimensionalities do not agree!");
-        }
-        double sumdiff = 0., sumsum = 0.;
-        // TODO: compute lower bound for sumdiff
-        // TODO: compute upper bound for sumsum
-        return sumdiff / sumsum;
-      }
+  @Override
+  public double minDist(SpatialComparable mbr1, SpatialComparable mbr2) {
+    if (mbr1 instanceof NumberVector && mbr2 instanceof NumberVector) {
+      return distance((NumberVector) mbr1, (NumberVector) mbr2);
+    }
+    final int dim1 = mbr1.getDimensionality();
+    if (dim1 != mbr2.getDimensionality()) {
+      throw new IllegalArgumentException("Dimensionalities do not agree!");
+    }
+    double sumdiff = 0., sumsum = 0.;
+    // TODO: compute lower bound for sumdiff
+    // TODO: compute upper bound for sumsum
+    return sumdiff / sumsum;
+  }
 {% endhighlight %}
 
 In order to find a lower bound for the equation above, we need a lower bound for the nominator, and an upper bound for the denominator. Fortunately, we can do this in each single dimension independently.
 
-In a single dimension, the bounding rectangles of the R-tree become intervals: `[: max1](./min1)` and `[: max2](./min2)`. There are three different situations that can arise: the first rectangle can be strictly less than the second (then `max1 < min2`), the first rectangle can be strictly larger than the second (then `min1 > max2`) or the two rectangles overlap. When they overlap, their minimum distance is 0, otherwise it is the difference of the inequalities we just gave.
+In a single dimension, the bounding rectangles of the R-tree become intervals: `[min1:max1]` and `[min2:max2]`. There are three different situations that can arise: the first rectangle can be strictly less than the second (then `max1 < min2`), the first rectangle can be strictly larger than the second (then `min1 > max2`) or the two rectangles overlap. When they overlap, their minimum distance is 0, otherwise it is the difference of the inequalities we just gave.
 
 For the upper bound on the lengths, we can exploit that either `-min1` or `+max2` will have the largest absolute value.
 
 {% highlight java %}
-        double sumdiff = 0., sumsum = 0.;
-        for (int d = 0; d < dim1; d++) {
-          final double min1 = mbr1.getMin(d), max1 = mbr1.getMax(d);
-          final double min2 = mbr2.getMin(d), max2 = mbr2.getMax(d);
-          if (max1 < min2) {
-            sumdiff += min2 - max1;
-          } else if (min1 > max2) {
-            sumdiff += min1 - max2;
-          } else {
-            // Minimum difference is 0
-          }
-          sumsum += Math.max(-min1, max1) + Math.max(-min2, max2);
-        }
-        return sumdiff / sumsum;
+    double sumdiff = 0., sumsum = 0.;
+    for (int d = 0; d < dim1; d++) {
+      final double min1 = mbr1.getMin(d), max1 = mbr1.getMax(d);
+      final double min2 = mbr2.getMin(d), max2 = mbr2.getMax(d);
+      if (max1 < min2) {
+        sumdiff += min2 - max1;
+      } else if (min1 > max2) {
+        sumdiff += min1 - max2;
+      } else {
+        // Minimum difference is 0
+      }
+      sumsum += Math.max(-min1, max1) + Math.max(-min2, max2);
+    }
+    return sumdiff / sumsum;
 {% endhighlight %}
 
 Using index acceleration
@@ -126,38 +126,41 @@ Using index acceleration
 
 In order to benefit from this, we need to
 
-1.  [Add an R-Tree index to the database](.//HowTo/Index) via the `-dbc.index` parameter
+1.  [Add an R-Tree index to the database](/howto/use_indexes) via the `-dbc.index` parameter
 2.  Use an algorithm that is implemented by k nearest neighbor or radius queries
 
-Not every algorithm can be accelerated with an index, but many can such as DBSCAN, OPTICS and LOF. When an appropriate index was added to the database, ELKI will automatically use it wherever possible. So by implementing indexing support for this distance function, we accelerated dozens of algorithms at the same time! d \#\# Bonus ELKIification
+Not every algorithm can be accelerated with an index, but many can such as DBSCAN, OPTICS and LOF. When an appropriate index was added to the database, ELKI will automatically use it wherever possible. So by implementing indexing support for this distance function, we accelerated dozens of algorithms at the same time!
+
+Bonus ELKIification
+-------------------
 
 In order to fully ELKIfy the implementation, we should add a static instance (since this distance function is parameterless) and add a Parameterizer to use the static instance:
 
 {% highlight java %}
-      /**
-       * Static instance.
-       */
-      public static final BrayCurtisDistanceFunction STATIC = new BrayCurtisDistanceFunction();
+  /**
+   * Static instance.
+   */
+  public static final BrayCurtisDistanceFunction STATIC = new BrayCurtisDistanceFunction();
 
-      /**
-       * Constructor.
-       * 
-       * @deprecated Use {@link #STATIC} instance instead.
-       */
-      @Deprecated
-      public BrayCurtisDistanceFunction() {
-        super();
-      }
+  /**
+   * Constructor.
+   * 
+   * @deprecated Use {@link #STATIC} instance instead.
+   */
+  @Deprecated
+  public BrayCurtisDistanceFunction() {
+    super();
+  }
 
-      /**
-       * Parameterization class.
-       */
-      public static class Parameterizer extends AbstractParameterizer {
-        @Override
-        protected BrayCurtisDistanceFunction makeInstance() {
-          return BrayCurtisDistanceFunction.STATIC;
-        }
-      }
+  /**
+   * Parameterization class.
+   */
+  public static class Parameterizer extends AbstractParameterizer {
+    @Override
+    protected BrayCurtisDistanceFunction makeInstance() {
+      return BrayCurtisDistanceFunction.STATIC;
+    }
+  }
 {% endhighlight %}
 
 Why: it is not at all essential. Usually, distance functions will barely be compared, or instantiated. So you are not going to save a lot of anything. But from an engineering point of view it *emphasizes* that there exist only one such distance. We might as well formalize it.

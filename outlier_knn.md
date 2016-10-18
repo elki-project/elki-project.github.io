@@ -2,13 +2,13 @@
 layout: page
 title: Outlier Algorithms with k-Nearest-Neighbors
 short: kNN-based Outlier
-parent: algorithms
+hideparent: algorithms
 ---
 
 
-> Important note: this information is for ELKI 0.7.
->
-> Progress to unify these parameters is still underway!
+Important note: this information is for ELKI 0.7.\\
+Progress to unify these parameters is still underway!
+{: class="box-warn" }
 
 Overview of kNN interpretation across algorithms
 ================================================

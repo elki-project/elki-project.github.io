@@ -28,43 +28,53 @@ As evaluator choose `clustering.pairsegments.ClusterPairSegmentAnalysis`, and th
 
 In order to simplify the user interface, you can set for example
 
-    -vis.window.single
-    -visualizer.stylesheet presentation
-    -vis.enable (ScatterPlot|CircleSegments|Evaluation)
+<pre>
+-vis.window.single
+-visualizer.stylesheet presentation
+-vis.enable (ScatterPlot|CircleSegments|Evaluation)
+</pre>
 
-The following two detailed settings also include \* Detailed configurations for two clustering algorithms on this data set \* Embedding visualizers, to allow interaction in the overview (`-vis.window.single`) \* Customized visualization by selectively enabling just some visualizers (by default, much more visualizers are used, making the overview a bit complicated)
+The following two detailed settings also include
+
+* Detailed configurations for two clustering algorithms on this data set
+* Embedding visualizers, to allow interaction in the overview (`-vis.window.single`)
+* Customized visualization by selectively enabling just some visualizers (by default, much more visualizers are used, making the overview a bit complicated)
 
 Figure 5+6
 ----------
 
-    -dbc.in pov.csv
-    -algorithm clustering.EM,clustering.DBSCAN
-    # Parameters for EM clustering
-    -em.k 3
-    # Parameters for DBSCAN clustering
-    -dbscan.epsilon 0.1
-    -dbscan.minpts 5
-    # Parameters for Evaluation and Visualization
-    -evaluator clustering.EvaluateClustering,clustering.pairsegments.ClusterPairSegmentAnalysis
-    -vis.window.single
-    -visualizer.stylesheet presentation
-    -vis.enable (scatterplotfact|emcluster|voronoi|marker|axis|Evalu|Circle)
+<pre>
+-dbc.in pov.csv
+-algorithm clustering.EM,clustering.DBSCAN
+# Parameters for EM clustering
+-em.k 3
+# Parameters for DBSCAN clustering
+-dbscan.epsilon 0.1
+-dbscan.minpts 5
+# Parameters for Evaluation and Visualization
+-evaluator clustering.EvaluateClustering,clustering.pairsegments.ClusterPairSegmentAnalysis
+-vis.window.single
+-visualizer.stylesheet presentation
+-vis.enable (scatterplotfact|emcluster|voronoi|marker|axis|Evalu|Circle)
+</pre>
 
 Figure 7+8
 ----------
 
-    -dbc.in different-densities-2d.ascii
-    -algorithm clustering.EM,clustering.kmeans.KMeansLloyd
-    # Parameters for EM clustering
-    -em.k 6
-    -kmeans.initialization KMeansPlusPlusInitialMeans
-    -kmeans.seed 1
-    # Parameters for kmeans clustering
-    -kmeans.k 5
-    -kmeans.initialization KMeansPlusPlusInitialMeans
-    -kmeans.seed 1
-    # Parameters for Evaluation and Visualization
-    -evaluator clustering.EvaluateClustering,clustering.pairsegments.ClusterPairSegmentAnalysis
-    -vis.window.single
-    -visualizer.stylesheet presentation
-    -vis.enable (scatterplotfact|voronoi|marker|axis|Evalu|Circle)
+<pre>
+-dbc.in different-densities-2d.ascii
+-algorithm clustering.EM,clustering.kmeans.KMeansLloyd
+# Parameters for EM clustering
+-em.k 6
+-kmeans.initialization KMeansPlusPlusInitialMeans
+-kmeans.seed 1
+# Parameters for kmeans clustering
+-kmeans.k 5
+-kmeans.initialization KMeansPlusPlusInitialMeans
+-kmeans.seed 1
+# Parameters for Evaluation and Visualization
+-evaluator clustering.EvaluateClustering,clustering.pairsegments.ClusterPairSegmentAnalysis
+-vis.window.single
+-visualizer.stylesheet presentation
+-vis.enable (scatterplotfact|voronoi|marker|axis|Evalu|Circle)
+</pre>

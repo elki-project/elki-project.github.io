@@ -20,7 +20,7 @@ Note that this is *deliberately* only exposed as an interface:
 Just as important as managing single objects is the management of collections. ELKI comes with a large set of DBID optimized collections that *perform better than the generic native Java collections*. So use these collections where possible.
 
 **Never** use a `Map<DBIDRef, ?>` or similar (references may change, breaking your data structure). Avoid `DBIDUtil.deref`, too - usually it means you are wasting a lot of memory and thus performance, and have overlooked a better data model using the optimized data structures in ELKI!
-{: style="margin: .2em; padding: .2em; border: 4px solid DarkRed" }
+{: class="box-warn" }
 
 
 DBIDs - optimized collections for DBIDs
@@ -47,7 +47,7 @@ Benefits of the specialized DBIDs interfaces:
 * Less error prone by better compile time type checking (cf. [Collection\#remove(Object)](/releases/current/doc/java/util/Collection.html) which allows you to remove objects of arbitrary type)
 
 **Always** prefer a DBIDs object over a traditional Java collection!
-{: style="margin: .2em; padding: .2em; border: 4px solid DarkGreen" }
+{: class="box-recommend" }
 
 DBID references
 ---------------
@@ -55,12 +55,12 @@ DBID references
 Some classes - including iterators below, and some pairs containing a single DBID - implement the [de.lmu.ifi.dbs.elki.database.ids.DBIDRef](/releases/current/doc/de/lmu/ifi/dbs/elki/database/ids/DBIDRef.html) interface.
 
 `DBIDRef` objects behave mostly like a `DBID`, but they may be only temporarily valid (e.g. iterators).
-{: style="margin: .2em; padding: .2em; border: 4px solid DarkGreen" }
+{: class="box-recommend" }
 
 If possible, try to use `DBIDRef` directly, as it requires less memory management than `DBID`.
 
 Never use `DBIDRef` as keys in Java collections (e.g. `Map<DBIDRef, ?>`), as these APIs assume they are unmodifiable. Using them with ELKI data storage classes however is safe, as they will be internally dereferenced.
-{: style="margin: .2em; padding: .2em; border: 4px solid DarkRed" }
+{: class="box-warn" }
 
 Iterators
 ---------
@@ -76,7 +76,7 @@ for (DBIDIter iter = ids.iter(); iter.valid(); iter.advance()) {
 Note that many APIs will accept the `DBIDIter` itself (as it is a `DBIDRef`), so you don't need to materialize the `id` object!
 
 `DBIDIter` allow you to inexpensively iterate over a set.
-{: style="margin: .2em; padding: .2em; border: 4px solid DarkGreen" }
+{: class="box-recommend" }
 
 Maps - associated storage
 -------------------------
