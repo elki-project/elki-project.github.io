@@ -1,25 +1,27 @@
 ---
 layout: page
-title: Tutorial%2FOutlier
+title: Implementing Outlier Detection
+short: Outlier Detection
+parent: docs
 ---
 
 
 Implementing a new outlier detection method
 ===========================================
 
-    #!div class="compact" style="float:right; font-size: x-small; text-align:right"
-    Version information: Updated for ELKI 0.6.5~20141030
+Version information: Updated for ELKI 0.6.5~20141030
+{: class="compact" style="font-size: x-small; text-align:right" }
 
 In this tutorial, we want to implement a new outlier detection method. The outlier definition used in this example is to use the standard deviation of the distances to the k nearest neighbors. Inliers are expected to have a low standard deviation, outliers to have a higher standard deviation (note: in reality, it probably is not that easy, but this is good enough for this tutorial).
 
-The two key APIs in ELKI are the [Algorithm](./releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/Algorithm.html) interface (and the associated abstract classes and specializations) and the [OutlierResult](./releases/current/doc/de/lmu/ifi/dbs/elki/result/OutlierResult.html) classes for output.
+The two key APIs in ELKI are the [Algorithm](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/Algorithm.html) interface (and the associated abstract classes and specializations) and the [OutlierResult](/releases/current/doc/de/lmu/ifi/dbs/elki/result/OutlierResult.html) classes for output.
 
 The auto-generated code
 -----------------------
 
-Again we start with a stub class. As base class we chose [AbstractDistanceBasedAlgorithm](./releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/AbstractDistanceBasedAlgorithm.html), and implementing the [OutlierAlgorithm](./releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/OutlierAlgorithm.html) interface forces us to use the result type [OutlierResult](./releases/current/doc/de/lmu/ifi/dbs/elki/result/OutlierResult.html). The full stub looks like this:
+Again we start with a stub class. As base class we chose [AbstractDistanceBasedAlgorithm](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/AbstractDistanceBasedAlgorithm.html), and implementing the [OutlierAlgorithm](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/OutlierAlgorithm.html) interface forces us to use the result type [OutlierResult](/releases/current/doc/de/lmu/ifi/dbs/elki/result/OutlierResult.html). The full stub looks like this:
 
-    #!java
+{% highlight java %}
     package tutorial.outlier;
 
     import de.lmu.ifi.dbs.elki.algorithm.AbstractDistanceBasedAlgorithm;
@@ -55,6 +57,7 @@ Again we start with a stub class. As base class we chose [AbstractDistanceBasedA
         return null;
       }
     }
+{% endhighlight %}
 
 (Note: you **may** be missing the `run` method. See below.)
 
@@ -63,7 +66,7 @@ Completing the stub
 
 We have two generics in this example. `O` is the object type. Since this is dependant on the distance function, we cannot make many assumptions. We just need to have a type variable and use it consistently. We will also add a class logger and fill out the `getInputTypeRestriction` method (which again is determined by the distance function and the `k` parameter, for the number of neighbors. We also made the constructor `public`.
 
-    #!java
+{% highlight java %}
     package tutorial.outlier;
 
     import de.lmu.ifi.dbs.elki.algorithm.AbstractDistanceBasedAlgorithm;
@@ -114,13 +117,14 @@ We have two generics in this example. `O` is the object type. Since this is depe
         return logger;
       }
     }
+{% endhighlight %}
 
 Adding the `run` method
 -----------------------
 
-Now we need to implement the main method. Since we have extended [AbstractAlgorithm](./releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/AbstractAlgorithm.html), we actually have three options for this. The exact signature *cannot* be defined in Java:
+Now we need to implement the main method. Since we have extended [AbstractAlgorithm](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/AbstractAlgorithm.html), we actually have three options for this. The exact signature *cannot* be defined in Java:
 
-    #!java
+{% highlight java %}
       // Java interface version, but implemented in AbstractAlgorithm
       public OutlierResult run(Database database);
 
@@ -129,10 +133,11 @@ Now we need to implement the main method. Since we have extended [AbstractAlgori
 
       // Short version, auto-discovered by AbstractAlgorithm#run
       public OutlierResult run(Relation<O> relation);
+{% endhighlight %}
 
 We need to implement only one of these signatures, the choice is up to us. The versions with `relation` will save us some manual work, so we'll go with these. We'll create the following stub first, that outlines the general flow. First we initialize the kNN query. Note that the database *may* choose to use an optimized kNN query here; which is why it needs to know the distance function and value of *k* in advance. Then we setup a data storage for double values, process the individual elements and finally wrap the result in the expected API. Note that the outlier result API consists of two part: meta data on the score distribution (including minimum and maximum values) and a relation of the actual scores (which essentially is just our data store).
 
-    #!java
+{% highlight java %}
       public OutlierResult run(Database database, Relation<O> relation) {
         // Get a nearest neighbor query on the relation.
         KNNQuery<O> knnq = QueryUtil.getKNNQuery(relation, getDistanceFunction(), k);
@@ -159,10 +164,11 @@ We need to implement only one of these signatures, the choice is up to us. The v
           relation.getDBIDs(), "stddev-outlier", scores);
         return new OutlierResult(meta, rel);
       }
+{% endhighlight %}
 
 Finally, we fill in the actual outlier detection algorithm:
 
-    #!java
+{% highlight java %}
         // Iterate over all objects
         for(DBIDIter iter = relation.iterDBIDs(); iter.valid(); iter.advance()) {
           DBID id = iter.getDBID();
@@ -180,13 +186,14 @@ Finally, we fill in the actual outlier detection algorithm:
           // Store score
           scores.putDouble(id, mv.getSampleStddev());
         }
+{% endhighlight %}
 
 Adding a parameterizer
 ----------------------
 
-Right now, we can invoke the algorithm from Java (albeit a bit tricky), but we also want to be able to use the GUI and command line interface. For this we need to implement [Parameterization](./Parameterization), namely add an [AbstractParameterizer](./releases/current/doc/de/lmu/ifi/dbs/elki/utilities/optionhandling/AbstractParameterizer.html). This is as *public static inner class named `Parameterizer`* (otherwise it will not be found!). The stub obtained from extracting the superclass parameterizer is:
+Right now, we can invoke the algorithm from Java (albeit a bit tricky), but we also want to be able to use the GUI and command line interface. For this we need to implement [Parameterization](./Parameterization), namely add an [AbstractParameterizer](/releases/current/doc/de/lmu/ifi/dbs/elki/utilities/optionhandling/AbstractParameterizer.html). This is as *public static inner class named `Parameterizer`* (otherwise it will not be found!). The stub obtained from extracting the superclass parameterizer is:
 
-    #!java
+{% highlight java %}
       public static class Parameterizer<O>
           extends AbstractDistanceBasedAlgorithm.Parameterizer<O> {
         @Override
@@ -195,10 +202,11 @@ Right now, we can invoke the algorithm from Java (albeit a bit tricky), but we a
           return null;
         }
       }
+{% endhighlight %}
 
 We again need to customize this stub slightly: restrict the distance function type, change the return type and override the `makeOptions`. The improved stub then is:
 
-    #!java
+{% highlight java %}
       public static class Parameterizer<O>
             extends AbstractDistanceBasedAlgorithm.Parameterizer<O> {
         /** Number of neighbors to get */
@@ -215,10 +223,11 @@ We again need to customize this stub slightly: restrict the distance function ty
           return new DistanceStddevOutlier<O>(distanceFunction, k);
         }
       }
+{% endhighlight %}
 
 There is not much left to do. The distance function is parameterized by the super class. We need to add a parameter for `k`:
 
-    #!java
+{% highlight java %}
       public static class Parameterizer<O>
             extends AbstractDistanceBasedAlgorithm.Parameterizer<O> {
         /**
@@ -248,5 +257,6 @@ There is not much left to do. The distance function is parameterized by the supe
           return new DistanceStddevOutlier<O>(distanceFunction, k);
         }
       }
+{% endhighlight %}
 
 Note that we enforce `k > 1` in the parameterization API, as the 1 nearest neighbor will usually be the object itself. As you can see, the parameterizer has the purpose of providing a common parameterization interface and the produces the actual Java instance. It connects the UIs to the actual Java code.

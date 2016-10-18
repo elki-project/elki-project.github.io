@@ -1,16 +1,17 @@
 ---
 layout: page
-title: Tutorial%2FSpatialDistanceFunctions
+title: Spatial Distance Functions
+parent: docs
 ---
 
 
 Implementing a spatial distance function
 ========================================
 
-    #!div class="compact" style="font-size: x-small; text-align:right"
-    Version information: Updated for ELKI 0.6.5~20141030
+Version information: Updated for ELKI 0.6.5~20141030
+{: class="compact" style="font-size: x-small; text-align:right" }
 
-In the tutorial on [distance functions](./../DistanceFunctions) we already implemented a custom, domain-specific distance function.
+In the tutorial on [distance functions](distance_functions) we already implemented a custom, domain-specific distance function.
 
 In this tutorial, we will implement a textbook distance function, but also extend it to allow **index accelerated** queries.
 
@@ -25,9 +26,11 @@ Bray-curtis dissimilarity (also: Sørensen–Dice coefficient) is a distance fun
 
 The continuous formulation of Bray-Curtis for two vectors `x` and `y` is as follows:
 
-    sum_i |x_i - y_i|
-    d(x,y) = ---------------------
-              sum_i |x_i| + |y_i|
+<pre>
+           sum_i |x_i - y_i|
+d(x,y) = ---------------------
+          sum_i |x_i| + |y_i|
+</pre>
 
 Often, the absolute value of the denominator is missing, but then it would no longer be a proper dissimilarity function on R<sup>n</sup> either. For nonnegative values, it obviously does not change results, and bray-curtis was originally designed for nonnegative values.
 
@@ -36,9 +39,9 @@ The numerator obivously is the Manhattan distance, while the denominator is the 
 Implementing the distance
 -------------------------
 
-First of all, we will implement the regular distance function. To minimize the amount of work we need to do, we will use the most specific abstract base class: [AbstractNumberVectorDistanceFunction](./releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/AbstractNumberVectorDistanceFunction.html) which is good for distance functions that have continuous numerical vectors as input and return double valued results.
+First of all, we will implement the regular distance function. To minimize the amount of work we need to do, we will use the most specific abstract base class: [AbstractNumberVectorDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/AbstractNumberVectorDistanceFunction.html) which is good for distance functions that have continuous numerical vectors as input and return double valued results.
 
-    #!java
+{% highlight java %}
     package tutorial;
 
     import de.lmu.ifi.dbs.elki.distance.distancefunction.AbstractNumberVectorDistanceFunction;
@@ -50,10 +53,11 @@ First of all, we will implement the regular distance function. To minimize the a
         return 0;
       }
     }
+{% endhighlight %}
 
 this very simple signature is all that we need to fill. We can pretty much straightforward use the definition above. We add a safety check to ensure vectors have the same dimensionality.
 
-    #!java
+{% highlight java %}
       @Override
       public double distance(NumberVector v1, NumberVector v2) {
         final int dim1 = v1.getDimensionality();
@@ -68,15 +72,16 @@ this very simple signature is all that we need to fill. We can pretty much strai
         }
         return sumdiff / sumsum;
       }
+{% endhighlight %}
 
 After implementing this class, we can immediately run our algorithms with it. Since it has an (implicit) public constructor and no parameters, the GUI will automatically add it to its drop down menus.
 
 Support for spatial indexes
 ---------------------------
 
-In order to accelerate distance based algorithms (e.g. DBSCAN, LOF) using this distance function, we need to implent a **lower-bound on the rectangle-to-rectangle distances**. This is often called the "minDist". In order to implement this method, we change the parent class to [AbstractSpatialDistanceFunction](./releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/AbstractSpatialDistanceFunction.html), and have eclipse generate the missing method. After adding the usual safety checks, it looks like this:
+In order to accelerate distance based algorithms (e.g. DBSCAN, LOF) using this distance function, we need to implent a **lower-bound on the rectangle-to-rectangle distances**. This is often called the "minDist". In order to implement this method, we change the parent class to [AbstractSpatialDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/AbstractSpatialDistanceFunction.html), and have eclipse generate the missing method. After adding the usual safety checks, it looks like this:
 
-    #!java
+{% highlight java %}
       @Override
       public double minDist(SpatialComparable mbr1, SpatialComparable mbr2) {
         if (mbr1 instanceof NumberVector && mbr2 instanceof NumberVector) {
@@ -91,6 +96,7 @@ In order to accelerate distance based algorithms (e.g. DBSCAN, LOF) using this d
         // TODO: compute upper bound for sumsum
         return sumdiff / sumsum;
       }
+{% endhighlight %}
 
 In order to find a lower bound for the equation above, we need a lower bound for the nominator, and an upper bound for the denominator. Fortunately, we can do this in each single dimension independently.
 
@@ -98,7 +104,7 @@ In a single dimension, the bounding rectangles of the R-tree become intervals: `
 
 For the upper bound on the lengths, we can exploit that either `-min1` or `+max2` will have the largest absolute value.
 
-    #!java
+{% highlight java %}
         double sumdiff = 0., sumsum = 0.;
         for (int d = 0; d < dim1; d++) {
           final double min1 = mbr1.getMin(d), max1 = mbr1.getMax(d);
@@ -113,6 +119,7 @@ For the upper bound on the lengths, we can exploit that either `-min1` or `+max2
           sumsum += Math.max(-min1, max1) + Math.max(-min2, max2);
         }
         return sumdiff / sumsum;
+{% endhighlight %}
 
 Using index acceleration
 ------------------------
@@ -126,7 +133,7 @@ Not every algorithm can be accelerated with an index, but many can such as DBSCA
 
 In order to fully ELKIfy the implementation, we should add a static instance (since this distance function is parameterless) and add a Parameterizer to use the static instance:
 
-    #!java
+{% highlight java %}
       /**
        * Static instance.
        */
@@ -151,5 +158,6 @@ In order to fully ELKIfy the implementation, we should add a static instance (si
           return BrayCurtisDistanceFunction.STATIC;
         }
       }
+{% endhighlight %}
 
 Why: it is not at all essential. Usually, distance functions will barely be compared, or instantiated. So you are not going to save a lot of anything. But from an engineering point of view it *emphasizes* that there exist only one such distance. We might as well formalize it.
