@@ -3,7 +3,7 @@ layout: page
 title: ELKI publications and citation information
 short: Publications
 section: publications
-navigation: 5
+navigation: 30
 ---
 
 

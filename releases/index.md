@@ -24,7 +24,7 @@ Release History
   * Batik [visualization](/visualization) module:
     * [minimal archive](/releases/release0.7.1/elki-batik-visualization-0.7.1.jar) ([Batik](/batik) dependencies *not* included)
     * [minimal sources](/releases/release0.7.1/elki-batik-visualization-0.7.1-sources.jar)
-  * LibSVM] extension module (one-class SVM for anomaly detection):
+  * LibSVM extension module (one-class SVM for anomaly detection):
     * [minimal archive](/releases/release0.7.1/elki-libsvm-0.7.1.jar) (libsvm *not* included)
     * [minimal sources](/releases/release0.7.1/elki-libsvm-0.7.1-sources.jar)
   * [online documentation](/releases/release0.7.1/doc/index.html)
