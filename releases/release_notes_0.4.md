@@ -30,24 +30,24 @@ Changes
 
 Performance:
 
-* Specializations to doubles led to an approximately 1.5x speedup compared to the previous release for many typical situations. This can be attributed to the cost of boxing and unboxing and the this way increased memory management cost, and emphasized why you shouldn't be [Benchmarking](./Benchmarking) ELKI against a non-generalized implementation.
+* Specializations to doubles led to an approximately 1.5x speedup compared to the previous release for many typical situations. This can be attributed to the cost of boxing and unboxing and the this way increased memory management cost, and emphasized why you shouldn't be [Benchmarking](/benchmarking) ELKI against a non-generalized implementation.
 
 Global changes:
 
 * Indexing: Multi-index support - databases can now have more than one index
 * Database: multi-relational database API
-* Database: [Database query objects](./DatabaseQuery) (base for a query optimization layer)
-* [Parameterization](./Parameterization): Improved Java API by moving parameterization into helper classes
-* Algorithms: [TypeInformation](./TypeInformation) to match data sources and input type restrictions
+* Database: [Database query objects](/dev/query) (base for a query optimization layer)
+* [Parameterization](/dev/parameterization): Improved Java API by moving parameterization into helper classes
+* Algorithms: [TypeInformation](/dev/typeinformation) to match data sources and input type restrictions
 * Generics: Many java generics became obsolete by the multi-relational database change
 
 Package level changes:
 
 * Preprocessors converted to just another type of index
 * Normalizations and Meta-Parsers become Input Filters
-* Parsers, Filters and Databases exchange data using [ObjectBundle](./ObjectBundle)s
-* Some functionality of [DatabaseConnection](./DatabaseConnection) (such as class label index) moved to filters
-* Persistence: Cache has been converted to a nested [PageFile](./PageFile), allowing for arbitrary combinations, including multi-level caching.
+* Parsers, Filters and Databases exchange data using [ObjectBundle](/dev/object_bundle)s
+* Some functionality of DatabaseConnection (such as class label index) moved to filters
+* Persistence: Cache has been converted to a nested PageFile, allowing for arbitrary combinations, including multi-level caching.
 * Indexing: Major refactoring to split the tree structure from the index use of the tree.
 
 Extensions added:

@@ -26,7 +26,7 @@ Outlier detection:
 - [SOF](./releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/spatial/SOF.html)
 - [TrimmedMeanApproach](./releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/spatial/TrimmedMeanApproach.html)
 
-Additionally, you can use existing data mining [Algorithms](/algorithms) via specialized [DistanceFunctions](distance_functions).
+Additionally, you can use existing data mining [Algorithms](/algorithms) via specialized [DistanceFunctions](/dev/distance_functions).
 
 Geo distance functions
 ----------------------
@@ -37,7 +37,7 @@ Defined for latitude-longitude pairs:
 - [LatLngDistanceFunction](./releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/geo/LatLngDistanceFunction.html)
 - [LngLatDistanceFunction](./releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/geo/LngLatDistanceFunction.html)
 
-See [DistanceFunctions](distance_functions) for other distance functions.
+See [DistanceFunctions](/dev/distance_functions) for other distance functions.
 
 Geo data types
 --------------
@@ -50,7 +50,7 @@ See [DataTypes](/datatypes) for a complete overview.
 Index support
 -------------
 
-Metrical [Index Structures](use_index) have support for geo data by using geographic distance functions.
+Metrical [Index Structures](use_indexes) have support for geo data by using geographic distance functions.
 
 Support in R-Trees is not yet complete, as we do not yet have an implementation of a valid min-dist for spatial rectangles on the earth sphere.
 

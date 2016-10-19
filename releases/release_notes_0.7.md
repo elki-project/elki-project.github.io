@@ -77,7 +77,7 @@ Outlier detection:
 - Parallel k-means.
 - Parallel LOF and variants.
 
-- [LibSVM](./LibSVM) format parser.
+- LibSVM format parser.
 
 - kNN classification (with index acceleration).
 

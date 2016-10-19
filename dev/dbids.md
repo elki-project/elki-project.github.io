@@ -119,6 +119,6 @@ This ultimately lead to the use of GNU Trove primitive collections, however tran
 The plans
 ---------
 
-At some point, someone will want to use ELKI with *huge* databases. Say, more than 4 billion objects. These could for example be a data stream, so they actually will never be in memory at the same time, yet they should have a unique identifier. For this, it should be possible to replace the DBID implementation with a [LongDBID](./LongDBID) implementation easily. So we chose to use the factory pattern for DBIDs, and meant to not expose the integer numbers at all.
+At some point, someone will want to use ELKI with *huge* databases. Say, more than 4 billion objects. These could for example be a data stream, so they actually will never be in memory at the same time, yet they should have a unique identifier. For this, it should be possible to replace the DBID implementation with a LongDBID implementation easily. So we chose to use the factory pattern for DBIDs, and meant to not expose the integer numbers at all.
 
 DBIDRef, an interface for objects referencing a DBID, but not necessarily being a DBID itself, is expected to further improve performance by requiring less materializations of DBID objects.

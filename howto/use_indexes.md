@@ -65,7 +65,7 @@ VA-File and Partial-VA-File
 Compatibility matrix
 --------------------
 
-See [DistanceFunctions](./distance_functions) for the full list of available distance functions. This table only lists distance functions where the indexing support is somewhat analyzed. Note that the M-tree must be initialized with the distance function.
+See [DistanceFunctions](/dev/distance_functions) for the full list of available distance functions. This table only lists distance functions where the indexing support is somewhat analyzed. Note that the M-tree must be initialized with the distance function.
 
 | Distance Function                                                                                                                                                           | R-Tree | M-Tree | VA-File | k-d-tree | LSH |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|-----------|--|--|--|
