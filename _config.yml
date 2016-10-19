@@ -3,7 +3,7 @@ title: ELKI Data Mining Framework
 email: elki@dbs.ifi.lmu.de
 description: >
   Open-Source Data Mining with Java.
-baseurl: "/"
+baseurl: ""
 url: "http://elki-project.github.io"
 github_username:  elki-project
 

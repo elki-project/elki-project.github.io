@@ -28,12 +28,12 @@ ELKI was **designed for research in data mining algorithms**, not for making the
 
 1.  ELKI is [AGPL licensed](/license). This is a variant of the GPL license, and requires you to license your code the same way as ELKI. If you embed ELKI into your application, and distribute this combination, then **you agree to license your code** with a compatible license (e.g. GPL, AGPL, BSD). In particular for commercial users this may not be acceptable, and if you include/use code written by others you may not be allowed to relicense their code at all. This licensing restriction should not matter much for research and academic usage. It also does not apply if ELKI is run as a separate application (e.g. via [command line scripts](#CommandLineScripting)).
 
-Recommended Solutions <a name="#Recommended">
+Recommended Solutions {#Recommended}
 ---------------------
 
 The *two* recommended approaches of automating ELKI processing are by using [command line scripting](#CommandLineScripting) and [extending ELKI via modules](#ExtendingELKI). Two alternate approaches [use the Parameterization API](#ParameterizationAPI) or the [pure Java API](#PureJavaAPI).
 
-### Command Line Scripting ELKI <a name="CommandLineScripting">
+### Command Line Scripting ELKI {#CommandLineScripting}
 
 The **simplest way of automating ELKI** is using the command line. Any operating system has a powerful scriping language. In the following examples, we will be using common POSIX shell scripting (e.g. bash on Linux). And for shell scripts, you have a wide variety of tools available, such as [clusterssh](http://sourceforge.net/projects/clusterssh/) or the [Oracle Grid Engine](https://en.wikipedia.org/wiki/Oracle_Grid_Engine) for distributed running on ELKI jobs.
 
@@ -51,7 +51,7 @@ for k in $( seq 3 40 ); do
 done
 {% endhighlight %}
 
-### Extending ELKI <a name="ExtendingELKI">
+### Extending ELKI {#ExtendingELKI}
 
 A neat trick to use ELKI for your own experiments is to hook into the API by the regular extension points, such as [ResultHandler](/releases/current/doc/de/lmu/ifi/dbs/elki/result/ResultHandler.html) (for customizing output), [Parser](/releases/current/doc/de/lmu/ifi/dbs/elki/datasource/parser/Parser.html) (for custom input file formats), and [DatabaseConnection](/releases/current/doc/de/lmu/ifi/dbs/elki/datasource/DatabaseConnection.html) (for custom data sources). You can then use `ResultUtil` to select the results that you want to **output in your own preferred format** or analyze:
 
@@ -69,7 +69,7 @@ public class MyCustomHandler implements ResultHandler {
 
 If your class has a `public` and parameterless constructor, or includes a [Parameterizer](/dev/parameterization) inner class, then it will automatically show up in the MiniGUI drop-down menus (if found on the classpath).
 
-Using the [Parameterization](/dev/parameterization) API <a name="ParameterizationAPI">
+Using the [Parameterization](/dev/parameterization) API {#ParameterizationAPI}
 ------------------------------------------------------
 
 An approach recommended only for *complicated* setups (managing multiple relations, or doing large benchmarks where a lot of work can be shared across multiple runs) instantiates classes using the parameterization API. But consider using the [recommended solutions](#Recommended) above!
@@ -114,7 +114,7 @@ LOF<NumberVector> lof = ClassGenericsUtil.parameterizeOrAbort(LOF.class, params)
 OutlierResult outliers = alg.run(rel); // Manually chosen relation - not general!
 {% endhighlight %}
 
-Pure Java API <a name="PureJavaAPI">
+Pure Java API {#PureJavaAPI}
 -------------
 
 If you are a Java purist, and want to specify all parameters, this is of course possible, too.

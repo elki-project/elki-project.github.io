@@ -11,14 +11,14 @@ Visualization in ELKI
 Usage
 -----
 
-To use the ELKI visualizer, set `-resulthandler` to [de.lmu.ifi.dbs.elki.visualization.gui.ResultVisualizer](/releases/current/doc/de/lmu/ifi/dbs/elki/visualization/gui/ResultVisualizer.html). This class will inspect the algorithm output, invoke appropriate visualization modules and arrange them on the screen. The menu allows export to [SVG](/svg), PNG, JPG, PDF, PostScript and other formats.
+To use the ELKI visualizer, set `-resulthandler` to [de.lmu.ifi.dbs.elki.visualization.gui.ResultVisualizer](/releases/current/doc/de/lmu/ifi/dbs/elki/visualization/gui/ResultVisualizer.html). This class will inspect the algorithm output, invoke appropriate visualization modules and arrange them on the screen. The menu allows export to [SVG](/dev/svg), PNG, JPG, PDF, PostScript and other formats.
 
 Technology
 ----------
 
-ELKI uses [SVG](/svg) for visualization (which has benefits for print export), and Apache [Batik](/batik) for screen rendering. While this is not the fastest solution, the export benefits are good and we don't re-write pixel-rendering code ourselves.
+ELKI uses [SVG](/dev/svg) for visualization (which has benefits for print export), and Apache [Batik](/dev/batik) for screen rendering. While this is not the fastest solution, the export benefits are good and we don't re-write pixel-rendering code ourselves.
 
-See [Batik](/batik) for documentation pointers.
+See [Batik](/dev/batik) for documentation pointers.
 
 Visualization modules
 ---------------------

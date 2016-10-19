@@ -191,7 +191,7 @@ Finally, we fill in the actual outlier detection algorithm:
 Adding a parameterizer
 ----------------------
 
-Right now, we can invoke the algorithm from Java (albeit a bit tricky), but we also want to be able to use the GUI and command line interface. For this we need to implement [Parameterization](./Parameterization), namely add an [AbstractParameterizer](/releases/current/doc/de/lmu/ifi/dbs/elki/utilities/optionhandling/AbstractParameterizer.html). This is as *public static inner class named `Parameterizer`* (otherwise it will not be found!). The stub obtained from extracting the superclass parameterizer is:
+Right now, we can invoke the algorithm from Java (albeit a bit tricky), but we also want to be able to use the GUI and command line interface. For this we need to implement [Parameterization](/dev/parameterization), namely add an [AbstractParameterizer](/releases/current/doc/de/lmu/ifi/dbs/elki/utilities/optionhandling/AbstractParameterizer.html). This is as *public static inner class named `Parameterizer`* (otherwise it will not be found!). The stub obtained from extracting the superclass parameterizer is:
 
 {% highlight java %}
   public static class Parameterizer<O>

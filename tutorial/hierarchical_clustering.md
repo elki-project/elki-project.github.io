@@ -118,7 +118,7 @@ For the actual algorithm, we will be using a matrix of distances. For efficiency
 
 Most of the time, this will be a no-op. But if we e.g. were processing data streams, the ids could have been a hash set, for example. The [ArrayDBIDs](/releases/current/doc/de/lmu/ifi/dbs/elki/database/ids/ArrayDBIDs.html) API will allow us indexed access into the DBIDs, which we will use to map column and row numbers to actual objects. We also put in a warning to tell users that this algorithm is slow, and there exists a much faster alternative.
 
-In order to refer to the `i`th element, we will be using an [DBIDArrayIter](/releases/current/doc/de/lmu/ifi/dbs/elki/database/ids/DBIDArrayIter.html). This is similar to a `java.util.ListIterator<DBID>`, but it will avoid generating objects and is substantially faster this way. The Java `java.util.Iterator` API is good when you have large objects, but not for primitives such as these object references. You can learn more about this API on the [Development/DBIDs](./Development/DBIDs) page. With `iter.seek(i)` we can seek to a particular position, while with `iter.advance()` we can proceed to the next element.
+In order to refer to the `i`th element, we will be using an [DBIDArrayIter](/releases/current/doc/de/lmu/ifi/dbs/elki/database/ids/DBIDArrayIter.html). This is similar to a `java.util.ListIterator<DBID>`, but it will avoid generating objects and is substantially faster this way. The Java `java.util.Iterator` API is good when you have large objects, but not for primitives such as these object references. You can learn more about this API on the [Development/DBIDs](/dev/dbids) page. With `iter.seek(i)` we can seek to a particular position, while with `iter.advance()` we can proceed to the next element.
 
 ### Computing the distance matrix
 
@@ -307,7 +307,7 @@ We can now update the constructor. We added a parameter, the desired number of c
 
 ### Adding a Parameterizer
 
-So how are we getting this algorithm to show up in the [MiniGUI](./MiniGUI) for experiments? We need to add a [Parameterization](./Parameterization) class. Parameterizers serve the purpose of allowing the automatic generation of command line and UI code for an algorithm. Without a Parameterizer, we could only invoke the algorithm from Java. Fortunately, the parameterizer we need is not particularly difficult - we only added a single integer option.
+So how are we getting this algorithm to show up in the MiniGUI for experiments? We need to add a [Parameterization](/dev/parameterization) class. Parameterizers serve the purpose of allowing the automatic generation of command line and UI code for an algorithm. Without a Parameterizer, we could only invoke the algorithm from Java. Fortunately, the parameterizer we need is not particularly difficult - we only added a single integer option.
 
 {% highlight java %}
   public static class Parameterizer<O, D extends NumberDistance<D, ?>>
@@ -337,7 +337,7 @@ So how are we getting this algorithm to show up in the [MiniGUI](./MiniGUI) for 
 
 The `makeInstance` method tells the UI how to instantiate the algorithm. It will almost always be just a call to the desired constructor. The `makeOptions` method needs to define parameters (with type information, default values and value constraints), `grab()` their value from the given parameters and store it for later. The parameter classes will usually take care of reporting errors - `grab` will then fail, and an error will be stored in the Parameterization. Don't throw Exceptions - for user friendliness we want to log *all* errors in a single pass, instead of failing at the first error with an exception.
 
-After adding this `Parameterizer` to the class - note that it *must* be a static inner class named `Parameterizer` so that it can be found automatically - it will show up *automatically* in the [MiniGUI](./MiniGUI)! New classes will show up at the end, alphabetically sorted. So in the [MiniGUI](./MiniGUI), the `-algorithm` dropdown should now have an option `tutorial.clustering.NaiveAgglomerativeHierarchicalClustering1` at the very end.
+After adding this `Parameterizer` to the class - note that it *must* be a static inner class named `Parameterizer` so that it can be found automatically - it will show up *automatically* in the MiniGUI! New classes will show up at the end, alphabetically sorted. So in the MiniGUI, the `-algorithm` dropdown should now have an option `tutorial.clustering.NaiveAgglomerativeHierarchicalClustering1` at the very end.
 
 Running it on the "mouse" example data set, and setting the desired number of clusters to 20 yields the following result (which is typical for single-linkage clustering on such noisy data: many clusters with 1-2 elements, and a few larger ones)
 

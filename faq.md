@@ -40,7 +40,7 @@ You can find out about parameters using the `--help` switch, find a complete lis
 Is there a complete list of parameters?
 ---------------------------------------
 
-Of course. It can be found in the [JavaDoc](/javadoc) of the release that you are using. Here are the lists for release 0.7.1 [sorted by class name](/releases/release0.7.1/doc/parameters-byclass.html sorted by class name) and [sorted by option name](/releases/release0.5.5/doc/parameters-byopt.html sorted by option name). The list is automatically generated from the parameterization classes, so it is fairly complete.
+Of course. It can be found in the [JavaDoc](/javadoc) of the release that you are using. Here are the lists for release 0.7.1 [sorted by class name](/releases/release0.7.1/doc/parameters-byclass.html) and [sorted by option name](/releases/release0.5.5/doc/parameters-byopt.html). The list is automatically generated from the parameterization classes, so it is fairly complete.
 
 What is the `NoSupportedDataTypeException`?
 -------------------------------------------

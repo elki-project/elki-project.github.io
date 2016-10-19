@@ -22,7 +22,7 @@ Release History
     * [minimal archive](/releases/release0.7.1/elki-0.7.1.jar) (dependencies *not* included)
     * [minimal sources](/releases/release0.7.1/elki-0.7.1-sources.jar)
   * Batik [visualization](/visualization) module:
-    * [minimal archive](/releases/release0.7.1/elki-batik-visualization-0.7.1.jar) ([Batik](/batik) dependencies *not* included)
+    * [minimal archive](/releases/release0.7.1/elki-batik-visualization-0.7.1.jar) ([Batik](/dev/batik) dependencies *not* included)
     * [minimal sources](/releases/release0.7.1/elki-batik-visualization-0.7.1-sources.jar)
   * LibSVM extension module (one-class SVM for anomaly detection):
     * [minimal archive](/releases/release0.7.1/elki-libsvm-0.7.1.jar) (libsvm *not* included)
@@ -52,7 +52,7 @@ Release History
     * [minimal archive](/releases/release0.7.0/elki-0.7.0.jar) (dependencies *not* included)
     * [minimal sources](/releases/release0.7.0/elki-0.7.0-sources.jar)
   * Batik [visualization](/visualization) module:
-    * [minimal archive](/releases/release0.7.0/elki-batik-visualization-0.7.0.jar) ([Batik](/batik) dependencies *not* included)
+    * [minimal archive](/releases/release0.7.0/elki-batik-visualization-0.7.0.jar) ([Batik](/dev/batik) dependencies *not* included)
     * [minimal sources](/releases/release0.7.0/elki-batik-visualization-0.7.0-sources.jar)
   * LibSVM extension module (one-class SVM for anomaly detection):
     * [minimal archive](/releases/release0.7.0/elki-libsvm-0.7.0.jar) (libsvm *not* included)
@@ -72,7 +72,7 @@ Release History
     * [minimal archive](/releases/release0.7.0~20150828/elki-0.7.0~20150828.jar) (dependencies *not* included)
     * [minimal sources](/releases/release0.7.0~20150828/elki-0.7.0~20150828-sources.jar)
   * Batik [visualization](/visualization) module:
-    * [minimal archive](/releases/release0.7.0~20150828/elki-batik-visualization-0.7.0~20150828.jar) ([Batik](/batik) dependencies *not* included)
+    * [minimal archive](/releases/release0.7.0~20150828/elki-batik-visualization-0.7.0~20150828.jar) ([Batik](/dev/batik) dependencies *not* included)
     * [minimal sources](/releases/release0.7.0~20150828/elki-batik-visualization-0.7.0~20150828-sources.jar)
   * LibSVM extension module (one-class SVM for anomaly detection):
     * [minimal archive](/releases/release0.7.0~20150828/elki-libsvm-0.7.0~20150828.jar) (libsvm *not* included)
@@ -91,7 +91,7 @@ Release History
     * [minimal archive](/releases/release0.6.5~20141030/elki-0.6.5~20141030.jar) (dependencies *not* included)
     * [minimal sources](/releases/release0.6.5~20141030/elki-0.6.5~20141030-sources.jar)
   * Batik [visualization](/visualization) module:
-    * [minimal archive](/releases/release0.6.5~20141030/elki-batik-visualization-0.6.5~20141030.jar) ([Batik](/batik) dependencies *not* included)
+    * [minimal archive](/releases/release0.6.5~20141030/elki-batik-visualization-0.6.5~20141030.jar) ([Batik](/dev/batik) dependencies *not* included)
     * [minimal sources](/releases/release0.6.5~20141030/elki-batik-visualization-0.6.5~20141030-sources.jar)
   * LibSVM extension module (one-class SVM for anomaly detection):
     * [minimal archive](/releases/release0.6.5~20141030/elki-libsvm-0.6.5~20141030.jar) (libsvm *not* included)
@@ -105,12 +105,12 @@ Release History
 
 **0.6.0 (2014, January, 10)**
 
-: Final release for the 3D Parallel Coordinate Demo at SIGMOD 2013 (see [3DPC](/examples/3DPC) for details). (cite as [release 0.6](/publications#release0.6))
+: Final release for the 3D Parallel Coordinate Demo at SIGMOD 2013 (see [3DPC](/examples/3dpc) for details). (cite as [release 0.6](/publications#release0.6))
 
   * [executable archive](/releases/release0.6.0/elki.jar) (contains source-code)
   * [documentation](/releases/release0.6.0/doc/index.html)
   * [release notes](/releases/release_notes_0.6.0)
-  * [3DPC](/examples/3DPC) extension
+  * [3DPC](/examples/3dpc) extension
   * requires [OpenJDK 7](http://openjdk.java.net/projects/jdk7/).
 
 **0.6.0~beta2 (2013, October, 29)**
@@ -119,7 +119,7 @@ Release History
 
 **0.6.0~beta1 (2013, June, 20)**
 
-: Beta release as base for the 3D Parallel Coordinate Demo at SIGMOD 2013 (see [3DPC](/examples/3DPC) for details). (cite as [release 0.6](/publications#release0.6))
+: Beta release as base for the 3D Parallel Coordinate Demo at SIGMOD 2013 (see [3DPC](/examples/3dpc) for details). (cite as [release 0.6](/publications#release0.6))
 
 **0.5.5 (2012, December, 11)**
 

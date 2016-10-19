@@ -7,7 +7,7 @@ title: ELKI Data Mining Framework
 ELKI: Environment for Developing <span style="display:inline-block">KDD-Applications</span> <span style="display:inline-block">Supported by Index-Structures</span>
 ===============================================================================
 
-<div class="elklogo"><a href="/team"><img src="img/elki-fulllogo-400.png" class="elklogo"></a></div>
+<div class="elklogo"><a href="/team"><img src="img/elki-fulllogo-400.png" class="elklogo" alt="ELKI Logo"></a></div>
 
 Quick Summary
 -------------

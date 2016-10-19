@@ -26,7 +26,7 @@ Outlier detection:
 - [SOF](./releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/spatial/SOF.html)
 - [TrimmedMeanApproach](./releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/spatial/TrimmedMeanApproach.html)
 
-Additionally, you can use existing data mining [Algorithms](/algorithms) via specialized [DistanceFunctions](/distance_functions).
+Additionally, you can use existing data mining [Algorithms](/algorithms) via specialized [DistanceFunctions](distance_functions).
 
 Geo distance functions
 ----------------------
@@ -37,7 +37,7 @@ Defined for latitude-longitude pairs:
 - [LatLngDistanceFunction](./releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/geo/LatLngDistanceFunction.html)
 - [LngLatDistanceFunction](./releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/geo/LngLatDistanceFunction.html)
 
-See [DistanceFunctions](/distance_functions) for other distance functions.
+See [DistanceFunctions](distance_functions) for other distance functions.
 
 Geo data types
 --------------
