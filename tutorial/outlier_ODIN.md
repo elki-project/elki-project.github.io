@@ -263,6 +263,6 @@ To the class definition, we will add the following Java annotation:
 public class ODIN<O> // ...
 {% endhighlight %}
 
-We also put the same information into the [JavaDoc](/javadoc) of the class. This makes it easier for people finding the appropriate scientific background of the algorithm that we just implemented. We should also make a note that we *modified* their algorithm slightly: instead of using a threshold, we "curried" the method and return the threshold at which the point would become an outlier as score.
+We also put the same information into the [JavaDoc](/dev/javadoc) of the class. This makes it easier for people finding the appropriate scientific background of the algorithm that we just implemented. We should also make a note that we *modified* their algorithm slightly: instead of using a threshold, we "curried" the method and return the threshold at which the point would become an outlier as score.
 
 [You can browse the full source code online, in the tutorial folder](https://github.com/elki-project/elki/blob/master/addons/tutorial/src/main/java/tutorial/outlier/ODIN.java)

@@ -61,7 +61,7 @@ Smaller changes:
 * Precomputed distance matrixes can answer range and kNN queries.
 * Voronoi visualization can be switched in the menu now.
 * Improved backwards command line compatibility with additional aliases.
-* Added generated `@since` annotations in [JavaDoc](/javadoc).
+* Added generated `@since` annotations in [JavaDoc](/dev/javadoc).
 * Many new unit tests, renamed to the Java conventions.
 * Low-level reading of service files, to have faster startup.
 

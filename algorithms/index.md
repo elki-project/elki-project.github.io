@@ -10,7 +10,7 @@ Data Mining Algorithms in ELKI
 ==============================
 
 The following data-mining algorithms are included in the ELKI 0.7.1 release.
-For literature references, click on the individual algorithms or the references overview in the [JavaDoc](/javadoc) documentation. See also [RelatedPublications](/related)
+For literature references, click on the individual algorithms or the references overview in the [JavaDoc](/dev/javadoc) documentation. See also [RelatedPublications](/related)
 
 Clustering Algorithms:
 

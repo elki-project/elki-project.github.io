@@ -14,14 +14,14 @@ Release History
 : Bug fix and enhancement release 0.7.1 (cite as [release 0.7](/publications#release0.7))
 
   * Full package:
-    * [complete package](/releases/release0.7.1/elki-0.7.1.tar.gz) (contains source-code, [JavaDoc](/javadoc) and dependencies, includes batik [visualization](/visualization) and libsvm extensions)
+    * [complete package](/releases/release0.7.1/elki-0.7.1.tar.gz) (contains source-code, [JavaDoc](/dev/javadoc) and dependencies, includes batik [visualization](/algorithms/visualization) and libsvm extensions)
     * [executable archive](/releases/release0.7.1/elki-bundle-0.7.1.jar) (single jar, with dependencies, includes batik visualization and libsvm extensions, no source code)
     * [JavaDoc archive](/releases/release0.7.1/elki-bundle-0.7.1-javadoc.jar)
     * [sources only](/releases/release0.7.1/elki-0.7.1-sources.tar.gz) (package to build from source)
   * ELKI core (extensions not included):
     * [minimal archive](/releases/release0.7.1/elki-0.7.1.jar) (dependencies *not* included)
     * [minimal sources](/releases/release0.7.1/elki-0.7.1-sources.jar)
-  * Batik [visualization](/visualization) module:
+  * Batik [visualization](/algorithms/visualization) module:
     * [minimal archive](/releases/release0.7.1/elki-batik-visualization-0.7.1.jar) ([Batik](/dev/batik) dependencies *not* included)
     * [minimal sources](/releases/release0.7.1/elki-batik-visualization-0.7.1-sources.jar)
   * LibSVM extension module (one-class SVM for anomaly detection):
@@ -44,14 +44,14 @@ Release History
 : Final release of the 0.7.0 version. (cite as [release 0.7](/publications#release0.7))
 
   * Full package:
-    * [complete package](/releases/release0.7.0/elki-0.7.0.tar.gz) (contains source-code, [JavaDoc](/javadoc) and dependencies, includes batik [visualization](/visualization) and libsvm extensions)
+    * [complete package](/releases/release0.7.0/elki-0.7.0.tar.gz) (contains source-code, [JavaDoc](/dev/javadoc) and dependencies, includes batik [visualization](/algorithms/visualization) and libsvm extensions)
     * [executable archive](/releases/release0.7.0/elki-bundle-0.7.0.jar) (single jar, with dependencies, includes batik visualization and libsvm extensions, no source code)
     * [JavaDoc archive](/releases/release0.7.0/elki-bundle-0.7.0-javadoc.jar)
     * [sources only](/releases/release0.7.0/elki-0.7.0-sources.tar.gz) (package to build from source)
   * ELKI core (extensions not included):
     * [minimal archive](/releases/release0.7.0/elki-0.7.0.jar) (dependencies *not* included)
     * [minimal sources](/releases/release0.7.0/elki-0.7.0-sources.jar)
-  * Batik [visualization](/visualization) module:
+  * Batik [visualization](/algorithms/visualization) module:
     * [minimal archive](/releases/release0.7.0/elki-batik-visualization-0.7.0.jar) ([Batik](/dev/batik) dependencies *not* included)
     * [minimal sources](/releases/release0.7.0/elki-batik-visualization-0.7.0-sources.jar)
   * LibSVM extension module (one-class SVM for anomaly detection):
@@ -65,13 +65,13 @@ Release History
 : *Release candidate* of the 0.7.0 version. (cite as [release 0.7](/publications#release0.7))
 
   * Full package:
-    * [complete package](/releases/release0.7.0~20150828/elki-0.7.0~20150828.tar.gz) (contains source-code, [JavaDoc](/javadoc) and dependencies, includes batik [visualization](/visualization) and libsvm extensions)
+    * [complete package](/releases/release0.7.0~20150828/elki-0.7.0~20150828.tar.gz) (contains source-code, [JavaDoc](/dev/javadoc) and dependencies, includes batik [visualization](/algorithms/visualization) and libsvm extensions)
     * [executable archive](/releases/release0.7.0~20150828/elki-bundle-0.7.0~20150828.jar) (single jar, with dependencies, includes batik visualization and libsvm extensions, no source code)
     * [JavaDoc archive](/releases/release0.7.0~20150828/elki-0.7.0~20150828-javadoc.jar)
   * ELKI core (extensions not included):
     * [minimal archive](/releases/release0.7.0~20150828/elki-0.7.0~20150828.jar) (dependencies *not* included)
     * [minimal sources](/releases/release0.7.0~20150828/elki-0.7.0~20150828-sources.jar)
-  * Batik [visualization](/visualization) module:
+  * Batik [visualization](/algorithms/visualization) module:
     * [minimal archive](/releases/release0.7.0~20150828/elki-batik-visualization-0.7.0~20150828.jar) ([Batik](/dev/batik) dependencies *not* included)
     * [minimal sources](/releases/release0.7.0~20150828/elki-batik-visualization-0.7.0~20150828-sources.jar)
   * LibSVM extension module (one-class SVM for anomaly detection):
@@ -84,13 +84,13 @@ Release History
 : *Beta release* for the upcoming 0.7.0 version.
 
   * Full package:
-    * [complete package](/releases/release0.6.5~20141030/elki-0.6.5~20141030.tar.gz) (contains source-code, [JavaDoc](/javadoc) and dependencies, includes batik [visualization](/visualization) and libsvm extensions)
+    * [complete package](/releases/release0.6.5~20141030/elki-0.6.5~20141030.tar.gz) (contains source-code, [JavaDoc](/dev/javadoc) and dependencies, includes batik [visualization](/algorithms/visualization) and libsvm extensions)
     * [executable archive](/releases/release0.6.5~20141030/elki-bundle-0.6.5~20141030.jar) (single jar, with dependencies, includes batik visualization and libsvm extensions, no source code)
     * [JavaDoc archive](/releases/release0.6.5~20141030/elki-0.6.5~20141030-javadoc.jar)
   * ELKI core (extensions not included):
     * [minimal archive](/releases/release0.6.5~20141030/elki-0.6.5~20141030.jar) (dependencies *not* included)
     * [minimal sources](/releases/release0.6.5~20141030/elki-0.6.5~20141030-sources.jar)
-  * Batik [visualization](/visualization) module:
+  * Batik [visualization](/algorithms/visualization) module:
     * [minimal archive](/releases/release0.6.5~20141030/elki-batik-visualization-0.6.5~20141030.jar) ([Batik](/dev/batik) dependencies *not* included)
     * [minimal sources](/releases/release0.6.5~20141030/elki-batik-visualization-0.6.5~20141030-sources.jar)
   * LibSVM extension module (one-class SVM for anomaly detection):

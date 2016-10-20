@@ -5,7 +5,7 @@ parent: dev
 navigation: 1000
 ---
 
-ApiViz is a [JavaDoc](/javadoc) doclet that inserts class diagrams.
+ApiViz is a [JavaDoc](/dev/javadoc) doclet that inserts class diagrams.
 
 [ApiViz](http://code.google.com/p/apiviz/) homepage and documentation\]
 

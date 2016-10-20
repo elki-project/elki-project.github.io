@@ -12,7 +12,7 @@ ELKI: Environment for Developing <span style="display:inline-block">KDD-Applicat
 Quick Summary
 -------------
 
-ELKI is an open source (AGPLv3) data mining software written in Java. The focus of ELKI is research in algorithms, with an emphasis on unsupervised methods in [cluster analysis](/clustering) and outlier detection.
+ELKI is an open source (AGPLv3) data mining software written in Java. The focus of ELKI is research in algorithms, with an emphasis on unsupervised methods in [cluster analysis](/howto/clustering) and outlier detection.
 In order to achieve high performance and scalability, ELKI offers data index structures such as the R\*-tree that can provide major performance gains.
 ELKI is designed to be easy to extend for researchers and students in this domain, and welcomes contributions of additional methods.
 ELKI aims at providing a large collection of highly parameterizable algorithms, in order to allow easy and fair evaluation and benchmarking of algorithms.
@@ -39,7 +39,7 @@ The ELKI wiki: Tutorials, HowTos, Documentation
 
 Beginners may want to start at the [HowTo](/howto) documents, [Examples](/examples), [Tutorials](/tutorial), and [FAQ](/faq) to help with difficult configuration scenarios and beginning with ELKI development.
 
-The most important documentation pages are: [Tutorial](/tutorial), searchable [JavaDoc](/javadoc), [FAQ](/faq), [InputFormat](/inputformat), [DataTypes](/datatypes), [DistanceFunctions](/distances), [DataSets](/datasets), [Development](/dev), [Parameterization](/dev/parameterization), [Visualization](/visualization), [Benchmarking](/benchmarking), and the list of [Algorithms](/algorithms) and [publications implemented in ELKI](/related).
+The most important documentation pages are: [Tutorial](/tutorial), searchable [JavaDoc](/dev/javadoc), [FAQ](/faq), [InputFormat](/howto/inputformat), [DataTypes](/datatypes), [DistanceFunctions](/algorithms/distances), [DataSets](/datasets), [Development](/dev), [Parameterization](/dev/parameterization), [Visualization](/algorithms/visualization), [Benchmarking](/benchmarking), and the list of [Algorithms](/algorithms) and [publications implemented in ELKI](/related).
 
 Getting ELKI: Download and Citation Policy
 ------------------------------------------
@@ -62,7 +62,7 @@ There is a list of [publications](/publications) that accompany the ELKI release
 
 Compiling ELKI
 --------------
-ELKI is compiled using Maven and Python. The [compilation process is explained here](/compiling).
+ELKI is compiled using Maven and Python. The [compilation process is explained here](/dev/compiling).
 
 Information on ELKI APIs and coding styles is collected at the [development starting page](/dev). Please contribute!
 
