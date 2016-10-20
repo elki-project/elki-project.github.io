@@ -3,6 +3,7 @@ layout: page
 title: Geo Outlier Detection With External Neighborhoods
 short: External Neighborhoods
 parent: howto
+navigation: 45
 ---
 
 

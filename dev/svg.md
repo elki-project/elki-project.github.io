@@ -3,6 +3,7 @@ layout: page
 title: SVG in ELKI
 short: SVG
 parent: dev
+navigation: 1020
 ---
 
 Scalable Vector Graphics

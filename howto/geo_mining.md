@@ -2,6 +2,7 @@
 layout: page
 title: Geo Mining in ELKI
 parent: howto
+navigation: 40
 ---
 
 

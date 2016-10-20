@@ -2,7 +2,8 @@
 layout: page
 title: ELKI Input Format
 short: Input Format
-parent: docs
+parent: howto
+navigation: 10
 ---
 
 

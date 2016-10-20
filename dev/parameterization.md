@@ -1,6 +1,9 @@
 ---
 layout: page
 title: Parameterization API
+short: Parameterization
+parent: dev
+navigation: -70
 ---
 
 

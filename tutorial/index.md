@@ -1,14 +1,14 @@
 ---
 layout: page
-title: ELKI Tutorial
-short: Tutorial
+title: ELKI Tutorials
+short: Tutorials
 section: docs
-navigation: 3
+navigation: 4
 ---
 
 
-ELKI Tutorial
-=============
+ELKI Tutorials
+==============
 
 This tutorial explains a basic use of ELKI, how to use the MiniGUI and the visualizations.
 

@@ -3,6 +3,7 @@ layout: page
 title: How To Use Indexes
 short: Using Indexes
 parent: howto
+navigation: 30
 ---
 
 

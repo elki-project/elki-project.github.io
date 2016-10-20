@@ -3,6 +3,7 @@ layout: page
 title: Implementing Outlier Detection
 short: Outlier Detection
 parent: docs
+navigation: 20
 ---
 
 
@@ -10,7 +11,7 @@ Implementing a new outlier detection method
 ===========================================
 
 Version information: Updated for ELKI 0.6.5~20141030
-{: class="compact" style="font-size: x-small; text-align:right" }
+{: class="versioninfo" }
 
 In this tutorial, we want to implement a new outlier detection method. The outlier definition used in this example is to use the standard deviation of the distances to the k nearest neighbors. Inliers are expected to have a low standard deviation, outliers to have a higher standard deviation (note: in reality, it probably is not that easy, but this is good enough for this tutorial).
 

@@ -2,6 +2,7 @@
 layout: page
 title: Release Notes 0.7
 parent: releases
+navigation: -70
 ---
 
 

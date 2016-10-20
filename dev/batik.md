@@ -3,6 +3,7 @@ layout: page
 title: Apache Batik in ELKI
 short: Batik
 parent: dev
+navigation: 1010
 ---
 
 Apache Batik in ELKI

@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Clustering
-parent: docs
+parent: howto
+navigation: 40
 ---
 
 

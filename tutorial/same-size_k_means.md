@@ -2,14 +2,15 @@
 layout: page
 title: Same-Size K-Means
 parent: docs
+navigation: 30
 ---
 
 
-Same-size k-means variation
+Same-size k-Means Variation
 ===========================
 
 Version information: ELKI 0.7.1
-{: class="compact" style="font-size: x-small; text-align:right" }
+{: class="versioninfo" }
 
 In this tutorial, we will create a **k-means variation** that produces clusters of the same size.
 

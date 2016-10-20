@@ -2,6 +2,7 @@
 layout: page
 title: Spatial Distance Functions
 parent: docs
+navigation: 60
 ---
 
 
@@ -9,7 +10,7 @@ Implementing a spatial distance function
 ========================================
 
 Version information: Updated for ELKI 0.6.5~20141030
-{: class="compact" style="font-size: x-small; text-align:right" }
+{: class="versioninfo" }
 
 In the tutorial on [distance functions](distance_functions) we already implemented a custom, domain-specific distance function.
 

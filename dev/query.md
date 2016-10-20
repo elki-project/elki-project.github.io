@@ -1,6 +1,8 @@
 ---
 layout: page
 title: ELKI Database Query API
+parent: dev
+navigation: -60
 ---
 
 Database Query API

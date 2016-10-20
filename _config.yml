@@ -9,6 +9,7 @@ github_username:  elki-project
 
 # Build settings
 markdown: kramdown
+permalink: pretty
 highlighter: rouge
 sass:
   compress: true

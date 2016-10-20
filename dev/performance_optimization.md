@@ -1,6 +1,9 @@
 ---
 layout: page
 title: Optimizing ELKI Performance
+short: Performance Optimization
+parent: dev
+navigation: 100
 ---
 
 
@@ -12,7 +15,7 @@ The generic and modular nature of ELKI comes at a certain cost. While Java does 
 Boxing and Unboxing
 -------------------
 
-A known problem with Java for statistical computing is the cost of unboxing and boxing. While most people associate this with converting native types such as `int` to their object representation `Integer`, we do have new types of boxing/unboxing in ELKI. For example for a [FeatureVector](/releases/current/doc/de/lmu/ifi/dbs/elki/data/FeatureVector.html), the [getValue](./releases/current/doc/de/lmu/ifi/dbs/elki/data/FeatureVector.html) method will often have to do boxing. A [DoubleVector](./releases/current/doc/de/lmu/ifi/dbs/elki/data/DoubleVector.html) internally uses a native `double[]` array to store the data, the `getValue()` method has to return an object - so whenever this method is called, a new `Double` may be produced (only in some cases the Hotspot VM seems to be able to optimize this away).
+A known problem with Java for statistical computing is the cost of unboxing and boxing. While most people associate this with converting native types such as `int` to their object representation `Integer`, we do have new types of boxing/unboxing in ELKI. For example for a [FeatureVector](/releases/current/doc/de/lmu/ifi/dbs/elki/data/FeatureVector.html), the [getValue](/releases/current/doc/de/lmu/ifi/dbs/elki/data/FeatureVector.html) method will often have to do boxing. A [DoubleVector](/releases/current/doc/de/lmu/ifi/dbs/elki/data/DoubleVector.html) internally uses a native `double[]` array to store the data, the `getValue()` method has to return an object - so whenever this method is called, a new `Double` may be produced (only in some cases the Hotspot VM seems to be able to optimize this away).
 
 ### How to optimize:
 

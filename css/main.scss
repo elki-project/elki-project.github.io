@@ -18,6 +18,8 @@ $text-color:       #111;
 $background-color: #F7F7F7;
 $brand-color:      #00C;
 
+$dark-color:       darken($brand-color, 10%);
+
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
@@ -173,6 +175,8 @@ $sidebar-sep-color: mix(lighten($brand-color, 25%), $background-color, 25%);
 //h1, h2, h3, h4 { code { border: none; background: none; }
 //blockquote { color: $grey-color-dark; }
 
+h1, h2, h3, h4, h5, h6 { color: $dark-color; }
+
 // Definition lists
 dt { font-weight: bold }
 dd { padding-left: 1em; }
@@ -193,6 +197,11 @@ dd { padding-left: 1em; }
   padding: .2em;
   border: 4px solid DarkRed;
   background: mix($background-color, red, 95%);
+}
+.versioninfo {
+  font-size: x-small;
+  text-align: right;
+  float: right;
 }
 
 // Protected email links
@@ -230,11 +239,10 @@ div.elklogo {
 }
 
 // Table styling
-table{
+article table {
     border-collapse: collapse;
     border-spacing: 0;
     border:2px solid $grey-color-light;
-}
 
 th{
     border-bottom:2px solid $grey-color;
@@ -242,4 +250,10 @@ th{
 
 td{
     border:1px solid $grey-color-light;
+}
+tr{
+  &:nth-of-type(odd) {
+    background-color: rgba(255,255,255,.75);
+  }
+}
 }

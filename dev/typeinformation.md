@@ -1,6 +1,9 @@
 ---
 layout: page
 title: Data Type Information in ELKI
+short: Type Information
+parent: dev
+navigation: -40
 ---
 
 Type Information

@@ -3,6 +3,7 @@ layout: page
 title: Implenting Hierarchical Clustering
 short: Implementing HAC
 parent: docs
+navigation: 40
 ---
 
 
@@ -10,7 +11,7 @@ Implementing Hierarchical Clustering
 ====================================
 
 Version information: Updated for ELKI 0.6.0
-{: class="compact" style="font-size: x-small; text-align:right" }
+{: class="versioninfo" }
 
 This example needs to be updated, because non-numerical distances have been removed!
 {: class="box-warn" }

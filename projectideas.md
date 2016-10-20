@@ -1,6 +1,9 @@
 ---
 layout: page
 title: Data Mining Project Ideas with ELKI
+short: Project Ideas
+parent: dev
+navigation: 900
 ---
 
 

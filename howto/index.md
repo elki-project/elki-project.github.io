@@ -3,7 +3,7 @@ layout: page
 title: How to do ... in ELKI
 short: How To Do ...
 section: howto
-navigation: 4
+navigation: 3
 ---
 
 How to do ... in ELKI

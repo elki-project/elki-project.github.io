@@ -1,12 +1,14 @@
 ---
 layout: page
 title: Object Bundles
+parent: dev
+navigation: -50
 ---
 
 Object Bundles
 ==============
 
-**Compatibility note: this documentation applies to ELKI 0.4**
+**Compatibility note: this documentation applies to ELKI 0.4 and later**
 
 Object bundles in ELKI serve as an *exchange format* for objects in particular between the input layer, filters and the database layer. At some point, we also plan to use this for serialization using a kind of "stream bundle".
 

@@ -1,25 +1,28 @@
 ---
 layout: page
-title: HowTo%2FPrecomputedDistances
+title: Use Precomputed Distances
+short: Precomputed Distances
+parent: howto
+navigation: 50
 ---
 
 
 How to use precomputed distances in ELKI
 ========================================
 
-    #!div class="compact" style="font-size: x-small; text-align:right"
-    Version information: Updated for ELKI 0.6.5~20141030
+Version information: Updated for ELKI 0.6.5~20141030
+{: class="versioninfo" }
 
 In many situations, computing the object distances will be a major part of the algorithm runtimes. If you have enough disk space, it may be desirable to compute the distances only once and store them on the harddisk.
 
 ELKI comes with a number of classes related to precomputed distances:
 
--   [CacheDoubleDistanceInOnDiskMatrix](/releases/current/doc/de/lmu/ifi/dbs/elki/application/cache/CacheDoubleDistanceInOnDiskMatrix.html)
--   [CacheFloatDistanceInOnDiskMatrix](/releases/current/doc/de/lmu/ifi/dbs/elki/application/cache/CacheFloatDistanceInOnDiskMatrix.html)
--   [DiskCacheBasedDoubleDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/DiskCacheBasedDoubleDistanceFunction.html)
--   [DiskCacheBasedFloatDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/DiskCacheBasedFloatDistanceFunction.html)
--   [FileBasedDoubleDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/FileBasedDoubleDistanceFunction.html)
--   [FileBasedFloatDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/FileBasedFloatDistanceFunction.html)
+- [CacheDoubleDistanceInOnDiskMatrix](/releases/current/doc/de/lmu/ifi/dbs/elki/application/cache/CacheDoubleDistanceInOnDiskMatrix.html)
+- [CacheFloatDistanceInOnDiskMatrix](/releases/current/doc/de/lmu/ifi/dbs/elki/application/cache/CacheFloatDistanceInOnDiskMatrix.html)
+- [DiskCacheBasedDoubleDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/DiskCacheBasedDoubleDistanceFunction.html)
+- [DiskCacheBasedFloatDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/DiskCacheBasedFloatDistanceFunction.html)
+- [FileBasedDoubleDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/FileBasedDoubleDistanceFunction.html)
+- [FileBasedFloatDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/FileBasedFloatDistanceFunction.html)
 
 The first two are "applications", i.e. standalone tasks that do nothing but precompute the distance matrix and write it to disk, using a *binary* file format ("DiskCache") The last four are distance functions that access/load different input formats. The "FileBased" classes use a simpler, but much less efficient, ascii format.
 
@@ -28,12 +31,14 @@ Precomputing a distance matrix
 
 A typical command line for precomputing a distance matrix will look like this:
 
-    java -cp elki.jar
-    de.lmu.ifi.dbs.elki.application.cache.CacheDoubleDistanceInOnDiskMatrix
-    -dbc.in inputfile.ascii
-    -dbc.filter FixedDBIDsFilter -dbc.startid 0
-    -loader.diskcache matrix.dat
-    -loader.distance CosineDistanceFunction
+<pre>
+java -cp elki.jar
+de.lmu.ifi.dbs.elki.application.cache.CacheDoubleDistanceInOnDiskMatrix
+-dbc.in inputfile.ascii
+-dbc.filter FixedDBIDsFilter -dbc.startid 0
+-loader.diskcache matrix.dat
+-loader.distance CosineDistanceFunction
+</pre>
 
 Using the [FixedDBIDsFilter](/releases/current/doc/de/lmu/ifi/dbs/elki/datasource/filter/FixedDBIDsFilter.html) is only necessary if you need to offset values. However, I recommend using this filter *whenever* using precomputed distances to avoid indexing issues.
 
@@ -44,9 +49,11 @@ Using a precomputed (binary) distance matrix
 
 To use the precomputed distance matrix, set the following parameters
 
-    -dbc.filter FixedDBIDsFilter -dbc.startid 0
-    -algorithm.distancefunction external.DiskCacheBasedDoubleDistanceFunction
-    -distance.matrix matrix.dat
+<pre>
+-dbc.filter FixedDBIDsFilter -dbc.startid 0
+-algorithm.distancefunction external.DiskCacheBasedDoubleDistanceFunction
+-distance.matrix matrix.dat
+</pre>
 
 Note that you *really* should set the [FixedDBIDsFilter](/releases/current/doc/de/lmu/ifi/dbs/elki/datasource/filter/FixedDBIDsFilter.html), in particular when using the MiniGUI. Otherwise, a second run will use different object IDs and will likely produce errors because the matrix does not store the desired distances!
 
@@ -59,14 +66,16 @@ The binary matrix format used by ELKI (actually an upper triangle matrix) is not
 
 This will however need more memory than the binary format above, which can be mapped directly from the file system, thus this approach is really meant for using *external* distance information.
 
--   [FileBasedDoubleDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/FileBasedDoubleDistanceFunction.html)
--   [FileBasedFloatDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/FileBasedFloatDistanceFunction.html)
+- [FileBasedDoubleDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/FileBasedDoubleDistanceFunction.html)
+- [FileBasedFloatDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/FileBasedFloatDistanceFunction.html)
 
 require a different amount of *Java memory*, while they use the same input format (this is different from the distance matrixes above, which actually use a different file format).
 
 The default file format is ascii text, three columns, where the first two columns store the object IDs, and the third column the distance. The line
 
-    0 1 0.12345
+<pre>
+0 1 0.12345
+</pre>
 
 thus specifies that the objects 0 and 1 have a distance of 0.12345. Details can be found in the class [AsciiDistanceParser](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/AsciiDistanceParser.html), or you can provide your own implementation of the [DistanceParser](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/DistanceParser.html) interface.
 
@@ -76,16 +85,20 @@ In order to specify the exact meaning of the object numbers, you need to use the
 
 Here are the key parameters needed for using a text based distance matrix:
 
-    -dbc.filter FixedDBIDsFilter -dbc.startid 0
-    -algorithm.distancefunction external.FileBasedDoubleDistanceFunction
-    -distance.matrix /tmp/simple.ascii
+<pre>
+-dbc.filter FixedDBIDsFilter -dbc.startid 0
+-algorithm.distancefunction external.FileBasedDoubleDistanceFunction
+-distance.matrix /tmp/simple.ascii
+</pre>
 
 Using without primary data
 --------------------------
 
 Even when reading an external distance, ELKI will still need to get *regular* input data. In particular when just using this to precompute distances, this makes perfect sense. However, sometimes you don't need this. In order to *not* load the original data, you can use the fake data source
 
-    -dbc DBIDRangeDatabaseConnection -idgen.count 100
+<pre>
+-dbc DBIDRangeDatabaseConnection -idgen.count 100
+</pre>
 
 where you only need to specify the number of objects you have in your distance matrix.
 

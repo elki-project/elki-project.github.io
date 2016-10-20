@@ -2,6 +2,7 @@
 layout: page
 title: Compiling ELKI
 parent: dev
+navigation: -100
 ---
 
 Compiling ELKI

@@ -3,6 +3,7 @@ layout: page
 title: Implementing a Custom Distance Function
 short: Custom Distance
 parent: docs
+navigation: 10
 ---
 
 
@@ -10,7 +11,7 @@ Writing a custom distance function
 ==================================
 
 Version information: Updated for ELKI 0.6.5~20141030
-{: class="compact" style="font-size: x-small; text-align:right" }
+{: class="versioninfo" }
 
 For many real-world applications, a domain expert may be able to define a domain-specific distance function. For the following, let us assume we are working with 2D data, and the domain expert has decided that an appropriate distance function is `dx*dx+abs(dy)`, so taking the difference on the x axis to the square and the y axis linearly.
 

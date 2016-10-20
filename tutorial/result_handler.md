@@ -2,6 +2,7 @@
 layout: page
 title: Result Handlers
 parent: docs
+navigation: 50
 ---
 
 
@@ -9,7 +10,7 @@ Write a custom result handler
 =============================
 
 Version information: Updated for ELKI 0.6.5~20141030
-{: class="compact" style="font-size: x-small; text-align:right" }
+{: class="versioninfo" }
 
 The simples API for accessing ELKI results is the [ResultHandler](/releases/current/doc/de/lmu/ifi/dbs/elki/result/ResultHandler.html) API.
 

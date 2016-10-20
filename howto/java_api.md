@@ -3,6 +3,7 @@ layout: page
 title: How To Invoke ELKI From Java
 short: Java API
 parent: howto
+navigation: 20
 ---
 
 
