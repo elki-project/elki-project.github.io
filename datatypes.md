@@ -25,7 +25,7 @@ Included in ELKI 0.4 are implementations for the following "raw" data types:
   - [Multi-Polygons](/releases/current/doc/de/lmu/ifi/dbs/elki/data/spatial/PolygonsObject.html)
   - [Internal DBIDs](/releases/current/doc/de/lmu/ifi/dbs/elki/database/ids/DBID.html)
 
-As important as data types are the [DistanceFunctions](/dev/distance_functions). For example, **time series are supported by ELKI as regular number vectors**, by just using a specialized time series distance such as [DTWDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/timeseries/DTWDistanceFunction.html) on them, for **color histograms** you can use for example [HSBHistogramQuadraticDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/colorhistogram/HSBHistogramQuadraticDistanceFunction.html).
+As important as data types are the [DistanceFunctions](/distances). For example, **time series are supported by ELKI as regular number vectors**, by just using a specialized time series distance such as [DTWDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/timeseries/DTWDistanceFunction.html) on them, for **color histograms** you can use for example [HSBHistogramQuadraticDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/colorhistogram/HSBHistogramQuadraticDistanceFunction.html).
 
 In addition, you will find classes capable of extracting features from data types such as images to obtain supported number vectors. In order to plug in custom data types, you need to implement the following:
 
