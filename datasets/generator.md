@@ -1,6 +1,8 @@
 ---
 layout: page
 title: ELKI Data Set Generator
+short: Data Generator
+parent: datasets
 ---
 
 
@@ -57,26 +59,32 @@ This is enabled by default (or explicitly by setting the `test-model="1"` attrib
 Invocation
 ----------
 
+Beginning with ELKI 0.7.1, you can choose the generator in the MiniGUI.
+
 The [GeneratorXMLSpec](/releases/current/doc/de/lmu/ifi/dbs/elki/application/GeneratorXMLSpec.html) can be invoked from the command line using
 
-    java -cp elki.jar de.lmu.ifi.dbs.elki.application.GeneratorXMLSpec [... parameters ...]
+<pre>
+java -cp elki.jar de.lmu.ifi.dbs.elki.application.GeneratorXMLSpec [... parameters ...]
+</pre>
 
 As with all ELKI command line applications, help can be obtained with `-h`:
 
-    Parameters:
-    -verbose <|true|false>
-       Enable verbose messages while performing the algorithm.
-       Default: false
-    -app.out <file>
-       the file to write the generated data set into, if the file already exists,
-       the generated points will be appended to this file.
-    -bymodel.spec <file>
-       The generator specification file.
-    -bymodel.sizescale <double>
-       Factor for scaling the specified cluster sizes.
-       Default: 1.0
-    -bymodel.randomseed <int>
-       The random generator seed.
+<pre>
+Parameters:
+-verbose &lt;|true|false&gt;
+   Enable verbose messages while performing the algorithm.
+   Default: false
+-app.out &lt;file&gt;
+   the file to write the generated data set into, if the file already exists,
+   the generated points will be appended to this file.
+-bymodel.spec &lt;file&gt;
+   The generator specification file.
+-bymodel.sizescale &lt;double&gt;
+   Factor for scaling the specified cluster sizes.
+   Default: 1.0
+-bymodel.randomseed &lt;int&gt;
+   The random generator seed.
+</pre>
 
 The last two parameters allow scripted generation of data set series with different random seeds and varying data set scale.
 
