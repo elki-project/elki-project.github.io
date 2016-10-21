@@ -98,6 +98,7 @@ $sidebar-sep-color: mix(lighten($brand-color, 25%), $background-color, 25%);
     width: 14rem;
     text-align: left;
     box-shadow: inset -2.5ex -1ex 1ex -2ex rgba(0,0,0,.4);
+    padding-right: 1ex;
   }
 }
 .sidebar .elk {
