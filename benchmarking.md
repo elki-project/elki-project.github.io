@@ -44,7 +44,7 @@ Knowledge and Information Systems 2016 \[ [EE (springerlink)](http://dx.doi.org/
 Performance of ELKI versions
 ----------------------------
 
-If you are not convinced, here is an empiric example of how huge implementation differences are.
+If you are not convinced, here is an empirical example of how huge implementation differences are.
 {: class="box-warn" }
 
 For this, we will compare ELKI with ELKI, just using different versions.
@@ -68,9 +68,9 @@ The test system is a 2.67 GHz Intel Xenon X5650 (single-threaded, memory limit 3
 | LOF with R\*-Tree | n/a | 321.4 | 146.4 | 135.8 | 93.0 | 90.8 | 38.4 | 35.7 |
 | k-means lloyd k=100 | 249.7 | 125.6 | 81.2 | 77.4 | 60.2 | 57.3 | 76.7 | 86.5
 
-As you can see, ELKI 0.3 had a slightly more expensive parser, but was already slightly faster than ELKI 0.2. In ELKI 0.4 we see major performance gains, which we attribute to ''removing Java's auto-boxing and unboxing\_ in various places. ELKI 0.5 and 0.6 used improved data structures. For ELKI 0.6.5 many optimizations were low level, at the parser, and with specialized optimizations for Euclidean distance only. Note that k-means is randomized, and we observe a standard deviation of +-20. We did not enabled improved seeding methods available in later versions.
+As you can see, ELKI 0.3 had a slightly more expensive parser, but was already slightly faster than ELKI 0.2. In ELKI 0.4 we see major performance gains, which we attribute to _removing Java's auto-boxing and unboxing_ in various places. ELKI 0.5 and 0.6 used improved data structures. For ELKI 0.6.5 many optimizations were low level, at the parser, and with specialized optimizations for Euclidean distance only. Note that k-means is randomized, and we observe a standard deviation of +-20. We did not enabled improved seeding methods available in later versions.
 
-However, we cannot remove all boxing/unboxing in Java without losing much of the generality of ELKI. **We expect significant performance gains to be possible with a low-level C implementation.** (Which are, however, not of scientific interest to us.) Therefore, benchmarking ELKI against implementations in C (or R or Matlab, or any other language that has high-performant mathematical libraries embedded) is not sound!
+However, we cannot remove all boxing/unboxing in Java without losing much of the generality of ELKI. **We expect significant performance gains to be possible with a low-level C implementation.** (Which are, however, not of scientific interest to us.) Therefore, benchmarking ELKI against implementations in C (or R or Matlab, or any other language that has high-performance mathematical libraries embedded) is not sound!
 
 ELKI in comparison to other software
 ------------------------------------
@@ -100,3 +100,9 @@ Single-Link clustering could not be run in Weka or R. Weka crashes with an Illeg
 
 Weka DBSCAN and OPTICS runtime has decreased 8x with extension version 1.0.3, by removing unnecessary safety checks. ELKI's DBSCAN has become 5x faster across versions. **Do not do runtime benchmarking on code that you did not profile and optimize to the same extent - the result will be meaningless!**
 {: class="box-warn" }
+
+More examples of performance changes across versions can be found in this study:
+
+> Hans-Peter Kriegel, Erich Schubert, Arthur Zimek:\\
+**The (black) art of runtime evaluation: Are we comparing algorithms or implementations?**\\
+Knowledge and Information Systems 2016 \[ [EE (springerlink)](http://dx.doi.org/10.1007/s10115-016-1004-2) | [authorized access (Springer)](http://rdcu.be/lMk4) \]
