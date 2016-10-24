@@ -35,8 +35,11 @@ Of course we try to make ELKI as fast as possible (but we will not sacrifice ext
 We also strongly encourage reviewers to pay attention to fair benchmarks, and outright reject papers when these are not done in a sound way. Unfortunately, many articles do lack when it comes to fair experiments.
 {: class="box-recommend" }
 
-A study on the issues involved in efficiency evaluations compares standard algorithms in ELKI and other implementations: 
-Hans-Peter Kriegel, Erich Schubert, Arthur Zimek: The (black) art of runtime evaluation: Are we comparing algorithms or implementations? KAIS 2016 \[[EE (springerlink)](http://dx.doi.org/10.1007/s10115-016-1004-2)\]
+A study on the issues involved in efficiency evaluations compares standard algorithms in ELKI and other implementations:
+
+> Hans-Peter Kriegel, Erich Schubert, Arthur Zimek:\\
+**The (black) art of runtime evaluation: Are we comparing algorithms or implementations?**\\
+Knowledge and Information Systems 2016 \[ [EE (springerlink)](http://dx.doi.org/10.1007/s10115-016-1004-2) | [authorized access (Springer)](http://rdcu.be/lMk4) \]
 
 Performance of ELKI versions
 ----------------------------
