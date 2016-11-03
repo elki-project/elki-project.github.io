@@ -148,6 +148,10 @@ $sidebar-sep-color: mix(lighten($brand-color, 25%), $background-color, 25%);
     }
   }
 }
+.icon svg {
+  width: .7em;
+  height: .7em;
+}
 
 .content {
   padding-top:    2rem;
@@ -272,3 +276,4 @@ a[href*="elki-project.github.io"]:after
   content: "";
   margin: 0;
 }
+
