@@ -258,3 +258,17 @@ tr{
   }
 }
 }
+
+a[href^="http://"]:after,
+a[href^="https://"]:after,
+a[href^="//"]:after
+{
+  content: url(/img/external-link.png);
+  margin: 0 0 0 5px;
+}
+
+a[href*="elki-project.github.io"]:after
+{
+  content: "";
+  margin: 0;
+}
