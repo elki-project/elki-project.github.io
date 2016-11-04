@@ -271,7 +271,8 @@ a[href^="//"]:after
   margin: 0 0 0 5px;
 }
 
-a[href*="elki-project.github.io"]:after
+a[href*="elki-project.github.io"]:after,
+nav a[href]:after
 {
   content: "";
   margin: 0;
