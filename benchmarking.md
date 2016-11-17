@@ -32,10 +32,10 @@ Therefore, **we strongly encourage you to implement all comparison methods in EL
 
 Of course we try to make ELKI as fast as possible (but we will not sacrifice extendability or code readability for this).
 
-We also strongly encourage reviewers to pay attention to fair benchmarks, and outright reject papers when these are not done in a sound way. Unfortunately, many articles do lack when it comes to fair experiments.
+We also strongly encourage reviewers to pay attention to fair benchmarks. Unfortunately, many articles do lack when it comes to fair experiments.
 {: class="box-recommend" }
 
-A study on the issues involved in efficiency evaluations compares standard algorithms in ELKI and other implementations:
+A study on the issues involved in efficiency evaluations discusses potential problems in empirical efficiency evaluations. It also compares standard algorithms in ELKI and other implementations. As a side result, this study shows that ELKI implementations are very competitive in terms of efficiency:
 
 > Hans-Peter Kriegel, Erich Schubert, Arthur Zimek:\\
 **The (black) art of runtime evaluation: Are we comparing algorithms or implementations?**\\
