@@ -39,7 +39,7 @@ A study on the issues involved in efficiency evaluations discusses potential pro
 
 > Hans-Peter Kriegel, Erich Schubert, Arthur Zimek:\\
 **The (black) art of runtime evaluation: Are we comparing algorithms or implementations?**\\
-Knowledge and Information Systems 2016 \[ [EE (springerlink)](http://dx.doi.org/10.1007/s10115-016-1004-2) | [authorized access (Springer)](http://rdcu.be/lMk4) \]
+Knowledge and Information Systems 2016, DOI: 10.1007/s10115-016-1004-2 \[ [EE (springerlink)](http://dx.doi.org/10.1007/s10115-016-1004-2) | [authorized access (Springer)](http://rdcu.be/lMk4) \]
 
 Performance of ELKI versions
 ----------------------------
