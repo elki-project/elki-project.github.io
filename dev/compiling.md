@@ -8,27 +8,27 @@ navigation: -100
 Compiling ELKI
 ==============
 
-ELKI is compiled using Apache Maven:
+ELKI is compiled using Gradle (note that many IDEs will work with Gradle builds just fine):
 
-On Linux (and supposedly other Unix-like systems):
+On Linux (and supposedly other Unix-like systems, Windows users can use `gradlew.bat`):
 {% highlight shell %}
 # Compile everything into individual jars:
-mvn package
+./gradlew jar
 # Launch
-sh util/launch-packaged.sh
+sh util/launch-compiled.sh
 {% endhighlight %}
 
-To build a single-jar ELKI package, you also need to install Python (2.6+ or 3.x should be fine), then run
+To build a single-jar ELKI package, run
 
 {% highlight shell %}
 # Build a package. Same as sh util/compile.sh
-mvn -P svg,svm,uncertain,tutorial,bundle package
+./gradlew shadowJar
 # Launch single-jar:
 java -jar elki-bundle-*-SNAPSHOT.jar
 {% endhighlight %}
 
 The resulting standalone package is output to the main folder.
-Alternatively, the folder `addons/bundle/target/dependency/` will contain all individual `.jar` files required for ELKI.
+Alternatively, the folder `addons/bundle/build/libs/lib` will contain all individual `.jar` files required for ELKI.
 
 Classpath
 ---------
@@ -46,9 +46,9 @@ The following wrapper for Linux (included as `util/launch-packaged.sh`) works we
 #!/bin/sh
 bd=$( dirname $( dirname $0 ) )
 java=$( test -z "$JAVA" && echo java || echo $JAVA  )
-core=$( ls $bd/elki/target/*.jar $bd/elki-core*/target/*.jar | egrep -v "javadoc.jar|sources.jar" )
-mods=$( ls $bd/elki*/target/*.jar | egrep -v "javadoc.jar|sources.jar|/elki-core|/elki/|/elki-docutil" )
-addons=$( ls $bd/addons/*/target/*.jar | egrep -v "javadoc.jar|sources.jar|elki-bundle" )
+core=$( ls $bd/elki/build/libs/*.jar $bd/elki-core*/build/libs/*.jar | egrep -v "javadoc.jar|sources.jar" )
+mods=$( ls $bd/elki*/build/libs/*.jar | egrep -v "javadoc.jar|sources.jar|/elki-core|/elki/|/elki-docutil" )
+addons=$( ls $bd/addons/*/build/libs/*.jar | egrep -v "javadoc.jar|sources.jar|elki-bundle" )
 if [ -z "$core" ]; then
   echo "ELKI does not appear to be compiled yet. Call 'mvn package' first."  >&2
   exit 1
@@ -64,36 +64,8 @@ JAVA=/usr/bin/java JVM_OPTS="-ea -Xmx30G" sh elki.sh
 
 The wrapper `util/launch-compiled.sh` will build a complex classpath that includes the compiled, but not yet packaged code. This may be useful to launch the development version.
 
-Maven Problem MDEP-187
-----------------------
 
-Unfortunately, there is a long-standing design problem ([MDEP-187](https://issues.apache.org/jira/browse/MDEP-187)) in Maven that makes compilation fail often with the error message.
+Disabling Modules
+-----------------
 
-> [ERROR] Failed to execute goal org.apache.maven.plugins:maven-dependency-plugin:2.8:copy-dependencies (copy-dependencies) on project elki-core-util: Artifact has not been packaged yet. When used on reactor artifact, copy should be executed after packaging: see MDEP-187. -> [Help 1]
-
-Because of this other Maven goals such as `mvn compile` tend to *not* work, unfortunately.
-
-We have not yet found an easy workaround for this problem, as we need to have the dependencies copied prior to building the bundle documentation, otherwise there would not be a complete JavaDoc. We are thus considering a move to either Gradle, or back to Apache Ant.
-
-The following command should correctly compile ELKI: 
-
-{% highlight shell %}
-mvn -P svg,svm,uncertain,tutorial,bundle package
-{% endhighlight %}
-
-After successful compilation, you will find a standalone "fat" jar in `addons/bundle/target/elki-bundle-*.jar`.
-
-Under the hood
---------------
-
-Compilation is tricky because of dependencies. Maven does much of the work in compiling the individual modules.
-
-The really messy part is now getting all the modules into a single big jar.
-
-- Jars need to be collected, extracted, and combined into one.
-- License documentation needs to be cleaned up.
-- Service files (files listing the available implementations of an interface for the GUI) need to be merged.
-- A single "manifest" needs to be generated to make it executable.
-- A complete documentation needs to be built.
-
-Much of this is moved into the `addons/bundle/pom.xml` so it does not need to be run every time, but only when it is desired to have a single "fat" jar build.
+You can disable addon modules that you do not need by commenting them in `settings.gradle`
