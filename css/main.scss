@@ -91,14 +91,23 @@ $sidebar-sep-color: mix(lighten($brand-color, 25%), $background-color, 25%);
 }
 @media (min-width: 48em) {
   .sidebar {
-    position: fixed;
+    //position: fixed; bottom: 0;
+    position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     width: 14rem;
     text-align: left;
+    // box-shadow: inset -2.5ex -1ex 1ex -2ex rgba(0,0,0,.4);
+    background-color: transparent;
+    padding-right: 1ex;
+  }
+  .sidebar::after { content: " "; display: block;
+    z-index: -100;
+    position: fixed; top: 0; left: 0; bottom: 0; width: 14rem;
     box-shadow: inset -2.5ex -1ex 1ex -2ex rgba(0,0,0,.4);
     padding-right: 1ex;
+    background-color: $sidebar-background-color;
   }
 }
 .sidebar .elk {
@@ -142,7 +151,7 @@ $sidebar-sep-color: mix(lighten($brand-color, 25%), $background-color, 25%);
     a.active {
       font-weight: bold;
       background: $background-color;
-      margin-right: 0px;
+      margin-right: -1ex;
       border-bottom: 1px solid #ccc;
       border-top: 1px solid #ccc;
     }
