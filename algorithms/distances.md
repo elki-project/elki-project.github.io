@@ -34,14 +34,14 @@ ELKI release 0.6.0~20141030 includes the following distance functions
   - [SharedNearestNeighborJaccardDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/SharedNearestNeighborJaccardDistanceFunction.html)
   - [LocallyWeightedDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/LocallyWeightedDistanceFunction.html)
 - Optimized implementations for sparse vectors:
-  - [SparseEuclideanDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/SparseEuclideanDistanceFunction.html)
-  - [SparseManhattanDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/SparseManhattanDistanceFunction.html)
-  - [SparseLPNormDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/SparseLPNormDistanceFunction.html)
-  - [SparseMaximumDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/SparseMaximumDistanceFunction.html)
+  - [SparseEuclideanDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/SparseEuclideanDistanceFunction.html)
+  - [SparseManhattanDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/SparseManhattanDistanceFunction.html)
+  - [SparseLPNormDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/SparseLPNormDistanceFunction.html)
+  - [SparseMaximumDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/SparseMaximumDistanceFunction.html)
 - Adapters for similarity functions:
-  - [SimilarityAdapterArccos](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/adapter/SimilarityAdapterArccos.html)
-  - [SimilarityAdapterLn](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/adapter/SimilarityAdapterLn.html)
-  - [SimilarityAdapterLinear](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/adapter/SimilarityAdapterLinear.html)
+  - [ArccosSimilarityAdapter](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/adapter/ArccosSimilarityAdapter.html)
+  - [LnSimilarityAdapter](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/adapter/LnSimilarityAdapter.html)
+  - [LinearSimilarityAdapter](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/adapter/LinearSimilarityAdapter.html)
 - Distances for probability distributions:
   - [JeffreyDivergenceDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/probabilistic/JeffreyDivergenceDistanceFunction.html)
   - [ChiSquaredDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/probabilistic/ChiSquaredDistanceFunction.html)
@@ -115,6 +115,6 @@ When implementing custom distance functions, ask yourself the following question
 - What requirements does it have on the input data?
 - What is the output data type?
 
-Most likely, you will be implementing a [PrimitiveDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/PrimitiveDistanceFunction.html) and can save yourself some work by deriving from [AbstractVectorDoublePrimitiveDistanceFunction](./releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/AbstractVectorDoublePrimitiveDistanceFunction.html), for example (= input are arbitrary number vectors of equal dimensionality, the distance is defined on the data itself, and the output type are double values).
+Most likely, you will be implementing a [PrimitiveDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/PrimitiveDistanceFunction.html) and can save yourself some work by deriving from [AbstractPrimitiveDistanceFunction](./releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/AbstractPrimitiveDistanceFunction.html), for example for distances defined in coordinate vectors.
 
-Tutorial/DistanceFunctions takes you through all the steps needed for implementing a custom distance function.
+The [Tutorial on writing a custom distance function](/tutorial/distance_functions) takes you through all the steps needed for implementing a custom distance function.

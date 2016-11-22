@@ -46,7 +46,7 @@ Room for improvement: better logic for finding optimal transfers, e.g. by solvin
 Auto-generated code
 -------------------
 
-Since this is a K-means variant, we can use the base class [AbstractKMeans](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans.html). Generating the standard methods, adding a logger and choosing the generics yields the following code blueprint.
+Since this is a K-means variant, we can use the base class [AbstractKMeans](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/AbstractKMeans.html). Generating the standard methods, adding a logger and choosing the generics yields the following code blueprint.
 
 For the generics, we want to allow arbitrary vector types: `V extends NumberVector`.The cluster model will be a simple `MeanModel` (using a `KMeansModel` instead would trigger Voronoi cell visualization, which is no longer appropriate). The reason why we have to choose these generics is that the abstract class `AbstractKMeans` is also used e.g. for KMedians and similar algorithms with looser constraints than KMeans or our new variation.
 

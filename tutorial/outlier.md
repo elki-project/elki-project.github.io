@@ -15,12 +15,12 @@ Version information: Updated for ELKI 0.6.5~20141030
 
 In this tutorial, we want to implement a new outlier detection method. The outlier definition used in this example is to use the standard deviation of the distances to the k nearest neighbors. Inliers are expected to have a low standard deviation, outliers to have a higher standard deviation (note: in reality, it probably is not that easy, but this is good enough for this tutorial).
 
-The two key APIs in ELKI are the [Algorithm](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/Algorithm.html) interface (and the associated abstract classes and specializations) and the [OutlierResult](/releases/current/doc/de/lmu/ifi/dbs/elki/result/OutlierResult.html) classes for output.
+The two key APIs in ELKI are the [Algorithm](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/Algorithm.html) interface (and the associated abstract classes and specializations) and the [OutlierResult](/releases/current/doc/de/lmu/ifi/dbs/elki/result/outlier/OutlierResult.html) classes for output.
 
 The auto-generated code
 -----------------------
 
-Again we start with a stub class. As base class we chose [AbstractDistanceBasedAlgorithm](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/AbstractDistanceBasedAlgorithm.html), and implementing the [OutlierAlgorithm](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/OutlierAlgorithm.html) interface forces us to use the result type [OutlierResult](/releases/current/doc/de/lmu/ifi/dbs/elki/result/OutlierResult.html). The full stub looks like this:
+Again we start with a stub class. As base class we chose [AbstractDistanceBasedAlgorithm](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/AbstractDistanceBasedAlgorithm.html), and implementing the [OutlierAlgorithm](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/OutlierAlgorithm.html) interface forces us to use the result type [OutlierResult](/releases/current/doc/de/lmu/ifi/dbs/elki/result/outlier/OutlierResult.html). The full stub looks like this:
 
 {% highlight java %}
 package tutorial.outlier;

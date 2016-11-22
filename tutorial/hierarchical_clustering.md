@@ -16,7 +16,7 @@ Version information: Updated for ELKI 0.6.0
 This example needs to be updated, because non-numerical distances have been removed!
 {: class="box-warn" }
 
-In this tutorial, we will implement the *naive approach* to hierarchical clustering. It is naive in the sense that it is a fairly general procedure, which unfortunately operates in O(n<sup>3</sup>) runtime and O(n<sup>2</sup>) memory, so it does not scale very well. For some linkage criteria, there exist optimized algorithms such as [SLINK](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/clustering/SLINK.html), which computes single-link clustering in low O(n<sup>2</sup>) runtime and O(n) memory.
+In this tutorial, we will implement the *naive approach* to hierarchical clustering. It is naive in the sense that it is a fairly general procedure, which unfortunately operates in O(n<sup>3</sup>) runtime and O(n<sup>2</sup>) memory, so it does not scale very well. For some linkage criteria, there exist optimized algorithms such as [SLINK](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/SLINK.html), which computes single-link clustering in low O(n<sup>2</sup>) runtime and O(n) memory.
 
 We will initially construct a very simple algorithm, then improve on it in multiple steps. This material was prepared for the tutorials to the KDD lecture at LMU.
 
@@ -722,7 +722,7 @@ The code for finding the minimum distance now becomes this:
       }
 {% endhighlight %}
 
-Note that the loops now are using the ELKI/Trove/C++ style iterators (see [Iter](/releases/current/doc/de/lmu/ifi/dbs/elki/utilities/iterator/Iter.html)). Since these iterators are [ArrayIter](/releases/current/doc/de/lmu/ifi/dbs/elki/utilities/iterator/ArrayIter.html)s, we can access their offset using `getOffset()`. For consistency with SLINK, we will find the *last* minimum instead of the first minimum now.
+Note that the loops now are using the ELKI/Trove/C++ style iterators (see [Iter](/releases/current/doc/de/lmu/ifi/dbs/elki/utilities/datastructures/iterator/Iter.html)). Since these iterators are [ArrayIter](/releases/current/doc/de/lmu/ifi/dbs/elki/utilities/datastructures/iterator/ArrayIter.html)s, we can access their offset using `getOffset()`. For consistency with SLINK, we will find the *last* minimum instead of the first minimum now.
 
 Merging the clusters becomes simpler, as we stopped tracking the exact members, but only the cluster sizes:
 
@@ -799,7 +799,7 @@ public class NaiveAgglomerativeHierarchicalClustering<O, D extends NumberDistanc
 
 We can now also drop the `numclusters` parameter, as we want to use the existing ELKI classes for extracting flat clusterings out of our hierarchy.
 
-We can now use this implementation in combination with [ExtractFlatClusteringFromHierarchy](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/ExtractFlatClusteringFromHierarchy.html):
+We can now use this implementation in combination with [ExtractFlatClusteringFromHierarchy](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/extraction/ExtractFlatClusteringFromHierarchy.html):
 
 {% highlight shell %}
 elki -dbc.in mickey-mouse.csv \

@@ -17,7 +17,7 @@ Default Input Format
 
 The input format depends on the parser you use.
 
-The default parser is [DoubleVectorLabelParser](/releases/current/doc/de/lmu/ifi/dbs/elki/datasource/parser/DoubleVectorLabelParser.html), which essentially expects the format
+The default parser is [NumberVectorLabelParser](/releases/current/doc/de/lmu/ifi/dbs/elki/datasource/parser/NumberVectorLabelParser.html), which essentially expects the format
 
     # comment
     1.23 4.56 7.89 label1 label2
@@ -30,7 +30,7 @@ All records should have the same number of numerical columns! Otherwise, the res
 
 The separator character(s) can be set e.g. using `-parser.colsep ","` with the default being whitespace, comma or semicolon.
 
-A more detailed description and *an example file* can be found in the package documentation of [de.lmu.ifi.dbs.elki.datasource.parser](/releases/current/doc/de/lmu/ifi/dbs/elki/datasource/parser.html)
+A more detailed description and *an example file* can be found in the package documentation of [de.lmu.ifi.dbs.elki.datasource.parser](/releases/current/doc/de/lmu/ifi/dbs/elki/datasource/parser/package-summary.html)
 
 ARFF files
 ----------

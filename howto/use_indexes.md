@@ -26,7 +26,7 @@ R-Trees
 
 The R-tree family is a very well established index structure. With algorithms such as Sort-Tile-Recursive the tree can very efficiently bulk-loaded, while the R\*-tree tries to keep the tree efficient while performing modifications to it.
 
-R-trees are very flexible, and can accelerate any distance function for wich a reasonable *point to rectangle minimum distance* can be defined. In ELKI, any class implementing the [SpatialPrimitiveDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/SpatialPrimitiveDistanceFunction.html) (see also [SpatialPrimitiveDoubleDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/SpatialPrimitiveDoubleDistanceFunction.html) for double valued distances) can be used. This includes in particular Euclidean and other Minkowski norms, but to some extend also cosine distance can be accelerated. In contrast to M-trees below, the index supports *all of these distances at the same time*.
+R-trees are very flexible, and can accelerate any distance function for wich a reasonable *point to rectangle minimum distance* can be defined. In ELKI, any class implementing the [SpatialPrimitiveDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/SpatialPrimitiveDistanceFunction.html) can be used. This includes in particular Euclidean and other Minkowski norms, but to some extend also cosine distance can be accelerated. In contrast to M-trees below, the index supports *all of these distances at the same time*.
 
 Using R-trees in ELKI is simple, you just need to enable the [RStarTreeFactory](/releases/current/doc/de/lmu/ifi/dbs/elki/index/tree/spatial/rstarvariants/rstar/RStarTreeFactory.html) via the parameters:
 
@@ -70,12 +70,12 @@ See [DistanceFunctions](/algorithms/distances) for the full list of available di
 
 | Distance Function                                                                                                                                                           | R-Tree | M-Tree | VA-File | k-d-tree | LSH |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|-----------|--|--|--|
-|[EuclideanDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/EuclideanDistanceFunction.html) | Y | Y | Y | Y | Y |
-|[ManhattanDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/ManhattanDistanceFunction.html)| Y | Y | Y | Y | Y |
-|[LPNormDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/LPNormDistanceFunction.html)| Y | \* | Y | Y | \* |
-|[MaximumDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/MaximumDistanceFunction.html)| Y | Y | ? | Y | ? |
-|[MinimumDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/MinimumDistanceFunction.html)| Y | N | ? | ? | ? |
-|[SquaredEuclideanDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/SquaredEuclideanDistanceFunction.html)| Y | N | ? | Y | ? |
+|[EuclideanDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/EuclideanDistanceFunction.html) | Y | Y | Y | Y | Y |
+|[ManhattanDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/ManhattanDistanceFunction.html)| Y | Y | Y | Y | Y |
+|[LPNormDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/LPNormDistanceFunction.html)| Y | \* | Y | Y | \* |
+|[MaximumDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/MaximumDistanceFunction.html)| Y | Y | ? | Y | ? |
+|[MinimumDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/MinimumDistanceFunction.html)| Y | N | ? | ? | ? |
+|[SquaredEuclideanDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/SquaredEuclideanDistanceFunction.html)| Y | N | ? | Y | ? |
 |[ArcCosineDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/ArcCosineDistanceFunction.html)| Y | \* | ? | ? | ? |
 |[CosineDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/CosineDistanceFunction.html)| Y | \* | ? | ? | ? |
 |[CanberraDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/CanberraDistanceFunction.html)| Y | Y | ? | ? | ? |

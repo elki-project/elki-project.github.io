@@ -9,7 +9,7 @@ navigation: 15
 Data Types Supported by ELKI
 ============================
 
-See package [de.lmu.ifi.dbs.elki.data](/releases/current/doc/de/lmu/ifi/dbs/elki/data.html) for a class hierarchy diagram.
+See package [de.lmu.ifi.dbs.elki.data](/releases/current/doc/de/lmu/ifi/dbs/elki/data/package-summary.html) for a class hierarchy diagram.
 
 Included in ELKI 0.4 are implementations for the following "raw" data types:
 

@@ -21,7 +21,7 @@ This tutorial was developed for the KDD I class summer term 2013 and the ELKI 0.
 Algorithm stub
 --------------
 
-We create a new class named ODIN. As base class we chose [AbstractDistanceBasedAlgorithm](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/AbstractDistanceBasedAlgorithm.html), and implementing the [OutlierAlgorithm](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/OutlierAlgorithm.html) interface forces us to use the result type [OutlierResult](/releases/current/doc/de/lmu/ifi/dbs/elki/result/OutlierResult.html). The full stub looks like this:
+We create a new class named ODIN. As base class we chose [AbstractDistanceBasedAlgorithm](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/AbstractDistanceBasedAlgorithm.html), and implementing the [OutlierAlgorithm](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/OutlierAlgorithm.html) interface forces us to use the result type [OutlierResult](/releases/current/doc/de/lmu/ifi/dbs/elki/result/outlier/OutlierResult.html). The full stub looks like this:
 
 {% highlight java %}
 package tutorial.outlier;

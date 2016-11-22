@@ -40,14 +40,14 @@ ELKI 0.5.0 includes two types of true sparse vectors, [SparseFloatVector](/relea
 Data filtering
 --------------
 
-ELKI parsers try to operate streaming. As such, sparse vectors will vary in dimensionality, and not form a vector *field*. Some algorithms and distance functions expect all vectors to have the same dimensionality. The filter [SparseVectorFieldFilter](/releases/current/doc/de/lmu/ifi/dbs/elki/datasource/filter/SparseVectorFieldFilter.html) will trivially set the maximum dimensionality by re-scanning the data set in memory.
+ELKI parsers try to operate streaming. As such, sparse vectors will vary in dimensionality, and not form a vector *field*. Some algorithms and distance functions expect all vectors to have the same dimensionality. The filter [SparseVectorFieldFilter](/releases/current/doc/de/lmu/ifi/dbs/elki/datasource/filter/typeconversions/SparseVectorFieldFilter.html) will trivially set the maximum dimensionality by re-scanning the data set in memory.
 
-For text data, a common normalization of data is TF-IDF. The filter [TFIDFNormalization](/releases/current/doc/de/lmu/ifi/dbs/elki/datasource/filter/normalization/TFIDFNormalization.html) will normalize TF vectors accordingly.
+For text data, a common normalization of data is TF-IDF. The filter [InverseDocumentFrequencyNormalization](/releases/current/doc/de/lmu/ifi/dbs/elki/datasource/filter/normalization/columnwise/InverseDocumentFrequencyNormalization.html) will normalize vectors by their IDF accordingly.
 
 Distance functions
 ------------------
 
-While most distance functions will accept any number vector *field*, there are a number of distance functions implemented that are optimized for sparse vectors and allow the dimensionality of the two vectors to vary. [SparseEuclideanDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/SparseEuclideanDistanceFunction.html) for example is faster for sparse vectors and does not have this restriction. We appreciate contributions of additional optimized implementations to ELKI!
+While most distance functions will accept any number vector *field*, there are a number of distance functions implemented that are optimized for sparse vectors and allow the dimensionality of the two vectors to vary. [SparseEuclideanDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/SparseEuclideanDistanceFunction.html) for example is faster for sparse vectors and does not have this restriction. We appreciate contributions of additional optimized implementations to ELKI!
 
 Two views of sparse data
 ------------------------

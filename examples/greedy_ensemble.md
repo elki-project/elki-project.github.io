@@ -14,7 +14,7 @@ Erich Schubert, Remigius Wojdanowski, Arthur Zimek, Hans-Peter Kriegel\\
 **On Evaluation of Outlier Rankings and Outlier Scores**\\
 In Proceedings of the 12th SIAM International Conference on Data Mining (SDM), Anaheim, CA, 2012
 
-The code for this experiment will be released with Version 0.5 of ELKI, in the package [de.lmu.ifi.dbs.elki.application.greedyensemble](/releases/current/doc/de/lmu/ifi/dbs/elki/application/greedyensemble.html).
+The code for this experiment will be released with Version 0.5 of ELKI, in the package [de.lmu.ifi.dbs.elki.application.greedyensemble](/releases/current/doc/de/lmu/ifi/dbs/elki/application/greedyensemble/package-summary.html).
 
 This experiment is split into two parts: computing the ensemble members, and then combining their results into one.
 

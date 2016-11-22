@@ -45,7 +45,7 @@ Benefits of the specialized DBIDs interfaces:
 * Optimized storage (often ~75% less memory)
 * Optimized operations
 * Clearer cut interfaces (modifiable, data organization)
-* Less error prone by better compile time type checking (cf. [Collection\#remove(Object)](/releases/current/doc/java/util/Collection.html) which allows you to remove objects of arbitrary type)
+* Less error prone by better compile time type checking (cf. [Collection\#remove(Object)](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html#remove-java.lang.Object-) which allows you to remove objects of arbitrary type)
 
 **Always** prefer a DBIDs object over a traditional Java collection!
 {: class="box-recommend" }

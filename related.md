@@ -505,7 +505,7 @@ Online: <http://dx.doi.org/10.1109/ICDM.2006.17>
 [de.lmu.ifi.dbs.elki.algorithm.outlier.distance.parallel.ParallelKNNOutlier](./releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/distance/parallel/ParallelKNNOutlier.html),\\
 [de.lmu.ifi.dbs.elki.algorithm.outlier.distance.parallel.ParallelKNNWeightOutlier](./releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/distance/parallel/ParallelKNNWeightOutlier.html),\\
 [de.lmu.ifi.dbs.elki.algorithm.outlier.lof.SimplifiedLOF](./releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/lof/SimplifiedLOF.html),\\
-[de.lmu.ifi.dbs.elki.algorithm.outlier.lof.parallel](./releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/lof/parallel.html),\\
+[de.lmu.ifi.dbs.elki.algorithm.outlier.lof.parallel](./releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/lof/parallel/package-summary.html),\\
 [de.lmu.ifi.dbs.elki.algorithm.outlier.lof.parallel.ParallelLOF](./releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/lof/parallel/ParallelLOF.html),\\
 [de.lmu.ifi.dbs.elki.algorithm.outlier.lof.parallel.ParallelSimplifiedLOF](./releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/lof/parallel/ParallelSimplifiedLOF.html)\\
 By: E. Schubert, A. Zimek, H.-P. Kriegel\\
@@ -1500,7 +1500,7 @@ By: J. Gao, P.-N. Tan\\
 In: Proc. Sixth International Conference on Data Mining, 2006. ICDM'06.\\
 Online: <http://dx.doi.org/10.1109/ICDM.2006.43>
 
-[de.lmu.ifi.dbs.elki.visualization.visualizers.scatterplot.density.DensityEstimationOverlayInstance](./releases/current/doc/de/lmu/ifi/dbs/elki/visualization/visualizers/scatterplot/density/DensityEstimationOverlayInstance.html)\\
+[de.lmu.ifi.dbs.elki.visualization.visualizers.scatterplot.density.DensityEstimationOverlay](./releases/current/doc/de/lmu/ifi/dbs/elki/visualization/visualizers/scatterplot/density/DensityEstimationOverlay.html)\\
 By: D. W. Scott\\
 **Multivariate density estimation: Theory, Practice, and Visualization**\\
 In: Multivariate Density Estimation: Theory, Practice, and Visualization\\

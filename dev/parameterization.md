@@ -60,7 +60,7 @@ Classes are now encouraged to offer a **classic java constructor**. Parameteriza
 
 ### Example
 
-A benefit is that classes can now also return a subclass (this was already possible with static methods in 3.5 generation), as can be seen in this example from [LPNormDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/LPNormDistanceFunction.html)
+A benefit is that classes can now also return a subclass (this was already possible with static methods in 3.5 generation), as can be seen in this example from [LPNormDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/LPNormDistanceFunction.html)
 
 {% highlight java %}
 // NOTE: this is a STATIC INNER class of LPNormDistanceFunction!
