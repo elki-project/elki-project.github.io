@@ -1,0 +1,49 @@
+---
+layout: null
+permalink: robots.txt
+badagents:
+ - "Sogou web spider"
+ - "Sogou inst spider"
+ - "Sogou spider2"
+ - "Sogou blog"
+ - "Sogou News Spider"
+ - "Sogou Orion spider"
+ - "Sosospider"
+---
+{% for agent in page.badagents %}User-agent: {{ agent }}
+Disallow: /
+
+{% endfor %}
+# These URIs will cause unneccessary traffic with ANY bot.
+User-agent: *
+User-agent: archive.org_bot
+User-agent: ia_archiver
+Disallow: /releases/release0.1/doc
+Disallow: /releases/release0.5.0~beta1/doc
+Disallow: /releases/release0.5.0~beta2/doc
+Disallow: /releases/release0.6.0~beta1/doc
+Disallow: /releases/release0.6.0~beta2/doc
+Disallow: /releases/release0.6.5~20140718/doc
+Disallow: /releases/release0.6.5~20140721/doc
+Disallow: /releases/release0.6.5~20141030/doc
+Disallow: /releases/*/doc/index.html?de/lmu/
+
+# The following spiders were found to misbehave and are no longer welcome:
+User-agent: YoudaoBot
+User-agent: HaoSouSpider
+User-agent: 360Spider
+User-agent: MegaIndex
+Disallow: /
+Crawl-Delay: 360000
+
+# The following spiders are just unnecessary traffic
+User-agent: BLEXBot
+User-agent: dotbot
+User-agent: AhrefsBot
+User-agent: SMTBot
+User-agent: SemrushBot
+User-agent: SemrushBot-SA
+User-agent: WeSEE_Bot
+User-agent: ltx71
+Disallow: /
+
