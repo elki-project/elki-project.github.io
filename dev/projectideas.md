@@ -163,13 +163,15 @@ The following list are project ideas for *students that want to get started* wit
 
 ### Association rule mining
 
-- Association rule extraction from frequent item sets (different measures of interestingness, such as Lift)
+- Additional measures of interestingness for association rule extraction
 
 - CHARM:
 
   M. J. Zaki. "Generating non-redundant association rules". In: Proceedings of the 6th ACM International Conference on Knowledge Discovery and Data Mining (SIGKDD), 2000, pp. 34-43.
 
 - Visualization of FPgrowth FP-Trees
+
+- FPgrowth variations, such as FP-bonsai
 
 ### Visualization
 
@@ -182,8 +184,6 @@ The following list are project ideas for *students that want to get started* wit
 - Andrew's curves (as a variant for parallel coordinates)
 
 ### Infrastructure
-
-- Port build system to Gradle
 
 - Additional interactions with visualization
 
