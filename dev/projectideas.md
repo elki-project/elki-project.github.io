@@ -63,10 +63,6 @@ The following list are project ideas for *students that want to get started* wit
 
 ### Hierarchical clustering variations
 
-- NN-Chain: (*in progress*)
-
-  F. Murtagh. “A survey of recent advances in hierarchical clustering algorithms”. In: The Computer Journal 26.4 (1983), pp. 354–359
-
 - Generic linkage clustering nach Müllner:
 
   D. Müllner. “Modern hierarchical, agglomerative clustering algorithms.” arXiv preprint arXiv:1109.2378.
