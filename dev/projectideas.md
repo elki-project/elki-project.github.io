@@ -61,6 +61,15 @@ The following list are project ideas for *students that want to get started* wit
 
   M. Van der Laan, and K. Pollard, and J. Bryan. "A new partitioning around medoids algorithm." Journal of Statistical Computation and Simulation, 73(8) (2003): 575-584.
 
+- "Spherical k-means":
+
+  I. S. Dhillon, and D. S. Modha. Concept Decompositions for Large Sparse Text Data Using Clustering." Machine Learning 42(1) (2001): 143-175.
+
+- "Trimmed k-means":
+
+  J. A. Cuesta-Albertos, A. Gordaliza, and C. Matrán. "Trimmed k-means: an attempt to robustify quantizers." The Annals of Statistics, 25(2) (1997): 553-576.
+
+
 ### Hierarchical clustering variations
 
 - Generic linkage clustering nach Müllner:
