@@ -19,7 +19,7 @@ Artificial data sets
 | **Data set name** | **Size** | **Dim.** | **Properties** | **Parameters** | **Files** |
 |-------------------|----------|----------|----------------|----------------|-----------|
 | Vary Density      | 150      | 2        |3 Gaussian clusters with variable density<br>Easy for EM, hard for density clustering|em.k=3|[CSV](https://github.com/elki-project/elki/blob/master/data/synthetic/ABC-publication/pov.csv), [XML](https://github.com/elki-project/elki/blob/master/data/synthetic/ABC-publication/pov.xml)|
-|Mouse|500|2|3 Gaussian clusters and noise<br>For comparing EM and kMeans|em.k=3<br>kmeans.k=3|[CSV](https://github.com/elki-project/elki/blob/master/data/synthetic/Vorlesung/mickey-mouse.csv), [XML](https://github.com/elki-project/elki/blob/master/data/synthetic/Vorlesung/mickey-mouse.xml)|
+|Mouse|500|2|3 Gaussian clusters and noise<br>For comparing EM and kMeans|em.k=3<br>kmeans.k=3|[CSV](https://github.com/elki-project/elki/blob/master/data/synthetic/Vorlesung/mouse.csv), [XML](https://github.com/elki-project/elki/blob/master/data/synthetic/Vorlesung/mouse.xml)|
 
 [Toy data sets used in LoOP publication](https://github.com/elki-project/elki/blob/master/data/synthetic/LoOP-publication)
 
