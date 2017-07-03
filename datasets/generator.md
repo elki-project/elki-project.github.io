@@ -93,6 +93,6 @@ Version 0.5 (unreleased) also contains a [GeneratorXMLDatabaseConnection](/relea
 Examples
 --------
 
-A simple example can be found in [mouse.xml](https://github.com/elki-project/elki/blob/master/data/synthetic/Vorlesung/mickey-mouse.xml). This 2 dimensional data set includes three gaussian clusters and background noise. Due to the `test-model="1"` statement, the clusters will not overlap, and the outliers will be outside of the clusters.
+A simple example can be found in [mouse.xml](https://github.com/elki-project/elki/blob/master/data/synthetic/Vorlesung/mouse.xml). This 2 dimensional data set includes three gaussian clusters and background noise. Due to the `test-model="1"` statement, the clusters will not overlap, and the outliers will be outside of the clusters.
 
 Additional examples can be found in [DataSets](/datasets)
