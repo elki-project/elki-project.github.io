@@ -13,7 +13,11 @@ Invoking ELKI from Java
 Preface
 -------
 
-While you can embed ELKI into your application, we currently do not (yet) recommend to do so. Instead, we recommend using the MiniGUI or the command line interface to run your experiments, even when writing custom extensions in Java. If you want a custom output format, this is best done e.g. as a custom [ResultHandler](/releases/current/doc/de/lmu/ifi/dbs/elki/result/ResultHandler.html) or just by using the [ResultWriter](/releases/current/doc/de/lmu/ifi/dbs/elki/result/ResultWriter.html) and parsing the resulting files afterwards. But if your are brave, and you agree with [AGPL-3 license](/license), then you can of course use the [Pure Java API](#PureJavaAPI).
+You can easily use ELKI from Java - it has a [standard Java API](#PureJavaAPI). You will need to first load your data into a database (think of "data frames" in many other tools), then you can add an index to the data, and run an algorithm on this database. But note that some classes have ''many'' parameters, and since Java does not have default values and parameter constraints, using the ELKI-specific APIs does provide several advantages.
+
+You can even embed ELKI into your application (if you accept the [AGPL-3 license](/license)), but we currently do not (yet) recommend to do so, because the API is still changing substantially.
+
+But in many cases, using the MiniGUI or the command line interface to run your experiments will be better, even when writing custom extensions in Java. If you want a custom output format, this is best done e.g. as a custom [ResultHandler](/releases/current/doc/de/lmu/ifi/dbs/elki/result/ResultHandler.html) or just by using the [ResultWriter](/releases/current/doc/de/lmu/ifi/dbs/elki/result/ResultWriter.html) and parsing the resulting files afterwards.
 
 The reasons why we recommend "loose coupling" with ELKI are:
 
@@ -21,13 +25,13 @@ The reasons why we recommend "loose coupling" with ELKI are:
 
 2.  **Memory usage:** data mining is quite memory intensive. If you use the MiniGUI or command line, you have a good *cleanup* when the task is finished. If you invoke it from Java, changes are *really high* that you keep some reference somewhere, and end up leaking *lots* of memory. So **when using the Java API, *you* need to ensure that the objects are properly cleaned up and garbage collected**!
 
-By running ELKI from the command line, you get two things for free: a. no memory leaks. When the task is finished, the process quits and frees all memory. b. no need to rerun it twice for the same data. Subsequent analysis does not need to rerun the algorithm.
+    By running ELKI from the command line, you get two things for free: a. no memory leaks. When the task is finished, the process quits and frees all memory. b. no need to rerun it twice for the same data. Subsequent analysis does not need to rerun the algorithm.
 
-1.  ELKI is **not designed as embeddable library**. It can be used, but it is not designed to be used this way. ELKI has tons of options and functionality, and this comes at a price, both in runtime (although it can easily [outperform R and Weka](/benchmarking), for example!) memory usage and in particular in code complexity.
+3.  ELKI is **not designed as embeddable library**. It can be used, but it is not designed to be used this way. ELKI has tons of options and functionality, and this comes at a price, both in runtime (although it can easily [outperform R and Weka](/benchmarking), for example!) memory usage and in particular in code complexity.
 
-ELKI was **designed for research in data mining algorithms**, not for making them easy to include in arbitrary applications. Instead, if you have a particular problem, you should use ELKI to find out *which* approach works good, then *reimplement that approach in an optimized manner for your problem* (maybe even in C++ then, to further reduce memory and runtime).
+    ELKI was **designed for research in data mining algorithms**, not for making them easy to include in arbitrary applications. Instead, if you have a particular problem, you should use ELKI to find out *which* approach works good, then *reimplement that approach in an optimized manner for your problem* (maybe even in C++ then, to further reduce memory and runtime).
 
-1.  ELKI is [AGPL licensed](/license). This is a variant of the GPL license, and requires you to license your code the same way as ELKI. If you embed ELKI into your application, and distribute this combination, then **you agree to license your code** with a compatible license (e.g. GPL, AGPL, BSD). In particular for commercial users this may not be acceptable, and if you include/use code written by others you may not be allowed to relicense their code at all. This licensing restriction should not matter much for research and academic usage. It also does not apply if ELKI is run as a separate application (e.g. via [command line scripts](#CommandLineScripting)).
+4.  ELKI is [AGPL licensed](/license). This is a variant of the GPL license, and requires you to license your code the same way as ELKI. If you embed ELKI into your application, and distribute this combination, then **you agree to license your code** with a compatible license (e.g. GPL, AGPL, BSD). In particular for commercial users this may not be acceptable, and if you include/use code written by others you may not be allowed to relicense their code at all. This licensing restriction should not matter much for research and academic usage. It also does not apply if ELKI is run as a separate application (e.g. via [command line scripts](#CommandLineScripting)).
 
 Recommended Solutions {#Recommended}
 ---------------------
