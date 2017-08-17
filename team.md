@@ -71,7 +71,7 @@ Perhaps you will be among this herd of elks soon?
 <li><img title="Johannes Niedermayer" src="img/elk200.png" alt="Team contributor: Similarity Search" width="75" /></li>
 <li><img title="Johannes Schneider" src="img/elk200.png" alt="External contributor: FastOPTICS" width="50" /></li>
 <li><img title="Klaus Arthur Schmid" src="http://www.dbs.ifi.lmu.de/w_de/images/3/3e/Schmid_KlausArthur_250.jpg" alt="Team contributor: Uncertain Data" width="75" /></li>
-<li><img title="Marie Kiermeier" src="http://www.mobile.ifi.lmu.de/wp-content/uploads/team/marie-kiermeier/Bewerbungsfoto-134x150.jpg" alt="Student contributor: Intrinsic Dimensionality" width="50" /></li>
+<li><img title="Marie Kiermeier" src="http://www.mobile.ifi.lmu.de/wp-content/uploads/team/marie-kiermeier/SF12076-2-100x150.jpg" alt="Student contributor: Intrinsic Dimensionality" width="50" /></li>
 <li><img title="Nils Doerre" src="img/elk200.png" alt="Student contributor: Spatial Indexing" width="50" /></li>
 <li><img title="Oussama Chelly" src="img/elk200.png" alt="External contributor: Intrinsic Dimensionality" width="50" /></li>
 <li><img title="Sebastian Hollizeck" src="img/elk200.png" alt="Student contributor: Protein Feature Spaces" width="50" /></li>
@@ -88,6 +88,8 @@ Perhaps you will be among this herd of elks soon?
 <li><img title="Julian Erhard" src="img/elk200.png" alt="Student contributor: Minimax Clustering" width="50" /></li>
 <li><img title="Frederic Sautter" src="img/elk200.png" alt="Student contributor: Association Rule Mining" width="50" /></li>
 <li><img title="Evelyn Kirner" src="img/elk200.png" alt="Student contributor: NN-descent" width="50" /></li>
+<li><img title="Matthew Arcifa" src="img/elk200.png" alt="Student contributor: filter unit tests" width="50" /></li>
+<li><img title="Merlin Dietrich" src="img/elk200.png" alt="Student contributor: math unit tests" width="50" /></li>
 </ul>
 <div class="caption"><div class=".caption-container"><h3>ELKI contributors</h3><p></p></div></div>
 <script src="//code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
