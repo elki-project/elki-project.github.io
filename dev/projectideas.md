@@ -147,6 +147,10 @@ The following list are project ideas for *students that want to get started* wit
 - ROSECC correlation clustering:
 
   M. S. Aziz, and C. K. Reddy. "A robust seedless algorithm for correlation clustering." Advances in Knowledge Discovery and Data Mining. Springer Berlin Heidelberg, 2010. 28-37.
+  
+- STATPC subspace clustering:
+
+  G. Moise and J. Sander. "Finding non-redundant, statistically significant regions in high dimensional data: a novel approach to projected and subspace clustering." Proceedings of the 14th ACM SIGKDD international conference on Knowledge discovery and data mining, 2008. 533-541.
 
 ### Outlier detection algorithms
 
