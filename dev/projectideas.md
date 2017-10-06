@@ -152,9 +152,13 @@ The following list are project ideas for *students that want to get started* wit
 
   G. Moise and J. Sander. "Finding non-redundant, statistically significant regions in high dimensional data: a novel approach to projected and subspace clustering." Proceedings of the 14th ACM SIGKDD international conference on Knowledge discovery and data mining, 2008. 533-541.
 
+- SSPC subspace clustering (with semi-supervision):
+
+  K. P. Yip, D. W. Cheung, and M. K. Ng "On discovery of extremely low-dimensional clusters using semi-supervised projected clustering." Proceedings of the 21st International Conference on Data Engineering (ICDE), 2005. 329-340.
+
 ### Outlier detection algorithms
 
-- ORCA fast version of KNNOuliter:
+- ORCA fast version of KNNOutlier:
 
   S. D. Bay and M. Schwabacher. “Mining distance-based outliers in near linear time with randomization and a simple pruning rule”. In: Proceedings of the 9th ACM International Conference on Knowledge Discovery and Data Mining (SIGKDD), Washington, DC. 2003, pp. 29–38
 
