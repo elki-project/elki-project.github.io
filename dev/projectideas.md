@@ -186,6 +186,20 @@ The following list are project ideas for *students that want to get started* wit
 
 - FPgrowth variations, such as FP-bonsai
 
+### Data indexing
+
+- Top-down bulk loading support for the R-tree, such as:
+
+  Lee, Taewon, and Sukho Lee. "OMT: Overlap Minimizing Top-down Bulk Loading Algorithm for R-tree." CAiSE Short Paper Proceedings. Vol. 74. 2003.
+  
+- Vantage-Point trees:
+
+  Yianilos, Peter N. "Data structures and algorithms for nearest neighbor search in general metric spaces." SODA. Vol. 93. No. 194. 1993.
+  
+  Bozkaya, Tolga, and Meral Ozsoyoglu. "Indexing large metric spaces for similarity search queries." ACM Transactions on Database Systems (TODS) 24.3 (1999): 361-404.
+  
+  Uhlmann, Jeffrey K. "Satisfying general proximity/similarity queries with metric trees." Information processing letters 40.4 (1991): 175-179.
+
 ### Visualization
 
 - Visualization of Silhouette
