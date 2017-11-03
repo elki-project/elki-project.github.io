@@ -51,6 +51,21 @@ The following list is **automatically generated** from very heterogenous sources
    **[STATS - A Point Access Method for Multidimensional Clusters](https://doi.org/10.1007/978-3-319-64468-4_27)**.
    *DEXA (1)*, 352-361, Springer, 10.1007/978-3-319-64468-4\_27,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/dexa/EvagorouH17)
+1. Jyoti Lakhani, Ajay Khuteta, Anupama Choudhary, and Dharmesh Harwani (2017).
+   **[Hierarchical Clustering-Based Algorithms and In Silico Techniques for Phylogenetic Analysis of Rhizobia](https://doi.org/10.1007/978-3-319-64982-5_10)**.
+   *Rhizobium Biology and Biotechnology*, 185-214, Springer, 10.1007/978-3-319-64982-5\_10
+1. Luisa Sanz-Martínez, Alejandra Martínez-Monés, Miguel L. Bote-Lorenzo, Juan A. Muñoz-Cristóbal, and Yannis Dimitriadis (2017).
+   **[Automatic Group Formation in a MOOC Based on Students’ Activity Criteria](https://doi.org/10.1007/978-3-319-66610-5_14)**.
+   *Lecture Notes in Computer Science*, 179-193, Springer, 10.1007/978-3-319-66610-5\_14
+1. Adnan Manzoor, Julia S. Mollee, Aart T. van Halteren, and Michel C. A. Klein (2017).
+   **[Real-Life Validation of Methods for Detecting Locations, Transition Periods and Travel Modes Using Phone-Based GPS and Activity Tracker Data](https://doi.org/10.1007/978-3-319-67074-4_46)**.
+   *Lecture Notes in Computer Science*, 473-483, Springer, 10.1007/978-3-319-67074-4\_46
+1. Evelyn Kirner, Erich Schubert, and Arthur Zimek (2017).
+   **[Good and Bad Neighborhood Approximations for Outlier Detection Ensembles](https://doi.org/10.1007/978-3-319-68474-1_12)**.
+   *Lecture Notes in Computer Science*, 173-187, Springer, 10.1007/978-3-319-68474-1\_12
+1. Erich Schubert, and Michael Gertz (2017).
+   **[Intrinsic t-Stochastic Neighbor Embedding for Visualization and Outlier Detection](https://doi.org/10.1007/978-3-319-68474-1_13)**.
+   *Lecture Notes in Computer Science*, 188-203, Springer, 10.1007/978-3-319-68474-1\_13
 1. Ankita Roy, Soumya Ray, and Radha Tamal Goswami (2017).
    **[Approaches and Challenges of Big Data Analytics—Study of a Beginner](https://doi.org/10.1007/978-981-10-2035-3_25)**.
    *Proceedings of the First International Conference on Intelligent Computing and Communication*, 237-245, Springer, 10.1007/978-981-10-2035-3\_25
@@ -84,6 +99,9 @@ The following list is **automatically generated** from very heterogenous sources
 1. Michalis Korakakis, Evaggelos Spyrou, Phivos Mylonas, and Stavros J. Perantonis (2017).
    **[Exploiting social media information toward a context-aware recommendation system](https://doi.org/10.1007/s13278-017-0459-9)**.
    *Social Network Analysis and Mining* 7(1), Springer, 10.1007/s13278-017-0459-9
+1. Julien F. Marquant, Ralph Evins, L. Andrew Bollinger, and Jan Carmeliet (2017).
+   **[A holarchic approach for multi-scale distributed energy system optimisation](https://doi.org/10.1016/j.apenergy.2017.09.057)**.
+   *Applied Energy*, Elsevier BV, 10.1016/j.apenergy.2017.09.057
 1. Emre Güngör, and Ahmet Özmen (2017).
    **[Distance and density based clustering algorithm using Gaussian kernel](https://doi.org/10.1016/j.eswa.2016.10.022)**.
    *Expert Syst. Appl.* 69, 10-20, 10.1016/j.eswa.2016.10.022,
@@ -135,9 +153,6 @@ The following list is **automatically generated** from very heterogenous sources
 1. Wesin Alves, Daniel Martins, Ubiratan Bezerra, and Aldebaro Klautau (2017).
    **[A Hybrid Approach for Big Data Outlier Detection from Electric Power SCADA System](https://doi.org/10.1109/TLA.2017.7827888)**.
    *IEEE Latin America Transactions* 15(1), 57-64, IEEE, 10.1109/TLA.2017.7827888
-1. David Ciechanowicz, Dominik Pelzer, Benedikt Bartenschlager, and Alois Knoll (2017).
-   **[A Modular Power System Planning and Power Flow Simulation Framework for Generating and Evaluating Power Network Models](https://doi.org/10.1109/TPWRS.2016.2602479)**.
-   *IEEE Transactions on Power Systems* 32(3), 2214-2224, IEEE, 10.1109/TPWRS.2016.2602479
 1. Soongeol Kwon, Lewis Ntaimo, and Natarajan Gautam (2017).
    **[Optimal Day-Ahead Power Procurement With Renewable Energy and Demand Response](https://doi.org/10.1109/TPWRS.2016.2643624)**.
    *IEEE Transactions on Power Systems* 32(5), 3924-3933, IEEE, 10.1109/TPWRS.2016.2643624
