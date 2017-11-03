@@ -23,15 +23,15 @@ The following list is **automatically generated** from very heterogenous sources
 1. Adam Byron (2017).
    **[Clustering and Network Analysis of Reverse Phase Protein Array Data](https://doi.org/10.1007/978-1-4939-6990-6_12)**.
    *Molecular Profiling*, 171-191, Springer, 10.1007/978-1-4939-6990-6\_12
-1. Arno G. Stefani, Achim Sandmann, Andreas Burkovski, Johannes B. Huber, Heinrich Sticht, and Christophe Jardin (2017).
-   **[Application of Methods from Information Theory in Protein-Interaction Analysis](https://doi.org/10.1007/978-3-319-54729-9_13)**.
-   *Information- and Communication Theory in Molecular Biology*, 293-313, Springer, 10.1007/978-3-319-54729-9\_13
 1. Charu C. Aggarwal (2017).
    **[Applications of Outlier Analysis](https://doi.org/10.1007/978-3-319-47578-3_13)**.
    *Outlier Analysis*, 399-422, Springer, 10.1007/978-3-319-47578-3\_13
 1. Charu C. Aggarwal (2017).
    **[High-Dimensional Outlier Detection: The Subspace Method](https://doi.org/10.1007/978-3-319-47578-3_5)**.
    *Outlier Analysis*, 149-184, Springer, 10.1007/978-3-319-47578-3\_5
+1. Arno G. Stefani, Achim Sandmann, Andreas Burkovski, Johannes B. Huber, Heinrich Sticht, and Christophe Jardin (2017).
+   **[Application of Methods from Information Theory in Protein-Interaction Analysis](https://doi.org/10.1007/978-3-319-54729-9_13)**.
+   *Information- and Communication Theory in Molecular Biology*, 293-313, Springer, 10.1007/978-3-319-54729-9\_13
 1. Charu C. Aggarwal, and Saket Sathe (2017).
    **[Variance Reduction in Outlier Ensembles](https://doi.org/10.1007/978-3-319-54765-7_3)**.
    *Outlier Ensembles*, 75-161, Springer, 10.1007/978-3-319-54765-7\_3
@@ -54,21 +54,29 @@ The following list is **automatically generated** from very heterogenous sources
 1. Jyoti Lakhani, Ajay Khuteta, Anupama Choudhary, and Dharmesh Harwani (2017).
    **[Hierarchical Clustering-Based Algorithms and In Silico Techniques for Phylogenetic Analysis of Rhizobia](https://doi.org/10.1007/978-3-319-64982-5_10)**.
    *Rhizobium Biology and Biotechnology*, 185-214, Springer, 10.1007/978-3-319-64982-5\_10
-1. Luisa Sanz-Martínez, Alejandra Martínez-Monés, Miguel L. Bote-Lorenzo, Juan A. Muñoz-Cristóbal, and Yannis Dimitriadis (2017).
-   **[Automatic Group Formation in a MOOC Based on Students’ Activity Criteria](https://doi.org/10.1007/978-3-319-66610-5_14)**.
-   *Lecture Notes in Computer Science*, 179-193, Springer, 10.1007/978-3-319-66610-5\_14
-1. Adnan Manzoor, Julia S. Mollee, Aart T. van Halteren, and Michel C. A. Klein (2017).
+1. Luisa Sanz-Martínez, Alejandra Martínez-Monés, Miguel L. Bote-Lorenzo, Juan Alberto Muñoz-Cristóbal, and Yannis A. Dimitriadis (2017).
+   **[Automatic Group Formation in a MOOC Based on Students' Activity Criteria](https://doi.org/10.1007/978-3-319-66610-5_14)**.
+   *EC-TEL*, 179-193, Springer, 10.1007/978-3-319-66610-5\_14,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/ectel/Sanz-MartinezMB17)
+1. Adnan R. Manzoor, Julia S. Mollee, Aart Tijmen van Halteren, and Michel C. A. Klein (2017).
    **[Real-Life Validation of Methods for Detecting Locations, Transition Periods and Travel Modes Using Phone-Based GPS and Activity Tracker Data](https://doi.org/10.1007/978-3-319-67074-4_46)**.
-   *Lecture Notes in Computer Science*, 473-483, Springer, 10.1007/978-3-319-67074-4\_46
+   *ICCCI (1)*, 473-483, Springer, 10.1007/978-3-319-67074-4\_46,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/iccci/ManzoorMHK17)
 1. Evelyn Kirner, Erich Schubert, and Arthur Zimek (2017).
    **[Good and Bad Neighborhood Approximations for Outlier Detection Ensembles](https://doi.org/10.1007/978-3-319-68474-1_12)**.
-   *Lecture Notes in Computer Science*, 173-187, Springer, 10.1007/978-3-319-68474-1\_12
+   *SISAP*, 173-187, Springer, 10.1007/978-3-319-68474-1\_12,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/sisap/KirnerSZ17)
 1. Erich Schubert, and Michael Gertz (2017).
-   **[Intrinsic t-Stochastic Neighbor Embedding for Visualization and Outlier Detection](https://doi.org/10.1007/978-3-319-68474-1_13)**.
-   *Lecture Notes in Computer Science*, 188-203, Springer, 10.1007/978-3-319-68474-1\_13
+   **[Intrinsic t-Stochastic Neighbor Embedding for Visualization and Outlier Detection - A Remedy Against the Curse of Dimensionality?](https://doi.org/10.1007/978-3-319-68474-1_13)**.
+   *SISAP*, 188-203, Springer, 10.1007/978-3-319-68474-1\_13,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/sisap/SchubertG17)
 1. Ankita Roy, Soumya Ray, and Radha Tamal Goswami (2017).
    **[Approaches and Challenges of Big Data Analytics—Study of a Beginner](https://doi.org/10.1007/978-981-10-2035-3_25)**.
    *Proceedings of the First International Conference on Intelligent Computing and Communication*, 237-245, Springer, 10.1007/978-981-10-2035-3\_25
+1. B. B. Gupta, Aakanksha Tewari, Ankit Kumar Jain, and Dharma P. Agrawal (2017).
+   **[Fighting against phishing attacks: state of the art and future challenges](https://doi.org/10.1007/s00521-016-2275-y)**.
+   *Neural Computing and Applications* 28(12), 3629-3654, 10.1007/s00521-016-2275-y,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/nca/GuptaTJA17)
 1. Hans-Peter Kriegel, Erich Schubert, and Arthur Zimek (2017).
    **[The (black) art of runtime evaluation: Are we comparing algorithms or implementations?](https://doi.org/10.1007/s10115-016-1004-2)**.
    *Knowl. Inf. Syst.* 52(2), 341-378, 10.1007/s10115-016-1004-2,
@@ -81,9 +89,10 @@ The following list is **automatically generated** from very heterogenous sources
    **[Scalable density-based clustering with quality guarantees using random projections](https://doi.org/10.1007/s10618-017-0498-x)**.
    *Data Min. Knowl. Discov.* 31(4), 972-1005, 10.1007/s10618-017-0498-x,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/datamine/SchneiderV17)
-1. Klaus Arthur Schmid, Andreas Zufle, Tobias Emrich, Matthias Renz, and Reynold Cheng (2017).
+1. Klaus Arthur Schmid, Andreas Züfle, Tobias Emrich, Matthias Renz, and Reynold Cheng (2017).
    **[Uncertain Voronoi cell computation based on space decomposition](https://doi.org/10.1007/s10707-017-0293-2)**.
-   *GeoInformatica*, Springer, 10.1007/s10707-017-0293-2
+   *GeoInformatica* 21(4), 797-827, 10.1007/s10707-017-0293-2,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/geoinformatica/SchmidZERC17)
 1. Mohamed Ben Khalifa, Rebeca P. Díaz Redondo, Ana Fernández Vilas, and Sandra Servia Rodríguez (2017).
    **[Identifying urban crowds using geo-located Social media data: a Twitter experiment in New York City](https://doi.org/10.1007/s10844-016-0411-x)**.
    *J. Intell. Inf. Syst.* 48(2), 287-308, 10.1007/s10844-016-0411-x,
@@ -98,7 +107,8 @@ The following list is **automatically generated** from very heterogenous sources
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/jaihc/MousaviHKM17)
 1. Michalis Korakakis, Evaggelos Spyrou, Phivos Mylonas, and Stavros J. Perantonis (2017).
    **[Exploiting social media information toward a context-aware recommendation system](https://doi.org/10.1007/s13278-017-0459-9)**.
-   *Social Network Analysis and Mining* 7(1), Springer, 10.1007/s13278-017-0459-9
+   *Social Netw. Analys. Mining* 7(1), 42:1-42:20, 10.1007/s13278-017-0459-9,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/snam/KorakakisSMP17)
 1. Julien F. Marquant, Ralph Evins, L. Andrew Bollinger, and Jan Carmeliet (2017).
    **[A holarchic approach for multi-scale distributed energy system optimisation](https://doi.org/10.1016/j.apenergy.2017.09.057)**.
    *Applied Energy*, Elsevier BV, 10.1016/j.apenergy.2017.09.057
@@ -128,9 +138,10 @@ The following list is **automatically generated** from very heterogenous sources
    **[A study on anomaly detection ensembles](https://doi.org/10.1016/j.jal.2016.12.002)**.
    *J. Applied Logic* 21, 1-13, 10.1016/j.jal.2016.12.002,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/japll/ChiangDLLY17)
-1. Dominik Sacha, Michael Sedlmair, Leishi Zhang, John A. Lee, Jaakko Peltonen, Daniel Weiskopf, Stephen C. North, and Daniel A. Keim (2017).
+1. Dominik Sacha, Michael Sedlmair, Leishi Zhang, John Aldo Lee, Jaakko Peltonen, Daniel Weiskopf, Stephen C. North, and Daniel A. Keim (2017).
    **[What you see is what you can change: Human-centered machine learning by interactive visualization](https://doi.org/10.1016/j.neucom.2017.01.105)**.
-   *Neurocomputing*, Elsevier BV, 10.1016/j.neucom.2017.01.105
+   *Neurocomputing* 268, 164-175, 10.1016/j.neucom.2017.01.105,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/ijon/SachaSZLPWNK17)
 1. Marcin Los, Jakub Sawicki, Maciej Smolka, and Robert Schaefer (2017).
    **[Memetic approach for irremediable ill-conditioned parametric inverse problems](https://doi.org/10.1016/j.procs.2017.05.007)**.
    *ICCS*, 867-876, Elsevier, 10.1016/j.procs.2017.05.007,
@@ -142,6 +153,9 @@ The following list is **automatically generated** from very heterogenous sources
    **[GeNICE: A Novel Framework for Gene Network Inference by Clustering, Exhaustive Search, and Multivariate Analysis](https://doi.org/10.1089/cmb.2017.0022)**.
    *Journal of Computational Biology* 24(8), 809-830, 10.1089/cmb.2017.0022,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/jcb/JacominiMSC17)
+1. Fernando Perez-Sanz, Pedro J. Navarro, and Marcos Egea-Cortines (2017).
+   **[Plant phenomics: an overview of image acquisition technologies and image data analysis algorithms](https://doi.org/10.1093/gigascience/gix092)**.
+   *GigaScience*, Oxford University Press (OUP), 10.1093/gigascience/gix092
 1. Weiyu Huang, and Alejandro Ribeiro (2017).
    **[Axiomatic hierarchical clustering given intervals of metric distances](https://doi.org/10.1109/ICASSP.2017.7952953)**.
    *ICASSP*, 4227-4231, IEEE, 10.1109/ICASSP.2017.7952953,
@@ -166,9 +180,10 @@ The following list is **automatically generated** from very heterogenous sources
    **[MacroBase: Prioritizing Attention in Fast Data](https://doi.org/10.1145/3035918.3035928)**.
    *SIGMOD Conference*, 541-556, ACM, 10.1145/3035918.3035928,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/sigmod/BailisGMNRS17)
-1. Rocío B. Hubert, Ana G. Maguitman, Carlos I. Chesñevar, and Marcos A. Malamud (2017).
-   **[CitymisVis. a Tool for the Visual Analysis and Exploration of Citizen Requests and Complaints](https://doi.org/10.1145/3047273.3047320)**.
-   *Proceedings of the 10th International Conference on Theory and Practice of Electronic Governance - ICEGOV '17*, ACM Press, 10.1145/3047273.3047320
+1. Rocío B. Hubert, Ana Gabriela Maguitman, Carlos Iván Chesñevar, and Marcos A. Malamud (2017).
+   **[CitymisVis: a Tool for the Visual Analysis and Exploration of Citizen Requests and Complaints](https://doi.org/10.1145/3047273.3047320)**.
+   *ICEGOV*, 22-25, ACM, 10.1145/3047273.3047320,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/icegov/HubertMCM17)
 1. Erich Schubert, Jörg Sander, Martin Ester, Hans-Peter Kriegel, and Xiaowei Xu (2017).
    **[DBSCAN Revisited, Revisited: Why and How You Should (Still) Use DBSCAN](https://doi.org/10.1145/3068335)**.
    *ACM Trans. Database Syst.* 42(3), 19:1-19:21, 10.1145/3068335,
@@ -199,6 +214,9 @@ The following list is **automatically generated** from very heterogenous sources
 1. Changbo Ke, Zhiqiu Huang, Fu Xiao, and Linyuan Liu (2017).
    **[Privacy Data Decomposition and Discretization Method for SaaS Services](https://doi.org/10.1155/2017/4785142)**.
    *Mathematical Problems in Engineering* 2017, 1-11, Hindawi Limited, 10.1155/2017/4785142
+1. Junpeng Wang, Xiaotong Liu, and Han-Wei Shen (2017).
+   **[High-dimensional data analysis with subspace comparison using matrix visualization](https://doi.org/10.1177/1473871617733996)**.
+   *Information Visualization*, 147387161773399, SAGE Publications, 10.1177/1473871617733996
 1. 迟荣华, 程媛, 朱素霞, 黄少滨, and 陈德运 (2017).
    **[基于快速高斯变换的不确定数据聚类算法](https://doi.org/10.11959/j.issn.1000-436x.2017061)**.
    *通信学报* 38(3), 101-111, 10.11959/j.issn.1000-436x.2017061
@@ -240,6 +258,10 @@ The following list is **automatically generated** from very heterogenous sources
    **[A simple efficient density estimator that enables fast systematic search](https://arxiv.org/abs/1707.00783)**.
    *CoRR* abs/1707.00783,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/corr/WellsT17)
+1. Erich Schubert, Andreas Spitz, Michael Weiler, Johanna Geiß, and Michael Gertz (2017).
+   **[Semantic Word Clouds with Background Corpus Normalization and t-distributed Stochastic Neighbor Embedding](https://arxiv.org/abs/1708.03569)**.
+   *CoRR* abs/1708.03569,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/corr/abs-1708-03569)
 1. Markus Mauder (2017).
    **[Analyzing complex data using domain constraints](https://edoc.ub.uni-muenchen.de/20890/)**.
    Ludwig Maximilian University of Munich, Germany,
@@ -247,26 +269,28 @@ The following list is **automatically generated** from very heterogenous sources
 1. Aakash Ravi (2017).
    **[Machine learning-based identification of separating features in molecular fragments](http://hdl.handle.net/20.500.11956/2093)**.
 1. Benjamin Heinzerling, Michael Strube, and Chin-Yew Lin (2017).
-   **[Trust, but Verify! Better Entity Linking through Automatic Verification](http://aclweb.org/anthology/E/E17/E17-1078.bib)**.
+   **[Trust, but Verify! Better Entity Linking through Automatic Verification](http://www.aclweb.org/anthology/E17-1078)**.
    *Proceedings of the 15th Conference of the European Chapter of the Association for Computational Linguistics: Volume 1, Long Papers*, 828--838, Association for Computational Linguistics
-1. Erich Schubert, Andreas Spitz, Michael Weiler, Johanna Geiß, and Michael Gertz (2017).
-   **[Semantic Word Clouds with Background Corpus Normalization and t-distributed Stochastic Neighbor Embedding](https://arxiv.org/abs/1708.03569)**.
-   *arXiv* 1708.03569
 1. Loïc Prieur-Drevon (2017).
    **[Structures de données hautement extensibles pour le stockage sur disque de séries temporelles hétérogènes](http://publications.polymtl.ca/2489/)**.
    École Polytechnique de Montréal
 1. Lu Chen, Yunjun Gao, Baihua Zheng, Christian S. Jensen, Hanyu Yang, and Keyu Yang (2017).
    **[Pivot-based metric indexing](http://dl.acm.org/citation.cfm?id=3115404.3115411)**.
    *Proceedings of the VLDB Endowment* 10(10), 1058-1069, VLDB Endowment
-1. Luisa Sanz Martínez, Juan Alberto Muñoz Cristóbal, Miguel L. Bote Lorenzo, Alejandra Martínez Monés, and Yannis A. Dimitriadis (2017).
-   **[Automatic group formation in a MOOC based on students' activity criteria](http://uvadoc.uva.es/handle/10324/24836)** (EC-TEL 2017).
-   Springer
 1. Pallam Anusha, and G.Krishna Reddy (2017).
    **[Repeal Adjacent Neighbors In Untrue Interval Base Discovery System](https://ijitr.com/index.php/ojs/article/view/1551)**.
    *IJITR* 5(1), 5552-5554
+1. Renzo Paranaíba Mesquita (2017).
+   **[Aprimoramentos da Junção Canalizada aplicada em dados Métricos e Espaciais](http://repositorio.unifei.edu.br/xmlui/handle/123456789/939)**.
 1. Thomas Ortner, Peter Filzmoser, Maia Zaharieva, Sarka Brodinova, and Christian Breiteneder (2017).
    **[Local projections for high-dimensional outlier detection](https://arxiv.org/abs/1708.01550)**.
    *arXiv* 1708.01550
+1. Vanessa Estefania Quintana Bajaña, and Sandro Anibal Yagual Tomala (2017).
+   **[Propuesta de Aplicación Predictiva de Aprobación de una Asignatura con Flujo Previo a Través de Algoritmos Basados en Software WEKA Para Estudiantes del Ultimo Semestre de la Carrera de Ingeniería en Sistemas Computacionales de la Universidad de Guayaquil](http://repositorio.ug.edu.ec/handle/redug/19883)**.
+   Universidad de Guayaquil. Facultad de Ciencias Matematicas y Fisicas. Carrera de Ingenieria en Sistemas Computacionales
+1. Гущина Оксана Александровна (2017).
+   **[Применение интеллектуальных систем при управлении рисками программных проектов](https://cyberleninka.ru/article/n/primenenie-intellektualnyh-sistem-pri-upravlenii-riskami-programmnyh-proektov)**.
+   *Вестник Мордовского университета* 27(2), Федеральное государственное бюджетное образовательное учреждение высшего образования «Национальный исследовательский Мордовский государственный университет им. Н. П. Огарёва»
 
 2016
 ----
@@ -285,9 +309,6 @@ The following list is **automatically generated** from very heterogenous sources
 1. Smita Chormunge, and Sudarson Jena (2016).
    **[Performance Efficiency and Effectiveness of Clustering Methods for Microarray Datasets](https://doi.org/10.1007/978-81-322-2529-4_58)**.
    *Proceedings of 3rd International Conference on Advanced Computing, Networking and Informatics*, 557-567, Springer India, 10.1007/978-81-322-2529-4\_58
-1. B. B. Gupta, Aakanksha Tewari, Ankit Kumar Jain, and Dharma P. Agrawal (2016).
-   **[Fighting against phishing attacks: state of the art and future challenges](https://doi.org/10.1007/s00521-016-2275-y)**.
-   *Neural Computing and Applications*, Springer, 10.1007/s00521-016-2275-y
 1. Guilherme O. Campos, Arthur Zimek, Jörg Sander, Ricardo J. G. B. Campello, Barbora Micenková, Erich Schubert, Ira Assent, and Michael E. Houle (2016).
    **[On the evaluation of unsupervised outlier detection: measures, datasets, and an empirical study](https://doi.org/10.1007/s10618-015-0444-8)**.
    *Data Min. Knowl. Discov.* 30(4), 891-927, 10.1007/s10618-015-0444-8,
