@@ -155,6 +155,18 @@ The following list are project ideas for *students that want to get started* wit
 - SSPC subspace clustering (with semi-supervision):
 
   K. P. Yip, D. W. Cheung, and M. K. Ng "On discovery of extremely low-dimensional clusters using semi-supervised projected clustering." Proceedings of the 21st International Conference on Data Engineering (ICDE), 2005. 329-340.
+  
+### Historic clustering algorithms
+
+These probably are primarily of interest to the history of clustering.
+  
+- Bonner clustering (historic):
+
+  R. E. Bonner. "On some clustering techniques." IBM journal of research and development 8.1 (1964): 22-32.
+  
+- Rocchio clustering (historic):
+
+  J. J. Rocchio. "Document Retrieval System - Optimization and Evaluation." Harvard University Doctoral Thesis, Report No. ISR-10 to the National Science Foundation, 1966 http://sigir.org/files/museum/isr-10/pdfs/p1-chapter_4.pdf
 
 ### Outlier detection algorithms
 
