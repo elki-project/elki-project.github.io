@@ -92,6 +92,12 @@ The following list are project ideas for *students that want to get started* wit
 
   L. Kaufman and P. J. Rousseeuw. Finding Groups in Data: An Introduction to Cluster Analyis. John Wiley&Sons, 1990
 
+- Extension of Lance-Williams - minimum average distance in new cluster etc.:
+
+  M. Jambu, M.-O. Lebeaux. "Classification automatique pour l'analyse des données"
+  
+  J. Podani. "New Combinatorial Clustering Methods". Vegetatio 81(1/2)
+
 ### DBSCAN and OPTICS extensions
 
 - DBCLASD algorithm:
@@ -216,6 +222,10 @@ These probably are primarily of interest to the history of clustering.
 - Cluster evaluation by connectivity (internal):
 
   Handl, J., Knowles, J., & Kell, D. B. (2005). "Computational cluster validation in post-genomic data analysis." Bioinformatics, 21(15), 3201-3212.
+  
+- Validation of Arbitrary-Shaped Clusters
+
+  Baya, Ariel E., and Pablo M. Granitto. "How many clusters: A validation index for arbitrary-shaped clusters." IEEE/ACM Transactions on Computational Biology and Bioinformatics (TCBB) 10.2 (2013): 401-414.
 
 ### Visualization
 
