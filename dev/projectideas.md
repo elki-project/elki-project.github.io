@@ -211,6 +211,11 @@ These probably are primarily of interest to the history of clustering.
   Bozkaya, Tolga, and Meral Ozsoyoglu. "Indexing large metric spaces for similarity search queries." ACM Transactions on Database Systems (TODS) 24.3 (1999): 361-404.
   
   Uhlmann, Jeffrey K. "Satisfying general proximity/similarity queries with metric trees." Information processing letters 40.4 (1991): 175-179.
+  
+### Evaluation
+- Cluster evaluation by connectivity (internal):
+
+  Handl, J., Knowles, J., & Kell, D. B. (2005). "Computational cluster validation in post-genomic data analysis." Bioinformatics, 21(15), 3201-3212.
 
 ### Visualization
 
