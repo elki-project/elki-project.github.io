@@ -98,6 +98,10 @@ The following list are project ideas for *students that want to get started* wit
   
   J. Podani. "New Combinatorial Clustering Methods". Vegetatio 81(1/2)
 
+- Stopping conditions by Mojena:
+
+  R. Mojena. Hierarchical grouping methods and stopping rules: an evaluation. Comput. Journal, 20(4): 359-363, 1977
+
 ### DBSCAN and OPTICS extensions
 
 - DBCLASD algorithm:
