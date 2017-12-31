@@ -13,6 +13,16 @@ Over the years, ELKI has been increasingly cited/used in scientific publications
 
 The following list is **automatically generated** from very heterogenous sources, and does contain errors. Where possible, we try to use metadata from DBLP, CrossRef.org, SemanticScholar, and HTML meta headers from the publisher web pages. For theses, seminar articles etc. this approach does however not work. We have not verified every citation discovered by the bot.
 
+2018
+----
+
+1. Arno G. Stefani, Achim Sandmann, Andreas Burkovski, Johannes B. Huber, Heinrich Sticht, and Christophe Jardin (2018).
+   **[Application of Methods from Information Theory in Protein-Interaction Analysis](https://doi.org/10.1007/978-3-319-54729-9_13)**.
+   *Lecture Notes in Bioengineering*, 293-313, Springer, 10.1007/978-3-319-54729-9\_13
+1. C. Yilmaz, C. Akalin, I. Gunal, H. Celik, Murat Buyuk, A. Suleman, and M. Yildiz (2018).
+   **[A hybrid damage assessment for E-and S-glass reinforced laminated composite structures under in-plane shear loading](https://doi.org/10.1016/j.compstruct.2017.12.023)**.
+   *Composite Structures* 186, 347-354, Elsevier BV, 10.1016/j.compstruct.2017.12.023
+
 2017
 ----
 
@@ -29,9 +39,6 @@ The following list is **automatically generated** from very heterogenous sources
 1. Charu C. Aggarwal (2017).
    **[High-Dimensional Outlier Detection: The Subspace Method](https://doi.org/10.1007/978-3-319-47578-3_5)**.
    *Outlier Analysis*, 149-184, Springer, 10.1007/978-3-319-47578-3\_5
-1. Arno G. Stefani, Achim Sandmann, Andreas Burkovski, Johannes B. Huber, Heinrich Sticht, and Christophe Jardin (2017).
-   **[Application of Methods from Information Theory in Protein-Interaction Analysis](https://doi.org/10.1007/978-3-319-54729-9_13)**.
-   *Information- and Communication Theory in Molecular Biology*, 293-313, Springer, 10.1007/978-3-319-54729-9\_13
 1. Charu C. Aggarwal, and Saket Sathe (2017).
    **[Variance Reduction in Outlier Ensembles](https://doi.org/10.1007/978-3-319-54765-7_3)**.
    *Outlier Ensembles*, 75-161, Springer, 10.1007/978-3-319-54765-7\_3
@@ -156,6 +163,9 @@ The following list is **automatically generated** from very heterogenous sources
 1. Fernando Perez-Sanz, Pedro J. Navarro, and Marcos Egea-Cortines (2017).
    **[Plant phenomics: an overview of image acquisition technologies and image data analysis algorithms](https://doi.org/10.1093/gigascience/gix092)**.
    *GigaScience*, Oxford University Press (OUP), 10.1093/gigascience/gix092
+1. Tshepiso Mokoena, Ofentswe Lebogo, Asive Dlaba, and Vukosi Marivate (2017).
+   **[Bringing sequential feature explanations to life](https://doi.org/10.1109/AFRCON.2017.8095456)**.
+   *2017 Ieee Africon*, IEEE, 10.1109/AFRCON.2017.8095456
 1. Weiyu Huang, and Alejandro Ribeiro (2017).
    **[Axiomatic hierarchical clustering given intervals of metric distances](https://doi.org/10.1109/ICASSP.2017.7952953)**.
    *ICASSP*, 4227-4231, IEEE, 10.1109/ICASSP.2017.7952953,
@@ -208,6 +218,9 @@ The following list is **automatically generated** from very heterogenous sources
    **[STAR: A System for Ticket Analysis and Resolution](https://doi.org/10.1145/3097983.3098190)**.
    *KDD*, 2181-2190, ACM, 10.1145/3097983.3098190,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/kdd/ZhouXBWZLXLSG17)
+1. Guansong Pang, Hongzuo Xu, Longbing Cao, and Wentao Zhao (2017).
+   **[Selective Value Coupling Learning for Detecting Outliers in High-Dimensional Categorical Data](https://doi.org/10.1145/3132847.3132994)**.
+   *Proceedings of the 2017 ACM on Conference on Information and Knowledge Management - CIKM '17*, ACM Press, 10.1145/3132847.3132994
 1. Zhihua Li, Ziyuan Li, Ning Yu, and Steven Wen (2017).
    **[Locality-Based Visual Outlier Detection Algorithm for Time Series](https://doi.org/10.1155/2017/1869787)**.
    *Security and Communication Networks* 2017, 1-10, Hindawi Limited, 10.1155/2017/1869787
@@ -236,6 +249,9 @@ The following list is **automatically generated** from very heterogenous sources
 1. Jürgen Bernard, Eduard Dobermann, Michael Sedlmair, and Dieter W. Fellner (2017).
    **[Combining Cluster and Outlier Analysis with Visual Analytics](https://doi.org/10.2312/eurova.20171114)**.
    *EuroVis Workshop on Visual Analytics (EuroVA)*, The Eurographics Association, 10.2312/eurova.20171114
+1. Julien F. Marquant, L. Andrew Bollinger, Ralph Evins, and Jan Carmeliet (2017).
+   **[A new combined clustering method to analyse the potential of district heating networks at large-scale](https://doi.org/10.3929/ethz-b-000196118)**.
+   *30th International Conference on Efficiency, Cost, Optimisation, Simulation and Environmental Impact of Energy Systems (ECOS 2017)*, ETH Zurich, 10.3929/ethz-b-000196118
 1. Yasser Abd Djawad, Andi Mu'nisa, Pangayoman Rusung, Abdi Kurniawan, Irma Suryani Idris, and Mushawwir Taiyeb (2017).
    **[Essential Feature Extraction of Photoplethysmography Signal of Men and Women in Their 20s](https://doi.org/10.4186/ej.2017.21.4.259)**.
    *Engineering Journal* 21(4), 259-272, Faculty of Engineering, Chulalongkorn University, 10.4186/ej.2017.21.4.259
@@ -266,11 +282,34 @@ The following list is **automatically generated** from very heterogenous sources
    **[Analyzing complex data using domain constraints](https://edoc.ub.uni-muenchen.de/20890/)**.
    Ludwig Maximilian University of Munich, Germany,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/phd/dnb/Mauder17)
+1. Miguel; Tornillo Julián; Pascal Guadalupe; Carroso Lucas; Pavlicevic Juan Guagliano (2017).
+   **[Aplicación de herramientas de vigilancia tecnológica para el relevamiento de tecnologías de código abierto aplicables en la enseñanza de la Ingeniería](http://hdl.handle.net/10915/63395)**.
+   *XII Congreso de Tecnología en Educación y Educación en Tecnología (TE&ET, La Matanza 2017).*, 978-987-4417-04-6
 1. Aakash Ravi (2017).
    **[Machine learning-based identification of separating features in molecular fragments](http://hdl.handle.net/20.500.11956/2093)**.
+1. Andreas Forstén (2017).
+   **[Unsupervised Anomaly Detection in Receipt Data](http://nbn-resolving.de/urn:nbn:se:kth:diva-215161)**.
+1. Anthony McCaffrey, and University of Massachusetts (UMass) (2017).
+   **[Feature Type Spectrum Technique](http://www.freepatentsonline.com/9646266.html)**.
 1. Benjamin Heinzerling, Michael Strube, and Chin-Yew Lin (2017).
    **[Trust, but Verify! Better Entity Linking through Automatic Verification](http://www.aclweb.org/anthology/E17-1078)**.
    *Proceedings of the 15th Conference of the European Chapter of the Association for Computational Linguistics: Volume 1, Long Papers*, 828--838, Association for Computational Linguistics
+1. Daniel Bauersachs (2017).
+   **[Interactive Association Rule Exploration](http://www.pms.ifi.lmu.de/publikationen/projektarbeiten/Daniel.Bauersachs/PA_Daniel.Bauersachs.pdf)**.
+   LMU Munich
+1. Evgeniy A. Malyutin, Dmitriy Yu. Bugaichenko, and Alexey N. Mishenin (2017).
+   **[Textual trends detection at OK](http://hdl.handle.net/11701/8516)**.
+   St Petersburg State University
+1. George E. Barreto, Rosa M. Gomez, Rosa H. Bustos, Diego A. Forero, Gjumrakch Aliev, Vadim V. Tarasov, Nagendra S. Yarla, Valentina Echeverria, and Janneth Gonzalez (2017).
+   **[Approaches of the Transcriptomic Analysis in Astrocytes: Potential Pharmacological Targets](http://www.ingentaconnect.com/contentone/ben/cpd/2017/00000023/00000028/art00013)**.
+   Bentham Science Publishers
+1. Ilari Kampman (2017).
+   **[Algorithms for Clustering High-Dimensional Data](http://dspace.cc.tut.fi/dpub/handle/123456789/25370)** (Algoritmeja moniulotteisen datan klusterointiin).
+1. Jürgen Hermes, Michael Richter, and Claes Neuefeind (2017).
+   **Supervised Classification of Aspectual Verb Classes in German Subcategorization-Frame-Based vs Window-Based Approach: A Comparison**.
+1. Kai M Ting (2017).
+   **[Algorithms that Defy the Gravity of Learning Curve](http://www.dtic.mil/docs/citations/AD1037814)**.
+   FEDERATION UNIVERSITY AUSTRALIA MOUNT HELEN Australia
 1. Loïc Prieur-Drevon (2017).
    **[Structures de données hautement extensibles pour le stockage sur disque de séries temporelles hétérogènes](http://publications.polymtl.ca/2489/)**.
    École Polytechnique de Montréal
@@ -282,6 +321,12 @@ The following list is **automatically generated** from very heterogenous sources
    *IJITR* 5(1), 5552-5554
 1. Renzo Paranaíba Mesquita (2017).
    **[Aprimoramentos da Junção Canalizada aplicada em dados Métricos e Espaciais](http://repositorio.unifei.edu.br/xmlui/handle/123456789/939)**.
+1. Rocio Hubert (2017).
+   **[Análisis y visualización de peticiones, quejas y reclamos ciudadanos](http://ir.cs.uns.edu.ar/publications/bibpopup/81.bib)**.
+   *46 Jornadas Argentinas de Informática e Investigación Operativa (JAIIO), EST*
+1. Thiago Orion Simões Amorim (2017).
+   **[Bioacústica de baleias cachalotes (Physeter macrocephalus Linnaeus, 1758) com ênfase no oceano Atlântico Sul ocidental](https://repositorio.ufjf.br/jspui/handle/ufjf/6002)**.
+   Universidade Federal de Juiz de Fora (UFJF)
 1. Thomas Ortner, Peter Filzmoser, Maia Zaharieva, Sarka Brodinova, and Christian Breiteneder (2017).
    **[Local projections for high-dimensional outlier detection](https://arxiv.org/abs/1708.01550)**.
    *arXiv* 1708.01550
@@ -291,6 +336,9 @@ The following list is **automatically generated** from very heterogenous sources
 1. Гущина Оксана Александровна (2017).
    **[Применение интеллектуальных систем при управлении рисками программных проектов](https://cyberleninka.ru/article/n/primenenie-intellektualnyh-sistem-pri-upravlenii-riskami-programmnyh-proektov)**.
    *Вестник Мордовского университета* 27(2), Федеральное государственное бюджетное образовательное учреждение высшего образования «Национальный исследовательский Мордовский государственный университет им. Н. П. Огарёва»
+1. Малютин Евгений Алексеевич, Бугайченко Дмитрий Юрьевич, and Мишенин Алексей Николаевич (2017).
+   **[Выделение текстовых трендов в социальной сети ok](https://cyberleninka.ru/article/n/vydelenie-tekstovyh-trendov-v-sotsialnoy-seti-ok)**.
+   *Вестник Санкт-Петербургского университета. Серия 10. Прикладная математика. Информатика. Процессы управления*, Федеральное государственное бюджетное образовательное учреждение высшего образования «Санкт-Петербургский государственный университет»
 
 2016
 ----
@@ -486,8 +534,9 @@ The following list is **automatically generated** from very heterogenous sources
    *Politicising Europe*, Cambridge University Press, 9781107129412
 1. Ahmed Balfagih (2016).
    **[Direct Selling Business Lead Prediction by Social Media Data Mining](http://hdl.handle.net/10222/71412)**.
-1. Anthony McCaffrey, and University Of Massachusetts (2016).
-   **[Feature type spectrum technique](https://www.google.com/patents/US9646266)**.
+1. Alexander Fischer-Brandies (2016).
+   **[Explaining Outliers in ARTigo](http://www.pms.ifi.lmu.de/publikationen/projektarbeiten/Alexander.Fischer-Brandies/PA_Alexander.Fischer-Brandies.pdf)**.
+   LMU Munich
 1. B. Gajewski, and T. Martyn (2016).
    **[Spatial data clustering in independent mobile environment](https://yadda.icm.edu.pl/baztech/element/bwmeta1.element.baztech-95117230-511c-45d0-b1ae-83d4cf2926d8)**.
    *Measurement Automation Monitoring* Vol. 62, No. 5
@@ -495,6 +544,9 @@ The following list is **automatically generated** from very heterogenous sources
    **[Exploratory Cluster Analysis from Ubiquitous Data Streams using Self-Organizing Maps](http://hdl.handle.net/10362/19974)**.
 1. Francisco Daniel Porras Bernárdez (2016).
    **[Extraction of User's Stays and Transitions from GPS Logs: A Comparison of Three Spatio-Temporal Clustering Approaches](http://pub-geo.tuwien.ac.at/showbibtex.php?ID=247847&lang=6&nohtml=1)**.
+1. Frederic Sautter (2016).
+   **[Association Rule Generation and Evaluation of Interestingness Measures for Artwork Tags](http://www.pms.ifi.lmu.de/publikationen/projektarbeiten/Frederic.Sautter/PA_Frederic.Sautter.pdf)**.
+   LMU Munich
 1. G. O. Campos, A. Zimek, J. Sander, R. J. G. B. Campello, B. Micenková, E. Schubert, I. Assent, and M. E. Houle (2016).
    **[On the Evaluation of Outlier Detection: Measures, Datasets, and an Empirical Study Continued](http://findresearcher.sdu.dk/portal/en/publications/on-the-evaluation-of-outlier-detection-measures-datasets-and-an-empirical-study-continued(9665bb60-8390-464e-8dfb-a767078f7ac4).html)**.
    *Proceedings of the LWDA 2016 Workshops: KDML, FGWM, FGIR, and FGDB, Potsdam, Germany*
@@ -542,6 +594,9 @@ The following list is **automatically generated** from very heterogenous sources
 1. Ravi Chinapaga, D. Sravya, M Bal Raju, and N Subhash Chandra (2016).
    **[Detecting Outliers Using Euclidean Distance In Unsupervised Method](https://www.ijitr.com/index.php/ojs/article/view/1086)**.
    *IJITR* 4(5), 3855–3857
+1. Sebastian Rühl (2016).
+   **[Event Detection in ARTigo Data](http://www.pms.ifi.lmu.de/publikationen/projektarbeiten/Sebastian.Ruehl/PA_Sebastian.Ruehl.pdf)**.
+   LMU Munich
 1. Stephen K Karanja (2016).
    **[Density-based Cluster Analysis Of Fire Hot Spots In Kenya's Wildlife Protected Areas](http://hdl.handle.net/11295/97366)**.
    University of Nairobi
@@ -844,6 +899,8 @@ The following list is **automatically generated** from very heterogenous sources
 1. Zoraida Emperatriz Mamani Rodríguez (2015).
    **[Aplicación de la minería de datos distribuida usando algoritmo de clustering k-means para mejorar la calidad de servicios de las organizaciones modernas caso: Poder judicial](http://cybertesis.unmsm.edu.pe/handle/cybertesis/4472)**.
    Universidad Nacional Mayor de San Marcos. Programa Cybertesis PERÚ
+1. Δημήτριος Νικηφοράκης (2015).
+   **[Ομαδοποίηση γράφων με τους αλγόριθμους k-means και DBSCAN](http://localhost:8080/xmlui/handle/123456789/1931)**.
 1. Л.А. Казаковцев, А.А. Ступина, and В.И. Орлов (2015).
    **[Выбор Метрики Для Системы Автоматической Классификации Электрорадиоизделий По Производственным Партиям](http:/cyberleninka.ru/article/n/vybor-metriki-dlya-sistemy-avtomaticheskoy-klassifikatsii-elektroradioizdeliy-po-proizvodstvennym-partiyam)**.
    *Программные продукты и системы*, Закрытое акционерное общество Научно-исследовательский институт "Центрпрограммсистем"
@@ -1022,6 +1079,11 @@ The following list is **automatically generated** from very heterogenous sources
 1. Dominique Legallois, Solen Quiniou, Peggy Cellier, and Thierry Charnois (2014).
    **[Graph Mining under Linguistic Constraints for Exploring Large Texts](http://repositoriodigital.academica.mx/jspui/handle/987654321/217547)**.
    Instituto Politécnico Nacional
+1. Ektabahen Kanubhai Patel (2014).
+   **[A web based data mining courseware](http://hdl.handle.net/10211.3/131222)**.
+1. Florian Hoidn (2014).
+   **[The Analytics Center: Devising a Citizen Science Data Mining Tool for the ARTigo Image Tagging Project](http://www.pms.ifi.lmu.de/publikationen/projektarbeiten/Florian.Hoidn/PA_Florian.Hoidn.pdf)**.
+   LMU Munich
 1. Haofan Zhang (2014).
    **[Spectral Ranking and Unsupervised Feature Selection for Point, Collective and Contextual Anomaly Detection](http://hdl.handle.net/10012/8763)**.
 1. Henrik Larsson, and Erik Lindqvist (2014).
@@ -1029,15 +1091,18 @@ The following list is **automatically generated** from very heterogenous sources
    Institutionen för data- och informationsteknik (Chalmers), Chalmers tekniska högskola
 1. João Luiz Grave Gross (2014).
    **[URSA: um framework para agrupamento de dados e validação de resultados](http://hdl.handle.net/10183/110328)** (URSA: a framework for data clustering and data analysis).
+1. Kaisa Vent (2014).
+   **[Inimese tegevuskohtade leidmine nutitelefonipõhiste käitumisandmestike alusel](http://hdl.handle.net/10062/42782)**.
+   Tartu Ülikool
 1. Muhammad Sohail (2014).
    **[Calculation of Energy Footprint of Manufacturing Assets](http://dspace.cc.tut.fi/dpub/handle/123456789/22235)**.
 1. Nicola Padovano, and Elia Filiberto Polo (2014).
    **[Progetto e realizzazione di un framework per Neosperience sul clustering di reti sociali](http://hdl.handle.net/10589/94087)**.
    Italy
 1. Pratik Kumar Mishra, Dinesh Pothineni, Aadil Rasheed, Deepak Sundararajan, Ashok Krish, Hasit Kaji, and Tata Consultancy Services Limited (2014).
-   **[System and Method for Determining an Expert of a Subject on a Web-based Platform](https://www.google.com/patents/US20140289175)**.
+   **[System and Method for Determining an Expert of a Subject on a Web-based Platform](http://www.freepatentsonline.com/y2014/0289175.html)**.
 1. R.J. Ma, and N.Y. Yu (2014).
-   **[A new route for energy efficiency diagnosis and potential analysis of energy consumption from air-conditioning system](https://repository.tamu.edu/handle/1969.1/152321)**.
+   **[A new route for energy efficiency diagnosis and potential analysis of energy consumption from air-conditioning system](http://hdl.handle.net/1969.1/152321)**.
    Energy Systems Laboratory (http://esl.tamu.edu)
 1. Reka Katalin Kelemen (2014).
    **[Mathematical modeling of T cell clustering following malaria infection in mice](http://trace.tennessee.edu/utk_gradthes/2728)**.
@@ -1253,7 +1318,7 @@ The following list is **automatically generated** from very heterogenous sources
    **[Flow-based Brute-force Attack Detection in Large and High-speed Networks](http://theses.cz/id/1bm1mx/)**.
    Masarykova univerzita
 1. Jan Vykopal (2013).
-   **[SimFlow - a similarity-based detection of brute-force attacks](http://www.muni.cz/research/publications/1102672)**.
+   **[SimFlow - a similarity-based detection of brute-force attacks](http://www.muni.cz/research/publications/1102672)**.
 1. Kai M Ting (2013).
    **[Second Generation of Mass Estimation](http://www.dtic.mil/docs/citations/ADA590623)**.
    Monash Univ Churchill (Australia) Gippsland School Of Information Technology
@@ -1263,6 +1328,8 @@ The following list is **automatically generated** from very heterogenous sources
 1. Manish Gupta (2013).
    **[Outlier detection for information networks](http://hdl.handle.net/2142/44770)**.
    University of Illinois at Urbana-Champaign
+1. Maria José Gomes Pedroto (2013).
+   **[Estimação de Massa em Energia Eólica](http://hdl.handle.net/10216/74672)**.
 1. N Ronald (2013).
    **[Workers, adventurers, explorers: uncovering activity patterns in Melbourne](http://trid.trb.org/view.aspx?id=1299789)**.
    *Australasian Transport Research Forum (ATRF), 36th, 2013, Brisbane, Queensland, Australia*
@@ -1423,6 +1490,8 @@ The following list is **automatically generated** from very heterogenous sources
    **[Evaluation of Multiple Clustering Solutions](http://ceur-ws.org/Vol-772/multiclust2011-paper7.pdf)**.
    *MultiClust@ECML/PKDD*, 55-66, CEUR-WS.org,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/multiclust/KriegelSZ11)
+1. Iliya Mitov (2011).
+   **[Class association rule mining using multidimensional numbered information spaces](http://hdl.handle.net/1942/20134)**.
 1. Johan Mazel (2011).
    **[Unsupervised network anomaly detection](https://tel.archives-ouvertes.fr/tel-00667654)**.
    INSA de Toulouse
