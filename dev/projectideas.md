@@ -210,6 +210,10 @@ These probably are primarily of interest to the history of clustering.
 
 ### Data indexing
 
+- Additional splitting strategy:
+
+  Korotkov, Alexander. "A new double sorting-based node splitting algorithm for R-tree". Programming and Computer Software 38.3 (2012): 109-118.
+
 - Top-down bulk loading support for the R-tree, such as:
 
   Lee, Taewon, and Sukho Lee. "OMT: Overlap Minimizing Top-down Bulk Loading Algorithm for R-tree." CAiSE Short Paper Proceedings. Vol. 74. 2003.
