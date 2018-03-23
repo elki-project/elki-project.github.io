@@ -122,10 +122,6 @@ The following list are project ideas for *students that want to get started* wit
 
   S. Guha, R. Rastogi, and K. Shim. “CURE: An efficient Clustering Algorithm for Large Databases”. In: Proceedings of the ACM International Conference on Management of Data (SIGMOD), Seattle, WA. 1998, pp. 73–84
 
-- CLARANS algorithm: (*in progress*)
-
-  R. T. Ng and J. Han. “CLARANS: A method for clustering objects for spatial data mining”. In: IEEE Transactions on Knowledge and Data Engineering 14.5 (2002), pp. 1003–1016
-
 - JP-Clustering:
 
   R. A. Jarvis and E. A. Patrick. “Clustering Using a Similarity Measure based on Shared Near Neighbors”. In: IEEE Transactions on Computers C-22.11 (1973), pp. 1025–1034
@@ -169,14 +165,26 @@ The following list are project ideas for *students that want to get started* wit
 ### Historic clustering algorithms
 
 These probably are primarily of interest to the history of clustering.
-  
+
 - Bonner clustering (historic):
 
   R. E. Bonner. "On some clustering techniques." IBM journal of research and development 8.1 (1964): 22-32.
-  
+
 - Rocchio clustering (historic):
 
   J. J. Rocchio. "Document Retrieval System - Optimization and Evaluation." Harvard University Doctoral Thesis, Report No. ISR-10 to the National Science Foundation, 1966 http://sigir.org/files/museum/isr-10/pdfs/p1-chapter_4.pdf
+
+- Robert F. Ling's clustering (historic, related to DBSCAN):
+
+  R. F. Ling. "On the theory and construction of k-clusters". The Computer Journal. 15 (4), 1972: 326–332.
+
+- Wishart's clustering (historic, maybe related to DBSCAN):
+
+  D. Wishart, "Mode analysis", 1969. In Numerical Taxonomy, edited by AJ Cole
+
+- Wong and Lane's "Nearest neighbor clustering" (historic, related to DBSCAN):
+
+  M. A. Wong, T. Lane, A kth nearest neighbour clustering procedure. In Computer Science and Statistics: Proceedings of the 13th Symposium on the Interface (pp. 308-311), 1981.
 
 ### Outlier detection algorithms
 
