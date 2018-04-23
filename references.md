@@ -16,12 +16,24 @@ The following list is **automatically generated** from very heterogenous sources
 2018
 ----
 
+1. Huixiao Hong, Jieqiang Zhu, Minjun Chen, Ping Gong, Chaoyang Zhang, and Weida Tong (2018).
+   **[Quantitative Structure–Activity Relationship Models for Predicting Risk of Drug-Induced Liver Injury in Humans](https://doi.org/10.1007/978-1-4939-7677-5_5)**.
+   *Drug-Induced Liver Toxicity*, 77-100, Springer, 10.1007/978-1-4939-7677-5\_5
+1. Adam Byron (2018).
+   **[Proteomic Profiling of Integrin Adhesion Complex Assembly](https://doi.org/10.1007/978-1-4939-7759-8_13)**.
+   *Methods in Molecular Biology*, 193-236, Springer, 10.1007/978-1-4939-7759-8\_13
 1. Arno G. Stefani, Achim Sandmann, Andreas Burkovski, Johannes B. Huber, Heinrich Sticht, and Christophe Jardin (2018).
    **[Application of Methods from Information Theory in Protein-Interaction Analysis](https://doi.org/10.1007/978-3-319-54729-9_13)**.
    *Lecture Notes in Bioengineering*, 293-313, Springer, 10.1007/978-3-319-54729-9\_13
+1. Jakub Sawicki, Marcin Łoś, Maciej Smołka, Robert Schaefer, and Julen Álvarez-Aramberri (2018).
+   **[Approximating landscape insensitivity regions in solving ill-conditioned inverse problems](https://doi.org/10.1007/s12293-018-0258-5)**.
+   *Memetic Computing*, Springer, 10.1007/s12293-018-0258-5
 1. C. Yilmaz, C. Akalin, I. Gunal, H. Celik, Murat Buyuk, A. Suleman, and M. Yildiz (2018).
    **[A hybrid damage assessment for E-and S-glass reinforced laminated composite structures under in-plane shear loading](https://doi.org/10.1016/j.compstruct.2017.12.023)**.
    *Composite Structures* 186, 347-354, Elsevier BV, 10.1016/j.compstruct.2017.12.023
+1. Sarah Shukri, Hossam Faris, Ibrahim Aljarah, Seyedali Mirjalili, and Ajith Abraham (2018).
+   **[Evolutionary static and dynamic clustering algorithms based on multi-verse optimizer](https://doi.org/10.1016/j.engappai.2018.03.013)**.
+   *Engineering Applications of Artificial Intelligence* 72, 54-66, Elsevier BV, 10.1016/j.engappai.2018.03.013
 1. Tharindu R. Bandaragoda, Kai Ming Ting, David Albrecht, Fei Tony Liu, Ye Zhu, and Jonathan R. Wells (2018).
    **[Isolation-based anomaly detection using nearest-neighbor ensembles. iNNE](https://doi.org/10.1111/coin.12156)**.
    *Computational Intelligence*, Wiley-Blackwell, 10.1111/coin.12156
@@ -29,6 +41,9 @@ The following list is **automatically generated** from very heterogenous sources
    **[Exploring Expert Cognition for Attributed Network Embedding](https://doi.org/10.1145/3159652.3159655)**.
    *WSDM*, 270-278, ACM, 10.1145/3159652.3159655,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/wsdm/HuangSLH18)
+1. Chen Luo, and Anshumali Shrivastava (2018).
+   **[Arrays of (locality-sensitive) Count Estimators (ACE). Anomaly Detection on the Edge](https://doi.org/10.1145/3178876.3186056)**.
+   *Proceedings of the 2018 World Wide Web Conference on World Wide Web - WWW '18*, ACM Press, 10.1145/3178876.3186056
 1. Bastian Hornung, Vitor A. P. Martins dos Santos, Hauke Smidt, and Peter J. Schaap (2018).
    **[Studying microbial functionality within the gut ecosystem by systems biology](https://doi.org/10.1186/s12263-018-0594-6)**.
    *Genes & Nutrition* 13(1), Springer, 10.1186/s12263-018-0594-6
@@ -40,6 +55,9 @@ The following list is **automatically generated** from very heterogenous sources
    **[Data mining using concepts of independence, unimodality and homophily](https://edoc.ub.uni-muenchen.de/21675/)**.
    Ludwig Maximilian University of Munich, Germany,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/phd/dnb/Ye18)
+1. Alfonso Román y Zubeldia (2018).
+   **[Implementación de pruebas para una hipótesis sobre la aplicación de distancia Euclidiana para realizar agrupamientos en espacios multidimensionales](http://ridaa.unicen.edu.ar/xmlui/handle/123456789/1564)**.
+   Universidad Nacional del Centro de la Provincia de Buenos Aires. Facultad de Ciencias Exactas
 
 2017
 ----
