@@ -9,4 +9,8 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | replace:'.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="shortcut icon" href="/{{ site.baseurl }}img/favicon.png" type="image/png">
   {% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
+  {% if site.safe %}<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+  <script>window["denyCookies"]=function(b){window["ga-disable-UA-87792924-1"]=b;}
+window.addEventListener("load",function(){window.cookieconsent.initialise({palette:{popup:{background:"#edeff5",text:"#838391"},button:{background:"#4b81e8"}},theme:"classic",type:"opt-out",content:{message:"This website uses Google Analytics cookies to ensure you get the best experience on our website, and is hosted on GitHub servers outside of our control.",link:"GitHub privacy statement",href:"https://help.github.com/articles/github-privacy-statement/",deny:"Disable Google Analytics"},onInitialise:function(status){window.denyCookies(!this.hasConsented());},onStatusChange:function(status,chosenBefore){window.denyCookies(!this.hasConsented());}})});</script>{% endif %}
 </head>
