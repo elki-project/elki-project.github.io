@@ -58,6 +58,9 @@ The following list is **automatically generated** from very heterogenous sources
 1. Alfonso Román y Zubeldia (2018).
    **[Implementación de pruebas para una hipótesis sobre la aplicación de distancia Euclidiana para realizar agrupamientos en espacios multidimensionales](http://ridaa.unicen.edu.ar/xmlui/handle/123456789/1564)**.
    Universidad Nacional del Centro de la Provincia de Buenos Aires. Facultad de Ciencias Exactas
+1. Slimane Oulad-Naoui (2018).
+   **[Fouille de motifs: formalisation et unification](https://tel.archives-ouvertes.fr/tel-01760242)**.
+   UATL (Algeria)
 
 2017
 ----
@@ -347,6 +350,10 @@ The following list is **automatically generated** from very heterogenous sources
    **[A Hybrid Data Mining Approach for Product Complexity Analysis](https://arxiv.org/abs/1710.10555)**.
    *CoRR* abs/1710.10555,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/corr/abs-1710-10555)
+1. Nina Hubig (2017).
+   **[Analyzing and Predicting Large Vector-, Graph- and Spatio-Temporal Data](http://d-nb.info/1147968128)**.
+   Technical University Munich, Germany,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/phd/dnb/Hubig17)
 1. Markus Mauder (2017).
    **[Analyzing complex data using domain constraints](https://edoc.ub.uni-muenchen.de/20890/)**.
    Ludwig Maximilian University of Munich, Germany,
@@ -409,6 +416,9 @@ The following list is **automatically generated** from very heterogenous sources
 1. Rocio Hubert (2017).
    **[Análisis y visualización de peticiones, quejas y reclamos ciudadanos](http://ir.cs.uns.edu.ar/publications/bibpopup/81.bib)**.
    *46 Jornadas Argentinas de Informática e Investigación Operativa (JAIIO), EST*
+1. Shaherin Basith, Minghua Cui, Stephani J.Y. Macalino, and Sun Choi (2017).
+   **[Expediting the Design, Discovery and Development of Anticancer Drugs using Computational Approaches](http://www.ingentaconnect.com/contentone/ben/cmc/2017/00000024/00000042/art00003)**.
+   Bentham Science Publishers
 1. Soongeol Kwon (2017).
    **[Demand-Side Management for Energy-efficient Data Center Operations with Renewable Energy and Demand Response](http://hdl.handle.net/1969.1/161385)**.
 1. Subscribers Only (2017).
