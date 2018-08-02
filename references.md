@@ -25,15 +25,24 @@ The following list is **automatically generated** from very heterogenous sources
 1. Arno G. Stefani, Achim Sandmann, Andreas Burkovski, Johannes B. Huber, Heinrich Sticht, and Christophe Jardin (2018).
    **[Application of Methods from Information Theory in Protein-Interaction Analysis](https://doi.org/10.1007/978-3-319-54729-9_13)**.
    *Lecture Notes in Bioengineering*, 293-313, Springer, 10.1007/978-3-319-54729-9\_13
+1. Meiling Zhu, Chen Liu, and Yanbo Han (2018).
+   **[An Event Correlation Based Approach to Predictive Maintenance](https://doi.org/10.1007/978-3-319-96893-3_18)**.
+   *Lecture Notes in Computer Science*, 232-247, Springer, 10.1007/978-3-319-96893-3\_18
 1. Jakub Sawicki, Marcin Łoś, Maciej Smołka, Robert Schaefer, and Julen Álvarez-Aramberri (2018).
    **[Approximating landscape insensitivity regions in solving ill-conditioned inverse problems](https://doi.org/10.1007/s12293-018-0258-5)**.
    *Memetic Computing*, Springer, 10.1007/s12293-018-0258-5
+1. Joice K. Joseph, Karunakaran Akhil Dev, A.P. Pradeepkumar, and Mahesh Mohan (2018).
+   **[Big Data Analytics and Social Media in Disaster Management](https://doi.org/10.1016/B978-0-12-812056-9.00016-6)**.
+   *Integrating Disaster Science and Management*, 287-294, Elsevier, 10.1016/B978-0-12-812056-9.00016-6
 1. C. Yilmaz, C. Akalin, I. Gunal, H. Celik, Murat Buyuk, A. Suleman, and M. Yildiz (2018).
    **[A hybrid damage assessment for E-and S-glass reinforced laminated composite structures under in-plane shear loading](https://doi.org/10.1016/j.compstruct.2017.12.023)**.
    *Composite Structures* 186, 347-354, Elsevier BV, 10.1016/j.compstruct.2017.12.023
 1. Sarah Shukri, Hossam Faris, Ibrahim Aljarah, Seyedali Mirjalili, and Ajith Abraham (2018).
    **[Evolutionary static and dynamic clustering algorithms based on multi-verse optimizer](https://doi.org/10.1016/j.engappai.2018.03.013)**.
    *Engineering Applications of Artificial Intelligence* 72, 54-66, Elsevier BV, 10.1016/j.engappai.2018.03.013
+1. Jingyu Sun, Masato Kamiya, and Susumu Takeuchi (2018).
+   **[Introducing Hierarchical Clustering with Real Time Stream Reasoning into Semantic-Enabled IoT](https://doi.org/10.1109/COMPSAC.2018.10291)**.
+   *2018 IEEE 42nd Annual Computer Software and Applications Conference (COMPSAC)*, IEEE, 10.1109/COMPSAC.2018.10291
 1. Tharindu R. Bandaragoda, Kai Ming Ting, David Albrecht, Fei Tony Liu, Ye Zhu, and Jonathan R. Wells (2018).
    **[Isolation-based anomaly detection using nearest-neighbor ensembles. iNNE](https://doi.org/10.1111/coin.12156)**.
    *Computational Intelligence*, Wiley-Blackwell, 10.1111/coin.12156
@@ -44,9 +53,21 @@ The following list is **automatically generated** from very heterogenous sources
 1. Chen Luo, and Anshumali Shrivastava (2018).
    **[Arrays of (locality-sensitive) Count Estimators (ACE). Anomaly Detection on the Edge](https://doi.org/10.1145/3178876.3186056)**.
    *Proceedings of the 2018 World Wide Web Conference on World Wide Web - WWW '18*, ACM Press, 10.1145/3178876.3186056
+1. Erich Schubert, and Michael Gertz (2018).
+   **[Numerically stable parallel computation of (co-)variance](https://doi.org/10.1145/3221269.3223036)**.
+   *Proceedings of the 30th International Conference on Scientific and Statistical Database Management - SSDBM '18*, ACM Press, 10.1145/3221269.3223036
+1. Youcef Djenouri, and Arthur Zimek (2018).
+   **[Outlier Detection in Urban Traffic Data](https://doi.org/10.1145/3227609.3227692)**.
+   *Proceedings of the 8th International Conference on Web Intelligence, Mining and Semantics - WIMS '18*, ACM Press, 10.1145/3227609.3227692
 1. Bastian Hornung, Vitor A. P. Martins dos Santos, Hauke Smidt, and Peter J. Schaap (2018).
    **[Studying microbial functionality within the gut ecosystem by systems biology](https://doi.org/10.1186/s12263-018-0594-6)**.
    *Genes & Nutrition* 13(1), Springer, 10.1186/s12263-018-0594-6
+1. Wookey Lee, and Woong Kee Loh (2018).
+   **[G-OPTICS: fast ordering density-based cluster objects using graphics processing units](https://doi.org/10.1504/IJWGS.2018.092583)**.
+   *International Journal of Web and Grid Services* 14(3), 273, Inderscience Publishers, 10.1504/IJWGS.2018.092583
+1. Meiling Zhu, and Chen Liu (2018).
+   **[A Correlation Driven Approach with Edge Services for Predictive Industrial Maintenance](https://doi.org/10.3390/s18061844)**.
+   *Sensors* 18(6), 1844, Mdpi Ag, 10.3390/s18061844
 1. Payam Karisani, and Eugene Agichtein (2018).
    **[Did You Really Just Have a Heart Attack? Towards Robust Detection of Personal Health Mentions in Social Media](https://arxiv.org/abs/1802.09130)**.
    *CoRR* abs/1802.09130,
@@ -58,9 +79,18 @@ The following list is **automatically generated** from very heterogenous sources
 1. Alfonso Román y Zubeldia (2018).
    **[Implementación de pruebas para una hipótesis sobre la aplicación de distancia Euclidiana para realizar agrupamientos en espacios multidimensionales](http://ridaa.unicen.edu.ar/xmlui/handle/123456789/1564)**.
    Universidad Nacional del Centro de la Provincia de Buenos Aires. Facultad de Ciencias Exactas
+1. Fatemeh Riahi, and Oliver Schulte (2018).
+   **[Model-based Exception Mining for Object-Relational Data](https://arxiv.org/abs/1807.00381)**.
+   *arXiv* 1807.00381
+1. Roberto Pirrone, Vincenzo Cannella, Sergio Monteleone, and Gabriella Giordano (2018).
+   **[Linear density-based clustering with a discrete density model](https://arxiv.org/abs/1807.08158)**.
+   *arXiv* 1807.08158
 1. Slimane Oulad-Naoui (2018).
    **[Fouille de motifs: formalisation et unification](https://tel.archives-ouvertes.fr/tel-01760242)**.
    UATL (Algeria)
+1. Stephen Pauwels, and Toon Calders (2018).
+   **[Extending Dynamic Bayesian Networks for Anomaly Detection in Complex Logs](https://arxiv.org/abs/1805.07107)**.
+   *arXiv* 1805.07107
 
 2017
 ----
