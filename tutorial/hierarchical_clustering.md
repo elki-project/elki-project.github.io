@@ -10,11 +10,8 @@ navigation: 40
 Implementing Hierarchical Clustering
 ====================================
 
-Version information: Updated for ELKI 0.6.0
+Version information: Updated for ELKI 0.7.1
 {: class="versioninfo" }
-
-This example needs to be updated, because non-numerical distances have been removed!
-{: class="box-warn" }
 
 In this tutorial, we will implement the *naive approach* to hierarchical clustering. It is naive in the sense that it is a fairly general procedure, which unfortunately operates in O(n<sup>3</sup>) runtime and O(n<sup>2</sup>) memory, so it does not scale very well. For some linkage criteria, there exist optimized algorithms such as [SLINK](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/SLINK.html), which computes single-link clustering in low O(n<sup>2</sup>) runtime and O(n) memory.
 
@@ -35,7 +32,7 @@ However, we will see that there is more to the algorithm, such as the need to tr
 
 ### Auto-generated code
 
-First of all, we start a new class, `NaiveAgglomerativeHierarchicalClustering`, extending [AbstractDistanceBasedAlgorithm](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/AbstractDistanceBasedAlgorithm.html). For the generics, we restrict the distance type `D` to `NumberDistance<D, ?>` (we can't use non-numerical distances in linkage clustering), and the output type to the abstract type `Result` (for the initial version, we could have used `Clustering<Model>`, too). After having eclipse auto-generate method stubs and constructor, the template code looks like this:
+First of all, we start a new class, `NaiveAgglomerativeHierarchicalClustering`, extending [AbstractDistanceBasedAlgorithm](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/AbstractDistanceBasedAlgorithm.html). We accept any type of object `O` (as long as we have a distance function), and for now the output type is the abstract type `Result` (for the initial version, we could have used `Clustering<Model>`, too). After having eclipse auto-generate method stubs and constructor, the template code looks like this:
 
 {% highlight java %}
 package tutorial.clustering;
@@ -43,14 +40,13 @@ package tutorial.clustering;
 import de.lmu.ifi.dbs.elki.algorithm.AbstractDistanceBasedAlgorithm;
 import de.lmu.ifi.dbs.elki.data.type.TypeInformation;
 import de.lmu.ifi.dbs.elki.distance.distancefunction.DistanceFunction;
-import de.lmu.ifi.dbs.elki.distance.distancevalue.NumberDistance;
 import de.lmu.ifi.dbs.elki.logging.Logging;
 import de.lmu.ifi.dbs.elki.result.Result;
 
-public class NaiveAgglomerativeHierarchicalClustering<O, D extends NumberDistance<D, ?>>
-  extends AbstractDistanceBasedAlgorithm<O, D, Result> {
+public class NaiveAgglomerativeHierarchicalClustering<O>
+  extends AbstractDistanceBasedAlgorithm<O, Result> {
 
-  protected NaiveAgglomerativeHierarchicalClustering(DistanceFunction<? super O, D> distanceFunction) {
+  protected NaiveAgglomerativeHierarchicalClustering(DistanceFunction<? super O> distanceFunction) {
     super(distanceFunction);
     // TODO Auto-generated constructor stub
   }
@@ -105,7 +101,7 @@ Where `Relation<O>` will be of the type requested by `getInputTypeRestriction()`
 In order to compute distances, we need to connect the distance function to this relation. This will allow ELKI to choose an optimized implementation where appropriate. Fortunately, as this is a very common procedure, it is just a single line:
 
 {% highlight java %}
-    DistanceQuery<O, D> dq = db.getDistanceQuery(relation, getDistanceFunction());
+    DistanceQuery<O> dq = db.getDistanceQuery(relation, getDistanceFunction());
 {% endhighlight %}
 
 For the actual algorithm, we will be using a matrix of distances. For efficiency, we will be using the raw type of `double[][]` (we will be further optimizing this to `double[]` later). For this to work, we need a unique mapping of objects to columns and rows in this matrix, and back. For this, we force the database IDs to be a static array:
@@ -128,10 +124,10 @@ We use this to compute the initial distance matrix to work on:
 {% highlight java %}
     double[][] matrix = new double[size][size];
     DBIDArrayIter ix = ids.iter(), iy = ids.iter();
-    for (int x = 0; ix.valid(); x++, ix.advance()) {
+    for(int x = 0; ix.valid(); x++, ix.advance()) {
       iy.seek(0);
-      for (int y = 0; y < x; y++, iy.advance()) {
-        final double dist = dq.distance(ix, iy).doubleValue();
+      for(int y = 0; y < x; y++, iy.advance()) {
+        final double dist = dq.distance(ix, iy);
         matrix[x][y] = dist;
         matrix[y][x] = dist;
       }
@@ -156,7 +152,7 @@ Furthermore, we will need some auxillary data that will represent the dendrogram
     // have every object point to itself initially
     ArrayModifiableDBIDs parent = DBIDUtil.newArray(ids);
     // Active clusters, when not trivial.
-    TIntObjectMap<ModifiableDBIDs> clusters = new TIntObjectHashMap<>();
+    Int2ReferenceMap<ModifiableDBIDs> clusters = new Int2ReferenceOpenHashMap<>();
 {% endhighlight %}
 
 ### Algorithm main loop
@@ -170,18 +166,18 @@ For the initial version, we will be using a parameter `numclusters`, with the nu
     FiniteProgress prog = LOG.isVerbose() ?
       new FiniteProgress("Agglomerative clustering", stop, LOG)
       : null;
-    for (int i = 0; i < stop; i++) {
+    for(int i = 0; i < stop; i++) {
       // TODO: find clusters to merge
 
       // TODO: store the merge in auxillary data
 
       // TODO: update distance matrix
 
-      if (prog != null) {
+      if(prog != null) {
         prog.incrementProcessed(LOG);
       }
     }
-    if (prog != null) {
+    if(prog != null) {
       prog.ensureCompleted(LOG);
     }
 {% endhighlight %}
@@ -191,15 +187,15 @@ So now we need to implement the three key steps of the algorithm: find two clust
 {% highlight java %}
       double min = Double.POSITIVE_INFINITY;
       int minx = -1, miny = -1;
-      for (int x = 0; x < size; x++) {
-        if (height[x] < Double.POSITIVE_INFINITY) {
+      for(int x = 0; x < size; x++) {
+        if(height[x] < Double.POSITIVE_INFINITY) {
           continue;
         }
-        for (int y = 0; y < x; y++) {
-          if (height[y] < Double.POSITIVE_INFINITY) {
+        for(int y = 0; y < x; y++) {
+          if(height[y] < Double.POSITIVE_INFINITY) {
             continue;
           }
-          if (matrix[x][y] < min) {
+          if(matrix[x][y] < min) {
             min = matrix[x][y];
             minx = x;
             miny = y;
@@ -228,13 +224,14 @@ Updating the `clusters` map is slightly more complicated because of an implement
       // Merge into cluster
       ModifiableDBIDs cx = clusters.get(minx);
       ModifiableDBIDs cy = clusters.get(miny);
-      if (cy == null) {
+      if(cy == null) {
         cy = DBIDUtil.newHashSet();
         cy.add(iy);
       }
-      if (cx == null) {
+      if(cx == null) {
         cy.add(ix);
-      } else {
+      }
+      else {
         cy.addDBIDs(cx);
         clusters.remove(minx);
       }
@@ -247,7 +244,7 @@ Now we will be updating our matrix. For single-linkage the update rule is pretty
 
 {% highlight java %}
       // Update distance matrix for y:
-      for (int j = 0; j < size; j++) {
+      for(int j = 0; j < size; j++) {
         matrix[j][miny] = Math.min(matrix[j][minx], matrix[j][miny]);
         matrix[miny][j] = Math.min(matrix[minx][j], matrix[miny][j]);
       }
@@ -264,18 +261,17 @@ Instead of coming up with our own representation of a dendrogram, we will for no
 {% highlight java %}
     final Clustering<Model> dendrogram = new Clustering<>(
       "Hierarchical-Clustering", "hierarchical-clustering");
-    for (int x = 0; x < size; x++) {
-      if (height[x] < Double.POSITIVE_INFINITY) {
-        continue;
+    for(int x = 0; x < size; x++) {
+      if(height[x] < Double.POSITIVE_INFINITY) {
+        DBIDs cids = clusters.get(x);
+        // For singleton objects, this may be null.
+        if(cids == null) {
+          ix.seek(x);
+          cids = DBIDUtil.deref(ix);
+        }
+        Cluster<Model> cluster = new Cluster<>("Cluster", cids);
+        dendrogram.addToplevelCluster(cluster);
       }
-      DBIDs cids = clusters.get(x);
-      // For singleton objects, this may be null.
-      if (cids == null) {
-        ix.seek(x);
-        cids = DBIDUtil.deref(ix);
-      }
-      Cluster<Model> cluster = new Cluster<>("Cluster", cids);
-      dendrogram.addToplevelCluster(cluster);
     }
     return dendrogram;
 {% endhighlight %}
@@ -299,7 +295,7 @@ We can now update the constructor. We added a parameter, the desired number of c
    * @param numclusters Number of clusters
    */
   public NaiveAgglomerativeHierarchicalClustering(
-      DistanceFunction<? super O, D> distanceFunction,
+      DistanceFunction<? super O> distanceFunction,
       int numclusters) {
     super(distanceFunction);
     this.numclusters = numclusters;
@@ -311,8 +307,8 @@ We can now update the constructor. We added a parameter, the desired number of c
 So how are we getting this algorithm to show up in the MiniGUI for experiments? We need to add a [Parameterization](/dev/parameterization) class. Parameterizers serve the purpose of allowing the automatic generation of command line and UI code for an algorithm. Without a Parameterizer, we could only invoke the algorithm from Java. Fortunately, the parameterizer we need is not particularly difficult - we only added a single integer option.
 
 {% highlight java %}
-  public static class Parameterizer<O, D extends NumberDistance<D, ?>>
-    extends AbstractDistanceBasedAlgorithm.Parameterizer<O, D> {
+  public static class Parameterizer<O>
+    extends AbstractDistanceBasedAlgorithm.Parameterizer<O> {
 
     /**
      * Desired number of clusters.
@@ -322,15 +318,15 @@ So how are we getting this algorithm to show up in the MiniGUI for experiments? 
     @Override
     protected void makeOptions(Parameterization config) {
       super.makeOptions(config);
-      IntParameter numclustersP = new IntParameter(SLINK.Parameterizer.SLINK_MINCLUSTERS_ID);
-      numclustersP.addConstraint(new GreaterEqualConstraint(1));
-      if (config.grab(numclustersP)) {
+      IntParameter numclustersP = new IntParameter(CutDendrogramByNumberOfClusters.Parameterizer.MINCLUSTERS_ID) //
+          .addConstraint(CommonConstraints.GREATER_EQUAL_ONE_INT);
+      if(config.grab(numclustersP)) {
         numclusters = numclustersP.intValue();
       }
     }
 
     @Override
-    protected NaiveAgglomerativeHierarchicalClustering<O, D> makeInstance() {
+    protected NaiveAgglomerativeHierarchicalClustering<O> makeInstance() {
       return new NaiveAgglomerativeHierarchicalClustering<>(distanceFunction, numclusters);
     }
   }
@@ -362,18 +358,21 @@ Above we computed a complete similarity matrix; but we already assumed it to be 
 Using this formula, we can now initialize our data structure as follows:
 
 {% highlight java %}
-    if (size > 0x10000) {
+    if(size > 0x10000) {
       throw new AbortException("This implementation does not scale "
         + "to data sets larger than " + 0x10000
         + " instances (~17 GB RAM), which results in an integer overflow.");
     }
 
+    // Compute the initial (lower triangular) distance matrix.
     double[] scratch = new double[triangleSize(size)];
+    DBIDArrayIter ix = ids.iter(), iy = ids.iter();
+    // Position counter - must agree with computeOffset!
     int pos = 0;
-    for (int x = 0; ix.valid(); x++, ix.advance()) {
+    for(int x = 0; ix.valid(); x++, ix.advance()) {
       iy.seek(0);
-      for (int y = 0; y < x; y++, iy.advance()) {
-        scratch[pos] = dq.distance(ix, iy).doubleValue();
+      for(int y = 0; y < x; y++, iy.advance()) {
+        scratch[pos] = dq.distance(ix, iy);
         pos++;
       }
     }
@@ -386,17 +385,17 @@ So far, our code has actually become simpler, but in order to skip rows when fin
 {% highlight java %}
       double min = Double.POSITIVE_INFINITY;
       int minx = -1, miny = -1;
-      for (int x = 0; x < size; x++) {
-        if (height[x] < Double.POSITIVE_INFINITY) {
+      for(int x = 0; x < size; x++) {
+        if(height[x] < Double.POSITIVE_INFINITY) {
           continue;
         }
         final int xbase = triangleSize(x);
-        for (int y = 0; y < x; y++) {
-          if (height[y] < Double.POSITIVE_INFINITY) {
+        for(int y = 0; y < x; y++) {
+          if(height[y] < Double.POSITIVE_INFINITY) {
             continue;
           }
           final int idx = xbase + y;
-          if (scratch[idx] < min) {
+          if(scratch[idx] < min) {
             min = scratch[idx];
             minx = x;
             miny = y;
@@ -429,19 +428,19 @@ This is why we need three loops. The first covers `j < y < x`, the second `y < j
 {% highlight java %}
       final int xbase = triangleSize(minx), ybase = triangleSize(miny);
       // Write to (y, j), with j < y
-      for (int j = 0; j < miny; j++) {
-        if (height[j] < Double.POSITIVE_INFINITY) continue;
+      for(int j = 0; j < miny; j++) {
+        if(height[j] < Double.POSITIVE_INFINITY) continue;
         scratch[ybase + j] = Math.min(scratch[xbase + j], scratch[ybase + j]);
       }
       // Write to (j, y), with y < j < x
-      for (int j = miny + 1; j < minx; j++) {
-        if (height[j] < Double.POSITIVE_INFINITY) continue;
+      for(int j = miny + 1; j < minx; j++) {
+        if(height[j] < Double.POSITIVE_INFINITY) continue;
         final int jbase = triangleSize(j);
         scratch[jbase + miny] = Math.min(scratch[xbase + j], scratch[jbase + miny]);
       }
       // Write to (j, y), with y < x < j
-      for (int j = minx + 1; j < size; j++) {
-        if (height[j] < Double.POSITIVE_INFINITY) continue;
+      for(int j = minx + 1; j < size; j++) {
+        if(height[j] < Double.POSITIVE_INFINITY) continue;
         final int jbase = triangleSize(j);
         scratch[jbase + miny] = Math.min(scratch[jbase + minx], scratch[jbase + miny]);
       }
@@ -488,15 +487,17 @@ When merging the clusters, we need to track their previous cluster sizes (`sizex
       ModifiableDBIDs cx = clusters.get(minx);
       ModifiableDBIDs cy = clusters.get(miny);
       int sizex = 1, sizey = 1; // cluster sizes, for averaging
-      if (cy == null) {
+      if(cy == null) {
         cy = DBIDUtil.newHashSet();
         cy.add(iy);
-      } else {
+      }
+      else {
         sizey = cy.size(); // Remember the size of cluster y
       }
-      if (cx == null) {
+      if(cx == null) {
         cy.add(ix);
-      } else {
+      }
+      else {
         sizex = cx.size(); // Remember the size of cluster x
         cy.addDBIDs(cx);
         clusters.remove(minx);
@@ -509,8 +510,8 @@ Then we can change the update block to:
 {% highlight java %}
       final int xbase = triangleSize(minx), ybase = triangleSize(miny);
       // Write to (y, j), with j < y
-      for (int j = 0; j < miny; j++) {
-        if (height[j] < Double.POSITIVE_INFINITY) continue;
+      for(int j = 0; j < miny; j++) {
+        if(height[j] < Double.POSITIVE_INFINITY) continue;
         final DBIDs idsj = clusters.get(j);
         final int sizej = (idsj == null) ? 1 : idsj.size();
         scratch[ybase + j] = linkage.combine(
@@ -518,8 +519,8 @@ Then we can change the update block to:
           sizey, scratch[ybase + j], sizej, min);
       }
       // Write to (j, y), with y < j < x
-      for (int j = miny + 1; j < minx; j++) {
-        if (height[j] < Double.POSITIVE_INFINITY) continue;
+      for(int j = miny + 1; j < minx; j++) {
+        if(height[j] < Double.POSITIVE_INFINITY) continue;
         final int jbase = triangleSize(j);
         final DBIDs idsj = clusters.get(j);
         final int sizej = (idsj == null) ? 1 : idsj.size();
@@ -528,8 +529,8 @@ Then we can change the update block to:
           sizey, scratch[jbase + miny], sizej, min);
       }
       // Write to (j, y), with y < x < j
-      for (int j = minx + 1; j < size; j++) {
-        if (height[j] < Double.POSITIVE_INFINITY) continue;
+      for(int j = minx + 1; j < size; j++) {
+        if(height[j] < Double.POSITIVE_INFINITY) continue;
         final DBIDs idsj = clusters.get(j);
         final int sizej = (idsj == null) ? 1 : idsj.size();
         final int jbase = triangleSize(j);
@@ -547,7 +548,7 @@ In order to choose the linkage, we need to update the constructor and `Parameter
 
 {% highlight java %}
   public NaiveAgglomerativeHierarchicalClustering(
-        DistanceFunction<? super O, D> distanceFunction,
+        DistanceFunction<? super O> distanceFunction,
         int numclusters, Linkage linkage) {
     super(distanceFunction);
     this.numclusters = numclusters;
@@ -567,21 +568,21 @@ For the Parameterizer, we need to add a new [OptionID](/releases/current/doc/de/
     @Override
     protected void makeOptions(Parameterization config) {
       super.makeOptions(config);
-      IntParameter numclustersP = new IntParameter(SLINK.Parameterizer.SLINK_MINCLUSTERS_ID);
-      numclustersP.addConstraint(new GreaterEqualConstraint(1));
-      if (config.grab(numclustersP)) {
+      IntParameter numclustersP = new IntParameter(CutDendrogramByNumberOfClusters.Parameterizer.MINCLUSTERS_ID) //
+          .addConstraint(CommonConstraints.GREATER_EQUAL_ONE_INT);
+      if(config.grab(numclustersP)) {
         numclusters = numclustersP.intValue();
       }
 
-      EnumParameter<Linkage> linkageP = new EnumParameter<>(LINKAGE_ID, Linkage.class);
-      linkageP.setDefaultValue(Linkage.WARD);
-      if (config.grab(linkageP)) {
+      EnumParameter<Linkage> linkageP = new EnumParameter<>(LINKAGE_ID, Linkage.class) //
+          .setDefaultValue(Linkage.WARD);
+      if(config.grab(linkageP)) {
         linkage = linkageP.getValue();
       }
     }
 
     @Override
-    protected NaiveAgglomerativeHierarchicalClustering3<O, D> makeInstance() {
+    protected NaiveAgglomerativeHierarchicalClustering3<O> makeInstance() {
       return new NaiveAgglomerativeHierarchicalClustering3<>(distanceFunction, numclusters, linkage);
     }
 {% endhighlight %}
@@ -651,8 +652,9 @@ Ward linkage is still somewhat special: for Ward, the distance matrix should be 
 and then:
 
 {% highlight java %}
-        scratch[pos] = dq.distance(ix, iy).doubleValue();
-        if (square) {
+        scratch[pos] = dq.distance(ix, iy);
+        // Ward uses variances -- i.e. squared values
+        if(square) {
           scratch[pos] *= scratch[pos];
         }
 {% endhighlight %}
@@ -677,13 +679,13 @@ The new data storage initialization looks like this (note that we also no longer
 {% highlight java %}
     WritableDBIDDataStore parent = DataStoreUtil.makeDBIDStorage(ids,
         DataStoreFactory.HINT_HOT | DataStoreFactory.HINT_STATIC);
-    WritableDoubleDistanceDataStore height = DataStoreUtil.makeDoubleDistanceStorage(ids,
+    WritableDoubleDataStore height = DataStoreUtil.makeDoubleStorage(ids,
         DataStoreFactory.HINT_HOT | DataStoreFactory.HINT_STATIC);
     WritableIntegerDataStore csize = DataStoreUtil.makeIntegerStorage(ids,
         DataStoreFactory.HINT_HOT | DataStoreFactory.HINT_TEMP);
 
     // Initialize the contents: parent(p)=p, height=+inf, size=1
-    for (DBIDIter it = ids.iter(); it.valid(); it.advance()) {
+    for(DBIDIter it = ids.iter(); it.valid(); it.advance()) {
       parent.put(it, it);
       height.put(it, Double.POSITIVE_INFINITY);
       csize.put(it, 1);
@@ -703,17 +705,17 @@ The code for finding the minimum distance now becomes this:
 {% highlight java %}
       double min = Double.POSITIVE_INFINITY;
       int minx = -1, miny = -1;
-      for (ix.seek(0); ix.valid(); ix.advance()) {
-        if (height.doubleValue(ix) < Double.POSITIVE_INFINITY) {
+      for(ix.seek(0); ix.valid(); ix.advance()) {
+        if(height.doubleValue(ix) < Double.POSITIVE_INFINITY) {
           continue;
         }
         final int xbase = triangleSize(ix.getOffset());
-        for (iy.seek(0); iy.getOffset() < ix.getOffset(); iy.advance()) {
-          if (height.doubleValue(iy) < Double.POSITIVE_INFINITY) {
+        for(iy.seek(0); iy.getOffset() < ix.getOffset(); iy.advance()) {
+          if(height.doubleValue(iy) < Double.POSITIVE_INFINITY) {
             continue;
           }
           final int idx = xbase + iy.getOffset();
-          if (scratch[idx] <= min) {
+          if(scratch[idx] <= min) {
             min = scratch[idx];
             minx = ix.getOffset();
             miny = iy.getOffset();
@@ -727,14 +729,14 @@ Note that the loops now are using the ELKI/Trove/C++ style iterators (see [Iter]
 Merging the clusters becomes simpler, as we stopped tracking the exact members, but only the cluster sizes:
 
 {% highlight java %}
-      // Point the iterators to the minimum:
+      // Avoid allocating memory, by reusing existing iterators:
       ix.seek(minx);
       iy.seek(miny);
-      // Update height, parent of x
+      // Perform merge in data structure: x -> y
+      // Since y < x, prefer keeping y, dropping x.
+      int sizex = csize.intValue(ix), sizey = csize.intValue(iy);
       height.put(ix, min);
       parent.put(ix, iy);
-      // Old cluster sizes, new cluster size of y:
-      int sizex = csize.intValue(ix), sizey = csize.intValue(iy);
       csize.put(iy, sizex + sizey);
 {% endhighlight %}
 
@@ -743,16 +745,16 @@ The changes for updating the similariy matrix are similar: it is now more conven
 {% highlight java %}
       final int xbase = triangleSize(minx), ybase = triangleSize(miny);
       // Write to (y, j), with j < y
-      for (ij.seek(0); ij.getOffset() < miny; ij.advance()) {
-        if (height.doubleValue(ij) < Double.POSITIVE_INFINITY) continue;
+      for(ij.seek(0); ij.getOffset() < miny; ij.advance()) {
+        if(height.doubleValue(ij) < Double.POSITIVE_INFINITY) continue;
         final int sizej = csize.intValue(ij);
         scratch[ybase + ij.getOffset()] = linkage.combine(
           sizex, scratch[xbase + ij.getOffset()],
           sizey, scratch[ybase + ij.getOffset()], sizej, min);
       }
       // Write to (j, y), with y < j < x
-      for (ij.seek(miny + 1); ij.getOffset() < minx; ij.advance()) {
-        if (height.doubleValue(ij) < Double.POSITIVE_INFINITY) continue;
+      for(ij.seek(miny + 1); ij.getOffset() < minx; ij.advance()) {
+        if(height.doubleValue(ij) < Double.POSITIVE_INFINITY) continue;
         final int jbase = triangleSize(ij.getOffset());
         final int sizej = csize.intValue(ij);
         scratch[jbase + miny] = linkage.combine(
@@ -760,8 +762,8 @@ The changes for updating the similariy matrix are similar: it is now more conven
           sizey, scratch[jbase + miny], sizej, min);
       }
       // Write to (j, y), with y < x < j
-      for (ij.seek(minx + 1); ij.valid(); ij.advance()) {
-        if (height.doubleValue(ij) < Double.POSITIVE_INFINITY) continue;
+      for(ij.seek(minx + 1); ij.valid(); ij.advance()) {
+        if(height.doubleValue(ij) < Double.POSITIVE_INFINITY) continue;
         final int jbase = triangleSize(ij.getOffset());
         final int sizej = csize.intValue(ij);
         scratch[jbase + miny] = linkage.combine(
@@ -775,25 +777,20 @@ The changes for updating the similariy matrix are similar: it is now more conven
 Instead of extracting our own `Clustering<Model>` result, we just return the hierarchy:
 
 {% highlight java %}
-return new PointerHierarchyRepresentationResult<>(ids, parent, height);
+return new PointerHierarchyRepresentationResult(ids, parent, height, dq.getDistanceFunction().isSquared());
 {% endhighlight %}
 
 (which obviously is substantially less code than in \[\#ReturningaClustering\])
 
-Finally, we want our algorithm to implement the `HierarchicalClusteringAlgorithm` interface, which requires some simple changes to the parent class generics, the return type of the run method, and the addition of a simple type getter to let users query our returned distance type (we always produce `DoubleDistance`).
+Finally, we want our algorithm to implement the `HierarchicalClusteringAlgorithm` interface, which requires some simple changes to the parent class generics, and the return type of the run method.
 
 {% highlight java %}
-public class NaiveAgglomerativeHierarchicalClustering<O, D extends NumberDistance<D, ?>>
-    extends AbstractDistanceBasedAlgorithm<O, D, PointerHierarchyRepresentationResult<DoubleDistance>>
-    implements HierarchicalClusteringAlgorithm<DoubleDistance> {
+public class NaiveAgglomerativeHierarchicalClustering<O>
+    extends AbstractDistanceBasedAlgorithm<O, PointerHierarchyRepresentationResult>
+    implements HierarchicalClusteringAlgorithm {
 ...
-  public PointerHierarchyRepresentationResult<DoubleDistance> run(Database db, Relation<O> relation) {
+  public PointerHierarchyRepresentationResult run(Database db, Relation<O> relation) {
 ...
-  }
-...
-  @Override
-  public DoubleDistance getDistanceFactory() {
-    return DoubleDistance.FACTORY;
   }
 {% endhighlight %}
 
