@@ -13,6 +13,16 @@ Over the years, ELKI has been increasingly cited/used in scientific publications
 
 The following list is **automatically generated** from very heterogenous sources, and does contain errors. Where possible, we try to use metadata from DBLP, CrossRef.org, SemanticScholar, and HTML meta headers from the publisher web pages. For theses, seminar articles etc. this approach does however not work. We have not verified every citation discovered by the bot.
 
+2019
+----
+
+1. Dilip Singh Sisodia, Rahul Borkar, and Hari Shrawgi (2019).
+   **[Performance Evaluation of Large Data Clustering Techniques on Web Robot Session Data](https://doi.org/10.1007/978-981-13-0923-6_47)**.
+   *Machine Intelligence and Signal Analysis*, 545-553, Springer, 10.1007/978-981-13-0923-6\_47
+1. Bilkis Jamal Ferdosi, and Muhammad Masud Tarek (2019).
+   **[Visual Verification and Analysis of Outliers Using Optimal Outlier Detection Result by Choosing Proper Algorithm and Parameter](https://doi.org/10.1007/978-981-13-1498-8_45)**.
+   *Emerging Technologies in Data Mining and Information Security*, 507-517, Springer, 10.1007/978-981-13-1498-8\_45
+
 2018
 ----
 
@@ -27,22 +37,40 @@ The following list is **automatically generated** from very heterogenous sources
    *Lecture Notes in Bioengineering*, 293-313, Springer, 10.1007/978-3-319-54729-9\_13
 1. Meiling Zhu, Chen Liu, and Yanbo Han (2018).
    **[An Event Correlation Based Approach to Predictive Maintenance](https://doi.org/10.1007/978-3-319-96893-3_18)**.
-   *Lecture Notes in Computer Science*, 232-247, Springer, 10.1007/978-3-319-96893-3\_18
-1. Jakub Sawicki, Marcin Łoś, Maciej Smołka, Robert Schaefer, and Julen Álvarez-Aramberri (2018).
+   *APWeb/WAIM (2)*, 232-247, Springer, 10.1007/978-3-319-96893-3\_18,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/apweb/ZhuLH18)
+1. Daniyal Kazempour, Markus Mauder, Peer Kröger, and Thomas Seidl (2018).
+   **[Detecting global hyperparaboloid correlated clusters: a Hough-transform based multicore algorithm](https://doi.org/10.1007/s10619-018-7246-0)**.
+   *Distributed and Parallel Databases*, Springer Nature America, Inc, 10.1007/s10619-018-7246-0
+1. Ahmed AlEroud, and Aryya Gangopadhyay (2018).
+   **[Multimode co-clustering for analyzing terrorist networks](https://doi.org/10.1007/s10796-016-9712-4)**.
+   *Information Systems Frontiers* 20(5), 1053-1074, 10.1007/s10796-016-9712-4,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/isf/AlEroudG18)
+1. Jakub Sawicki, Marcin Los, Maciej Smolka, Robert Schaefer, and Julen Álvarez-Aramberri (2018).
    **[Approximating landscape insensitivity regions in solving ill-conditioned inverse problems](https://doi.org/10.1007/s12293-018-0258-5)**.
-   *Memetic Computing*, Springer, 10.1007/s12293-018-0258-5
+   *Memetic Computing* 10(3), 279-289, 10.1007/s12293-018-0258-5,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/memetic/SawickiLSSA18)
 1. Joice K. Joseph, Karunakaran Akhil Dev, A.P. Pradeepkumar, and Mahesh Mohan (2018).
    **[Big Data Analytics and Social Media in Disaster Management](https://doi.org/10.1016/B978-0-12-812056-9.00016-6)**.
    *Integrating Disaster Science and Management*, 287-294, Elsevier, 10.1016/B978-0-12-812056-9.00016-6
+1. Anitha Ramchandran, and Arun Kumar Sangaiah (2018).
+   **[Unsupervised Anomaly Detection for High Dimensional Data—an Exploratory Analysis](https://doi.org/10.1016/B978-0-12-813314-9.00011-6)**.
+   *Computational Intelligence for Multimedia Big Data on the Cloud with Engineering Applications*, 233-251, Elsevier, 10.1016/B978-0-12-813314-9.00011-6
 1. C. Yilmaz, C. Akalin, I. Gunal, H. Celik, Murat Buyuk, A. Suleman, and M. Yildiz (2018).
    **[A hybrid damage assessment for E-and S-glass reinforced laminated composite structures under in-plane shear loading](https://doi.org/10.1016/j.compstruct.2017.12.023)**.
    *Composite Structures* 186, 347-354, Elsevier BV, 10.1016/j.compstruct.2017.12.023
+1. Yannis Papanikolaou, Grigorios Tsoumakas, and Ioannis Katakis (2018).
+   **[Hierarchical partitioning of the output space in multi-label data](https://doi.org/10.1016/j.datak.2018.05.003)**.
+   *Data Knowl. Eng.* 116, 42-60, 10.1016/j.datak.2018.05.003,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/dke/PapanikolaouTK18)
 1. Sarah Shukri, Hossam Faris, Ibrahim Aljarah, Seyedali Mirjalili, and Ajith Abraham (2018).
    **[Evolutionary static and dynamic clustering algorithms based on multi-verse optimizer](https://doi.org/10.1016/j.engappai.2018.03.013)**.
-   *Engineering Applications of Artificial Intelligence* 72, 54-66, Elsevier BV, 10.1016/j.engappai.2018.03.013
+   *Eng. Appl. of AI* 72, 54-66, 10.1016/j.engappai.2018.03.013,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/eaai/ShukriFAMA18)
 1. Jingyu Sun, Masato Kamiya, and Susumu Takeuchi (2018).
    **[Introducing Hierarchical Clustering with Real Time Stream Reasoning into Semantic-Enabled IoT](https://doi.org/10.1109/COMPSAC.2018.10291)**.
-   *2018 IEEE 42nd Annual Computer Software and Applications Conference (COMPSAC)*, IEEE, 10.1109/COMPSAC.2018.10291
+   *COMPSAC (2)*, 540-545, IEEE, 10.1109/COMPSAC.2018.10291,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/compsac/SunKT18)
 1. Tharindu R. Bandaragoda, Kai Ming Ting, David Albrecht, Fei Tony Liu, Ye Zhu, and Jonathan R. Wells (2018).
    **[Isolation-based anomaly detection using nearest-neighbor ensembles. iNNE](https://doi.org/10.1111/coin.12156)**.
    *Computational Intelligence*, Wiley-Blackwell, 10.1111/coin.12156
@@ -51,27 +79,63 @@ The following list is **automatically generated** from very heterogenous sources
    *WSDM*, 270-278, ACM, 10.1145/3159652.3159655,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/wsdm/HuangSLH18)
 1. Chen Luo, and Anshumali Shrivastava (2018).
-   **[Arrays of (locality-sensitive) Count Estimators (ACE). Anomaly Detection on the Edge](https://doi.org/10.1145/3178876.3186056)**.
-   *Proceedings of the 2018 World Wide Web Conference on World Wide Web - WWW '18*, ACM Press, 10.1145/3178876.3186056
+   **[Arrays of (locality-sensitive) Count Estimators (ACE): Anomaly Detection on the Edge](https://doi.org/10.1145/3178876.3186056)**.
+   *WWW*, 1439-1448, ACM, 10.1145/3178876.3186056,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/www/LuoS18)
+1. Dominik Mautz, Wei Ye, Claudia Plant, and Christian Böhm (2018).
+   **[Discovering Non-Redundant K-means Clusterings in Optimal Subspaces](https://doi.org/10.1145/3219819.3219945)**.
+   *KDD*, 1973-1982, ACM, 10.1145/3219819.3219945,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/kdd/MautzYPB18)
 1. Erich Schubert, and Michael Gertz (2018).
    **[Numerically stable parallel computation of (co-)variance](https://doi.org/10.1145/3221269.3223036)**.
-   *Proceedings of the 30th International Conference on Scientific and Statistical Database Management - SSDBM '18*, ACM Press, 10.1145/3221269.3223036
+   *SSDBM*, 10:1-10:12, ACM, 10.1145/3221269.3223036,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/ssdbm/SchubertG18)
+1. Eva Tuba, Raka Jovanovic, Romana Capor-Hrosik, Adis Alihodzic, and Milan Tuba (2018).
+   **[Web Intelligence Data Clustering by Bare Bone Fireworks Algorithm Combined with K-Means](https://doi.org/10.1145/3227609.3227650)**.
+   *WIMS*, 7:1-7:8, ACM, 10.1145/3227609.3227650,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/wims/TubaJCAT18)
 1. Youcef Djenouri, and Arthur Zimek (2018).
    **[Outlier Detection in Urban Traffic Data](https://doi.org/10.1145/3227609.3227692)**.
-   *Proceedings of the 8th International Conference on Web Intelligence, Mining and Semantics - WIMS '18*, ACM Press, 10.1145/3227609.3227692
+   *WIMS*, 3:1-3:12, ACM, 10.1145/3227609.3227692,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/wims/DjenouriZ18)
+1. 星野 綾子, and 細見 格 (2018).
+   **[句構造解析とクラスタリングを用いた会話履歴の要約](https://doi.org/10.11517/pjsai.JSAI2018.0_2K102)**.
+   *人工知能学会全国大会論文集 第32回全国大会(2018)*, 2K102-2K102, 一般社団法人 人工知能学会, 10.11517/pjsai.JSAI2018.0\_2K102
 1. Bastian Hornung, Vitor A. P. Martins dos Santos, Hauke Smidt, and Peter J. Schaap (2018).
    **[Studying microbial functionality within the gut ecosystem by systems biology](https://doi.org/10.1186/s12263-018-0594-6)**.
    *Genes & Nutrition* 13(1), Springer, 10.1186/s12263-018-0594-6
-1. Wookey Lee, and Woong Kee Loh (2018).
+1. Wookey Lee, and Woong-Kee Loh (2018).
    **[G-OPTICS: fast ordering density-based cluster objects using graphics processing units](https://doi.org/10.1504/IJWGS.2018.092583)**.
-   *International Journal of Web and Grid Services* 14(3), 273, Inderscience Publishers, 10.1504/IJWGS.2018.092583
+   *IJWGS* 14(3), 273-287, 10.1504/IJWGS.2018.092583,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/ijwgs/LeeL18)
 1. Meiling Zhu, and Chen Liu (2018).
    **[A Correlation Driven Approach with Edge Services for Predictive Industrial Maintenance](https://doi.org/10.3390/s18061844)**.
-   *Sensors* 18(6), 1844, Mdpi Ag, 10.3390/s18061844
+   *Sensors* 18(6), 1844, 10.3390/s18061844,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/sensors/ZhuL18)
+1. Erich Schubert, Andreas Spitz, and Michael Gertz (2018).
+   **[Exploring Significant Interactions in Live News](http://ceur-ws.org/Vol-2079/paper9.pdf)**.
+   *NewsIR@ECIR*, 39-44, CEUR-WS.org,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/ecir/SchubertSZG18)
+1. Erich Schubert, and Michael Gertz (2018).
+   **[Improving the Cluster Structure Extracted from OPTICS Plots](http://ceur-ws.org/Vol-2191/paper37.pdf)**.
+   *LWDA*, 318-329, CEUR-WS.org,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/lwa/SchubertG18)
 1. Payam Karisani, and Eugene Agichtein (2018).
    **[Did You Really Just Have a Heart Attack? Towards Robust Detection of Personal Health Mentions in Social Media](https://arxiv.org/abs/1802.09130)**.
    *CoRR* abs/1802.09130,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/corr/abs-1802-09130)
+1. Stephen Pauwels, and Toon Calders (2018).
+   **[Extending Dynamic Bayesian Networks for Anomaly Detection in Complex Logs](https://arxiv.org/abs/1805.07107)**.
+   *CoRR* abs/1805.07107,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/corr/abs-1805-07107)
+1. Fatemeh Riahi, and Oliver Schulte (2018).
+   **[Model-based Exception Mining for Object-Relational Data](https://arxiv.org/abs/1807.00381)**.
+   *CoRR* abs/1807.00381,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/corr/abs-1807-00381)
+1. Roberto Pirrone, Vincenzo Cannella, Sergio Monteleone, and Gabriella Giordano (2018).
+   **[Linear density-based clustering with a discrete density model](https://arxiv.org/abs/1807.08158)**.
+   *CoRR* abs/1807.08158,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/corr/abs-1807-08158)
 1. Wei Ye (2018).
    **[Data mining using concepts of independence, unimodality and homophily](https://edoc.ub.uni-muenchen.de/21675/)**.
    Ludwig Maximilian University of Munich, Germany,
@@ -79,18 +143,11 @@ The following list is **automatically generated** from very heterogenous sources
 1. Alfonso Román y Zubeldia (2018).
    **[Implementación de pruebas para una hipótesis sobre la aplicación de distancia Euclidiana para realizar agrupamientos en espacios multidimensionales](http://ridaa.unicen.edu.ar/xmlui/handle/123456789/1564)**.
    Universidad Nacional del Centro de la Provincia de Buenos Aires. Facultad de Ciencias Exactas
-1. Fatemeh Riahi, and Oliver Schulte (2018).
-   **[Model-based Exception Mining for Object-Relational Data](https://arxiv.org/abs/1807.00381)**.
-   *arXiv* 1807.00381
-1. Roberto Pirrone, Vincenzo Cannella, Sergio Monteleone, and Gabriella Giordano (2018).
-   **[Linear density-based clustering with a discrete density model](https://arxiv.org/abs/1807.08158)**.
-   *arXiv* 1807.08158
+1. Luisa Sanz Martínez, Alejandra Martínez Monés, Miguel L. Bote Lorenzo, and Yannis A. Dimitriadis (2018).
+   **[Validating performance of group formation based on homogeneous engagement criteria in MOOCs](http://uvadoc.uva.es/handle/10324/31403)**.
 1. Slimane Oulad-Naoui (2018).
    **[Fouille de motifs: formalisation et unification](https://tel.archives-ouvertes.fr/tel-01760242)**.
    UATL (Algeria)
-1. Stephen Pauwels, and Toon Calders (2018).
-   **[Extending Dynamic Bayesian Networks for Anomaly Detection in Complex Logs](https://arxiv.org/abs/1805.07107)**.
-   *arXiv* 1805.07107
 
 2017
 ----
@@ -335,7 +392,8 @@ The following list is **automatically generated** from very heterogenous sources
    *Synthesis Lectures on Information Security, Privacy, and Trust* 9(3), 1-173, Morgan & Claypool Publishers LLC, 10.2200/S00800ED1V01Y201709SPT022
 1. Jürgen Bernard, Eduard Dobermann, Michael Sedlmair, and Dieter W. Fellner (2017).
    **[Combining Cluster and Outlier Analysis with Visual Analytics](https://doi.org/10.2312/eurova.20171114)**.
-   *EuroVis Workshop on Visual Analytics (EuroVA)*, The Eurographics Association, 10.2312/eurova.20171114
+   *EuroVA@EuroVis*, 19-23, Eurographics Association, 10.2312/eurova.20171114,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/vissym/BernardDSF17)
 1. Leonidas Tsekouras, Iraklis Varlamis, and George Giannakopoulos (2017).
    **[A Graph-based Text Similarity Measure That Employs Named Entity Information](https://doi.org/10.26615/978-954-452-049-6_098)**.
    *RANLP*, 765-771, INCOMA Ltd. 10.26615/978-954-452-049-6\_098,
