@@ -11,7 +11,9 @@ Scientific Work Using or Referencing ELKI
 
 Over the years, ELKI has been increasingly cited/used in scientific publications and other software projects.
 
-The following list is **automatically generated** from very heterogenous sources, and does contain errors. Where possible, we try to use metadata from DBLP, CrossRef.org, SemanticScholar, and HTML meta headers from the publisher web pages. For theses, seminar articles etc. this approach does however not work. We have not verified every citation discovered by the bot.
+The following list is **automatically generated** from very heterogenous sources, and may contain errors.
+Where possible, we try to use metadata from DBLP, CrossRef.org, OpenCitations, SemanticScholar, and HTML meta headers from the publisher web pages.
+For theses, seminar articles etc. this approach does however not work. We have not verified every citation discovered by the bot.
 
 2019
 ----
@@ -148,6 +150,9 @@ The following list is **automatically generated** from very heterogenous sources
 1. Slimane Oulad-Naoui (2018).
    **[Fouille de motifs: formalisation et unification](https://tel.archives-ouvertes.fr/tel-01760242)**.
    UATL (Algeria)
+1. Žemlička Radomír (2018).
+   **[Spolupráce studentů různé úrovně znalostí](http://hdl.handle.net/10467/76847)**.
+   České vysoké učení technické v Praze. Vypočetní a informační centrum.
 
 2017
 ----
@@ -156,6 +161,12 @@ The following list is **automatically generated** from very heterogenous sources
    **[Evaluation and comparison of open source software suites for data mining and knowledge discovery](https://doi.org/10.1002/widm.1204)**.
    *Wiley Interdisc. Rew.: Data Mining and Knowledge Discovery* 7(3), 10.1002/widm.1204,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/widm/AltalhiLVV17)
+1. Peer Kröger, and Arthur Zimek (2017).
+   **[Subspace Clustering Techniques](https://doi.org/10.1007/978-1-4899-7993-3_607-2)**.
+   *Encyclopedia of Database Systems*, 1-4, Springer, 10.1007/978-1-4899-7993-3\_607-2
+1. Arthur Zimek, and Erich Schubert (2017).
+   **[Outlier Detection](https://doi.org/10.1007/978-1-4899-7993-3_80719-1)**.
+   *Encyclopedia of Database Systems*, 1-5, Springer, 10.1007/978-1-4899-7993-3\_80719-1
 1. Adam Byron (2017).
    **[Clustering and Network Analysis of Reverse Phase Protein Array Data](https://doi.org/10.1007/978-1-4939-6990-6_12)**.
    *Molecular Profiling*, 171-191, Springer, 10.1007/978-1-4939-6990-6\_12
@@ -654,6 +665,9 @@ The following list is **automatically generated** from very heterogenous sources
 1. Amit Verma, Iqbaldeep Kaur, and Amandeep Kaur (2016).
    **[Algorithmic Approach to Data Mining and Classification Techniques](https://doi.org/10.17485/ijst/2016/v9i28/88874)**.
    *Indian Journal of Science and Technology* 9(28), Indian Society for Education and Environment, 10.17485/ijst/2016/v9i28/88874
+1. Corey OMeara, Leonard Schlag, Luisa Faltenbacher, and Martin Wickler (2016).
+   **[ATHMoS: Automated Telemetry Health Monitoring System at GSOC using Outlier Detection and Supervised Machine Learning](https://doi.org/10.2514/6.2016-2347)**.
+   *SpaceOps 2016 Conference*, American Institute of Aeronautics and Astronautics, 10.2514/6.2016-2347
 1. Ivano Verzola, Alessandro Donati, Jose Martinez, Matthias Schubert, and Laszlo Somodi (2016).
    **[Project Sibyl: A Novelty Detection System for Human Spaceflight Operations](https://doi.org/10.2514/6.2016-2405)**.
    *14th International Conference on Space Operations*, American Institute of Aeronautics and Astronautics (AIAA), 10.2514/6.2016-2405
@@ -1795,33 +1809,40 @@ The following list is **automatically generated** from very heterogenous sources
 Finding more
 ------------
 
-Papers that cite ELKI releases can be found using google scholar:
+Papers that cite ELKI releases can be found:
 
 Release 0.1:
 [Semantic Scholar](https://www.semanticscholar.org/paper/6920268c42cc41162411ca803451db0f62fe3687)
 [Google Scholar](http://scholar.google.de/scholar?cites=947308291279715946)
+[OpenCitations](http://opencitations.net/index/coci/search?text=10.1007/978-3-540-69497-7_41&rule=citeddoi)
 
 Release 0.2:
 [Semantic Scholar](https://www.semanticscholar.org/paper/f965bff94f9c4eb7aa87edcbcc12595da01e9b56)
 [Google Scholar](http://scholar.google.de/scholar?cites=7259117758981814570)
+[OpenCitations](http://opencitations.net/index/coci/search?text=10.1007/978-3-642-02982-0_35&rule=citeddoi)
 
 Release 0.3:
 [Semantic Scholar](https://www.semanticscholar.org/paper/38594897714ec329f1d1c3ec4d65cb5e4f3700d4)
 [Google Scholar](http://scholar.google.de/scholar?cites=318410196722457623)
+[OpenCitations](http://opencitations.net/index/coci/search?text=10.1007/978-3-642-12098-5_34&rule=citeddoi)
 
 Release 0.4:
 [Semantic Scholar](https://www.semanticscholar.org/paper/64ef30ab2a5cd888aded27a934a738329758076f)
 [Google Scholar](http://scholar.google.de/scholar?cites=13815677342913404474)
+[OpenCitations](http://opencitations.net/index/coci/search?text=10.1007/978-3-642-22922-0_41&rule=citeddoi)
 
 Release 0.5:
 [Semantic Scholar](https://www.semanticscholar.org/paper/1ecd7268bac58e5bfee04cbdac1b508078894590)
 [Google Scholar](http://scholar.google.de/scholar?cites=6974576405934743829)
+[OpenCitations](http://opencitations.net/index/coci/search?text=10.1109/icde.2012.128&rule=citeddoi)
 
 Release 0.6:
 [Semantic Scholar](https://www.semanticscholar.org/paper/c8c4b3a1cdf4774f2c46d0f302d2f30d625e1c99)
 [Google Scholar](http://scholar.google.de/scholar?cites=10964489485233751703)
+[OpenCitations](http://opencitations.net/index/coci/search?text=10.1145/2463676.2463696&rule=citeddoi)
 
 Release 0.7:
 [Semantic Scholar](https://www.semanticscholar.org/paper/d3c5b084da0ad30d75bcc630949fa4df0243eff2)
 [Google Scholar](http://scholar.google.de/scholar?cites=13946522890235188309)
+[OpenCitations](http://opencitations.net/index/coci/search?text=10.14778/2824032.2824115&rule=citeddoi)
 
