@@ -29,6 +29,8 @@ The following list are project ideas for *students that want to get started* wit
 
   T. Kanungo, D. M. Mount, N. S. Netanyahu, C. D. Piatko, R. Silverman, and A. Y. Wu. “An efficient k-means clustering algorithm: Analysis and implementation”. In: IEEE Transactions on Pattern Analysis and Machine Intelligence 24.7 (2002), pp. 881–892
 
+  K. Alsabti, S. Ranka, V. Singh. "An efficient k-means clustering algorithm". Technical Report. (1997)
+
 - k-means nach Hartigan & Wong:
 
   J. A. Hartigan, and M. A. Wong. “Algorithm AS 136: A k-means clustering algorithm.” Applied statistics (1979): 100-108.
