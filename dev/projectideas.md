@@ -23,7 +23,7 @@ The following list are project ideas for *students that want to get started* wit
 
 ### k-means variations
 
-- k-means using a kd-tree for acceleration.
+- k-means using a kd-tree for acceleration (*in progress*).
 
   D. Pelleg and A. Moore. “Accelerating exact k-means algorithms with geometric reasoning”. In: Proceedings of the 5th ACM International Conference on Knowledge Discovery and Data Mining (SIGKDD), San Diego, CA. 1999, pp. 277–281
 
@@ -70,6 +70,10 @@ The following list are project ideas for *students that want to get started* wit
 - "Trimmed k-means":
 
   J. A. Cuesta-Albertos, A. Gordaliza, and C. Matrán. "Trimmed k-means: an attempt to robustify quantizers." The Annals of Statistics, 25(2) (1997): 553-576.
+  
+- "The Effectiveness of Lloyd-Type Methods for the k-Means Problem":
+
+  R. Ostrovsky, Y. Rabani, L. J. Schulman, C. Swamy: "The Effectiveness of Lloyd-Type Methods for the k-Means Problem." FOCS 2006: 165-176
 
 
 ### Hierarchical clustering variations
