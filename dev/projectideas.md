@@ -55,11 +55,11 @@ The following list are project ideas for *students that want to get started* wit
 
   G. Hamerly, and C. Elkan. "Learning the k in k-means". Advances in neural information processing systems, 16, 281. 2004.
 
-- A simple and fast algorithm for K-medoids clustering:
+- k-medoids with a Genetic Algorithm:
 
-  H.-S. Park, and C.-H. Jun. "A simple and fast algorithm for K-medoids clustering." Expert Systems with Applications 36.2 (2009): 3336-3341.
+  C. B. Lucasius, and A. D. Dane, and G. Kateman. "On k-medoid clustering of large data sets with the aid of a genetic algorithm: background, feasiblity and comparison." Analytica Chimica Acta 282.3 (1993): 647-669.
 
-- "A new partitioning around medoids algorithm":
+- Modification of PAM to optimize the Silhouette:
 
   M. Van der Laan, and K. Pollard, and J. Bryan. "A new partitioning around medoids algorithm." Journal of Statistical Computation and Simulation, 73(8) (2003): 575-584.
 
