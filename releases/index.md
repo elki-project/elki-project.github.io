@@ -9,7 +9,7 @@ section: releases
 Release History
 ===============
 
-**0.7.1 (2016, Feburary 11)**
+**0.7.1 (2016, February 11)**
 
 : Bug fix and enhancement release 0.7.1 (cite as [release 0.7](/publications#release0.7))
 
