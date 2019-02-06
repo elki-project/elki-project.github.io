@@ -10,7 +10,7 @@ Outlier Detection Data Sets
 ===========================
 
 We have collected [data sets for outlier detection][1] ([mirror][2]) and
-studied the performance of many algorithms and parameters on this data set
+studied the performance of many algorithms and parameters on these data sets
 (using ELKI, of course).
 
 Details have been published as:
