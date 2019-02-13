@@ -79,6 +79,9 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Zahid Halim, and Jamal Hussain Khattak (2018).
    **[Density-based clustering of big probabilistic graphs](https://doi.org/10.1007/s12530-018-9223-2)**.
    *Evolving Systems*, Springer, 10.1007/s12530-018-9223-2
+1. Haofan Zhang, Ke Nian, Thomas F. Coleman, and Yuying Li (2018).
+   **[Spectral ranking and unsupervised feature selection for point, collective, and contextual anomaly detection](https://doi.org/10.1007/s41060-018-0161-7)**.
+   *International Journal of Data Science and Analytics*, Springer, 10.1007/s41060-018-0161-7
 1. Joice K. Joseph, Karunakaran Akhil Dev, A.P. Pradeepkumar, and Mahesh Mohan (2018).
    **[Big Data Analytics and Social Media in Disaster Management](https://doi.org/10.1016/B978-0-12-812056-9.00016-6)**.
    *Integrating Disaster Science and Management*, 287-294, Elsevier, 10.1016/B978-0-12-812056-9.00016-6
@@ -141,6 +144,10 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[Efficient Outlier Detection for High-Dimensional Data](https://doi.org/10.1109/TSMC.2017.2718220)**.
    *IEEE Trans. Systems, Man, and Cybernetics: Systems* 48(12), 2451-2461, 10.1109/TSMC.2017.2718220,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/tsmc/LiuLLZ18)
+1. Yoshihiro Okada (2018).
+   **[Time-Tunnel: 3D Visualization Tool and Its Aspects as 3D Parallel Coordinates](https://doi.org/10.1109/iV.2018.00019)**.
+   *IV*, 50-55, IEEE, 10.1109/iV.2018.00019,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/iv/Okada18)
 1. Tharindu R. Bandaragoda, Kai Ming Ting, David W. Albrecht, Fei Tony Liu, Ye Zhu, and Jonathan R. Wells (2018).
    **[Isolation-based anomaly detection using nearest-neighbor ensembles](https://doi.org/10.1111/coin.12156)**.
    *Computational Intelligence* 34(4), 968-998, 10.1111/coin.12156,
