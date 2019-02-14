@@ -15,12 +15,12 @@ The core team for development and maintenance of ELKI is consisting of:
 
 <table width="100%">
   <tr>
-    <td align="center"><img src="http://dbs.ifi.uni-heidelberg.de/fileadmin/Team/eschubert/eschubert.jpg" width="160" alt="Erich"></td>
-    <td align="center"><img src="http://www.imada.sdu.dk/~zimek/pics/zimek.jpg" width="160" alt="Arthur"></td>
+    <td align="center"><img src="https://www-ai.cs.uni-dortmund.de/Portrait1-klein.jpg?self=%24fl3nfxlkhs&part=data" width="160" alt="Erich"></td>
+    <td align="center"><img src="https://www.imada.sdu.dk/~zimek/pics/zimek.jpg" width="160" alt="Arthur"></td>
   </tr>
   <tr>
-    <td align="center"><a href="http://dbs.ifi.uni-heidelberg.de/index.php?id=eschubert">Erich Schubert</a><br />Heidelberg University</td>
-    <td align="center"><a href="http://www.imada.sdu.dk/~zimek">Arthur Zimek</a><br />University of Southern Denmark</td>
+    <td align="center"><a href="https://www-ai.cs.uni-dortmund.de/PERSONAL/schubert.html">Erich Schubert</a><br />TU Dortmund</td>
+    <td align="center"><a href="https://www.imada.sdu.dk/~zimek">Arthur Zimek</a><br />University of Southern Denmark</td>
   </tr>
 </table>
 
@@ -35,7 +35,7 @@ Perhaps you will be among this herd of elks soon?
 <div class="slideshow">
 <ul id="herd">
 <li><img title="Elke Achtert" src="http://www.dbs.ifi.lmu.de/w_de/images/thumb/5/58/Elke_Achtert.jpg/477px-Elke_Achtert.jpg" alt="Lead developer: Index structures" width="100" /></li>
-<li><img title="Erich Schubert" src="http://dbs.ifi.uni-heidelberg.de/fileadmin/Team/eschubert/eschubert.jpg" alt="Lead developer: Outlier detection" width="100" /></li>
+<li><img title="Erich Schubert" src="http://www-ai.cs.uni-dortmund.de/Portrait1-klein.jpg?self=%24fl3nfxlkhs&part=data" alt="Lead developer: Outlier detection" width="100" /></li>
 <li><img title="Arthur Zimek" src="http://www.dbs.ifi.lmu.de/w_de/images/thumb/9/9a/Mitarbeiter-Zimek.jpg/424px-Mitarbeiter-Zimek.jpg" alt="Lead developer: Correlation clustering" width="100" /></li>
 <li><img title="Thomas Bernecker" src="http://www.dbs.ifi.lmu.de/w_de/images/a/a1/Mitarbeiter-Bernecker.jpg" alt="Team contributor: Time series mining" width="75" /></li>
 <li><img title="Tobias Emrich" src="http://www.dbs.ifi.lmu.de/w_de/images/5/52/Mitarbeiter-Emrich.jpg" alt="Team contributor: Uncertain data" width="75" /></li>
