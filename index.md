@@ -34,10 +34,12 @@ With the development and publication of ELKI, we humbly hope to serve the data m
 
 The people behind ELKI are documented on the [team page](/team).
 
-The ELKI wiki: Tutorials, HowTos, Documentation
------------------------------------------------
+The ELKI web page: Tutorials, HowTos, Documentation
+---------------------------------------------------
 
-Beginners may want to start at the [HowTo](/howto) documents, [Examples](/examples), [Tutorials](/tutorial), and [FAQ](/faq) to help with difficult configuration scenarios and beginning with ELKI development.
+A [basic tutorial example](/tutorial/#basic-usage-example) will show you how to run k-Means and EM clustering with ELKI.
+
+Further documentation can be found int the [HowTo](/howto) documents, [Examples](/examples), [Tutorials](/tutorial), and [FAQ](/faq) to help with difficult configuration scenarios and beginning with ELKI development.
 
 The most important documentation pages are: [Tutorial](/tutorial), searchable [JavaDoc](/dev/javadoc), [FAQ](/faq), [InputFormat](/howto/inputformat), [DataTypes](/datatypes), [DistanceFunctions](/algorithms/distances), [DataSets](/datasets), [Development](/dev), [Parameterization](/dev/parameterization), [Visualization](/algorithms/visualization), [Benchmarking](/benchmarking), and the list of [Algorithms](/algorithms) and [publications implemented in ELKI](/related).
 
@@ -47,14 +49,23 @@ Getting ELKI: Download and Citation Policy
 You can download ELKI including source code on the [releases](/releases) page.
 ELKI uses the AGPLv3 [license](/license), a well-known open source license.
 
-ELKI is available on [GitHub](https://github.com/elki-project/elki) and [Maven](https://search.maven.org/#artifactdetails%7Cde.lmu.ifi.dbs.elki%7Celki%7C0.7.0%7Cjar). You can [clone an example project](https://github.com/elki-project/example-elki-project) to get started.
+ELKI is available on [GitHub](https://github.com/elki-project/elki) and [Maven](https://search.maven.org/#artifactdetails%7Cde.lmu.ifi.dbs.elki%7Celki%7C0.7.5%7Cjar).
+You can [clone an example project](https://github.com/elki-project/example-elki-project) to get started.
 
+Gradle:
+{% highlight gradle %}
+dependencies {
+    compile group: 'de.lmu.ifi.dbs.elki', name: 'elki', version:'0.7.5'
+}
+{% endhighlight %}
+
+Maven:
 {% highlight xml %}
 <!-- https://mvnrepository.com/artifact/de.lmu.ifi.dbs.elki/elki -->
 <dependency>
     <groupId>de.lmu.ifi.dbs.elki</groupId>
     <artifactId>elki</artifactId>
-    <version>0.7.1</version>
+    <version>0.7.5</version>
 </dependency>
 {% endhighlight %}
 

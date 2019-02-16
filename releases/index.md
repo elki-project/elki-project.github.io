@@ -9,6 +9,34 @@ section: releases
 Release History
 ===============
 
+**0.7.5 (2018, February 15)**
+
+: Bug fix and enhancement release 0.7.5 (cite as [release 0.7.5](/publications#release0.7.5))
+
+  * Full package:
+    * [complete package](/releases/release0.7.5/elki-0.7.5.tar.gz) (contains source-code, [JavaDoc](/dev/javadoc) and dependencies, includes batik [visualization](/algorithms/visualization) and libsvm extensions)
+    * [executable archive](/releases/release0.7.5/elki-bundle-0.7.5.jar) (single jar, with dependencies, includes batik visualization and libsvm extensions, no source code)
+    * [JavaDoc archive](/releases/release0.7.5/elki-bundle-0.7.5-javadoc.jar)
+    * [sources only](/releases/release0.7.5/elki-0.7.5-sources.tar.gz) (package to build from source)
+  * [online documentation](/releases/release0.7.5/javadoc/index.html)
+  * [release notes](/releases/release_notes_0.7.5)
+
+Gradle:
+{% highlight gradle %}
+dependencies {
+    compile group: 'de.lmu.ifi.dbs.elki', name: 'elki', version:'0.7.5'
+}
+{% endhighlight %}
+
+  Maven:
+  {% highlight xml %}
+<!-- https://mvnrepository.com/artifact/de.lmu.ifi.dbs.elki/elki -->
+<dependency>
+    <groupId>de.lmu.ifi.dbs.elki</groupId>
+    <artifactId>elki</artifactId>
+    <version>0.7.5</version>
+</dependency>{% endhighlight %}
+
 **0.7.1 (2016, February 11)**
 
 : Bug fix and enhancement release 0.7.1 (cite as [release 0.7](/publications#release0.7))

@@ -12,6 +12,14 @@ Publications
 
 The following publications accompanied the given [releases](/releases). Please use one of these publications, according to the release you are using, for citing ELKI to give credit. Thank you. For other papers using or referencing ELKI, see [our references](/references).
 
+[ELKI 0.7.5] <span id="release0.7.5"></span>
+
+: Erich Schubert and Arthur Zimek:\\
+**ELKI: A large open-source library for data analysis**.\\
+ELKI Release 0.7.5 "Heidelberg".\\
+CoRR arXiv 1902.03616.\\
+\[ [EE (arXiv)](https://arxiv.org/abs/1902.03616) \]
+
 [ELKI 0.7] <span id="release0.7"></span>
 
 : Erich Schubert, Andreas Koos, Tobias Emrich, Andreas Züfle, Klaus Arthur Schmid, Arthur Zimek:\\
