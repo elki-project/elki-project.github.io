@@ -41,7 +41,7 @@ FAQs
 
 1. But I just want to call it from **Java**!
 
-   Actually you become a bit less dependant on the other class when you use the parameterization API, since the addition of a new option with a default value will not affect you. [ListParameterization](/releases/current/doc/de/lmu/ifi/dbs/elki/utilities/optionhandling/parameterization/ListParameterization.html) is an easy to use API for this. However, forth generation API will allow you to use regular Java constructors. As examples for usage within Java, check the unit tests (e.g. in `elki/src/test/java/de/lmu/ifi/dbs/elki/algorithm`). An example containing many use-cases is `elki/src/test/java/de/lmu/ifi/dbs/elki/algorithm/AbstractSimpleAlgorithmTest.java`.
+   Actually you become a bit less dependant on the other class when you use the parameterization API, since the addition of a new option with a default value will not affect you. [ListParameterization](/releases/current/javadoc/de/lmu/ifi/dbs/elki/utilities/optionhandling/parameterization/ListParameterization.html) is an easy to use API for this. However, forth generation API will allow you to use regular Java constructors. As examples for usage within Java, check the unit tests (e.g. in `elki/src/test/java/de/lmu/ifi/dbs/elki/algorithm`). An example containing many use-cases is `elki/src/test/java/de/lmu/ifi/dbs/elki/algorithm/AbstractSimpleAlgorithmTest.java`.
 
 1. Why does this **change every version**?
 
@@ -56,11 +56,11 @@ Parameterization
 
 This is the parameterization API as of version 0.4.0 onwards.
 
-Classes are now encouraged to offer a **classic java constructor**. Parameterization is delegated to an **inner class** derived from [AbstractParameterizer](/releases/current/doc/de/lmu/ifi/dbs/elki/utilities/optionhandling/AbstractParameterizer.html) (or `Super.Parameterizer`) that will read the parameters and then produce an instance.
+Classes are now encouraged to offer a **classic java constructor**. Parameterization is delegated to an **inner class** derived from [AbstractParameterizer](/releases/current/javadoc/de/lmu/ifi/dbs/elki/utilities/optionhandling/AbstractParameterizer.html) (or `Super.Parameterizer`) that will read the parameters and then produce an instance.
 
 ### Example
 
-A benefit is that classes can now also return a subclass (this was already possible with static methods in 3.5 generation), as can be seen in this example from [LPNormDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/LPNormDistanceFunction.html)
+A benefit is that classes can now also return a subclass (this was already possible with static methods in 3.5 generation), as can be seen in this example from [LPNormDistanceFunction](/releases/current/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/LPNormDistanceFunction.html)
 
 {% highlight java %}
 // NOTE: this is a STATIC INNER class of LPNormDistanceFunction!

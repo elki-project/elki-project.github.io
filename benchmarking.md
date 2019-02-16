@@ -51,7 +51,7 @@ For this, we will compare ELKI with ELKI, just using different versions.
 
 For this benchmark we use the ALOI image data set, which has 110.250 objects, with just 8 dimensions (so the algorithms, distance functions and index structures are supposed okay). We tested four workloads, each with and without an R\*-Tree index. For this experiment, all R\*-Trees were incrementally loaded (bulk loading is faster, but was not yet available in all versions)
 
-The test system is a 2.67 GHz Intel Xenon X5650 (single-threaded, memory limit 32 GB)
+The test system is a 2.67 GHz Intel Xeon X5650 (single-threaded, memory limit 32 GB)
 
 | **Task**  | **ELKI 0.1** | **ELKI 0.2** |  **ELKI 0.3** | **ELKI 0.4** | **ELKI 0.5.0** | **ELKI 0.5.5** | **ELKI 0.6.0** | **ELKI 0.6.5** |
 |-----------|--------------|--------------|--------------|--------------|--------------|--------------|--------------|--------------|
@@ -78,7 +78,7 @@ ELKI in comparison to other software
 We advocate to _not_ compare algorithms from different frameworks with each other. Implementation details can make a huge difference. For example k-means from the R "flexclus" package seems to be about half as fast as the R native kmeans. In the most extreme example of this benchmark, **the same algorithm is 280x faster in one implementation than the other** (LOF in ELKI vs. LOF in "Data mining with R"). So from a scientific point of view, **even a performance difference of two orders of magnitude can be explained with implementation differences**.
 {: class="box-warn" }
 
-2.67 GHz Intel Xenon X5650 (single-threaded, memory limit 32 GB)
+2.67 GHz Intel Xeon X5650 (single-threaded, memory limit 32 GB)
 
 | **Task**               | **ELKI 0.6.0** | **WEKA 3.7.5**        |
 |------------------------|----------------|-----------------------|

@@ -9,7 +9,7 @@ navigation: -90
 Database IDs
 ============
 
-[DBID](/releases/current/doc/de/lmu/ifi/dbs/elki/database/ids/DBID.html) is the ELKI-internal identifier of a database object.
+[DBID](/releases/current/javadoc/de/lmu/ifi/dbs/elki/database/ids/DBID.html) is the ELKI-internal identifier of a database object.
 
 Note that this is *deliberately* only exposed as an interface:
 
@@ -27,18 +27,18 @@ Just as important as managing single objects is the management of collections. E
 DBIDs - optimized collections for DBIDs
 ---------------------------------------
 
-[DBIDs](/releases/current/doc/de/lmu/ifi/dbs/elki/database/ids/DBIDs.html) is the most general collection of DBIDs. In fact, even a single DBID implements this interface (containing itself only).
+[DBIDs](/releases/current/javadoc/de/lmu/ifi/dbs/elki/database/ids/DBIDs.html) is the most general collection of DBIDs. In fact, even a single DBID implements this interface (containing itself only).
 
-[ModifiableDBIDs](/releases/current/doc/de/lmu/ifi/dbs/elki/database/ids/ModifiableDBIDs.html) is the base of modifiable collections (there also is [StaticDBIDs](/releases/current/doc/de/lmu/ifi/dbs/elki/database/ids/StaticDBIDs.html), which however is much less often used). In contrast to the Java collections API which already specifies `add` and `remove` in the top interface, these are in ELKI only available for modifiable DBIDs.
+[ModifiableDBIDs](/releases/current/javadoc/de/lmu/ifi/dbs/elki/database/ids/ModifiableDBIDs.html) is the base of modifiable collections (there also is [StaticDBIDs](/releases/current/javadoc/de/lmu/ifi/dbs/elki/database/ids/StaticDBIDs.html), which however is much less often used). In contrast to the Java collections API which already specifies `add` and `remove` in the top interface, these are in ELKI only available for modifiable DBIDs.
 
-Creating a new collection is fairly easy, using the appropriate factory methods from [DBIDUtil](/releases/current/doc/de/lmu/ifi/dbs/elki/database/ids/DBIDUtil.html):
+Creating a new collection is fairly easy, using the appropriate factory methods from [DBIDUtil](/releases/current/javadoc/de/lmu/ifi/dbs/elki/database/ids/DBIDUtil.html):
 
 {% highlight java %}
 ArrayModifiableDBIDs array = DBIDUtil.newArray();
 HashSetDBIDs hashset = DBIDUtil.newHashSet();
 {% endhighlight %}
 
-[DBIDUtil](/releases/current/doc/de/lmu/ifi/dbs/elki/database/ids/DBIDUtil.html) is your central utility class for common DBID operations: `union`, `intersection`, `difference`, `randomSample`, ... are all implemented efficiently.
+[DBIDUtil](/releases/current/javadoc/de/lmu/ifi/dbs/elki/database/ids/DBIDUtil.html) is your central utility class for common DBID operations: `union`, `intersection`, `difference`, `randomSample`, ... are all implemented efficiently.
 
 Benefits of the specialized DBIDs interfaces:
 
@@ -53,7 +53,7 @@ Benefits of the specialized DBIDs interfaces:
 DBID references
 ---------------
 
-Some classes - including iterators below, and some pairs containing a single DBID - implement the [de.lmu.ifi.dbs.elki.database.ids.DBIDRef](/releases/current/doc/de/lmu/ifi/dbs/elki/database/ids/DBIDRef.html) interface.
+Some classes - including iterators below, and some pairs containing a single DBID - implement the [de.lmu.ifi.dbs.elki.database.ids.DBIDRef](/releases/current/javadoc/de/lmu/ifi/dbs/elki/database/ids/DBIDRef.html) interface.
 
 `DBIDRef` objects behave mostly like a `DBID`, but they may be only temporarily valid (e.g. iterators).
 {: class="box-recommend" }
@@ -66,7 +66,7 @@ Never use `DBIDRef` as keys in Java collections (e.g. `Map<DBIDRef, ?>`), as the
 Iterators
 ---------
 
-[DBIDIter](/releases/current/doc/de/lmu/ifi/dbs/elki/database/ids/DBIDIter.html) is not the standard Java iterator. It does not have `remove` and its semantics are closer to that of a C++ iterator. You can use it as follows:
+[DBIDIter](/releases/current/javadoc/de/lmu/ifi/dbs/elki/database/ids/DBIDIter.html) is not the standard Java iterator. It does not have `remove` and its semantics are closer to that of a C++ iterator. You can use it as follows:
 
 {% highlight java %}
 for (DBIDIter iter = ids.iter(); iter.valid(); iter.advance()) {
@@ -93,15 +93,15 @@ Tips & Tricks
 
 - **Mapping DBIDs to row numbers**:
 
-  Static databases will assign a continuous [DBIDRange](/releases/current/doc/de/lmu/ifi/dbs/elki/database/ids/DBIDRange.html) to each object. The method `range.getOffset(dbidref)` can be used to map a DBID reference back to the offset within the data set (i.e. row number, starting with 0).
+  Static databases will assign a continuous [DBIDRange](/releases/current/javadoc/de/lmu/ifi/dbs/elki/database/ids/DBIDRange.html) to each object. The method `range.getOffset(dbidref)` can be used to map a DBID reference back to the offset within the data set (i.e. row number, starting with 0).
 
 - **Fixed DBIDs for multiple runs** (deprecated):
 
-  People are often surprised that running the same task in ELKI twice may give different output, and in particular the objects are given different DBIDs. By default, ELKI will just use DBIDs consecutively. So if your first task used 100 objects, the second run will use objects 100-200. The reason is the growing support for *streaming* operation where this continuous allocation is desired. There is a simple workaround if you desire the fixed IDs behaviour: set `-dbc.filter` to contain [FixedDBIDsFilter](/releases/current/doc/de/lmu/ifi/dbs/elki/datasource/filter/FixedDBIDsFilter.html).
+  People are often surprised that running the same task in ELKI twice may give different output, and in particular the objects are given different DBIDs. By default, ELKI will just use DBIDs consecutively. So if your first task used 100 objects, the second run will use objects 100-200. The reason is the growing support for *streaming* operation where this continuous allocation is desired. There is a simple workaround if you desire the fixed IDs behaviour: set `-dbc.filter` to contain [FixedDBIDsFilter](/releases/current/javadoc/de/lmu/ifi/dbs/elki/datasource/filter/FixedDBIDsFilter.html).
 
 - **Collections**:
 
-  Use [DBIDUtil](/releases/current/doc/de/lmu/ifi/dbs/elki/database/ids/DBIDUtil.html), it has a lot of things.
+  Use [DBIDUtil](/releases/current/javadoc/de/lmu/ifi/dbs/elki/database/ids/DBIDUtil.html), it has a lot of things.
 
   - Never use Java collections; never combine Java collections and DBIDRef.
   - Avoid `DBIDUtil.deref`. Most of the time, you are wasting memory, time, and have overlooked an appropriate data structure provided by ELKI.

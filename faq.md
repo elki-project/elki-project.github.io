@@ -73,4 +73,13 @@ Both the command line and graphical interfaces rely on an API that specified par
 Where can I get help?
 ---------------------
 
-Subscribe to the [ELKI user mailing list](https://tools.rz.ifi.lmu.de/mailman/listinfo/elki-user) and post your question there.
+You can subscribe to the user mailing list, by sending an email to
+<span class="maillink">elki-user-request () lists ifi lmu de</span>
+with the subject "subscribe" or "unsubscribe"
+([Mailman manual](https://www.gnu.org/software/mailman/mailman-member/node10.html)).
+
+If you have a *programming* question, you can also try asking at
+[StackOverflow](http://stackoverflow.com/questions/tagged/elki).
+But you should understand that this is a general (and third-party operated)
+*programming* community; questions just on how to use it may be considered
+off-topic there, and may be closed quickly without an answer.

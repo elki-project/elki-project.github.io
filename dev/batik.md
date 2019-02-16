@@ -14,4 +14,4 @@ Apache Batik is used by ELKI for SVG [visualization](/algorithms/visualization).
 -   Apache Batik <http://xmlgraphics.apache.org/batik/>
 -   Batik/SVG tricks: [ApacheCON 2003 presentation](http://people.apache.org/~deweese/ac2003/ApacheCON2003.pdf)
 
-The packages [de.lmu.ifi.dbs.elki.visualization.svg](/releases/current/doc/de/lmu/ifi/dbs/elki/visualization/svg/package-summary.html) and [de.lmu.ifi.dbs.elki.visualization.batikutil](/releases/current/doc/de/lmu/ifi/dbs/elki/visualization/batikutil/package-summary.html) include additional code useful for [SVG](/dev/svg) and Batik in particular. See their [JavaDoc](/dev/javadoc) for an overview of the added functionality.
+The packages [de.lmu.ifi.dbs.elki.visualization.svg](/releases/current/javadoc/de/lmu/ifi/dbs/elki/visualization/svg/package-summary.html) and [de.lmu.ifi.dbs.elki.visualization.batikutil](/releases/current/javadoc/de/lmu/ifi/dbs/elki/visualization/batikutil/package-summary.html) include additional code useful for [SVG](/dev/svg) and Batik in particular. See their [JavaDoc](/dev/javadoc) for an overview of the added functionality.
