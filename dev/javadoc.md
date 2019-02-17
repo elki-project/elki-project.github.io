@@ -34,7 +34,7 @@ Some essential packages
 | [de.lmu.ifi.dbs.elki](/releases/current/javadoc/de/lmu/ifi/dbs/elki/package-summary.html)                                     | starting page                                        |
 |-----------------------------------------------------------------------------------------------------------|------------------------------------------------------|
 | [de.lmu.ifi.dbs.elki.datasource.parser](/releases/current/javadoc/de/lmu/ifi/dbs/elki/datasource/parser/package-summary.html) &nbsp; | parsers and [InputFormat](/howto/inputformat) description |
-| [de.lmu.ifi.dbs.elki.distance](/releases/current/javadoc/de/lmu/ifi/dbs/elki/distance/package-summary.html)                   |                                                      |
+| [de.lmu.ifi.dbs.elki.distance.distancefunction](/releases/current/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/package-summary.html)                   |                                                      |
 | [de.lmu.ifi.dbs.elki.algorithm](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/package-summary.html)                 |                                                      |
 | [de.lmu.ifi.dbs.elki.index](/releases/current/javadoc/de/lmu/ifi/dbs/elki/index/package-summary.html)                         | index structures                                     |
 | [de.lmu.ifi.dbs.elki.utilities](/releases/current/javadoc/de/lmu/ifi/dbs/elki/utilities/package-summary.html)                 |                                                      |

@@ -21,10 +21,10 @@ ELKI comes with a number of classes related to precomputed distances:
 - [CacheFloatDistanceInOnDiskMatrix](/releases/current/doc/de/lmu/ifi/dbs/elki/application/cache/CacheFloatDistanceInOnDiskMatrix.html)
 - [DiskCacheBasedDoubleDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/DiskCacheBasedDoubleDistanceFunction.html)
 - [DiskCacheBasedFloatDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/DiskCacheBasedFloatDistanceFunction.html)
-- [FileBasedDoubleDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/FileBasedDoubleDistanceFunction.html)
-- [FileBasedFloatDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/FileBasedFloatDistanceFunction.html)
+- [FileBasedSparseDoubleDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/FileBasedSparseDoubleDistanceFunction.html)
+- [FileBasedSparseFloatDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/FileBasedSparseFloatDistanceFunction.html)
 
-The first two are "applications", i.e. standalone tasks that do nothing but precompute the distance matrix and write it to disk, using a *binary* file format ("DiskCache") The last four are distance functions that access/load different input formats. The "FileBased" classes use a simpler, but much less efficient, ascii format.
+The first two are "applications", i.e. standalone tasks that do nothing but precompute the distance matrix and write it to disk, using a *binary* file format ("DiskCache") The last four are distance functions that access/load different input formats. The "FileBasedSparse" classes use a simpler, but much less efficient, ascii format.
 
 Precomputing a distance matrix
 ------------------------------
@@ -66,8 +66,8 @@ The binary matrix format used by ELKI (actually an upper triangle matrix) is not
 
 This will however need more memory than the binary format above, which can be mapped directly from the file system, thus this approach is really meant for using *external* distance information.
 
-- [FileBasedDoubleDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/FileBasedDoubleDistanceFunction.html)
-- [FileBasedFloatDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/FileBasedFloatDistanceFunction.html)
+- [FileBasedSparseDoubleDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/FileBasedSparseDoubleDistanceFunction.html)
+- [FileBasedSparseFloatDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/FileBasedSparseFloatDistanceFunction.html)
 
 require a different amount of *Java memory*, while they use the same input format (this is different from the distance matrixes above, which actually use a different file format).
 
@@ -87,7 +87,7 @@ Here are the key parameters needed for using a text based distance matrix:
 
 <pre>
 -dbc.filter FixedDBIDsFilter -dbc.startid 0
--algorithm.distancefunction external.FileBasedDoubleDistanceFunction
+-algorithm.distancefunction external.FileBasedSparseDoubleDistanceFunction
 -distance.matrix /tmp/simple.ascii
 </pre>
 

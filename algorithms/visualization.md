@@ -67,7 +67,7 @@ Visualizers included in ELKI 0.6.0:
    - [optics.OPTICSClusterVisualization](/releases/current/javadoc/de/lmu/ifi/dbs/elki/visualization/visualizers/optics/OPTICSClusterVisualization.html)
    - [optics.OPTICSPlotCutVisualization](/releases/current/javadoc/de/lmu/ifi/dbs/elki/visualization/visualizers/optics/OPTICSPlotCutVisualization.html) (for epsilon cuts)
    - [optics.OPTICSPlotSelectionVisualization](/releases/current/javadoc/de/lmu/ifi/dbs/elki/visualization/visualizers/optics/OPTICSPlotSelectionVisualization.html)
-   - [optics.OPTICSPlotSteepAreaVisualization](/releases/current/javadoc/de/lmu/ifi/dbs/elki/visualization/visualizers/optics/OPTICSPlotSteepAreaVisualization.html) (for OPTICS Xi method)
+   - [optics.OPTICSSteepAreaVisualization](/releases/current/javadoc/de/lmu/ifi/dbs/elki/visualization/visualizers/optics/OPTICSSteepAreaVisualization.html) (for OPTICS Xi method)
  - Pair segments visualization:
    - [pairsegments.CircleSegmentsVisualizer](/releases/current/javadoc/de/lmu/ifi/dbs/elki/visualization/visualizers/pairsegments/CircleSegmentsVisualizer.html)
  - Generic:
@@ -75,7 +75,7 @@ Visualizers included in ELKI 0.6.0:
    - [visunproj.PixmapVisualizer](/releases/current/javadoc/de/lmu/ifi/dbs/elki/visualization/visualizers/visunproj/PixmapVisualizer.html)
    - [visunproj.SimilarityMatrixVisualizer](/releases/current/javadoc/de/lmu/ifi/dbs/elki/visualization/visualizers/visunproj/SimilarityMatrixVisualizer.html)
  - Textual:
-   - [visunproj.ClusterEvaluationVisualization](/releases/current/javadoc/de/lmu/ifi/dbs/elki/visualization/visualizers/visunproj/ClusterEvaluationVisualization.html)
+   - [visunproj.EvaluationVisualization](/releases/current/javadoc/de/lmu/ifi/dbs/elki/visualization/visualizers/visunproj/EvaluationVisualization.html)
    - [visunproj.KeyVisualization](/releases/current/javadoc/de/lmu/ifi/dbs/elki/visualization/visualizers/visunproj/KeyVisualization.html)
    - [visunproj.SettingsVisualization](/releases/current/javadoc/de/lmu/ifi/dbs/elki/visualization/visualizers/visunproj/SettingsVisualization.html)
 

@@ -119,7 +119,7 @@ Similarity functions usable through the adapter classes above include:
   - [LaplaceKernelFunction](/releases/current/javadoc/de/lmu/ifi/dbs/elki/distance/similarityfunction/kernel/LaplaceKernelFunction.html)
   - [LinearKernelFunction](/releases/current/javadoc/de/lmu/ifi/dbs/elki/distance/similarityfunction/kernel/LinearKernelFunction.html)
   - [PolynomialKernelFunction](/releases/current/javadoc/de/lmu/ifi/dbs/elki/distance/similarityfunction/kernel/PolynomialKernelFunction.html)
-  - [RadialBasisKernelFunction](/releases/current/javadoc/de/lmu/ifi/dbs/elki/distance/similarityfunction/kernel/RadialBasisKernelFunction.html)
+  - [RadialBasisFunctionKernelFunction](/releases/current/javadoc/de/lmu/ifi/dbs/elki/distance/similarityfunction/kernel/RadialBasisFunctionKernelFunction.html)
   - [RationalQuadraticKernelFunction](/releases/current/javadoc/de/lmu/ifi/dbs/elki/distance/similarityfunction/kernel/RationalQuadraticKernelFunction.html)
   - [SigmoidKernelFunction](/releases/current/javadoc/de/lmu/ifi/dbs/elki/distance/similarityfunction/kernel/SigmoidKernelFunction.html)
 
@@ -135,7 +135,7 @@ When implementing custom distance functions, ask yourself the following question
 Most likely, you will be implementing a
 [NumberVectorDistanceFunction](/releases/current/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/NumberVectorDistanceFunction.html)
 and can save yourself some work by deriving from
-[AbstractNumberVectorDistanceFunction](./releases/current/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/AbstractNumberVectorDistanceFunction.html),
+[AbstractNumberVectorDistanceFunction](/releases/current/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/AbstractNumberVectorDistanceFunction.html),
 for example for distances defined in coordinate vectors.
 
 The [Tutorial on writing a custom distance function](/tutorial/distance_functions) takes you through all the steps needed for implementing a custom distance function.

@@ -58,8 +58,7 @@ Support in R-Trees is not yet complete, as we do not yet have an implementation 
 Output support
 --------------
 
-ELKI has some specialized output support for geo data:
+ELKI has specialized output support for geo data:
 
 - [de.lmu.ifi.dbs.elki.result.KMLOutputHandler](/releases/current/doc/de/lmu/ifi/dbs/elki/result/KMLOutputHandler.html) for producing KML output files
-- [de.lmu.ifi.dbs.elki.application.jsmap.JSONResultHandler](/releases/current/doc/de/lmu/ifi/dbs/elki/application/jsmap/JSONResultHandler.html) for using a web browser interface
 

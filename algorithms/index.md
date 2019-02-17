@@ -41,7 +41,7 @@ Clustering Algorithms:
   - [NNChain](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/NNChain.html)
   - [SLINK](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/SLINK.html)
   - [SLINKHDBSCANLinearMemory](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/SLINKHDBSCANLinearMemory.html)
-  - [BIRCHLeafClustering](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/birch/BirchLeafClustering.html)
+  - [BIRCHLeafClustering](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/birch/BIRCHLeafClustering.html)
   - Cluster extraction:
     - [ClustersWithNoiseExtraction](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/extraction/ClustersWithNoiseExtraction.html)
     - [CutDendrogramByHeight](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/extraction/CutDendrogramByHeight.html)
@@ -216,7 +216,6 @@ Other:
 - [DependencyDerivator](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/DependencyDerivator.html)
 - [KNNDistancesSampler](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/KNNDistancesSampler.html)
 - [KNNJoin](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/KNNJoin.html)
-- [MaterializeDistances](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/MaterializeDistances.html)
 
 Benchmarking algorithms:
 
