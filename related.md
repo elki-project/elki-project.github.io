@@ -2388,7 +2388,7 @@ A. Inselberg\
 [DOI:10.1007/978-0-387-68628-8](https://doi.org/10.1007/978-0-387-68628-8)
 <!-- doi:10.1007/978-0-387-68628-8 -->
 
-[de.lmu.ifi.dbs.elki.visualization.visualizers.scatterplot.density.DensityEstimationOverlay$Instance](./releases/current/doc/de/lmu/ifi/dbs/elki/visualization/visualizers/scatterplot/density/DensityEstimationOverlay$Instance.html)\
+[de.lmu.ifi.dbs.elki.visualization.visualizers.scatterplot.density.DensityEstimationOverlay.Instance](./releases/current/doc/de/lmu/ifi/dbs/elki/visualization/visualizers/scatterplot/density/DensityEstimationOverlay.Instance.html)\
 D. W. Scott\
 **Multivariate density estimation: Theory, Practice, and Visualization**\
 In: Multivariate Density Estimation: Theory, Practice, and Visualization\

@@ -80,7 +80,7 @@ After implementing this class, we can immediately run our algorithms with it. Si
 Support for spatial indexes
 ---------------------------
 
-In order to accelerate distance based algorithms (e.g. DBSCAN, LOF) using this distance function, we need to implent a **lower-bound on the rectangle-to-rectangle distances**. This is often called the "minDist". In order to implement this method, we change the parent class to [AbstractSpatialDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/AbstractSpatialDistanceFunction.html), and have eclipse generate the missing method. After adding the usual safety checks, it looks like this:
+In order to accelerate distance based algorithms (e.g. DBSCAN, LOF) using this distance function, we need to implent a **lower-bound on the rectangle-to-rectangle distances**. This is often called the "minDist". We additionally implement the interface [SpatialPrimitiveDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/SpatialPrimitiveDistanceFunction.html), and have eclipse generate the missing method. After adding the usual safety checks, it looks like this:
 
 {% highlight java %}
   @Override

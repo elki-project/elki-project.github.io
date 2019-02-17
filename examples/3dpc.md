@@ -22,7 +22,7 @@ This page provides more information on the publication:
 
   Debian and Ubuntu users can conveniently install JOGL by: `aptitude install libjogl2-java`
 
-* 3DPC add-on package [3dpc.jar](/releases/3dpc-addon-0.6.0~beta1/3dpc.jar) (includes source code, and windows start script).
+* 3DPC add-on package [3dpc.jar](http://elki.dbs.ifi.lmu.de/releases/3dpc-addon-0.6.0~beta1/3dpc.jar) (includes source code, and windows start script).
 
 ## Running
 

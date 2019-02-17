@@ -796,19 +796,17 @@ public class NaiveAgglomerativeHierarchicalClustering<O>
 
 We can now also drop the `numclusters` parameter, as we want to use the existing ELKI classes for extracting flat clusterings out of our hierarchy.
 
-We can now use this implementation in combination with [ExtractFlatClusteringFromHierarchy](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/extraction/ExtractFlatClusteringFromHierarchy.html):
+We can now use this implementation in combination with [CutDendrogramByNumberOfClusters](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/extraction/CutDendrogramByNumberOfClusters.html):
 
 {% highlight shell %}
 elki -dbc.in mickey-mouse.csv \
--algorithm clustering.hierarchical.ExtractFlatClusteringFromHierarchy \
+-algorithm clustering.hierarchical.extraction.CutDendrogramByNumberOfClusters \
 -algorithm tutorial.clustering.NaiveAgglomerativeHierarchicalClustering4 \
--hierarchical.threshold-mode BY_MINCLUSTERS \
 -hierarchical.minclusters 3 \
--hierarchical.output-mode STRICT_PARTITIONS \
 -resultHandler visualizer
 {% endhighlight %}
 
-the resulting clusters have not changed compared to the previous output, but we now have the other strategies of extracting clusters available (such as `-hierarchical.threshold-mode BY_THRESHOLD`), too:
+the resulting clusters have not changed compared to the previous output, but we now have the other strategies of extracting clusters available, too:
 
 ![](mouse-ward.png)
 
