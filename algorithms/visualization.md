@@ -11,7 +11,7 @@ Visualization in ELKI
 Usage
 -----
 
-To use the ELKI visualizer, set `-resulthandler` to [de.lmu.ifi.dbs.elki.visualization.gui.ResultVisualizer](/releases/current/javadoc/de/lmu/ifi/dbs/elki/visualization/gui/ResultVisualizer.html). This class will inspect the algorithm output, invoke appropriate visualization modules and arrange them on the screen. The menu allows export to [SVG](/dev/svg), PNG, JPG, PDF, PostScript and other formats.
+To use the ELKI visualizer, set `-resulthandler` to [de.lmu.ifi.dbs.elki.result.AutomaticVisualization](/releases/current/javadoc/de/lmu/ifi/dbs/elki/result/AutomaticVisualization.html). This class will inspect the algorithm output, invoke appropriate visualization modules and arrange them on the screen. The menu allows export to [SVG](/dev/svg), PNG, JPG, PDF, PostScript and other formats.
 
 Technology
 ----------
@@ -65,9 +65,9 @@ Visualizers included in ELKI 0.6.0:
  - OPTICS:
    - [optics.OPTICSPlotVisualizer](/releases/current/javadoc/de/lmu/ifi/dbs/elki/visualization/visualizers/optics/OPTICSPlotVisualizer.html)
    - [optics.OPTICSClusterVisualization](/releases/current/javadoc/de/lmu/ifi/dbs/elki/visualization/visualizers/optics/OPTICSClusterVisualization.html)
-   - [optics.OPTICSPlotCutVisualizer](/releases/current/javadoc/de/lmu/ifi/dbs/elki/visualization/visualizers/optics/OPTICSPlotCutVisualizer.html) (for epsilon cuts)
-   - [optics.OPTICSPlotSelectionVisualizer](/releases/current/javadoc/de/lmu/ifi/dbs/elki/visualization/visualizers/optics/OPTICSPlotSelectionVisualizer.html)
-   - [optics.OPTICSPlotSteepAreaVisualizer](/releases/current/javadoc/de/lmu/ifi/dbs/elki/visualization/visualizers/optics/OPTICSPlotSteepAreaVisualizer.html) (for OPTICS Xi method)
+   - [optics.OPTICSPlotCutVisualization](/releases/current/javadoc/de/lmu/ifi/dbs/elki/visualization/visualizers/optics/OPTICSPlotCutVisualization.html) (for epsilon cuts)
+   - [optics.OPTICSPlotSelectionVisualization](/releases/current/javadoc/de/lmu/ifi/dbs/elki/visualization/visualizers/optics/OPTICSPlotSelectionVisualization.html)
+   - [optics.OPTICSPlotSteepAreaVisualization](/releases/current/javadoc/de/lmu/ifi/dbs/elki/visualization/visualizers/optics/OPTICSPlotSteepAreaVisualization.html) (for OPTICS Xi method)
  - Pair segments visualization:
    - [pairsegments.CircleSegmentsVisualizer](/releases/current/javadoc/de/lmu/ifi/dbs/elki/visualization/visualizers/pairsegments/CircleSegmentsVisualizer.html)
  - Generic:

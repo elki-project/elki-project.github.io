@@ -9,16 +9,18 @@ section: algorithms
 Data Mining Algorithms in ELKI
 ==============================
 
-The following data-mining algorithms are included in the ELKI 0.7.1 release.
+The following data-mining algorithms are included in the ELKI 0.7.5 release.
 For literature references, click on the individual algorithms or the references overview in the [JavaDoc](/dev/javadoc) documentation. See also [RelatedPublications](/related)
 
 Clustering Algorithms:
 
 - [AffinityPropagationClusteringAlgorithm](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/affinitypropagation/AffinityPropagationClusteringAlgorithm.html)
 - [CanopyPreClustering](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/CanopyPreClustering.html)
+- [Leader](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/Leader.html)
 - Density-based clustering:
   - [DBSCAN](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/DBSCAN.html)
   - [GeneralizedDBSCAN](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/gdbscan/GeneralizedDBSCAN.html)
+  - [ParalleGeneralizedDBSCAN](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/gdbscan/parallel/ParallelGeneralizedDBSCAN.html)
   - [LSDBC](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/gdbscan/LSDBC.html)
   - [GriDBSCAN](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/GriDBSCAN.html)
   - [OPTICSXi](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/optics/OPTICSXi.html)
@@ -30,31 +32,46 @@ Clustering Algorithms:
 - [EM](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/em/EM.html)
 - Hierarchical clustering family:
   - [AGNES](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/AGNES.html)
-  - [SLINK](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/SLINK.html)
-  - [CLINK](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/CLINK.html)
   - [AnderbergHierarchicalClustering](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/AnderbergHierarchicalClustering.html)
-  - [SLINKHDBSCANLinearMemory](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/SLINKHDBSCANLinearMemory.html)
+  - [CLINK](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/CLINK.html)
   - [HDBSCANLinearMemory](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/HDBSCANLinearMemory.html)
+  - [MiniMax](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/MiniMax.html)
+  - [MiniMaxAnderberg](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/MiniMaxAnderberg.html)
+  - [MiniMaxNNChain](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/MiniMaxNNChain.html)
+  - [NNChain](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/NNChain.html)
+  - [SLINK](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/SLINK.html)
+  - [SLINKHDBSCANLinearMemory](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/SLINKHDBSCANLinearMemory.html)
+  - [BIRCHLeafClustering](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/birch/BirchLeafClustering.html)
   - Cluster extraction:
-  - [HDBSCANHierarchyExtraction](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/extraction/HDBSCANHierarchyExtraction.html)
-  - [SimplifiedHierarchyExtraction](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/extraction/SimplifiedHierarchyExtraction.html)
-  - [ExtractFlatClusteringFromHierarchy](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/extraction/ExtractFlatClusteringFromHierarchy.html)
+    - [ClustersWithNoiseExtraction](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/extraction/ClustersWithNoiseExtraction.html)
+    - [CutDendrogramByHeight](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/extraction/CutDendrogramByHeight.html)
+    - [CutDendrogramByNumberOfClusters](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/extraction/CutDendrogramByNumberOfClusters.html)
+    - [HDBSCANHierarchyExtraction](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/extraction/HDBSCANHierarchyExtraction.html)
+    - [SimplifiedHierarchyExtraction](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/extraction/SimplifiedHierarchyExtraction.html)
 - K-Means family:
-  - [KMeansSort](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/KMeansSort.html)
+  - [KMeansAnnulus](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/KMeansAnnulus.html)
+  - [KMeansBisecting](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/KMeansBisecting.html)
   - [KMeansCompare](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/KMeansCompare.html)
-  - [KMeansHamerly](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/KMeansHamerly.html)
   - [KMeansElkan](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/KMeansElkan.html)
+  - [KMeansExponion](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/KMeansExponion.html)
+  - [KMeansHamerly](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/KMeansHamerly.html)
   - [KMeansLloyd](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/KMeansLloyd.html)
   - [ParallelLloydKMeans](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/parallel/ParallelLloydKMeans.html)
   - [KMeansMacQueen](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/KMeansMacQueen.html)
+  - [KMeansMinusMinus](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/KMeansMinusMinus.html)
+  - [KMeansSimplifiedElkan](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/KMeansSimplifiedElkan.html)
+  - [KMeansSort](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/KMeansSort.html)
   - [KMediansLloyd](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/KMediansLloyd.html)
+  - [KMedoidsFastPAM](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/KMedoidsFastPAM.html)
+  - [KMedoidsFastPAM1](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/KMedoidsFastPAM1.html)
   - [KMedoidsPAM](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/KMedoidsPAM.html)
-  - [KMedoidsEM](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/KMedoidsEM.html)
+  - [KMedoidsPAMReynolds](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/KMedoidsPAMReynolds.html)
+  - [KMedoidsPark](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/KMedoidsPark.html)
   - [CLARA](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/CLARA.html)
+  - [CLARANS](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/CLARANS.html)
+  - [FastCLARA](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/FastCLARA.html)
+  - [FastCLARANS](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/FastCLARANS.html)
   - [BestOfMultipleKMeans](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/BestOfMultipleKMeans.html)
-  - [KMeansBisecting](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/KMeansBisecting.html)
-  - [KMeansBatchedLloyd](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/KMeansBatchedLloyd.html)
-  - [KMeansHybridLloydMacQueen](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/KMeansHybridLloydMacQueen.html)
   - [SingleAssignmentKMeans](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/SingleAssignmentKMeans.html)
   - [XMeans](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/XMeans.html)
 - [SNNClustering](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/SNNClustering.html)
@@ -100,12 +117,16 @@ Outlier Detection
   - [DBOutlierDetection](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/distance/DBOutlierDetection.html)
   - [DBOutlierScore](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/distance/DBOutlierScore.html)
   - [HilOut](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/distance/HilOut.html)
+  - [KNNDD](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/distance/KNNDD.html)
   - [KNNOutlier](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/distance/KNNOutlier.html)
+  - [KNNSOS](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/distance/KNNSOS.html)
   - [KNNWeightOutlier](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/distance/KNNWeightOutlier.html)
+  - [LocalIsolationCoefficient](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/distance/LocalIsolationCoefficient.html)
   - [ODIN](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/distance/ODIN.html)
   - [ParallelKNNOutlier](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/distance/parallel/ParallelKNNOutlier.html)
   - [ParallelKNNWeightOutlier](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/distance/parallel/ParallelKNNWeightOutlier.html)
   - [ReferenceBasedOutlierDetection](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/distance/ReferenceBasedOutlierDetection.html)
+  - [SOS](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/distance/SOS.html)
 - LOF family of methods:
   - [LOF](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/lof/LOF.html)
   - [ParallelLOF](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/lof/parallel/ParallelLOF.html)
@@ -120,12 +141,17 @@ Outlier Detection
   - [LoOP](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/lof/LoOP.html)
   - [OnlineLOF](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/lof/OnlineLOF.html)
   - [SimplifiedLOF](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/lof/SimplifiedLOF.html)
-  - [ParallelSimplifiedLOF](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/lof/ParallelSimplifiedLOF.html)
+  - [ParallelSimplifiedLOF](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/lof/parallel/ParallelSimplifiedLOF.html)
   - [SimpleKernelDensityLOF](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/lof/SimpleKernelDensityLOF.html)
+  - [VarianceOfVolume](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/lof/VarianceOfVolume.html)
 - Angle-based outlier detection:
   - [ABOD](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/anglebased/ABOD.html)
   - [FastABOD](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/anglebased/FastABOD.html)
   - [LBABOD](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/anglebased/LBABOD.html)
+- Intrinsic dimensionality based:
+  - [IDOS](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/intrinsic/IDOS.html)
+  - [ISOS](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/intrinsic/ISOS.html)
+  - [IntrinsicDimensionalityOutlier](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/intrinsic/IntrinsicDimensionalityOutlier.html)
 - Clustering based outlier detection:
   - [EMOutlier](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/clustering/EMOutlier.html)
   - [KMeansOutlierDetection](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/clustering/KMeansOutlierDetection.html)
@@ -177,8 +203,18 @@ Frequent Itemset Mining:
 - [APRIORI](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/itemsetmining/APRIORI.html)
 - [Eclat](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/itemsetmining/Eclat.html)
 - [FPGrowth](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/itemsetmining/FPGrowth.html)
+
+Projection:
+
+- [BarnesHutTSNE](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/projection/BarnesHutTSNE.html)
+- [SNE](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/projection/SNE.html)
+- [TSNE](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/projection/TSNE.html)
+- itSNE, via the TSNE class
+
+Other:
+
 - [DependencyDerivator](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/DependencyDerivator.html)
-- [KNNDistanceOrder](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/KNNDistanceOrder.html)
+- [KNNDistancesSampler](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/KNNDistancesSampler.html)
 - [KNNJoin](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/KNNJoin.html)
 - [MaterializeDistances](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/MaterializeDistances.html)
 

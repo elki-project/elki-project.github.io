@@ -9,7 +9,7 @@ section: releases
 Release History
 ===============
 
-**0.7.5 (2018, February 15)**
+**0.7.5 (2019, February 15)**
 
 : Bug fix and enhancement release 0.7.5 (cite as [release 0.7.5](/publications#release0.7.5))
 
