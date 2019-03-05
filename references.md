@@ -24,9 +24,15 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Bilkis Jamal Ferdosi, and Muhammad Masud Tarek (2019).
    **[Visual Verification and Analysis of Outliers Using Optimal Outlier Detection Result by Choosing Proper Algorithm and Parameter](https://doi.org/10.1007/978-981-13-1498-8_45)**.
    *Emerging Technologies in Data Mining and Information Security*, 507-517, Springer, 10.1007/978-981-13-1498-8\_45
+1. Liefa Liao, and Bin Luo (2019).
+   **[Entropy Isolation Forest Based on Dimension Entropy for Anomaly Detection](https://doi.org/10.1007/978-981-13-6473-0_32)**.
+   *Computational Intelligence and Intelligent Systems*, 365-376, Springer, 10.1007/978-981-13-6473-0\_32
 1. Łukasz Struski, Przemysław Spurek, Jacek Tabor, and Marek Śmieja (2019).
    **[Projected memory clustering](https://doi.org/10.1016/j.patrec.2019.02.023)**.
    *Pattern Recognition Letters*, Elsevier BV, 10.1016/j.patrec.2019.02.023
+1. Julian Oehling, and David J. Barry (2019).
+   **[Using machine learning methods in airline flight data monitoring to generate new operational safety knowledge from existing data](https://doi.org/10.1016/j.ssci.2018.12.018)**.
+   *Safety Science* 114, 89-104, Elsevier BV, 10.1016/j.ssci.2018.12.018
 1. Pedro Henrique B. Ruas, Alan D. Machado, Michelle C. Silva, Magali R. G. Meireles, Ana Maria P. Cardoso, Luis E. Zárate, and Cristiane N. Nobre (2019).
    **[Identification and characterisation of Facebook user profiles considering interaction aspects](https://doi.org/10.1080/0144929X.2019.1566498)**.
    *Behaviour & Information Technology*, 1-15, Informa UK Limited, 10.1080/0144929X.2019.1566498
@@ -48,10 +54,17 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Lukas Hardi, and Ulrich Wagner (2019).
    **[Grocery Delivery or Customer Pickup—Influences on Energy Consumption and CO2 Emissions in Munich](https://doi.org/10.3390/su11030641)**.
    *Sustainability* 11(3), 641, Mdpi Ag, 10.3390/su11030641
+1. Yue Zhao, Zain Nasrullah, and Zheng Li (2019).
+   **[PyOD: A Python Toolbox for Scalable Outlier Detection](https://arxiv.org/abs/1901.01588)**.
+   *CoRR* abs/1901.01588,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/corr/abs-1901-01588)
 1. Erich Schubert, and Arthur Zimek (2019).
    **[ELKI: A large open-source library for data analysis - ELKI Release 0.7.5 "Heidelberg"](https://arxiv.org/abs/1902.03616)**.
    *CoRR* abs/1902.03616,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/corr/abs-1902-03616)
+1. José David Jácome Escobar, and Estalin Augusto Viracocha Andrade (2019).
+   **[Desarrollo de una aplicación para detección de patrones en imágenes mediante el uso de aprendizaje profundo](http://www.dspace.uce.edu.ec/handle/25000/17551)**.
+   Quito: UCE
 
 2018
 ----
@@ -163,9 +176,19 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[Hi-Clust: Unsupervised Analysis of Cloud Latency Measurements Through Hierarchical Clustering](https://doi.org/10.1109/CloudNet.2018.8549558)**.
    *CloudNet*, 1-7, IEEE, 10.1109/CloudNet.2018.8549558,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/cloudnet/MulinkaCK18)
+1. Dilip Singh Sisodia, Radhika Khandelwal, and Arti Anuragi (2018).
+   **[Categorization Performance of Unsupervised Learning Techniques for Web Robots Sessions](https://doi.org/10.1109/ICIRCA.2018.8597200)**.
+   *2018 International Conference on Inventive Research in Computing Applications (ICIRCA)*, IEEE, 10.1109/ICIRCA.2018.8597200
+1. Dilip Singh Sisodia, and Akanksha Verma (2018).
+   **[Performance of Unsupervised Learning Algorithms for Online Document Clustering](https://doi.org/10.1109/ICIRCA.2018.8597378)**.
+   *2018 International Conference on Inventive Research in Computing Applications (ICIRCA)*, IEEE, 10.1109/ICIRCA.2018.8597378
 1. Andre Kummerow, Steffen Nicolai, and Peter Bretschneider (2018).
    **[Ensemble approach for automated extraction of critical events from mixed historical PMU data sets](https://doi.org/10.1109/PESGM.2018.8586641)**.
    *2018 IEEE Power & Energy Society General Meeting (PESGM)*, IEEE, 10.1109/PESGM.2018.8586641
+1. Tommaso Zoppi, Andrea Ceccarelli, and Andrea Bondavalli (2018).
+   **[On Algorithms Selection for Unsupervised Anomaly Detection](https://doi.org/10.1109/PRDC.2018.00050)**.
+   *PRDC*, 279-288, IEEE, 10.1109/PRDC.2018.00050,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/prdc/ZoppiCB18)
 1. Pinjia He, Jieming Zhu, Shilin He, Jian Li, and Michael R. Lyu (2018).
    **[Towards Automated Log Parsing for Large-Scale Log Data Analysis](https://doi.org/10.1109/TDSC.2017.2762673)**.
    *IEEE Trans. Dependable Sec. Comput.* 15(6), 931-944, 10.1109/TDSC.2017.2762673,
@@ -315,11 +338,20 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Angie Cristina Pinto Chamorro, and Víctor Marcelo Zambrano Morocho (2018).
    **[Plataforma Tecnológica Para Contribuir La Planeación Urbana En La Ciudad De Guayaquil Dirigido A La Transportación, Enfocado A La Implementación De Algoritmos De Análisis De Trayectoria](http://repositorio.ug.edu.ec/handle/redug/32493)**.
    Universidad de Guayaquil. Facultad de Ciencias Matemáticas y Físicas. Carrera de Ingeniería En Sistemas Computacionales
+1. Carlos Humberto Apolaya Torres, and Adolfo Espinosa Diaz (2018).
+   **[Técnicas de inferencias, predicción y minería de datos](http://hdl.handle.net/10757/624497)**.
+   Universidad Peruana de Ciencias Aplicadas (UPC)
 1. Dušan HETLEROVIĆ (2018).
    **[Detekce anomálií v klasifikovaných datech: Vyhodnocování [online]](https://is.muni.cz/th/q7e3d/bp_data.zip?info)**.
 1. Elvis Ricardo Tapia Aparicio (2018).
    **[Modelo de minería de datos para identificación de patrones que influyen en el aprovechamiento académico de la Carrera de Sistemas de Información de la Universidad de Guayaquil](http://repositorio.ug.edu.ec/handle/redug/36418)**.
    Universidad de Guayaquil. Facultad de Ingeniería Industrial. Carrera de Licenciatura en Sistemas de Información.
+1. Fatih Kayaalp, and Muhammet Sinan Başarslan (2018).
+   **[Open source data mining programs: a case study on R](http://hdl.handle.net/11376/3347)** (Açık kaynak kodlu veri madenciliği programları: R’da örnek uygulama).
+   Düzce University
+1. Gjergji Make (2018).
+   **[Implementing KNIME Analytical Platform for visualizing data in educational context](https://www.theseus.fi/handle/10024/157624)**.
+   Haaga-Helia ammattikorkeakoulu
 1. Luisa Sanz Martínez, Alejandra Martínez Monés, Miguel L. Bote Lorenzo, and Yannis A. Dimitriadis (2018).
    **[Validating performance of group formation based on homogeneous engagement criteria in MOOCs](http://uvadoc.uva.es/handle/10324/31403)**.
 1. Žemlička Radomír (2018).
@@ -651,6 +683,8 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[Unsupervised Anomaly Detection in Receipt Data](http://nbn-resolving.de/urn:nbn:se:kth:diva-215161)**.
 1. Anthony McCaffrey, and University of Massachusetts (UMass) (2017).
    **[Feature Type Spectrum Technique](http://www.freepatentsonline.com/9646266.html)**.
+1. Dana Yarden, Oded Shoseyov, Merav Blanca, and Gemmacert Ltd (2017).
+   **[System and method for qualifying plant material](http://www.freepatentsonline.com/20190033210.html)**.
 1. Benjamin Heinzerling, Michael Strube, and Chin-Yew Lin (2017).
    **[Trust, but Verify! Better Entity Linking through Automatic Verification](http://www.aclweb.org/anthology/E17-1078)**.
    *Proceedings of the 15th Conference of the European Chapter of the Association for Computational Linguistics: Volume 1, Long Papers*, 828--838, Association for Computational Linguistics
