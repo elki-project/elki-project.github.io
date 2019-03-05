@@ -24,6 +24,34 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Bilkis Jamal Ferdosi, and Muhammad Masud Tarek (2019).
    **[Visual Verification and Analysis of Outliers Using Optimal Outlier Detection Result by Choosing Proper Algorithm and Parameter](https://doi.org/10.1007/978-981-13-1498-8_45)**.
    *Emerging Technologies in Data Mining and Information Security*, 507-517, Springer, 10.1007/978-981-13-1498-8\_45
+1. Łukasz Struski, Przemysław Spurek, Jacek Tabor, and Marek Śmieja (2019).
+   **[Projected memory clustering](https://doi.org/10.1016/j.patrec.2019.02.023)**.
+   *Pattern Recognition Letters*, Elsevier BV, 10.1016/j.patrec.2019.02.023
+1. Pedro Henrique B. Ruas, Alan D. Machado, Michelle C. Silva, Magali R. G. Meireles, Ana Maria P. Cardoso, Luis E. Zárate, and Cristiane N. Nobre (2019).
+   **[Identification and characterisation of Facebook user profiles considering interaction aspects](https://doi.org/10.1080/0144929X.2019.1566498)**.
+   *Behaviour & Information Technology*, 1-15, Informa UK Limited, 10.1080/0144929X.2019.1566498
+1. Luisa Sanz-Martínez, Erkan Er, Alejandra Martínez-Monés, Yannis Dimitriadis, and Miguel L. Bote-Lorenzo (2019).
+   **[Creating collaborative groups in a MOOC: a homogeneous engagement grouping approach](https://doi.org/10.1080/0144929X.2019.1571109)**.
+   *Behaviour & Information Technology*, 1-15, Informa UK Limited, 10.1080/0144929X.2019.1571109
+1. Kaize Ding, Jundong Li, and Huan Liu (2019).
+   **[Interactive Anomaly Detection on Attributed Networks](https://doi.org/10.1145/3289600.3290964)**.
+   *WSDM*, 357-365, ACM, 10.1145/3289600.3290964,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/wsdm/DingLL19)
+1. Xiaodan Xu, Huawen Liu, and Minghai Yao (2019).
+   **[Recent Progress of Anomaly Detection](https://doi.org/10.1155/2019/2686378)**.
+   *Complexity* 2019, 2686378:1-2686378:11, 10.1155/2019/2686378,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/complexity/XuLY19)
+1. Junpeng Wang, Xiaotong Liu, and Han-Wei Shen (2019).
+   **[High-dimensional data analysis with subspace comparison using matrix visualization](https://doi.org/10.1177/1473871617733996)**.
+   *Information Visualization* 18(1), 10.1177/1473871617733996,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/ivs/WangLS19)
+1. Lukas Hardi, and Ulrich Wagner (2019).
+   **[Grocery Delivery or Customer Pickup—Influences on Energy Consumption and CO2 Emissions in Munich](https://doi.org/10.3390/su11030641)**.
+   *Sustainability* 11(3), 641, Mdpi Ag, 10.3390/su11030641
+1. Erich Schubert, and Arthur Zimek (2019).
+   **[ELKI: A large open-source library for data analysis - ELKI Release 0.7.5 "Heidelberg"](https://arxiv.org/abs/1902.03616)**.
+   *CoRR* abs/1902.03616,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/corr/abs-1902-03616)
 
 2018
 ----
@@ -115,6 +143,10 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[Machine Intelligence in Healthcare and Medical Cyber Physical Systems: A Survey](https://doi.org/10.1109/ACCESS.2018.2866049)**.
    *IEEE Access* 6, 46419-46494, 10.1109/ACCESS.2018.2866049,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/access/ShishvanZS18)
+1. Xuan-Hong Dang, Raji Akella, Somaieh Bahrami, Vadim Sheinin, and Petros Zerfos (2018).
+   **[Unsupervised Threshold Autoencoder to Analyze and Understand Sentence Elements](https://doi.org/10.1109/BigData.2018.8622379)**.
+   *BigData*, 3267-3276, IEEE, 10.1109/BigData.2018.8622379,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/bigdataconf/DangABSZ18)
 1. Yanbo Han, Meiling Zhu, and Chen Liu (2018).
    **[A Service-Oriented Approach to Modeling and Reusing Event Correlations](https://doi.org/10.1109/COMPSAC.2018.00077)**.
    *COMPSAC (1)*, 498-507, IEEE, 10.1109/COMPSAC.2018.00077,
@@ -123,9 +155,10 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[Introducing Hierarchical Clustering with Real Time Stream Reasoning into Semantic-Enabled IoT](https://doi.org/10.1109/COMPSAC.2018.10291)**.
    *COMPSAC (2)*, 540-545, IEEE, 10.1109/COMPSAC.2018.10291,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/compsac/SunKT18)
-1. Cedric Buche, Cindy Even, and Julien Soler (2018).
+1. Cédric Buche, Cindy Even, and Julien Soler (2018).
    **[Autonomous Virtual Player in a Video Game Imitating Human Players: The ORION Framework](https://doi.org/10.1109/CW.2018.00029)**.
-   *2018 International Conference on Cyberworlds (CW)*, IEEE, 10.1109/CW.2018.00029
+   *CW*, 108-113, IEEE, 10.1109/CW.2018.00029,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/cw/BucheES18)
 1. Pavol Mulinka, Pedro Casas, and Lukas Kencl (2018).
    **[Hi-Clust: Unsupervised Analysis of Cloud Latency Measurements Through Hierarchical Clustering](https://doi.org/10.1109/CloudNet.2018.8549558)**.
    *CloudNet*, 1-7, IEEE, 10.1109/CloudNet.2018.8549558,
@@ -197,6 +230,9 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[G-OPTICS: fast ordering density-based cluster objects using graphics processing units](https://doi.org/10.1504/IJWGS.2018.092583)**.
    *IJWGS* 14(3), 273-287, 10.1504/IJWGS.2018.092583,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/ijwgs/LeeL18)
+1. I.Y. Grishanova, , J.V. Rogushina, and (2018).
+   **[Technological solutions for intelligent analysis of Big Data. Programming languages](https://doi.org/10.15407/pp2018.04.045)**.
+   *Problems In Programming*, 045-058, Co. Ltd. Ukrinformnauka, 10.15407/pp2018.04.045
 1. Xiaodan Xu, Huawen Liu, Li Li, and Minghai Yao (2018).
    **[A Comparison of Outlier Detection Techniques for High-Dimensional Data](https://doi.org/10.2991/ijcis.11.1.50)**.
    *Int. J. Comput. Intell. Syst.* 11(1), 652-662, 10.2991/ijcis.11.1.50,
@@ -222,6 +258,10 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[Two Faces of the Framework for Analysis and Prediction, Part 2 - Research](https://doi.org/10.5755/j01.itc.47.3.18747)**.
    *ITC* 47(3), 489-502, 10.5755/j01.itc.47.3.18747,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/itc/KurbalijaIGR18a)
+1. Hong Yu, Tiantian Zhang, Yahong Lian, and Yu Cai (2018).
+   **[Co-regularized Multi-view Subspace Clustering](http://proceedings.mlr.press/v95/yu18a.html)**.
+   *ACML*, 17-32, JMLR.org,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/acml/YuZLC18)
 1. Erich Schubert, Andreas Spitz, and Michael Gertz (2018).
    **[Exploring Significant Interactions in Live News](http://ceur-ws.org/Vol-2079/paper9.pdf)**.
    *NewsIR@ECIR*, 39-44, CEUR-WS.org,
@@ -280,9 +320,6 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Elvis Ricardo Tapia Aparicio (2018).
    **[Modelo de minería de datos para identificación de patrones que influyen en el aprovechamiento académico de la Carrera de Sistemas de Información de la Universidad de Guayaquil](http://repositorio.ug.edu.ec/handle/redug/36418)**.
    Universidad de Guayaquil. Facultad de Ingeniería Industrial. Carrera de Licenciatura en Sistemas de Información.
-1. Hong Yu, Tiantian Zhang, Yahong Lian, and Yu Cai (2018).
-   **[Co-regularized Multi-view Subspace Clustering](http://proceedings.mlr.press/v95/yu18a.html)**.
-   *Proceedings of The 10th Asian Conference on Machine Learning*, 17--32, PMLR
 1. Luisa Sanz Martínez, Alejandra Martínez Monés, Miguel L. Bote Lorenzo, and Yannis A. Dimitriadis (2018).
    **[Validating performance of group formation based on homogeneous engagement criteria in MOOCs](http://uvadoc.uva.es/handle/10324/31403)**.
 1. Žemlička Radomír (2018).
@@ -572,6 +609,10 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[Arrays of (locality-sensitive) Count Estimators (ACE): High-Speed Anomaly Detection via Cache Lookups](https://arxiv.org/abs/1706.06664)**.
    *CoRR* abs/1706.06664,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/corr/LuoS17a)
+1. Jonathan R. Wells, and Kai Ming Ting (2017).
+   **[A simple efficient density estimator that enables fast systematic search](https://arxiv.org/abs/1707.00783)**.
+   *CoRR* abs/1707.00783,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/corr/WellsT17)
 1. Erich Schubert, Andreas Spitz, Michael Weiler, Johanna Geiß, and Michael Gertz (2017).
    **[Semantic Word Clouds with Background Corpus Normalization and t-distributed Stochastic Neighbor Embedding](https://arxiv.org/abs/1708.03569)**.
    *CoRR* abs/1708.03569,
@@ -872,6 +913,8 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Alexander Fischer-Brandies (2016).
    **[Explaining Outliers in ARTigo](http://www.pms.ifi.lmu.de/publikationen/projektarbeiten/Alexander.Fischer-Brandies/PA_Alexander.Fischer-Brandies.pdf)**.
    Ludwig-Maximilians-Universität München
+1. Anthony McCaffrey, and University Of Massachusetts (2016).
+   **[Feature type spectrum technique](http://www.freepatentsonline.com/9646266.html)**.
 1. B. Gajewski, and T. Martyn (2016).
    **[Spatial data clustering in independent mobile environment](https://yadda.icm.edu.pl/baztech/element/bwmeta1.element.baztech-95117230-511c-45d0-b1ae-83d4cf2926d8)**.
    *Measurement Automation Monitoring* Vol. 62, No. 5
@@ -1972,3 +2015,5 @@ Release 0.7:
 [Google Scholar](http://scholar.google.de/scholar?cites=13946522890235188309)
 [OpenCitations](http://opencitations.net/index/coci/search?text=10.14778/2824032.2824115&rule=citeddoi)
 
+Release 0.7.5:
+[Semantic Scholar](https://www.semanticscholar.org/paper/08f4d340e566a95e267a93ea78ad7040d7f71a45)
