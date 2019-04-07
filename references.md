@@ -27,6 +27,12 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Liefa Liao, and Bin Luo (2019).
    **[Entropy Isolation Forest Based on Dimension Entropy for Anomaly Detection](https://doi.org/10.1007/978-981-13-6473-0_32)**.
    *Computational Intelligence and Intelligent Systems*, 365-376, Springer, 10.1007/978-981-13-6473-0\_32
+1. Ibrahim Aljarah, Majdi Mafarja, Ali Asghar Heidari, Hossam Faris, and Seyedali Mirjalili (2019).
+   **[Clustering analysis using a novel locality-informed grey wolf-inspired clustering approach](https://doi.org/10.1007/s10115-019-01358-x)**.
+   *Knowledge and Information Systems*, Springer, 10.1007/s10115-019-01358-x
+1. Dante Travisany, Eric Goles, Mauricio Latorre, María-Paz Cortés, and Alejandro Maass (2019).
+   **[Generation and robustness of Boolean networks to model Clostridium difficile infection](https://doi.org/10.1007/s11047-019-09730-0)**.
+   *Natural Computing*, Springer, 10.1007/s11047-019-09730-0
 1. Łukasz Struski, Przemysław Spurek, Jacek Tabor, and Marek Śmieja (2019).
    **[Projected memory clustering](https://doi.org/10.1016/j.patrec.2019.02.023)**.
    *Pattern Recognition Letters*, Elsevier BV, 10.1016/j.patrec.2019.02.023
@@ -39,6 +45,12 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Luisa Sanz-Martínez, Erkan Er, Alejandra Martínez-Monés, Yannis Dimitriadis, and Miguel L. Bote-Lorenzo (2019).
    **[Creating collaborative groups in a MOOC: a homogeneous engagement grouping approach](https://doi.org/10.1080/0144929X.2019.1571109)**.
    *Behaviour & Information Technology*, 1-15, Informa UK Limited, 10.1080/0144929X.2019.1571109
+1. Hao Wang, Yan Yang, and Bing Liu (2019).
+   **[GMC: Graph-based Multi-view Clustering](https://doi.org/10.1109/TKDE.2019.2903810)**.
+   *IEEE Transactions on Knowledge and Data Engineering*, IEEE, 10.1109/TKDE.2019.2903810
+1. Yezheng Liu, Zhe Li, Chong Zhou, Yuanchun Jiang, Jianshan Sun, Meng Wang, and Xiangnan He (2019).
+   **[Generative Adversarial Active Learning for Unsupervised Outlier Detection](https://doi.org/10.1109/TKDE.2019.2905606)**.
+   *IEEE Transactions on Knowledge and Data Engineering*, IEEE, 10.1109/TKDE.2019.2905606
 1. Kaize Ding, Jundong Li, and Huan Liu (2019).
    **[Interactive Anomaly Detection on Attributed Networks](https://doi.org/10.1145/3289600.3290964)**.
    *WSDM*, 357-365, ACM, 10.1145/3289600.3290964,
@@ -62,9 +74,17 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[ELKI: A large open-source library for data analysis - ELKI Release 0.7.5 "Heidelberg"](https://arxiv.org/abs/1902.03616)**.
    *CoRR* abs/1902.03616,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/corr/abs-1902-03616)
+1. Benjamin Heinzerling (2019).
+   **[Aspects of Coherence for Entity Analysis](http://nbn-resolving.de/urn:nbn:de:bsz:16-heidok-261173)**.
+1. Emeli Pettersson, and Albin Carlson (2019).
+   **[Att hitta en nål i en höstack: Metoder och tekniker för att sålla och gradera stora mängder ostrukturerad textdata](http://hdl.handle.net/2043/28238)** (Finding a Needle in a Haystack: Methods and techniques for screening and grading large amounts of unstructured textual data).
+   Malmö universitet/Teknik och samhälle
 1. José David Jácome Escobar, and Estalin Augusto Viracocha Andrade (2019).
    **[Desarrollo de una aplicación para detección de patrones en imágenes mediante el uso de aprendizaje profundo](http://www.dspace.uce.edu.ec/handle/25000/17551)**.
    Quito: UCE
+1. Massimiliano de Leoni (2019).
+   **[From Low-Level Events to Activities -- A Session-Based Approach (Extended Version)](https://arxiv.org/abs/1903.03993)**.
+   *arXiv* 1903.03993
 
 2018
 ----
