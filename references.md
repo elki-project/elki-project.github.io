@@ -12,12 +12,21 @@ Scientific Work Using or Referencing ELKI
 Over the years, ELKI has been increasingly cited/used in scientific publications and other software projects.
 
 The following list is **automatically generated** from very heterogenous sources, and may contain errors.
-Where possible, we try to use metadata from DBLP, CrossRef.org, OpenCitations, SemanticScholar, and HTML meta headers from the publisher web pages.
+Where possible, we try to use metadata from DBLP, CrossRef.org, OpenCitations, SemanticScholar, Microsoft Academic Search, and HTML meta headers from the publisher web pages.
 For theses, seminar articles etc. this approach does however not work. We have not verified every citation discovered by the bot.
 
 2019
 ----
 
+1. Piotr A. Kowalski, Szymon Łukasik, Małgorzata Charytanowicz, and Piotr Kulczycki (2019).
+   **[Nature Inspired Clustering – Use Cases of Krill Herd Algorithm and Flower Pollination Algorithm](https://doi.org/10.1007/978-3-030-01632-6_6)**.
+   *Interactions Between Computational Intelligence and Mathematics Part 2*, 83-98, Springer, 10.1007/978-3-030-01632-6\_6
+1. Dipesh Pradhan, and Feroz Zahid (2019).
+   **[Data Center Clustering for Geographically Distributed Cloud Deployments](https://doi.org/10.1007/978-3-030-15035-8_101)**.
+   *AINA Workshops*, 1030-1040, Springer, 10.1007/978-3-030-15035-8_101
+1. Sudarshan S. Chawathe (2019).
+   **[Clustering Blockchain Data](https://doi.org/10.1007/978-3-319-97864-2_3)**.
+   *Unsupervised and Semi-Supervised Learning*, 43-72, Springer, 10.1007/978-3-319-97864-2\_3
 1. Dilip Singh Sisodia, Rahul Borkar, and Hari Shrawgi (2019).
    **[Performance Evaluation of Large Data Clustering Techniques on Web Robot Session Data](https://doi.org/10.1007/978-981-13-0923-6_47)**.
    *Machine Intelligence and Signal Analysis*, 545-553, Springer, 10.1007/978-981-13-0923-6\_47
@@ -63,6 +72,9 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[High-dimensional data analysis with subspace comparison using matrix visualization](https://doi.org/10.1177/1473871617733996)**.
    *Information Visualization* 18(1), 10.1177/1473871617733996,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/ivs/WangLS19)
+1. Sanna Aronsson, Henrik Artman, Sinna Lindquist, Mikael Mitchell, Tomas Persson, Robert Ramberg, Mario Romero, and Pontus ter Vehn (2019).
+   **[Supporting after action review in simulator mission training: Co-creating visualization concepts for training of fast-jet fighter pilots](https://doi.org/10.1177/1548512918823296)**.
+   *The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology*, 154851291882329, SAGE Publications, 10.1177/1548512918823296
 1. Lukas Hardi, and Ulrich Wagner (2019).
    **[Grocery Delivery or Customer Pickup—Influences on Energy Consumption and CO2 Emissions in Munich](https://doi.org/10.3390/su11030641)**.
    *Sustainability* 11(3), 641, Mdpi Ag, 10.3390/su11030641
@@ -120,6 +132,9 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[An Event Correlation Based Approach to Predictive Maintenance](https://doi.org/10.1007/978-3-319-96893-3_18)**.
    *APWeb/WAIM (2)*, 232-247, Springer, 10.1007/978-3-319-96893-3\_18,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/apweb/ZhuLH18)
+1. Alberto Fernández, Salvador García, Mikel Galar, Ronaldo C. Prati, Bartosz Krawczyk, and Francisco Herrera (2018).
+   **[Data Intrinsic Characteristics](https://doi.org/10.1007/978-3-319-98074-4_10)**.
+   *Learning from Imbalanced Data Sets*, 253-277, Springer, 10.1007/978-3-319-98074-4\_10
 1. Salma Jamal, Sukriti Goyal, Abhinav Grover, and Asheesh Shanker (2018).
    **[Machine Learning: What, Why, and How?](https://doi.org/10.1007/978-981-13-1562-6_16)**.
    *Bioinformatics: Sequences, Structures, Phylogeny*, 359-374, Springer, 10.1007/978-981-13-1562-6\_16
@@ -156,10 +171,18 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[Hierarchical partitioning of the output space in multi-label data](https://doi.org/10.1016/j.datak.2018.05.003)**.
    *Data Knowl. Eng.* 116, 42-60, 10.1016/j.datak.2018.05.003,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/dke/PapanikolaouTK18)
+1. Andreas Solti, Manuel Raffel, Giovanni Romagnoli, and Jan Mendling (2018).
+   **[Misplaced product detection using sensor data without planograms](https://doi.org/10.1016/j.dss.2018.06.006)**.
+   *Decision Support Systems* 112, 76-87, 10.1016/j.dss.2018.06.006,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/dss/SoltiRRM18)
 1. Sarah Shukri, Hossam Faris, Ibrahim Aljarah, Seyedali Mirjalili, and Ajith Abraham (2018).
    **[Evolutionary static and dynamic clustering algorithms based on multi-verse optimizer](https://doi.org/10.1016/j.engappai.2018.03.013)**.
    *Eng. Appl. of AI* 72, 54-66, 10.1016/j.engappai.2018.03.013,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/eaai/ShukriFAMA18)
+1. Mohammad Khan Afridi, Nouman Azam, JingTao Yao, and Eisa Alanazi (2018).
+   **[A three-way clustering approach for handling missing data using GTRS](https://doi.org/10.1016/j.ijar.2018.04.001)**.
+   *Int. J. Approx. Reasoning* 98, 11-24, 10.1016/j.ijar.2018.04.001,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/ijar/AfridiAYA18)
 1. Jonathan R. Wells, and Kai Ming Ting (2018).
    **[A new simple and efficient density estimator that enables fast systematic search](https://doi.org/10.1016/j.patrec.2018.12.020)**.
    *Pattern Recognition Letters*, Elsevier BV, 10.1016/j.patrec.2018.12.020
@@ -301,6 +324,9 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[Two Faces of the Framework for Analysis and Prediction, Part 2 - Research](https://doi.org/10.5755/j01.itc.47.3.18747)**.
    *ITC* 47(3), 489-502, 10.5755/j01.itc.47.3.18747,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/itc/KurbalijaIGR18a)
+1. Wenying Ji (2018).
+   **[Simulation-Based Analytics for Fabrication Quality-Associated Decision Support](https://doi.org/10.7939/R3HX16598)**.
+   *arXiv: Other Computer Science*, 10.7939/R3HX16598
 1. Hong Yu, Tiantian Zhang, Yahong Lian, and Yu Cai (2018).
    **[Co-regularized Multi-view Subspace Clustering](http://proceedings.mlr.press/v95/yu18a.html)**.
    *ACML*, 17-32, JMLR.org,
@@ -313,10 +339,6 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[Improving the Cluster Structure Extracted from OPTICS Plots](http://ceur-ws.org/Vol-2191/paper37.pdf)**.
    *LWDA*, 318-329, CEUR-WS.org,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/conf/lwa/SchubertG18)
-1. Payam Karisani, and Eugene Agichtein (2018).
-   **[Did You Really Just Have a Heart Attack? Towards Robust Detection of Personal Health Mentions in Social Media](https://arxiv.org/abs/1802.09130)**.
-   *CoRR* abs/1802.09130,
-   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/corr/abs-1802-09130)
 1. Stephen Pauwels, and Toon Calders (2018).
    **[Extending Dynamic Bayesian Networks for Anomaly Detection in Complex Logs](https://arxiv.org/abs/1805.07107)**.
    *CoRR* abs/1805.07107,
@@ -603,9 +625,6 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Changbo Ke, Zhiqiu Huang, Fu Xiao, and Linyuan Liu (2017).
    **[Privacy Data Decomposition and Discretization Method for SaaS Services](https://doi.org/10.1155/2017/4785142)**.
    *Mathematical Problems in Engineering* 2017, 1-11, Hindawi Limited, 10.1155/2017/4785142
-1. Junpeng Wang, Xiaotong Liu, and Han-Wei Shen (2017).
-   **[High-dimensional data analysis with subspace comparison using matrix visualization](https://doi.org/10.1177/1473871617733996)**.
-   *Information Visualization*, 147387161773399, SAGE Publications, 10.1177/1473871617733996
 1. 迟荣华, 程媛, 朱素霞, 黄少滨, and 陈德运 (2017).
    **[基于快速高斯变换的不确定数据聚类算法](https://doi.org/10.11959/j.issn.1000-436x.2017061)**.
    *通信学报* 38(3), 101-111, 10.11959/j.issn.1000-436x.2017061
@@ -616,9 +635,16 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[Dimensional Testing for Reverse k-Nearest Neighbor Search](https://doi.org/10.14778/3067421.3067426)**.
    *PVLDB* 10(7), 769-780, 10.14778/3067421.3067426,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/pvldb/CasanovaEHKNSZ17)
+1. Lu Chen, Yunjun Gao, Baihua Zheng, Christian S. Jensen, Hanyu Yang, and Keyu Yang (2017).
+   **[Pivot-based Metric Indexing](https://doi.org/10.14778/3115404.3115411)**.
+   *PVLDB* 10(10), 1058-1069, 10.14778/3115404.3115411,
+   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/pvldb/ChenGZJYY17)
 1. Burak Omer Saracoglu (2017).
    **[Location selection factors of small hydropower plant investments powered by SAW, grey WPM and fuzzy DEMATEL based on human natural language perception](https://doi.org/10.1504/IJRET.2017.080867)**.
    *International Journal of Renewable Energy Technology* 8(1), 1, Inderscience Publishers, 10.1504/IJRET.2017.080867
+1. Igor A. Pestunov, , Sergey A. Rylov, Yuriy N. Sinyavskiy, Vladimir B. Berikov, , , and (2017).
+   **[Computationally efficient methods of clustering ensemble construction for satellite image segmentation](https://doi.org/10.18287/1613-0073-2017-1901-194-200)**.
+   *Image Processing, Geoinformation Technology and Information Security*, Samara University, 10.18287/1613-0073-2017-1901-194-200
 1. Onur Doğan (2017).
    **[Ücretsiz Veri Madenciliği Araçlari Ve Türkiye’De Bilinirlikleri Üzerine Bir Araştirma](https://doi.org/10.18354/esam.15352)**.
    *Ege Stratejik Araştırmalar Dergisi* 8(1), 77-93, 10.18354/esam.15352
@@ -725,9 +751,6 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Loïc Prieur-Drevon (2017).
    **[Structures de données hautement extensibles pour le stockage sur disque de séries temporelles hétérogènes](http://publications.polymtl.ca/2489/)**.
    École Polytechnique de Montréal
-1. Lu Chen, Yunjun Gao, Baihua Zheng, Christian S. Jensen, Hanyu Yang, and Keyu Yang (2017).
-   **[Pivot-based metric indexing](http://dl.acm.org/citation.cfm?id=3115404.3115411)**.
-   *Proceedings of the VLDB Endowment* 10(10), 1058-1069, VLDB Endowment
 1. Pallam Anusha, and G.Krishna Reddy (2017).
    **[Repeal Adjacent Neighbors In Untrue Interval Base Discovery System](https://ijitr.com/index.php/ojs/article/view/1551)**.
    *IJITR* 5(1), 5552-5554
@@ -943,10 +966,6 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[Hierarchical Clustering Given Confidence Intervals of Metric Distances](https://arxiv.org/abs/1610.04274)**.
    *CoRR* abs/1610.04274,
    [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/corr/HuangR16b)
-1. Yannis Papanikolaou, Ioannis Katakis, and Grigorios Tsoumakas (2016).
-   **[Hierarchical Partitioning of the Output Space in Multi-label Data](https://arxiv.org/abs/1612.06083)**.
-   *CoRR* abs/1612.06083,
-   [BibTeX](http://dblp.uni-trier.de/rec/bibtex/journals/corr/PapanikolaouKT16)
 1. Johannes Schneider, and Thomas Locher (2016).
    **[Obfuscation using Encryption](https://arxiv.org/abs/1612.03345)**.
    *CoRR* abs/1612.03345,
@@ -1015,7 +1034,7 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Mingjie Tang (2016).
    **[Efficient processing of similarity queries with applications](http://docs.lib.purdue.edu/dissertations/AAI10193825)**.
    Purdue University
-1. N. Srujana, G. Srinivasa Rao, and Dr. M. V. Sivaprasad (2016).
+1. N. Srujana, G. Srinivasa Rao, and M. V. Sivaprasad (2016).
    **[Unsupervised Distance-Based Outlier Detection In High Dimensional Data](http://ijitr.com/index.php/ojs/article/view/968)**.
    *IJITR* 4(5), 3905–3907
 1. P.A.R. Kostjens (2016).
@@ -1229,6 +1248,9 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. I. A. Pestunov, S. A. Rylov, and V. B. Berikov (2015).
    **[Hierarchical clustering algorithms for segmentation of multispectral images](https://doi.org/10.3103/S8756699015040020)**.
    *Optoelectronics, Instrumentation and Data Processing* 51(4), 329-338, Allerton Press, 10.3103/S8756699015040020
+1. Guansong Pang (2015).
+   **[Anomaly detection based on zero appearances in subspaces](https://doi.org/10.4225/03/58b647d9a377b)**.
+   Monash University. Faculty of Information Technology. Clayton School of Information Technology, 10.4225/03/58b647d9a377b
 1. Lindsay Lloyd-Smith, John Krigbaum, and Benjamin Valentine (2015).
    **[Social affiliation, settlement pattern histories and subsistence change in Neolithic Borneo](https://doi.org/10.4324/9781315725444.ch13)**.
    Routledge Handbooks Online, 10.4324/9781315725444.ch13
@@ -1284,9 +1306,6 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Gordon O Ondego (2015).
    **[A comparative study of decision Tree and Naïve Bayesian Classifiers on Verbal Autopsy Datasets](http://hdl.handle.net/11295/94785)**.
    University of Nairobi
-1. Guansong Pang (2015).
-   **[Anomaly detection based on zero appearances in subspaces](http://arrow.monash.edu.au/vital/access/manager/Repository/monash:156144)**.
-   Monash University. Faculty of Information Technology. Clayton School of Information Technology
 1. Guilherme Oliveira Campos (2015).
    **[Estudo, avaliação e comparação de técnicas de detecção não supervisionada de outliers](http://www.teses.usp.br/teses/disponiveis/55/55134/tde-04082015-084412/)**.
    Biblioteca Digital de Teses e Dissertações da Universidade de São Paulo
@@ -2038,36 +2057,44 @@ Release 0.1:
 [Semantic Scholar](https://www.semanticscholar.org/paper/6920268c42cc41162411ca803451db0f62fe3687)
 [Google Scholar](http://scholar.google.de/scholar?cites=947308291279715946)
 [OpenCitations](http://opencitations.net/index/coci/search?text=10.1007/978-3-540-69497-7_41&rule=citeddoi)
+[Microsoft Academic](https://academic.microsoft.com/paper/1481232215)
 
 Release 0.2:
 [Semantic Scholar](https://www.semanticscholar.org/paper/f965bff94f9c4eb7aa87edcbcc12595da01e9b56)
 [Google Scholar](http://scholar.google.de/scholar?cites=7259117758981814570)
 [OpenCitations](http://opencitations.net/index/coci/search?text=10.1007/978-3-642-02982-0_35&rule=citeddoi)
+[Microsoft Academic](https://academic.microsoft.com/paper/1554944210)
 
 Release 0.3:
 [Semantic Scholar](https://www.semanticscholar.org/paper/38594897714ec329f1d1c3ec4d65cb5e4f3700d4)
 [Google Scholar](http://scholar.google.de/scholar?cites=318410196722457623)
 [OpenCitations](http://opencitations.net/index/coci/search?text=10.1007/978-3-642-12098-5_34&rule=citeddoi)
+[Microsoft Academic](https://academic.microsoft.com/paper/1497774109)
 
 Release 0.4:
 [Semantic Scholar](https://www.semanticscholar.org/paper/64ef30ab2a5cd888aded27a934a738329758076f)
 [Google Scholar](http://scholar.google.de/scholar?cites=13815677342913404474)
 [OpenCitations](http://opencitations.net/index/coci/search?text=10.1007/978-3-642-22922-0_41&rule=citeddoi)
+[Microsoft Academic](https://academic.microsoft.com/paper/109218057)
 
 Release 0.5:
 [Semantic Scholar](https://www.semanticscholar.org/paper/1ecd7268bac58e5bfee04cbdac1b508078894590)
 [Google Scholar](http://scholar.google.de/scholar?cites=6974576405934743829)
 [OpenCitations](http://opencitations.net/index/coci/search?text=10.1109/icde.2012.128&rule=citeddoi)
+[Microsoft Academic](https://academic.microsoft.com/paper/2146570986)
 
 Release 0.6:
 [Semantic Scholar](https://www.semanticscholar.org/paper/c8c4b3a1cdf4774f2c46d0f302d2f30d625e1c99)
 [Google Scholar](http://scholar.google.de/scholar?cites=10964489485233751703)
 [OpenCitations](http://opencitations.net/index/coci/search?text=10.1145/2463676.2463696&rule=citeddoi)
+[Microsoft Academic](https://academic.microsoft.com/paper/2085843229)
 
 Release 0.7:
 [Semantic Scholar](https://www.semanticscholar.org/paper/d3c5b084da0ad30d75bcc630949fa4df0243eff2)
 [Google Scholar](http://scholar.google.de/scholar?cites=13946522890235188309)
 [OpenCitations](http://opencitations.net/index/coci/search?text=10.14778/2824032.2824115&rule=citeddoi)
+[Microsoft Academic](https://academic.microsoft.com/paper/2293385817)
 
 Release 0.7.5:
 [Semantic Scholar](https://www.semanticscholar.org/paper/08f4d340e566a95e267a93ea78ad7040d7f71a45)
+[Microsoft Academic](https://academic.microsoft.com/paper/2913146537)
