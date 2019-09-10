@@ -23,15 +23,7 @@ The following list are project ideas for *students that want to get started* wit
 
 ### k-means variations
 
-- k-means using a kd-tree for acceleration (*in progress*).
-
-  D. Pelleg and A. Moore. “Accelerating exact k-means algorithms with geometric reasoning”. In: Proceedings of the 5th ACM International Conference on Knowledge Discovery and Data Mining (SIGKDD), San Diego, CA. 1999, pp. 277–281
-
-  T. Kanungo, D. M. Mount, N. S. Netanyahu, C. D. Piatko, R. Silverman, and A. Y. Wu. “An efficient k-means clustering algorithm: Analysis and implementation”. In: IEEE Transactions on Pattern Analysis and Machine Intelligence 24.7 (2002), pp. 881–892
-
-  K. Alsabti, S. Ranka, V. Singh. "An efficient k-means clustering algorithm". Technical Report. (1997)
-
-- k-means nach Hartigan & Wong:
+- k-means nach Hartigan & Wong (*in progress*):
 
   J. A. Hartigan, and M. A. Wong. “Algorithm AS 136: A k-means clustering algorithm.” Applied statistics (1979): 100-108.
 
@@ -55,6 +47,10 @@ The following list are project ideas for *students that want to get started* wit
 
   G. Hamerly, and C. Elkan. "Learning the k in k-means". Advances in neural information processing systems, 16, 281. 2004.
 
+- Global k-means:
+
+  Likas, A., Vlassis, N., & Verbeek, J. J. (2003). The global k-means clustering algorithm. Pattern recognition, 36(2), 451-461.
+
 - k-medoids with a Genetic Algorithm:
 
   C. B. Lucasius, and A. D. Dane, and G. Kateman. "On k-medoid clustering of large data sets with the aid of a genetic algorithm: background, feasiblity and comparison." Analytica Chimica Acta 282.3 (1993): 647-669.
@@ -70,11 +66,14 @@ The following list are project ideas for *students that want to get started* wit
 - "Trimmed k-means":
 
   J. A. Cuesta-Albertos, A. Gordaliza, and C. Matrán. "Trimmed k-means: an attempt to robustify quantizers." The Annals of Statistics, 25(2) (1997): 553-576.
-  
+
 - "The Effectiveness of Lloyd-Type Methods for the k-Means Problem":
 
   R. Ostrovsky, Y. Rabani, L. J. Schulman, C. Swamy: "The Effectiveness of Lloyd-Type Methods for the k-Means Problem." FOCS 2006: 165-176
 
+- K-Harmonic Means:
+
+  Zhang, B., Hsu, M., & Dayal, U. (2000, September). K-harmonic means-a spatial clustering algorithm with boosting. In International Workshop on Temporal, Spatial, and Spatio-Temporal Data Mining (pp. 31-45). Springer, Berlin, Heidelberg.
 
 ### Hierarchical clustering variations
 
@@ -159,7 +158,7 @@ The following list are project ideas for *students that want to get started* wit
 - ROSECC correlation clustering:
 
   M. S. Aziz, and C. K. Reddy. "A robust seedless algorithm for correlation clustering." Advances in Knowledge Discovery and Data Mining. Springer Berlin Heidelberg, 2010. 28-37.
-  
+
 - STATPC subspace clustering:
 
   G. Moise and J. Sander. "Finding non-redundant, statistically significant regions in high dimensional data: a novel approach to projected and subspace clustering." Proceedings of the 14th ACM SIGKDD international conference on Knowledge discovery and data mining, 2008. 533-541.
@@ -167,7 +166,7 @@ The following list are project ideas for *students that want to get started* wit
 - SSPC subspace clustering (with semi-supervision):
 
   K. P. Yip, D. W. Cheung, and M. K. Ng "On discovery of extremely low-dimensional clusters using semi-supervised projected clustering." Proceedings of the 21st International Conference on Data Engineering (ICDE), 2005. 329-340.
-  
+
 ### Historic clustering algorithms
 
 These probably are primarily of interest to the history of clustering.
@@ -209,6 +208,10 @@ These probably are primarily of interest to the history of clustering.
 - RBRP kNN variant:
 
   A. Ghoting, S. Parthasarathy, and M. E. Otey. “Fast mining of distance-based outliers in high-dimensional datasets”. In: Data Mining and Knowledge Discovery 16.3 (2008), pp. 349–364
+
+- GLOSS subspace outlier:
+
+  B. van Stein, M. van Leeuwen, and T. Bäck. “Local subspace-based outlier detection using global neighbourhoods”. In: IEEE International Conference on Big Data (2016), pp. 1136–1142
 
 ### Association rule mining
 
