@@ -50,6 +50,14 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[Unsupervised Cross-Lingual Sentence Representation Learning via Linguistic Isomorphism](https://doi.org/10.1007/978-3-030-29563-9_20)**.
    *KSEM (2)*, 215-226, Springer, 10.1007/978-3-030-29563-9\_20,
    [BibTeX](https://dblp.org/rec/bibtex/conf/ksem/WangHT19)
+1. Erich Schubert, and Peter J. Rousseeuw (2019).
+   **[Faster k-Medoids Clustering: Improving the PAM, CLARA, and CLARANS Algorithms](https://doi.org/10.1007/978-3-030-32047-8_16)**.
+   *SISAP*, 171-187, Springer, 10.1007/978-3-030-32047-8\_16,
+   [BibTeX](https://dblp.org/rec/bibtex/conf/sisap/SchubertR19)
+1. Maximilian Archimedes Xaver Hünemörder, Daniyal Kazempour, Peer Kröger, and Thomas Seidl (2019).
+   **[SIDEKICK: Linear Correlation Clustering with Supervised Background Knowledge](https://doi.org/10.1007/978-3-030-32047-8_20)**.
+   *SISAP*, 221-230, Springer, 10.1007/978-3-030-32047-8\_20,
+   [BibTeX](https://dblp.org/rec/bibtex/conf/sisap/HunemorderKK019)
 1. Sudarshan S. Chawathe (2019).
    **[Clustering Blockchain Data](https://doi.org/10.1007/978-3-319-97864-2_3)**.
    *Unsupervised and Semi-Supervised Learning*, 43-72, Springer, 10.1007/978-3-319-97864-2\_3
@@ -62,6 +70,12 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Liefa Liao, and Bin Luo (2019).
    **[Entropy Isolation Forest Based on Dimension Entropy for Anomaly Detection](https://doi.org/10.1007/978-981-13-6473-0_32)**.
    *Computational Intelligence and Intelligent Systems*, 365-376, Springer, 10.1007/978-981-13-6473-0\_32
+1. C.S.R. Prabhu, Aneesh Sreevallabh Chivukula, Aditya Mogadala, Rohit Ghosh, and L.M. Jenila Livingston (2019).
+   **[Big Data Analytics: Systems, Algorithms, Applications](https://doi.org/10.1007/978-981-15-0094-7)**.
+   Springer, 10.1007/978-981-15-0094-7
+1. C.S.R. Prabhu, Aneesh Sreevallabh Chivukula, Aditya Mogadala, Rohit Ghosh, and L.M. Jenila Livingston (2019).
+   **[Intelligent Systems](https://doi.org/10.1007/978-981-15-0094-7_2)**.
+   *Big Data Analytics: Systems, Algorithms, Applications*, 25-46, Springer, 10.1007/978-981-15-0094-7\_2
 1. Félix Iglesias, Tanja Zseby, Daniel Ferreira, and Arthur Zimek (2019).
    **[MDCGen: Multidimensional Dataset Generator for Clustering](https://doi.org/10.1007/s00357-019-9312-3)**.
    *Journal of Classification*, Springer, 10.1007/s00357-019-9312-3
@@ -84,7 +98,8 @@ For theses, seminar articles etc. this approach does however not work. We have n
    [BibTeX](https://dblp.org/rec/bibtex/journals/dpd/WieseSWTS19)
 1. Ioan Drăgan, Gabriel Iuhasz, and Dana Petcu (2019).
    **[A Scalable Platform for Monitoring Data Intensive Applications](https://doi.org/10.1007/s10723-019-09483-1)**.
-   *Journal of Grid Computing*, Springer Science and Business Media LLC, 10.1007/s10723-019-09483-1
+   *J. Grid Comput.* 17(3), 503-528, 10.1007/s10723-019-09483-1,
+   [BibTeX](https://dblp.org/rec/bibtex/journals/grid/DraganIP19)
 1. Dante Travisany, Eric Goles, Mauricio Latorre, María-Paz Cortés, and Alejandro Maass (2019).
    **[Generation and robustness of Boolean networks to model Clostridium difficile infection](https://doi.org/10.1007/s11047-019-09730-0)**.
    *Natural Computing*, Springer, 10.1007/s11047-019-09730-0
@@ -99,6 +114,9 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Julian Oehling, and David J. Barry (2019).
    **[Using machine learning methods in airline flight data monitoring to generate new operational safety knowledge from existing data](https://doi.org/10.1016/j.ssci.2018.12.018)**.
    *Safety Science* 114, 89-104, Elsevier BV, 10.1016/j.ssci.2018.12.018
+1. Cui Xie, Mingkui Li, Haoying Wang, and Junyu Dong (2019).
+   **[A survey on visual analysis of ocean data](https://doi.org/10.1016/j.visinf.2019.08.001)**.
+   *Visual Informatics*, Elsevier BV, 10.1016/j.visinf.2019.08.001
 1. K. Dingle, A. Zimek, F. Azizieh, and A. R. Ansari (2019).
    **[Establishing a many-cytokine signature via multivariate anomaly detection](https://doi.org/10.1038/s41598-019-46097-9)**.
    *Scientific Reports* 9(1), Springer Science and Business Media LLC, 10.1038/s41598-019-46097-9
@@ -112,6 +130,9 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Xu Yang, Lingxi Zhu, Sio Lam, Laurie Cuthbert, and Yapeng Wang (2019).
    **[Comparison of clustering methods for identification of outdoor measurements in pollution monitoring](https://doi.org/10.1088/1755-1315/257/1/012014)**.
    *IOP Conference Series: Earth and Environmental Science* 257, 012014, IOP Publishing, 10.1088/1755-1315/257/1/012014
+1. Bastian Pfeifer, Nikolaos Alachiotis, Pavlos Pavlidis, and Michael G. Schimek (2019).
+   **[Genome Scans for Selection and Introgression based on k-nearest Neighbor Techniques](https://doi.org/10.1101/752758)**.
+   Cold Spring Harbor Laboratory, 10.1101/752758
 1. Hongzhi Wang, Mohamed Jaward Bah, and Mohamed Hammad (2019).
    **[Progress in Outlier Detection Techniques: A Survey](https://doi.org/10.1109/ACCESS.2019.2932769)**.
    *IEEE Access* 7, 107964-108000, 10.1109/ACCESS.2019.2932769,
@@ -170,6 +191,10 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[On systematic hyperparameter analysis through the example of subspace clustering](https://doi.org/10.1145/3335783.3335804)**.
    *SSDBM*, 226-229, ACM, 10.1145/3335783.3335804,
    [BibTeX](https://dblp.org/rec/bibtex/conf/ssdbm/Kazempour019)
+1. Klaus Arthur Schmid, and Andreas Züfle (2019).
+   **[Representative Query Answers on Uncertain Data](https://doi.org/10.1145/3340964.3340974)**.
+   *SSTD*, 140-149, ACM, 10.1145/3340964.3340974,
+   [BibTeX](https://dblp.org/rec/bibtex/conf/ssd/SchmidZ19)
 1. Xiaodan Xu, Huawen Liu, and Minghai Yao (2019).
    **[Recent Progress of Anomaly Detection](https://doi.org/10.1155/2019/2686378)**.
    *Complexity* 2019, 2686378:1-2686378:11, 10.1155/2019/2686378,
@@ -231,26 +256,51 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[Combinatorial Keyword Recommendations for Sponsored Search with Deep Reinforcement Learning](https://arxiv.org/abs/1907.08686)**.
    *CoRR* abs/1907.08686,
    [BibTeX](https://dblp.org/rec/bibtex/journals/corr/abs-1907-08686)
+1. Yuening Li, Daochen Zha, Na Zou, and Xia Hu (2019).
+   **[PyODDS: An End-to-End Outlier Detection System](https://arxiv.org/abs/1910.02575)**.
+   *CoRR* abs/1910.02575,
+   [BibTeX](https://dblp.org/rec/bibtex/journals/corr/abs-1910-02575)
+1. Hana Řezanková, and Richard Novák (2019).
+   **[Effect of ordinal variable transformations on hierarchical clustering results: A case study on the Big Data phenomenon](https://www.atlantis-press.com/proceedings/amse-19/125919266)**.
+   *22nd International Scientific Conference on Applications of Mathematics and Statistics in Economics (AMSE 2019)*, Atlantis Press, 978-94-6252-804-8
 1. Rebecca Lee Hammons, and Ronald J. Kovac (2019).
    **Fundamentals of Internet of Things for Non-Engineers**.
    CRC Press, 9781000000344
 1. Catherine Dawson (2019).
    **A-Z of Digital Research Methods**.
    Routledge, 9781351044653
+1. Adrià Correas Grifoll (2019).
+   **[Study and implementation of Machine Learning algorithms optimized for distributed multidimensional indexing databases](http://hdl.handle.net/2117/168653)**.
+   Universitat Politècnica de Catalunya
+1. Altamir Gomes Bispo Junior (2019).
+   **[Fast and Scalable Outlier Detection with Metric Access Methods](http://www.teses.usp.br/teses/disponiveis/55/55134/tde-04102019-154943/)**.
+   Biblioteca Digital de Teses e Dissertações da Universidade de São Paulo
 1. Anis Sharafoddini (2019).
    **[Toward Precision Medicine in Intensive Care: Leveraging Electronic Health Records and Patient Similarity](http://hdl.handle.net/10012/14726)**.
    University of Waterloo
 1. Benjamin Heinzerling (2019).
    **[Aspects of Coherence for Entity Analysis](http://nbn-resolving.de/urn:nbn:de:bsz:16-heidok-261173)**.
+1. Boleslo Edward Romero (2019).
+   **[Identifying Geographical Features with Spatial Data: Multi-scale Approaches for Representing Local Extrema](https://escholarship.org/uc/item/8qr5x2pt)**.
+   UC Santa Barbara
+1. Denis A. SYROMYATNIKOV, Darya A. PYATKINA, Larisa N. KONDRATENKO, Sergey I. KRIVOLAPOV, and Diana I. STEPANOVA (2019).
+   **[Big data analysis for studying water supply and sanitation coverage in cities](http://www.revistaespacios.com/a19v40n27/19402721.html)**.
+   *Revista ESPACIOS* 40(27)
 1. Emeli Pettersson, and Albin Carlson (2019).
    **[Att hitta en nål i en höstack: Metoder och tekniker för att sålla och gradera stora mängder ostrukturerad textdata](http://hdl.handle.net/2043/28238)** (Finding a Needle in a Haystack: Methods and techniques for screening and grading large amounts of unstructured textual data).
    Malmö universitet/Teknik och samhälle
+1. H D Nguyen, F Forbes, and G J McLachlan (2019).
+   **[Mini-batch learning of exponential family finite mixture models](https://arxiv.org/abs/1902.03335)**.
+   *arXiv* 1902.03335
 1. Igor Wescley Silva de Freitas (2019).
    **[Um estudo comparativo de técnicas de detecção de outliers no contexto de classificação de dados](http://repositorio.ufersa.edu.br/handle/prefix/1093)**.
    Universidade Federal Rural do Semi-Árido
 1. José David Jácome Escobar, and Estalin Augusto Viracocha Andrade (2019).
    **[Desarrollo de una aplicación para detección de patrones en imágenes mediante el uso de aprendizaje profundo](http://www.dspace.uce.edu.ec/handle/25000/17551)**.
    Quito: UCE
+1. Matthew C. Recker (2019).
+   **[Enabling Mobile Neutron Detection Systems with CLYC](https://scholar.afit.edu/etd/2371)**.
+   Air Force Institute of Technology
 1. Patrícia Freitas Pelozo Hespanhol (2019).
    **[Análise de padrões na produção de cana de açúcar utilizando aprendizado de máquina](http://hdl.handle.net/11449/183121)** (Analysis on sugar cane production using machine learning).
    Universidade Estadual Paulista (UNESP)
@@ -516,10 +566,6 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[Linear density-based clustering with a discrete density model](https://arxiv.org/abs/1807.08158)**.
    *CoRR* abs/1807.08158,
    [BibTeX](https://dblp.org/rec/bibtex/journals/corr/abs-1807-08158)
-1. Erich Schubert, and Peter J. Rousseeuw (2018).
-   **[Faster k-Medoids Clustering: Improving the PAM, CLARA, and CLARANS Algorithms](https://arxiv.org/abs/1810.05691)**.
-   *CoRR* abs/1810.05691,
-   [BibTeX](https://dblp.org/rec/bibtex/journals/corr/abs-1810-05691)
 1. Wei Ye (2018).
    **[Data mining using concepts of independence, unimodality and homophily](https://edoc.ub.uni-muenchen.de/21675/)**.
    Ludwig Maximilian University of Munich, Germany,
@@ -1439,6 +1485,9 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Smita Chormunge, and Sudarson Jena (2015).
    **[Efficiency and Effectiveness of Clustering Algorithms for High Dimensional Data](https://doi.org/10.5120/ijca2015906144)**.
    *IJCA* 125(11), 35-40, Foundation of Computer Science, 10.5120/ijca2015906144
+1. Nita M.Dimble, and Bharat Tidke (2015).
+   **[A Framework for Outlier Detection in Geographic Spatial Data](https://doi.org/10.5121/ijfcst.2015.5206)**.
+   *International Journal in Foundations of Computer Science & Technology* 5(2), 59-67, Academy and Industry Research Collaboration Center (AIRCC), 10.5121/ijfcst.2015.5206
 1. Alejandro Rituerto (2015).
    **[Modeling the environment with egocentric vision systems](https://doi.org/10.5565/rev/elcvia.739)**.
    *ELCVIA Electronic Letters on Computer Vision and Image Analysis* 14(3), Universitat Autonoma de Barcelona, 10.5565/rev/elcvia.739
@@ -2096,6 +2145,8 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Steffen Suchandt, and Hartmut Runge (2012).
    **[Along-track interferometry using TanDEM-X: First results from marine and land applications](http://ieeexplore.ieee.org/abstract/document/6217087/)**.
    *EUSAR 2012; 9th European Conference on Synthetic Aperture Radar*, 392-395, VDE, 978-3-8007-3404-7
+1. Arthur Zimek (2012).
+   **There and Back Again Outlier Detection between Statistical Reasoning and Efficient Database Methods**.
 1. Bruno Tavares (2012).
    **[Sistema de recomendação para plataformas de e-learning](http://hdl.handle.net/10400.22/2601)**.
    Instituto Politécnico do Porto. Instituto Superior de Engenharia do Porto
