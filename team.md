@@ -15,7 +15,7 @@ The core team for development and maintenance of ELKI is consisting of:
 
 <table width="100%">
   <tr>
-    <td align="center"><img src="https://www-ai.cs.uni-dortmund.de/Portrait1-klein.jpg?self=%24fl3nfxlkhs&part=data" width="160" alt="Erich"></td>
+    <td align="center"><img src="https://www-ai.cs.tu-dortmund.de/MG_2968Q_small.jpg?self=%24fvx0tzoge8&part=data" width="160" alt="Erich"></td>
     <td align="center"><img src="https://www.imada.sdu.dk/~zimek/pics/zimek.jpg" width="160" alt="Arthur"></td>
   </tr>
   <tr>
@@ -35,7 +35,7 @@ Perhaps you will be among this herd of elks soon?
 <div class="slideshow">
 <ul id="herd">
 <li><img title="Elke Achtert" src="http://www.dbs.ifi.lmu.de/w_de/images/thumb/5/58/Elke_Achtert.jpg/477px-Elke_Achtert.jpg" alt="Lead developer: Index structures" width="100" /></li>
-<li><img title="Erich Schubert" src="http://www-ai.cs.uni-dortmund.de/Portrait1-klein.jpg?self=%24fl3nfxlkhs&part=data" alt="Lead developer: Outlier detection" width="100" /></li>
+<li><img title="Erich Schubert" src="https://www-ai.cs.tu-dortmund.de/MG_2968Q_small.jpg?self=%24fvx0tzoge8&part=data" alt="Lead developer" width="100" /></li>
 <li><img title="Arthur Zimek" src="http://www.dbs.ifi.lmu.de/w_de/images/thumb/9/9a/Mitarbeiter-Zimek.jpg/424px-Mitarbeiter-Zimek.jpg" alt="Lead developer: Correlation clustering" width="100" /></li>
 <li><img title="Thomas Bernecker" src="http://www.dbs.ifi.lmu.de/w_de/images/a/a1/Mitarbeiter-Bernecker.jpg" alt="Team contributor: Time series mining" width="75" /></li>
 <li><img title="Tobias Emrich" src="http://www.dbs.ifi.lmu.de/w_de/images/5/52/Mitarbeiter-Emrich.jpg" alt="Team contributor: Uncertain data" width="75" /></li>
@@ -93,6 +93,7 @@ Perhaps you will be among this herd of elks soon?
 <li><img title="Cedrik Lüdicke" src="img/elk200.png" alt="Student contributor: kd-tree based k-means" width="50" /></li>
 <li><img title="Alan Mazankiewicz" src="img/elk200.png" alt="External contributor: MCDE dependence" width="50" /></li>
 <li><img title="Edouard Fouché" src="img/elk200.png" alt="External contributor: MCDE dependence" width="50" /></li>
+<li><img title="Robert Gehde" src="img/elk200.png" alt="Student contributor: unit tests" width="50" /></li>
 </ul>
 <div class="caption"><div class=".caption-container"><h3>ELKI contributors</h3><p></p></div></div>
 <script src="//code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
