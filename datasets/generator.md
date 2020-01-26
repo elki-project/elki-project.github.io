@@ -6,6 +6,25 @@ parent: datasets
 ---
 
 
+{% raw %}
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Dataset",
+  "name" : "ELKI Data Generator",
+  "description" : "A generator for synthetic data sets for use in cluster analysis, classification, and outlier detection.",
+  "author" : {
+    "@type" : "Person",
+    "givenName" : "Erich",
+    "familyName" : "Schubert",
+    "affiliation" : { "@id" : "https://www.tu-dortmund.de/" }
+  },
+  "isAccessibleForFree" : true,
+  "keywords" : ["data generator", "clustering", "cluster analysis", "outlier", "outlier detection", "anomaly detection"],
+  "license" : "https://www.gnu.org/licenses/agpl-3.0.html"
+}
+</script>
+{% endraw %}
 Data Set Generator
 ==================
 

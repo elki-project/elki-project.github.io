@@ -5,6 +5,26 @@ short: Multi-View
 parent: datasets
 ---
 
+{% raw %}
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Dataset",
+  "name" : "ALOI Image Features - Multiple Views",
+  "description" : "The \"Amsterdam Library of Object Images\" is a collection of 110250 images of 1000 small objects, taken under various light conditions and rotation angles. All objects were placed on a black background. Thus the images are taken under rather uniform conditions, which means there is little uncontrolled bias in the data set (unless mixed with other sources). They do however not resemble a \"typical\" image collection. The data set has a rather unique property for its size: there are around 100 different images of each object, so it is well suited for clustering. By downsampling some objects it can also be used for outlier detection. For multi-view research, we offer a number of different feature vector sets for evaluating this data set.",
+  "author" : {
+    "@type" : "Person",
+    "givenName" : "Erich",
+    "familyName" : "Schubert",
+    "affiliation" : { "@id" : "https://www.tu-dortmund.de/" }
+  },
+  "isAccessibleForFree" : true,
+  "isBasedOn" : { "@id" : "http://aloi.science.uva.nl/", },
+  "keywords" : ["image features", "color histograms", "clustering", "cluster analysis", "outlier", "outlier detection", "anomaly detection"],
+  "license" : "http://creativecommons.org/licenses/by/4.0/"
+}
+</script>
+{% endraw %}
 
 Multi-View Data Sets
 ====================
