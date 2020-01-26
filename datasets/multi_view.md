@@ -19,7 +19,7 @@ parent: datasets
     "affiliation" : { "@id" : "https://www.tu-dortmund.de/" }
   },
   "isAccessibleForFree" : true,
-  "isBasedOn" : { "@id" : "http://aloi.science.uva.nl/", },
+  "isBasedOn" : { "@id" : "http://aloi.science.uva.nl/" },
   "keywords" : ["image features", "color histograms", "clustering", "cluster analysis", "outlier", "outlier detection", "anomaly detection"],
   "license" : "http://creativecommons.org/licenses/by/4.0/"
 }
