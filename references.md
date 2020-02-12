@@ -24,6 +24,15 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Piotr A. Kowalski, Szymon Łukasik, Małgorzata Charytanowicz, and Piotr Kulczycki (2020).
    **[Optimizing Clustering with Cuttlefish Algorithm](https://doi.org/10.1007/978-3-030-18058-4_3)**.
    *Information Technology, Systems Research, and Computational Physics*, 34-43, Springer, 10.1007/978-3-030-18058-4\_3
+1. Srikanth Thudumu, Philip Branch, Jiong Jin, and Jugdutt (Jack) Singh (2020).
+   **[Adaptive Clustering for Outlier Identification in High-Dimensional Data](https://doi.org/10.1007/978-3-030-38961-1_19)**.
+   *Lecture Notes in Computer Science*, 215-228, Springer, 10.1007/978-3-030-38961-1\_19
+1. H D Nguyen, F Forbes, and G J McLachlan (2020).
+   **[Mini-batch learning of exponential family finite mixture models](https://doi.org/10.1007/s11222-019-09919-4)**.
+   *Stat Comput*, 10.1007/s11222-019-09919-4
+1. Dannie Korsgaard, Thomas Bjørner, Pernille Krog Sørensen, and Paolo Burelli (2020).
+   **[Creating user stereotypes for persona development from qualitative data through semi-automatic subspace clustering](https://doi.org/10.1007/s11257-019-09252-5)**.
+   *User Modeling and User-Adapted Interaction*, Springer Science and Business Media LLC, 10.1007/s11257-019-09252-5
 1. Lin, Duan, and Tian (2020).
    **[Interval Intuitionistic Fuzzy Clustering Algorithm Based on Symmetric Information Entropy](https://doi.org/10.3390/sym12010079)**.
    *Symmetry* 12(1), 79, Mdpi Ag, 10.3390/sym12010079
@@ -366,9 +375,6 @@ For theses, seminar articles etc. this approach does however not work. We have n
    Malmö universitet/Teknik och samhälle
 1. Guansong Pang (2019).
    **[Non-IID outlier detection with coupled outlier factors](http://hdl.handle.net/10453/134144)**.
-1. H D Nguyen, F Forbes, and G J McLachlan (2019).
-   **[Mini-batch learning of exponential family finite mixture models](https://arxiv.org/abs/1902.03335)**.
-   *arXiv* 1902.03335
 1. Igor Wescley Silva de Freitas (2019).
    **[Um estudo comparativo de técnicas de detecção de outliers no contexto de classificação de dados](http://repositorio.ufersa.edu.br/handle/prefix/1093)**.
    Universidade Federal Rural do Semi-Árido
@@ -397,6 +403,9 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Παναγιώτης Διέννης, and Αλέξανδρος Μπολοβίνος (2019).
    **[Εργαλεία ανάλυσης και οπτικοποίησης δεδομένων σε συστήματα επιχειρηματικής ευφυΐας](http://repository.library.teimes.gr/xmlui/handle/123456789/7840)**.
    ΤΕΙ Δυτικής Ελλάδας
+1. 丁志成, DING Zhicheng, 葛洪伟, GE Hongwei, 周竞, and ZHOU Jing (2019).
+   **[基于Kl散度的密度峰值聚类算法](http://journal2.cqupt.edu.cn/jcuptnse/html/2019/1673-825X-31-3-367.html)**.
+   重庆邮电大学学报(自然科学版)
 1. 程绵绵, CHENG Mianmian, 孙群, SUN Qun, 李少梅, LI Shaomei, 徐立, and XU Li (2019).
    **[顾及密度对比的多层次聚类点群选取方法](http://html.rhhz.net/WHDXXBXXKXB/html/20190804.htm)**.
    武汉大学学报·信息科学版
@@ -1676,6 +1685,9 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Guansong Pang (2015).
    **[Anomaly detection based on zero appearances in subspaces](https://doi.org/10.4225/03/58b647d9a377b)**.
    Monash University. Faculty of Information Technology. Clayton School of Information Technology, 10.4225/03/58b647d9a377b
+1. M. Oszust, and M. Kostka (2015).
+   **[Evaluation of Subspace Clustering Using Internal Validity Measures](https://doi.org/10.4316/AECE.2015.03020)**.
+   *Advances in Electrical and Computer Engineering* 15(3), 141-146, Universitatea Stefan cel Mare din Suceava, 10.4316/AECE.2015.03020
 1. Lindsay Lloyd-Smith, John Krigbaum, and Benjamin Valentine (2015).
    **[Social affiliation, settlement pattern histories and subsistence change in Neolithic Borneo](https://doi.org/10.4324/9781315725444.ch13)**.
    Routledge Handbooks Online, 10.4324/9781315725444.ch13
