@@ -256,13 +256,13 @@ This code will become more messy when we add support for other linkage formulas.
 
 At this point, the main clustering algorithm will run. But the result will be hard to use, as it is stored in a `height` array, a parent object reference and cluster member sets. In order to exploit the visualization and evaluation capabilites of ELKI, we need to produce a simpler structure. For the first version, we want to keep the effort to a minimum, and we will just return the existing clusters appropriately. We can't make use of the height and parent IDs this way, though.
 
-Instead of coming up with our own representation of a dendrogram, we will for now just produce a flat clustering, by looking up all non-merged clusters (i.e. with `height[x] < 0`) and produce a [Cluster](/releases/current/doc/de/lmu/ifi/dbs/elki/data/Cluster.html) object for each.
+Instead of coming up with our own representation of a dendrogram, we will for now just produce a flat clustering, by looking up all non-merged clusters (i.e. with `height[x]` infinity) and produce a [Cluster](/releases/current/doc/de/lmu/ifi/dbs/elki/data/Cluster.html) object for each.
 
 {% highlight java %}
     final Clustering<Model> dendrogram = new Clustering<>(
       "Hierarchical-Clustering", "hierarchical-clustering");
     for(int x = 0; x < size; x++) {
-      if(height[x] < Double.POSITIVE_INFINITY) {
+      if(height[x] == Double.POSITIVE_INFINITY) {
         DBIDs cids = clusters.get(x);
         // For singleton objects, this may be null.
         if(cids == null) {
@@ -559,7 +559,7 @@ In order to choose the linkage, we need to update the constructor and `Parameter
 For the Parameterizer, we need to add a new [OptionID](/releases/current/doc/de/lmu/ifi/dbs/elki/utilities/optionhandling/OptionID.html), and for an enum we can use the convenient [EnumParameter](/releases/current/doc/de/lmu/ifi/dbs/elki/utilities/optionhandling/parameters/EnumParameter.html), which will produce a dropdown menu. We'll set the default to Ward linkage, although we have not yet implemented it in the tutorial.
 
 {% highlight java %}
-    private static final OptionID LINKAGE_ID = new OptionID(
+    public static final OptionID LINKAGE_ID = new OptionID(
       "hierarchical.linkage",
       "Parameter to choose the linkage strategy.");
 

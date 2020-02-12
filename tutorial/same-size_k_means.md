@@ -625,7 +625,7 @@ Now we need to map these parameters to the constructor, which is straightforward
 Putting it all together
 -----------------------
 
-The complete source can be found here: [SameSizeKMeansAlgorithm.java](https://github.com/elki-project/elki/blob/master/addons/tutorial/src/main/java/tutorial/clustering/SameSizeKMeansAlgorithm.java)
+The complete source can be found here: [SameSizeKMeansAlgorithm.java](https://github.com/elki-project/elki/blob/master/addons/tutorial/src/main/java/tutorial/clustering/SameSizeKMeans.java)
 
 It is included in the `elki-tutorial` addon module for you to try out.
 
