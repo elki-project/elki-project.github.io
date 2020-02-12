@@ -51,7 +51,7 @@ vector in an Euclidean vector space, but not necessarily so.
 
 Eclipse now generates the following class for us:
 
-```
+{% highlight java %}
 public class CFSFDP<O> implements
     ClusteringAlgorithm<Clustering<SimplePrototypeModel<DBID>>> {
   @Override
@@ -60,17 +60,17 @@ public class CFSFDP<O> implements
     return null;
   }
 }
-```
+{% endhighlight %}
 
 Because the CFSFDP algorithm is distance based, we add a distance function
 field to our class. This distance needs to accept data of type `O`, but it
 may also be defined on any supertype of this, too:
-```
+{% highlight java %}
   /**
    * Distance function used.
    */
   protected Distance<? super O> distance;
-```
+{% endhighlight %}
 
 We need our input data to satisfy this type, and we create a "run" method.
 For this, we request data that satisfies our input requirements - which happen
@@ -81,7 +81,7 @@ unfortunately) a `run` method that receives the requested relation.
 Either the user can call `run` with a data relation directly, or he can use
 `autorun(Database)` and that method will find a suitable relation in the
 database, using the information from `getInputTypeRestriction`.
-```
+{% highlight java %}
   @Override
   public TypeInformation[] getInputTypeRestriction() {
     return TypeUtil.array(distance.getInputTypeRestriction());
@@ -96,7 +96,7 @@ database, using the information from `getInputTypeRestriction`.
   public Clustering<SimplePrototypeModel<DBID>> run(Relation<O> relation) {
     // TODO
   }
-```
+{% endhighlight %}
 
 Now we can almost begin implementing CFSFDP, except that we still need
 a number of parameters. The obvious parameter is the distance cutoff `dc`.
@@ -108,7 +108,7 @@ implement for this tutorial: they select the top k points based on
 `gamma=rho*delta`. Therefore, we also add a parameter k.
 
 We now add these fields and a constructor:
-```
+{% highlight java %}
   /**
    * Distance cutoff.
    */
@@ -132,7 +132,7 @@ We now add these fields and a constructor:
     this.dc = dc;
     this.k = k;
   }
-```
+{% endhighlight %}
 
 Density estimation
 ------------------
@@ -149,28 +149,28 @@ automatically add such an index to the database (or it may decide to compute
 a pairwise distance matrix, if memory permits). We leave such decisions to
 the query optimizer of ELKI, and we just specify what we need: a priority
 search, on our data relation, for our distance query.
-```
+{% highlight java %}
     PrioritySearcher<DBIDRef> searcher =
       new QueryBuilder<>(relation, distance).priorityByDBID();
-```
+{% endhighlight %}
 Densities used by CFSFDP are integer values, namely the number of points
 within radius `dc`. To store the densities, we use a
 `WritableIntegerDataStore` (in many cases, ELKI will optimize this to be an
 `int[]`, but it can also be a map to integers for non-continuous database ids).
 While this is "rho" in the original paper, we use the more meaningful name
 `density` in our code.
-```
+{% highlight java %}
     DBIDs ids = relation.getDBIDs();
     WritableIntegerDataStore density = DataStoreFactory.FACTORY.makeIntegerStorage(
       ids, DataStoreFactory.HINT_HOT | DataStoreFactory.HINT_TEMP);
-```
+{% endhighlight %}
 Next we iterate over all database objects (from the `ids` collection)
 and count matching neighbors. ELKI uses a special kind of iterator,
 `DBIDIter` that uses much less memory than a Java `Iterator<DBID>` would use.
-```
+{% highlight java %}
     for(DBIDIter it = ids.iter(); it.valid(); it.advance()) {
       int found = 0;
-```
+{% endhighlight %}
 For each point, we reset our search using `searcher.search(it, dc)`.
 We want to select all points with `searcher.computeExactDistance() <= dc`,
 but we can perform some optimization here because *we do not need to know
@@ -182,7 +182,7 @@ will make this expression false).
 We could also compare the lower bound, but usually this filtering is already
 performed by the searcher if we pass a cutoff value to the `search` function.
 We then store the resulting density for each point
-```
+{% highlight java %}
       for(searcher.search(it, dc); searcher.valid(); searcher.advance()) {
         if(searcher.getUpperBound() <= dc
             || searcher.computeExactDistance() <= dc) {
@@ -190,7 +190,7 @@ We then store the resulting density for each point
         }
       }
       density.put(it, found);
-```
+{% endhighlight %}
 For this part, we could have used the simple range search API of ELKI instead
 (using `rangeByDBID()` to get a `RangeSearcher`), but we will need the priority
 searcher for again in the next step.
@@ -209,29 +209,29 @@ distance of the entire data set (which could be expensive).
 For each point, we will store the distance to the next nearest point,
 and the DBID of that point. Hence we create two more data stores,
 and a temporary reference `var` and a `heap` we will discuss below.
-```
+{% highlight java %}
     WritableDoubleDataStore nextdist = DataStoreFactory.FACTORY.makeDoubleStorage(
       ids, DataStoreFactory.HINT_TEMP);
     WritableDBIDDataStore nextn = DataStoreFactory.FACTORY.makeDBIDStorage(
       ids, DataStoreFactory.HINT_TEMP);
     DBIDVar tmp = DBIDUtil.newVar();
     DoubleMinHeap heap = new DoubleMinHeap(k);
-```
+{% endhighlight %}
 Now we can iterate over all points again, and search for the next denser point.
 This time, we do not pass the `dc` cutoff to the searcher, as we may need to
 search outside this radius. Once we have found a more dense point, we will use
 `searcher.decreaseCutoff` to reduce the search radius.
-```
+{% highlight java %}
     for(DBIDIter it = ids.iter(); it.valid(); it.advance()) {
       final int dens = density.intValue(it);
       double dist = Double.POSITIVE_INFINITY;
       tmp.unset();
       for(searcher.search(it); searcher.valid(); searcher.advance()) {
-```
+{% endhighlight %}
 For each neighbor, we have to check whether it has a higher density, and
 keep the minimum distance each, again we can try to avoid distance computations
 by first checking the density.
-```
+{% highlight java %}
         if(density.intValue(searcher) > dens) {
           double d = searcher.computeExactDistance();
           if(d < dist) {
@@ -240,14 +240,14 @@ by first checking the density.
             tmp.set(searcher);
           }
         }
-```
+{% endhighlight %}
 We store the best values in the storages allocated above. To find the k largest
 values, we also maintain a heap of the k largest values.
-```
+{% highlight java %}
       nextdist.put(it, dist);
       nextn.put(it, tmp);
       heap.add(dist * dens, k); // gamma
-```
+{% endhighlight %}
 
 Building the Clusters
 ---------------------
@@ -256,22 +256,22 @@ beginning with the most dense point. We first determine the threshold for
 gamma to determine the cluster modes, then we process points descending by
 density. The motivation for this is that the nearest more dense point must
 already have been processed, i.e., must already have a cluster.
-```
+{% highlight java %}
     final double gammath = heap.peek();
     ArrayModifiableDBIDs sorted = DBIDUtil.newArray(ids);
     sorted.sort(new DataStoreUtil.DescendingByIntegerDataStore(density));
-```
+{% endhighlight %}
 To store the resulting clustering, we create a `Clustering` object,
 and we use a temporary data store to map objects to clusters.
-```
+{% highlight java %}
     WritableDataStore<ArrayModifiableDBIDs> cluster = DataStoreFactory.FACTORY.makeStorage(ids, DataStoreFactory.HINT_TEMP, ArrayModifiableDBIDs.class);
     Clustering<SimplePrototypeModel<DBID>> clustering = new Clustering<>();
-```
+{% endhighlight %}
 We can now iterate over all objects (descending by density), and either
 create a new cluster for them, or add them to the cluster of their nearest
 denser neighbor. When creating a new cluster, we use the current object
 as cluster prototype:
-```
+{% highlight java %}
     for(DBIDIter it = sorted.iter(); it.valid(); it.advance()) {
       double gamma = density.intValue(it) * nextdist.doubleValue(it);
       ArrayModifiableDBIDs c = gamma >= gammath ? null :
@@ -285,7 +285,7 @@ as cluster prototype:
       cluster.put(it, c);
     }
     return clustering;
-```
+{% endhighlight %}
 
 Adding a Parameterizer
 ----------------------
@@ -293,7 +293,7 @@ In order to make the class usable from the command line and MiniGUI, we need
 to add parameter definitions, default values, and constraints. For this we
 create an inner class named `Par` that implements the interface
 `Parameterizer`:
-```
+{% highlight java %}
   public static class Par<O> implements Parameterizer {
     @Override
     public void configure(Parameterization config) {
@@ -305,21 +305,20 @@ create an inner class named `Par` that implements the interface
       // TODO: create CFSFDP instance
     }
   }
-```
+{% endhighlight %}
 
 We first define two (public and static) options, for `dc` and `k`
 (we are going to reuse and existing parameter name for the distance function).
-```
+{% highlight java %}
     public static final OptionID DC_ID = new OptionID("cfsfdp.dc",
         "Distance cutoff for density estimation");
     public static final OptionID K_ID = new OptionID("cfsfdp.k",
         "Extract the top k clusters by gamma (on ties, there may be more).");
-
-```
+{% endhighlight %}
 
 We need three fields to hold the parameter values and implement the
 `make` method:
-```
+{% highlight java %}
     protected Distance<? super O> distance;
     protected double dc;
     protected int k;
@@ -328,10 +327,10 @@ We need three fields to hold the parameter values and implement the
     public CFSFDP<O> make() {
       return new CFSFDP<O>(distance, dc, k);
     }
-```
+{% endhighlight %}
 
 And now we can get the parameters and map them to these fields:
-```
+{% highlight java %}
     public void configure(Parameterization config) {
       new ObjectParameter<Distance<? super O>>(
               Algorithm.Utils.DISTANCE_FUNCTION_ID,
@@ -344,7 +343,7 @@ And now we can get the parameters and map them to these fields:
           .addConstraint(CommonConstraints.GREATER_EQUAL_ONE_INT) //
           .grab(config, x -> k = x);
     }
-```
+{% endhighlight %}
 
 Now the algorithm should be runnable from the command line and MiniGUI.
 
