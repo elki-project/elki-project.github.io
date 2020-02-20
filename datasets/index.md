@@ -23,7 +23,7 @@ Artificial data sets
 
 [Toy data sets used in LoOP publication](https://github.com/elki-project/elki/blob/master/data/synthetic/LoOP-publication)
 
-See [SNN data sets](https://www.dbs.ifi.lmu.de/Research_/SNN/DataSets/) for a number of high dimensional artificial data sets.
+See [SNN data sets](snn) for a number of synthetic high dimensional artificial data sets.
 
 Real data sets
 --------------
