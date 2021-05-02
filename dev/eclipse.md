@@ -11,8 +11,8 @@ Eclipse Configuration for ELKI
 
 Eclipse is the main development environment for ELKI, and thus the best supported.
 
-1. Install a recent version of [Eclipse](http://eclipse.org/downloads/), please use version Mars or later.
-2. If using Mars.1 or earlier, you need to update "Buildship Gradle Integration" via the Eclipse Marketplace.
+1. Install a Java 8 JDK (Java 11 should be fine, if you bump the version number in build.gradle; Java 17 currently does not work with Gradle yet)
+2. Install a recent version of [Eclipse](http://eclipse.org/downloads/).
 3. On [GitHub](https://github.com/elki-project/elki) either "fork" the project (to have your personal writable copy) or use the read-only clone uri: `https://github.com/elki-project/elki.git`
 4. In Eclipse, Import from Git, Clone URI.
 
