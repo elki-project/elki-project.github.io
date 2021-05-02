@@ -39,6 +39,18 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Andre F. R. Guarda, Nuno M. M. Rodrigues, and Fernando Pereira (2021).
    **[Constant Size Point Cloud Clustering: A Compact, Non-Overlapping Solution](https://doi.org/10.1109/TMM.2020.2974325)**.
    *IEEE Transactions on Multimedia* 23, 77-91, IEEE, 10.1109/TMM.2020.2974325
+1. John Wamburu, Stephen Lee, Mohammad H. Hajiesmaili, David Irwin, and Prashant Shenoy (2021).
+   **[Ride Substitution Using Electric Bike Sharing. Feasibility, Cost, and Carbon Analysis](https://doi.org/10.1145/3448081)**.
+   *Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies* 5(1), 1-28, Association for Computing Machinery (ACM), 10.1145/3448081
+1. Xiaoshen Yin, Alexander S. Martinez, Maria S. Sepúlveda, and Mark R. Christie (2021).
+   **[Rapid genetic adaptation to recently colonized environments is driven by genes underlying life history traits](https://doi.org/10.1186/s12864-021-07553-x)**.
+   *BMC Genomics* 22(1), Springer Science and Business Media LLC, 10.1186/s12864-021-07553-x
+1. Amin Ganjali Khosrowshahi, Iman Aghayan, Mehmet Metin Kunt, and Abdoul-Ahad Choupani (2021).
+   **[Detecting crash hotspots using grid and density-based spatial clustering](https://doi.org/10.1680/jtran.20.00028)**.
+   *Proceedings of the Institution of Civil Engineers - Transport*, 1-31, Thomas Telford Ltd. 10.1680/jtran.20.00028
+1. Nikolaos Myrtakis, V. Christophides, and Eric Simon (2021).
+   **[A Comparative Evaluation of Anomaly Explanation Algorithms](https://doi.org/10.5441/002/edbt.2021.10)**.
+   *EDBT*, 10.5441/002/edbt.2021.10
 
 2020
 ----
@@ -176,6 +188,9 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[Africa 3: A Continental Network Model to Enable the African Fourth Industrial Revolution](https://doi.org/10.1109/ACCESS.2020.3034144)**.
    *IEEE Access* 8, 196847-196864, 10.1109/ACCESS.2020.3034144,
    [BibTeX](https://dblp.org/rec/bibtex/journals/access/AjayiBM20)
+1. Alessio Bernardo, Heitor Murilo Gomes, Jacob Montiel, Bernhard Pfahringer, Albert Bifet, and Emanuele Della Valle (2020).
+   **[C-SMOTE: Continuous Synthetic Minority Oversampling for Evolving Data Streams](https://doi.org/10.1109/BigData50022.2020.9377768)**.
+   *2020 IEEE International Conference on Big Data (Big Data)*, IEEE, 10.1109/BigData50022.2020.9377768
 1. Lixia Ji, Xiao Zhang, and Lei Zhang (2020).
    **[Research on the Algorithm of Education Data Mining Based on Big Data](https://doi.org/10.1109/CSEI50228.2020.9142529)**.
    *2020 IEEE 2nd International Conference on Computer Science and Educational Informatization (CSEI)*, IEEE, 10.1109/CSEI50228.2020.9142529
@@ -183,6 +198,15 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[Evaluation system for user authentication methods on mobile devices](https://doi.org/10.1109/DESSERT50317.2020.9125076)**.
    *DESSERT*, 95-101, IEEE, 10.1109/DESSERT50317.2020.9125076,
    [BibTeX](https://dblp.org/rec/bibtex/conf/dessert/ProgonovPO20)
+1. Manish Mahajan, Santosh Kumar, Bhasker Pant, and Umesh Kumar Tiwari (2020).
+   **[Incremental Outlier Detection in Air Quality Data Using Statistical Methods](https://doi.org/10.1109/ICDABI51230.2020.9325683)**.
+   *2020 International Conference on Data Analytics for Business and Industry: Way Towards a Sustainable Economy (ICDABI)*, IEEE, 10.1109/ICDABI51230.2020.9325683
+1. Daniyal Kazempour, Long Matthias Yan Peer Kroger, and Thomas Seidl (2020).
+   **[You see a set of wagons - I see one train: Towards a unified view of local and global arbitrarily oriented subspace clusters](https://doi.org/10.1109/ICDMW51313.2020.00050)**.
+   *2020 International Conference on Data Mining Workshops (ICDMW)*, IEEE, 10.1109/ICDMW51313.2020.00050
+1. Daniyal Kazempour, Anna Beer, Peer Kröger, and Thomas Seidl (2020).
+   **[I fold you so! An internal evaluation measure for arbitrary oriented subspace clustering](https://doi.org/10.1109/ICDMW51313.2020.00051)**.
+   *2020 International Conference on Data Mining Workshops (ICDMW)*, IEEE, 10.1109/ICDMW51313.2020.00051
 1. Effrosyni Sigala, Efthimios Alepis, and C. Patsakis (2020).
    **[Measuring the Quality of Street Surfaces in Smart Cities through Smartphone Crowdsensing](https://doi.org/10.1109/IISA50023.2020.9284384)**.
    *2020 11th International Conference on Information, Intelligence, Systems and Applications (IISA*, 10.1109/IISA50023.2020.9284384
@@ -219,6 +243,9 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[Scalable Mining of Contextual Outliers Using Relevant Subspace](https://doi.org/10.1109/TSMC.2017.2718592)**.
    *IEEE Trans. Syst. Man Cybern. Syst.* 50(3), 988-1002, 10.1109/TSMC.2017.2718592,
    [BibTeX](https://dblp.org/rec/bibtex/journals/tsmc/ZhangYXZQ20)
+1. Omar Iraqi, and Hanan El Bakkali (2020).
+   **[Immunizer: A Scalable Loosely-Coupled Self-Protecting Software Framework using Adaptive Microagents and Parallelized Microservices](https://doi.org/10.1109/WETICE49692.2020.00013)**.
+   *2020 IEEE 29th International Conference on Enabling Technologies: Infrastructure for Collaborative Enterprises (WETICE)*, IEEE, 10.1109/WETICE49692.2020.00013
 1. Bastian Pfeifer, Nikolaos Alachiotis, Pavlos Pavlidis, and Michael G. Schimek (2020).
    **[Genome scans for selection and introgression based on k ‐nearest neighbour techniques](https://doi.org/10.1111/1755-0998.13221)**.
    *Molecular Ecology Resources* 20(6), 1597-1609, Wiley, 10.1111/1755-0998.13221
@@ -276,6 +303,9 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Charolina Devi Oktaviana Soleman, Nyoman Pramaita, and Made Sudarma (2020).
    **[Classification Of Loyality Customer Using K-Means Clustering, Studi Case: PT. Sucofindo (Persero) Denpasar Branch](https://doi.org/10.24843/IJEET.2020.v05.i02.p28)**.
    *International Journal of Engineering and Emerging Technology* 5(2), 164-171, 10.24843/IJEET.2020.v05.i02.p28
+1. Παναγιώτα Κωτσάκη (2020).
+   **[Διαχείριση Δεδομένων στις πλατφόρμες ΚΝΙΜE & WEKA](https://doi.org/10.26265/polynoe-7)**.
+   Πανεπιστήμιο Δυτικής Αττικής, 10.26265/polynoe-7
 1. Hanan R. Alnjar (2020).
    **[Data visualization metrics between theoretic view and real implementations: A review](https://doi.org/10.30493/das.2020.216111)**.
    *DYSONA - Applied Science* 1(2), 43-50, E-NAMTILA, 10.30493/das.2020.216111
@@ -324,6 +354,9 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[Efficient SVDD Sampling with Approximation Guarantees for the Decision Boundary](https://arxiv.org/abs/2009.13853)**.
    *CoRR* abs/2009.13853,
    [BibTeX](https://dblp.org/rec/bibtex/journals/corr/abs-2009-13853)
+1. Сергій Францович Смерічевський, Serhii Frantsovych Smerichevskyi, Л. В. Савченко, and L.V. Savchenko (2020).
+   **[Clusterization of urban territory for building an effective delivery sustem](https://er.nau.edu.ua/handle/NAU/43202)** (Кластеризація міської території  для побудови ефективної системи доставки).
+   Wydawnictwo naukowe WSPIA, м. Познань, 978-83-60038-76-5
 1. Axel Elmarsson, and Johan Grundberg (2020).
    **[A comparison of different R-tree construction techniques for range queries on neuromorphological data](http://nbn-resolving.de/urn:nbn:se:kth:diva-279974)**.
 1. Chen Luo (2020).
@@ -344,12 +377,17 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Mohaddeseh Peyro (2020).
    **[The Role of FG Nucleoporins Amino Acid Sequence Composition in Nucleocytoplasmic Transport](https://escholarship.org/uc/item/8pn1b5sf)**.
    UC Berkeley
+1. Pham Van Huong, Le Thi Hong Van, and Pham Sy Nguyen (2020).
+   **[Detecting Web Attacks Based on Clustering Algorithm and Multi-branch CNN](http://isj.vn/index.php/journal_STIS/article/view/120)**.
+   *Journal of Science and Technology on Information security* 2(12), 31-37
 1. Larkin Liu (2020).
    **[Algorithm for Two-Phase Facility Planning via Balanced Clustering and Integer Programming](https://arxiv.org/abs/2009.02736)**.
    *arXiv* 2009.02736
 1. Tommaso Zoppi, Andrea ceccarelli, Tommaso Capecchi, and Andrea Bondavalli (2020).
    **[Unsupervised Anomaly Detectors to Detect Intrusions in the Current Threat Landscape](https://arxiv.org/abs/2012.11354)**.
    *arXiv* 2012.11354
+1. Valerio García Palao (2020).
+   **[Utilizando Topic Modeling para buscar términos relacionados](https://repositorio.usj.es/handle/123456789/421)**.
 1. Παναγιώτης Κεχαγιάς (2020).
    **[Σχεδιασμός και ανάπτυξη παράλληλου αλγόριθμου συσταδοποίησης στο Apache Spark](http://hdl.handle.net/10889/13781)** (Design and development of a parallel clustering algorithm on top of Apache Spark).
 
@@ -683,6 +721,9 @@ For theses, seminar articles etc. this approach does however not work. We have n
    Malmö universitet/Teknik och samhälle
 1. Guansong Pang (2019).
    **[Non-IID outlier detection with coupled outlier factors](http://hdl.handle.net/10453/134144)**.
+1. Hatice AKTAŞ GÖKÇE (2019).
+   **[Yapay Sinir Ağları ile Robotik Cerrahi Operasyonu Geçirmiş Prostat Kanserli Bireylerde Nüks Durumunun İncelenmesi](http://acikerisim.ybu.edu.tr:8080/xmlui/handle/123456789/1943)** (Investigation of the Recurrence Status in Prostate Cancer Individuals with Robotic Surgery with Artificial Neural Network).
+   Ankara Yıldırım Beyazıt Üniversitesi Sağlık Bilimleri Enstitüsü
 1. Igor Wescley Silva de Freitas (2019).
    **[Um estudo comparativo de técnicas de detecção de outliers no contexto de classificação de dados](http://repositorio.ufersa.edu.br/handle/prefix/1093)**.
    Universidade Federal Rural do Semi-Árido
