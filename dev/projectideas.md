@@ -23,29 +23,9 @@ The following list are project ideas for *students that want to get started* wit
 
 ### k-means variations
 
-- k-means nach Hartigan & Wong (*in progress*):
-
-  J. A. Hartigan, and M. A. Wong. “Algorithm AS 136: A k-means clustering algorithm.” Applied statistics (1979): 100-108.
-
-- Accelerate EM algorithm (Gaussian Mixture Modeling) using kd-trees.
-
-  A. W. Moore. “Very fast EM-based mixture model clustering using multiresolution kd-trees”. In: Proceedings of the Annual Conference on Neural Information Processing Systems (NIPS), Denver, CO (1999), pp. 543–549
-
-- Fuzzy c-means:
-
-  J. Dunn. “Well separated clusters and optimal fuzzy partitions”. In: Journal of Cybernetics 4 (1974), pp. 95–104
-
-  J. C. Bezdek. Pattern recognition with fuzzy objective function algorithms. Kluwer Academic Publishers, 1981
-
-  J. C. Bezdek, R. Ehrlich, and W. Full. “FCM: The fuzzy c-means clustering algorithm”. In: Computers & Geosciences 10.2 (1984), pp. 191–203
-
 - ISODATA clustering:
 
   G. H. Ball and D. J. Hall. ISODATA, a novel method of data analysis and pattern classification. Tech. rep. Stanford Research Institute, 1965
-
-- G-Means:
-
-  G. Hamerly, and C. Elkan. "Learning the k in k-means". Advances in neural information processing systems, 16, 281. 2004.
 
 - Global k-means:
 
@@ -59,17 +39,9 @@ The following list are project ideas for *students that want to get started* wit
 
   M. Van der Laan, and K. Pollard, and J. Bryan. "A new partitioning around medoids algorithm." Journal of Statistical Computation and Simulation, 73(8) (2003): 575-584.
 
-- "Spherical k-means":
-
-  I. S. Dhillon, and D. S. Modha. Concept Decompositions for Large Sparse Text Data Using Clustering." Machine Learning 42(1) (2001): 143-175.
-
 - "Trimmed k-means":
 
   J. A. Cuesta-Albertos, A. Gordaliza, and C. Matrán. "Trimmed k-means: an attempt to robustify quantizers." The Annals of Statistics, 25(2) (1997): 553-576.
-
-- "The Effectiveness of Lloyd-Type Methods for the k-Means Problem":
-
-  R. Ostrovsky, Y. Rabani, L. J. Schulman, C. Swamy: "The Effectiveness of Lloyd-Type Methods for the k-Means Problem." FOCS 2006: 165-176
 
 - K-Harmonic Means:
 
@@ -106,6 +78,10 @@ The following list are project ideas for *students that want to get started* wit
 - Stopping conditions by Mojena:
 
   R. Mojena. Hierarchical grouping methods and stopping rules: an evaluation. Comput. Journal, 20(4): 359-363, 1977
+
+- Hausdorff linkage:
+
+  N. Basalto, R. Bellotti, F. De Carlo, P. Facchi, E. Pantaleo, S. Pascazio. Hausdorff clustering. Phys. Rev. E 78, 046112, 2008
 
 ### DBSCAN and OPTICS extensions
 
@@ -179,14 +155,6 @@ These probably are primarily of interest to the history of clustering.
 
   J. J. Rocchio. "Document Retrieval System - Optimization and Evaluation." Harvard University Doctoral Thesis, Report No. ISR-10 to the National Science Foundation, 1966 http://sigir.org/files/museum/isr-10/pdfs/p1-chapter_4.pdf
 
-- Robert F. Ling's clustering (historic, related to DBSCAN):
-
-  R. F. Ling. "On the theory and construction of k-clusters". The Computer Journal. 15 (4), 1972: 326–332.
-
-- Wishart's clustering (historic, maybe related to DBSCAN):
-
-  D. Wishart, "Mode analysis", 1969. In Numerical Taxonomy, edited by AJ Cole
-
 - Wong and Lane's "Nearest neighbor clustering" (historic, related to DBSCAN):
 
   M. A. Wong, T. Lane, A kth nearest neighbour clustering procedure. In Computer Science and Statistics: Proceedings of the 13th Symposium on the Interface (pp. 308-311), 1981.
@@ -253,8 +221,6 @@ These probably are primarily of interest to the history of clustering.
   Baya, Ariel E., and Pablo M. Granitto. "How many clusters: A validation index for arbitrary-shaped clusters." IEEE/ACM Transactions on Computational Biology and Bioinformatics (TCBB) 10.2 (2013): 401-414.
 
 ### Visualization
-
-- Visualization of Silhouette
 
 - Additional visualizations of dendrograms (e.g. radial), labels for dendrograms.
 

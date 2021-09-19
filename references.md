@@ -29,15 +29,13 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[EvoCluster: An Open-Source Nature-Inspired Optimization Clustering Framework](https://doi.org/10.1007/s42979-021-00511-0)**.
    *SN Comput. Sci.* 2(3), 185, 10.1007/s42979-021-00511-0,
    [BibTeX](https://dblp.org/rec/bibtex/journals/sncs/QaddouraFAC21)
-1. Han Liu, Xiaotong Zhang, Xianchao Zhang, Qimai Li, and Xiao-Ming Wu (2021).
-   **[RPC: Representative possible world based consistent clustering algorithm for uncertain data](https://doi.org/10.1016/J.COMCOM.2021.06.002)**.
-   *Computer Communications* 176, 128-137, Elsevier BV, 10.1016/J.COMCOM.2021.06.002
 1. Ali Keyvanfar, Arezou Shafaghat, Nurhaizah Ismail, Sapura Mohamad, and Hamidah Ahmad (2021).
    **[Multifunctional retention pond for stormwater management: A decision-support model using Analytical Network Process (ANP) and Global Sensitivity Analysis (GSA)](https://doi.org/10.1016/J.ECOLIND.2020.107317)**.
    *Ecological Indicators* 124, 107317, Elsevier BV, 10.1016/J.ECOLIND.2020.107317
-1. Danilo B. Coimbra, Rafael M. Martins, Edson Mota, Tacito Tiburtino, Pedro Diamantino, and Maycon L.M. Peixoto (2021).
-   **[Analyzing the quality of local and global multidimensional projections using performance evaluation planning](https://doi.org/10.1016/J.TCS.2020.12.043)**.
-   *Theoretical Computer Science* 872, 41-54, Elsevier BV, 10.1016/J.TCS.2020.12.043
+1. Han Liu, Xiaotong Zhang, Xianchao Zhang, Qimai Li, and Xiao-Ming Wu (2021).
+   **[RPC: Representative possible world based consistent clustering algorithm for uncertain data](https://doi.org/10.1016/J.COMCOM.2021.06.002)**.
+   *Comput. Commun.* 176, 128-137, 10.1016/J.COMCOM.2021.06.002,
+   [BibTeX](https://dblp.org/rec/bibtex/journals/comcom/LiuZZLW21)
 1. Alican Dogan, and Derya Birant (2021).
    **[Machine learning and data mining in manufacturing](https://doi.org/10.1016/j.eswa.2020.114060)**.
    *Expert Syst. Appl.* 166, 114060, 10.1016/j.eswa.2020.114060,
@@ -70,6 +68,13 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[SIMON: Open-Source Knowledge Discovery Platform](https://doi.org/10.1016/j.patter.2020.100178)**.
    *Patterns* 2(1), 100178, 10.1016/j.patter.2020.100178,
    [BibTeX](https://dblp.org/rec/bibtex/journals/patterns/TomicTWGKSDSTHD21)
+1. Danilo Barbosa Coimbra, Rafael Messias Martins, Edson Mota, Tácito Trindade de Araújo Tiburtino Neves, Pedro Diamantino, and Maycon L. M. Peixoto (2021).
+   **[Analyzing the quality of local and global multidimensional projections using performance evaluation planning](https://doi.org/10.1016/J.TCS.2020.12.043)**.
+   *Theor. Comput. Sci.* 872, 41-54, 10.1016/J.TCS.2020.12.043,
+   [BibTeX](https://dblp.org/rec/bibtex/journals/tcs/CoimbraMMNDP21)
+1. Andoni Garitano-Trojaola, Ana Sancho, Ralph Götz, Patrick Eiring, Susanne Walz, Hardikkumar Jetani, Jesus Gil-Pulido, Matteo Claudio Da Via, Eva Teufel, Nadine Rhodes, Larissa Haertle, Estibaliz Arellano-Viera, Raoul Tibes, Andreas Rosenwald, Leo Rasche, Michael Hudecek, Markus Sauer, Jürgen Groll, Hermann Einsele, Sabrina Kraus, and Martin K. Kortüm (2021).
+   **[Actin cytoskeleton deregulation confers midostaurin resistance in FLT3-mutant acute myeloid leukemia](https://doi.org/10.1038/s42003-021-02215-w)**.
+   *Communications Biology* 4(1), Springer Science and Business Media LLC, 10.1038/s42003-021-02215-w
 1. Mahboobeh Riahi-Madvar, Babak Nasersharif, and Ahmad Akbari Azirani (2021).
    **[Subspace Outlier Detection in High Dimensional Data using Ensemble of PCA-based Subspaces](https://doi.org/10.1109/CSICC52343.2021.9420589)**.
    *CSICC*, 1-5, IEEE, 10.1109/CSICC52343.2021.9420589,
@@ -135,6 +140,10 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[Multi-source Distributed System Data for AI-Powered Analytics](https://doi.org/10.1007/978-3-030-44769-4_13)**.
    *ESOCC*, 161-176, Springer, 10.1007/978-3-030-44769-4\_13,
    [BibTeX](https://dblp.org/rec/bibtex/conf/esocc/NedelkoskiBMBCK20)
+1. Andreas Züfle (2020).
+   **[Uncertain Spatial Data Management: An Overview](https://doi.org/10.1007/978-3-030-55462-0_14)**.
+   *Handbook of Big Geospatial Data*, 10.1007/978-3-030-55462-0\_14,
+   [BibTeX](https://dblp.org/rec/bibtex/journals/corr/abs-2009-01121)
 1. Jakub Peschel, Michal Batko, and Pavel Zezula (2020).
    **[Algebra for Complex Analysis of Data](https://doi.org/10.1007/978-3-030-59003-1_12)**.
    *DEXA (1)*, 177-187, Springer, 10.1007/978-3-030-59003-1\_12,
@@ -403,10 +412,6 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[Multi-view Graph Learning by Joint Modeling of Consistency and Inconsistency](https://arxiv.org/abs/2008.10208)**.
    *CoRR* abs/2008.10208,
    [BibTeX](https://dblp.org/rec/bibtex/journals/corr/abs-2008-10208)
-1. Andreas Züfle (2020).
-   **[Uncertain Spatial Data Management: An Overview](https://arxiv.org/abs/2009.01121)**.
-   *CoRR* abs/2009.01121,
-   [BibTeX](https://dblp.org/rec/bibtex/journals/corr/abs-2009-01121)
 1. Lukas Ruff, Jacob R. Kauffmann, Robert A. Vandermeulen, Grégoire Montavon, Wojciech Samek, Marius Kloft, Thomas G. Dietterich, and Klaus-Robert Müller (2020).
    **[A Unifying Review of Deep and Shallow Anomaly Detection](https://arxiv.org/abs/2009.11732)**.
    *CoRR* abs/2009.11732,
@@ -551,7 +556,7 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[Projected memory clustering](https://doi.org/10.1016/j.patrec.2019.02.023)**.
    *Pattern Recognit. Lett.* 123, 9-15, 10.1016/j.patrec.2019.02.023,
    [BibTeX](https://dblp.org/rec/bibtex/journals/prl/StruskiSTS19)
-1. Catia Oliveira, Tiago Guimarães, Filipe Portela, and Manuel Santos (2019).
+1. Catia F. Oliveira, Tiago Guimarães, Filipe Portela, and Manuel Santos (2019).
    **[Benchmarking Business Analytics Techniques in Big Data](https://doi.org/10.1016/j.procs.2019.11.026)**.
    *EUSPN/ICTH*, 690-695, Elsevier, 10.1016/j.procs.2019.11.026,
    [BibTeX](https://dblp.org/rec/bibtex/conf/euspn/OliveiraGPS19)
@@ -808,6 +813,8 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Matthew C. Recker (2019).
    **[Enabling Mobile Neutron Detection Systems with CLYC](https://scholar.afit.edu/etd/2371)**.
    Air Force Institute of Technology
+1. Morteza Mousavi Barroudi (2019).
+   **[Spatio-Temporal Partitioning and Location Prediction in GPS Trajectory Data](http://hdl.handle.net/11343/237438)**.
 1. Patrícia Freitas Pelozo Hespanhol (2019).
    **[Análise de padrões na produção de cana de açúcar utilizando aprendizado de máquina](http://hdl.handle.net/11449/183121)** (Analysis on sugar cane production using machine learning).
    Universidade Estadual Paulista (UNESP)
@@ -822,6 +829,8 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Παναγιώτης Διέννης, and Αλέξανδρος Μπολοβίνος (2019).
    **[Εργαλεία ανάλυσης και οπτικοποίησης δεδομένων σε συστήματα επιχειρηματικής ευφυΐας](http://repository.library.teimes.gr/xmlui/handle/123456789/7840)**.
    ΤΕΙ Δυτικής Ελλάδας
+1. М. С. Волошин (2019).
+   **[Дослідження методів кластеризації трас журналів подій в проектах інтелектуального аналізу процесів](http://openarchive.nure.ua/handle/document/10961)**.
 1. 丁志成, DING Zhicheng, 葛洪伟, GE Hongwei, 周竞, and ZHOU Jing (2019).
    **[基于Kl散度的密度峰值聚类算法](http://journal2.cqupt.edu.cn/jcuptnse/html/2019/1673-825X-31-3-367.html)**.
    重庆邮电大学学报(自然科学版)
