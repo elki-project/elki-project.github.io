@@ -18,6 +18,17 @@ For theses, seminar articles etc. this approach does however not work. We have n
 2021
 ----
 
+1. Francesca Soro, Thomas Favale, Danilo Giordano, Luca Vassio, Zied Ben Houidi, and Idilio Drago (2021).
+   **[The New Abnormal: Network Anomalies in the AI Era](https://doi.org/10.1002/9781119675525.ch11)**.
+   *Communication Networks and Service Management in the Era of Artificial Intelligence and Machine Learning*, 261-288, Wiley, 10.1002/9781119675525.ch11
+1. Franka Bause, David B. Blumenthal, Erich Schubert, and Nils M. Kriege (2021).
+   **[Metric Indexing for Graph Similarity Search](https://doi.org/10.1007/978-3-030-89657-7_24)**.
+   *SISAP*, 323-336, Springer, 10.1007/978-3-030-89657-7\_24,
+   [BibTeX](https://dblp.org/rec/bibtex/conf/sisap/BauseBSK21)
+1. Felix Borutta, Peer Kröger, and Matthias Renz (2021).
+   **[A Cost Model for Reverse Nearest Neighbor Query Processing on R-Trees Using Self Pruning](https://doi.org/10.1007/978-3-030-89657-7_4)**.
+   *SISAP*, 45-53, Springer, 10.1007/978-3-030-89657-7\_4,
+   [BibTeX](https://dblp.org/rec/bibtex/conf/sisap/BoruttaKR21)
 1. Andrzej Chmielowiec (2021).
    **[Algorithm for error-free determination of the variance of all contiguous subsequences and fixed-length contiguous subsequences for a sequence of industrial measurement data](https://doi.org/10.1007/S00180-021-01096-1)**.
    *Computational Statistics*, Springer Science and Business Media LLC, 10.1007/S00180-021-01096-1
@@ -32,6 +43,9 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Ali Keyvanfar, Arezou Shafaghat, Nurhaizah Ismail, Sapura Mohamad, and Hamidah Ahmad (2021).
    **[Multifunctional retention pond for stormwater management: A decision-support model using Analytical Network Process (ANP) and Global Sensitivity Analysis (GSA)](https://doi.org/10.1016/J.ECOLIND.2020.107317)**.
    *Ecological Indicators* 124, 107317, Elsevier BV, 10.1016/J.ECOLIND.2020.107317
+1. Israa S. Kamil, and Safaa O. Al-Mamory (2021).
+   **[Enhancement of OPTICS’ time complexity by using fuzzy clusters](https://doi.org/10.1016/J.MATPR.2021.06.441)**.
+   *Materials Today: Proceedings*, Elsevier BV, 10.1016/J.MATPR.2021.06.441
 1. Han Liu, Xiaotong Zhang, Xianchao Zhang, Qimai Li, and Xiao-Ming Wu (2021).
    **[RPC: Representative possible world based consistent clustering algorithm for uncertain data](https://doi.org/10.1016/J.COMCOM.2021.06.002)**.
    *Comput. Commun.* 176, 128-137, 10.1016/J.COMCOM.2021.06.002,
@@ -75,6 +89,9 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Andoni Garitano-Trojaola, Ana Sancho, Ralph Götz, Patrick Eiring, Susanne Walz, Hardikkumar Jetani, Jesus Gil-Pulido, Matteo Claudio Da Via, Eva Teufel, Nadine Rhodes, Larissa Haertle, Estibaliz Arellano-Viera, Raoul Tibes, Andreas Rosenwald, Leo Rasche, Michael Hudecek, Markus Sauer, Jürgen Groll, Hermann Einsele, Sabrina Kraus, and Martin K. Kortüm (2021).
    **[Actin cytoskeleton deregulation confers midostaurin resistance in FLT3-mutant acute myeloid leukemia](https://doi.org/10.1038/s42003-021-02215-w)**.
    *Communications Biology* 4(1), Springer Science and Business Media LLC, 10.1038/s42003-021-02215-w
+1. Aline Melo, and Yaoguo Li (2021).
+   **[Geology differentiation by applying unsupervised machine learning to multiple independent geophysical inversions](https://doi.org/10.1093/gji/ggab316)**.
+   *Geophysical Journal International* 227(3), 2058-2078, Oxford University Press (OUP), 10.1093/gji/ggab316
 1. Mahboobeh Riahi-Madvar, Babak Nasersharif, and Ahmad Akbari Azirani (2021).
    **[Subspace Outlier Detection in High Dimensional Data using Ensemble of PCA-based Subspaces](https://doi.org/10.1109/CSICC52343.2021.9420589)**.
    *CSICC*, 1-5, IEEE, 10.1109/CSICC52343.2021.9420589,
@@ -104,6 +121,9 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Amin Ganjali Khosrowshahi, Iman Aghayan, Mehmet Metin Kunt, and Abdoul-Ahad Choupani (2021).
    **[Detecting crash hotspots using grid and density-based spatial clustering](https://doi.org/10.1680/jtran.20.00028)**.
    *Proceedings of the Institution of Civil Engineers - Transport*, 1-31, Thomas Telford Ltd. 10.1680/jtran.20.00028
+1. Xuyang Han, Costas Armenakis, and Mojgan Jadidi (2021).
+   **[Modeling Vessel Behaviours by Clustering AIS Data Using Optimized DBSCAN](https://doi.org/10.3390/SU13158162)**.
+   *Sustainability* 13(15), 8162, Mdpi Ag, 10.3390/SU13158162
 1. Salim Miloudi, Yulin Wang, and Wenjia Ding (2021).
    **[An Improved Similarity-Based Clustering Algorithm for Multi-Database Mining](https://doi.org/10.3390/e23050553)**.
    *Entropy* 23(5), 553, 10.3390/e23050553,
@@ -210,6 +230,9 @@ For theses, seminar articles etc. this approach does however not work. We have n
    **[Spectral ranking and unsupervised feature selection for point, collective, and contextual anomaly detection](https://doi.org/10.1007/s41060-018-0161-7)**.
    *Int. J. Data Sci. Anal.* 9(1), 57-75, 10.1007/s41060-018-0161-7,
    [BibTeX](https://dblp.org/rec/bibtex/journals/ijdsa/ZhangNCL20)
+1. Szymon Łukasik, and Piotr A. Kowalski (2020).
+   **[Clustering with nature-inspired metaheuristics](https://doi.org/10.1016/b978-0-12-819714-1.00021-x)**.
+   *Nature-Inspired Computation and Swarm Intelligence*, 165-178, Elsevier, 10.1016/b978-0-12-819714-1.00021-x
 1. Mariano Kohan, and Juan M. Ale (2020).
    **[Discovering traffic congestion through traffic flow patterns generated by moving object trajectories](https://doi.org/10.1016/j.compenvurbsys.2019.101426)**.
    *Comput. Environ. Urban Syst.* 80, 101426, 10.1016/j.compenvurbsys.2019.101426,
@@ -443,6 +466,9 @@ For theses, seminar articles etc. this approach does however not work. We have n
 1. Georgios Kaiafas (2020).
    **[Ensemble Learning For Anomaly Detection With Applications For Cybersecurity And Telecommunication](http://hdl.handle.net/10993/44607)**.
    University of Luxembourg, ​​Luxembourg
+1. James Luke Coyte (2020).
+   **[Seated Whole Body Vibration Modelling using Inertial Motion Sensors](https://ro.uow.edu.au/theses1/1094)**.
+   University of Wollongong
 1. Jennifer Carmen Frey (2020).
    **[Using data mining to repurpose German language corpora. An evaluation of data-driven analysis methods for corpus linguistics](http://amsdottorato.unibo.it/9300/)**.
    alma
@@ -1510,7 +1536,7 @@ For theses, seminar articles etc. this approach does however not work. We have n
    University of Trento, Italy,
    [BibTeX](https://dblp.org/rec/bibtex/phd/basesearch/Papadimitriou17)
 1. Nina Hubig (2017).
-   **[Analyzing and Predicting Large Vector-, Graph- and Spatio-Temporal Data](http://d-nb.info/1147968128)**.
+   **[Analyzing and Predicting Large Vector-, Graph- and Spatio-Temporal Data](https://d-nb.info/1147968128)**.
    Technical University Munich, Germany,
    [BibTeX](https://dblp.org/rec/bibtex/phd/dnb/Hubig17)
 1. Markus Mauder (2017).
@@ -1518,7 +1544,7 @@ For theses, seminar articles etc. this approach does however not work. We have n
    Ludwig Maximilian University of Munich, Germany,
    [BibTeX](https://dblp.org/rec/bibtex/phd/dnb/Mauder17)
 1. Samuel Maurus (2017).
-   **[Exploratory Knowledge-Mining from Complex Data Contexts in Linear Time](http://d-nb.info/1131802322)**.
+   **[Exploratory Knowledge-Mining from Complex Data Contexts in Linear Time](https://d-nb.info/1131802322)**.
    Technical University Munich, Germany,
    [BibTeX](https://dblp.org/rec/bibtex/phd/dnb/Maurus17)
 1. Julien Collet (2017).
@@ -2146,7 +2172,7 @@ For theses, seminar articles etc. this approach does however not work. We have n
    Ludwig Maximilians University Munich,
    [BibTeX](https://dblp.org/rec/bibtex/phd/dnb/Niedermayer15)
 1. Matthias Rohr (2015).
-   **[Workload-sensitive Timing Behavior Analysis for Fault Localization in Software Systems](http://d-nb.info/1066644896)**.
+   **[Workload-sensitive Timing Behavior Analysis for Fault Localization in Software Systems](https://d-nb.info/1066644896)**.
    University of Kiel,
    [BibTeX](https://dblp.org/rec/bibtex/phd/dnb/Rohr15)
 1. Julien Soler (2015).
@@ -2382,11 +2408,11 @@ For theses, seminar articles etc. this approach does however not work. We have n
    *CoRR* abs/1407.4668,
    [BibTeX](https://dblp.org/rec/bibtex/journals/corr/Zimmermann14)
 1. Xiao He (2014).
-   **[Multi-purpose exploratory mining of complex data](http://d-nb.info/1060978830)**.
+   **[Multi-purpose exploratory mining of complex data](https://d-nb.info/1060978830)**.
    Ludwig Maximilians University Munich, Germany,
    [BibTeX](https://dblp.org/rec/bibtex/phd/dnb/He14)
 1. Richard Röttger (2014).
-   **[Active transitivity clustering of large-scale biomedical datasets](http://d-nb.info/1054054037)**.
+   **[Active transitivity clustering of large-scale biomedical datasets](https://d-nb.info/1054054037)**.
    Saarland University,
    [BibTeX](https://dblp.org/rec/bibtex/phd/dnb/Rottger14)
 1. Michael Davis (2014).
@@ -2620,23 +2646,23 @@ For theses, seminar articles etc. this approach does however not work. We have n
    *Softwaretechnik-Trends* 33(2),
    [BibTeX](https://dblp.org/rec/bibtex/journals/stt/Ehlers13)
 1. Tobias Emrich (2013).
-   **[Coping with distance and location dependencies in spatial, temporal and uncertain data](http://d-nb.info/1038152747)**.
+   **[Coping with distance and location dependencies in spatial, temporal and uncertain data](https://d-nb.info/1038152747)**.
    Ludwig Maximilians University Munich,
    [BibTeX](https://dblp.org/rec/bibtex/phd/dnb/Emrich13)
 1. Hardy Kremer (2013).
-   **[Mining and similarity search in temporal databases](http://d-nb.info/1044552492)**.
+   **[Mining and similarity search in temporal databases](https://d-nb.info/1044552492)**.
    RWTH Aachen University,
    [BibTeX](https://dblp.org/rec/bibtex/phd/dnb/Kremer13)
 1. Daniel Kuntze (2013).
-   **[Practical algorithms for clustering and modeling large data sets: analysis and improvements](http://d-nb.info/1048369935)**.
+   **[Practical algorithms for clustering and modeling large data sets: analysis and improvements](https://d-nb.info/1048369935)**.
    1-130, University of Paderborn,
    [BibTeX](https://dblp.org/rec/bibtex/phd/dnb/Kuntze13)
 1. Erich Schubert (2013).
-   **[Generalized and efficient outlier detection for spatial, temporal, and high-dimensional data mining](http://d-nb.info/1048522377)**.
+   **[Generalized and efficient outlier detection for spatial, temporal, and high-dimensional data mining](https://d-nb.info/1048522377)**.
    1-262, Ludwig Maximilians University Munich,
    [BibTeX](https://dblp.org/rec/bibtex/phd/dnb/Schubert13)
 1. Andreas Züfle (2013).
-   **[Similarity search and mining in uncertain spatial and spatio-temporal databases](http://d-nb.info/1045152900)**.
+   **[Similarity search and mining in uncertain spatial and spatio-temporal databases](https://d-nb.info/1045152900)**.
    1-397, Ludwig Maximilians University Munich,
    [BibTeX](https://dblp.org/rec/bibtex/phd/dnb/Zufle13)
 1. Matthew Orlinski (2013).
@@ -2765,11 +2791,11 @@ For theses, seminar articles etc. this approach does however not work. We have n
    *BMC Bioinform.* 13, 194, 10.1186/1471-2105-13-194,
    [BibTeX](https://dblp.org/rec/bibtex/journals/bmcbi/DibC12)
 1. Thomas Bernecker (2012).
-   **[Similarity processing in multi-observation data](http://d-nb.info/1032131535)**.
+   **[Similarity processing in multi-observation data](https://d-nb.info/1032131535)**.
    1-253, Ludwig Maximilian University of Munich, Germany,
    [BibTeX](https://dblp.org/rec/bibtex/phd/dnb/Bernecker12)
 1. Jens Ehlers (2012).
-   **[Self-adaptive performance monitoring for component-based software systems](http://d-nb.info/1021909521)**.
+   **[Self-adaptive performance monitoring for component-based software systems](https://d-nb.info/1021909521)**.
    1-232, University of Kiel,
    [BibTeX](https://dblp.org/rec/bibtex/phd/dnb/Ehlers12)
 1. Franz Graf (2012).
@@ -2777,7 +2803,7 @@ For theses, seminar articles etc. this approach does however not work. We have n
    1-221, Ludwig Maximilian University of Munich, Germany,
    [BibTeX](https://dblp.org/rec/bibtex/phd/dnb/Graf11)
 1. Stephan Günnemann (2012).
-   **[Subspace clustering for complex data](http://d-nb.info/1023979101)**.
+   **[Subspace clustering for complex data](https://d-nb.info/1023979101)**.
    RWTH Aachen University,
    [BibTeX](https://dblp.org/rec/bibtex/phd/dnb/Gunnemann12)
 1. Steffen Suchandt, and Hartmut Runge (2012).
@@ -2895,7 +2921,7 @@ For theses, seminar articles etc. this approach does however not work. We have n
    *DaMoN*, 3-8, ACM, 10.1145/1869389.1869390,
    [BibTeX](https://dblp.org/rec/bibtex/conf/damon/EmrichGKST10)
 1. Emmanuel Alexander Müller (2010).
-   **[Efficient knowledge discovery in subspaces of high dimensional databases](http://d-nb.info/1009453939)**.
+   **[Efficient knowledge discovery in subspaces of high dimensional databases](https://d-nb.info/1009453939)**.
    1-270, RWTH Aachen University,
    [BibTeX](https://dblp.org/rec/bibtex/phd/de/Muller2010)
 1. Albert Hein, and Thomas Kirste (2010).

@@ -27,6 +27,10 @@ The following list are project ideas for *students that want to get started* wit
 
   G. H. Ball and D. J. Hall. ISODATA, a novel method of data analysis and pattern classification. Tech. rep. Stanford Research Institute, 1965
 
+- Learning the number of clusters in data, PG-means:
+
+  Yu Feng, Greg Hamerly, PG-means: learning the number of clusters in data. NIPS, 2006
+
 - Global k-means:
 
   Likas, A., Vlassis, N., & Verbeek, J. J. (2003). The global k-means clustering algorithm. Pattern recognition, 36(2), 451-461.
