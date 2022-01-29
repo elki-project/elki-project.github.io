@@ -199,6 +199,10 @@ These probably are primarily of interest to the history of clustering.
 
 ### Data indexing
 
+- SCANN: Accelerating Large-Scale Inference with Anisotropic Vector Quantization
+
+  Ruiqi Guo, Philip Sun, Erik Lindgren, Quan Geng, David Simcha, Felix Chern, Sanjiv Kumar: "Accelerating Large-Scale Inference with Anisotropic Vector Quantization" in ICML 2020: 3887-3896
+
 - Additional splitting strategy:
 
   Korotkov, Alexander. "A new double sorting-based node splitting algorithm for R-tree". Programming and Computer Software 38.3 (2012): 109-118.
@@ -248,6 +252,12 @@ Medium difficulty
 - LOBPCG Eigenvector solver:
 
   Benner, P., & Mach, T. (2011). “Locally optimal block preconditioned conjugate gradient method for hierarchical matrices”. In PAMM, 11(1), 741-742.
+
+Variational Bayes:
+
+- Bayesian Gaussian Mixture:
+
+  Hagai Attias. (2000). “A Variational Bayesian Framework for Graphical Models”. In Advances in Neural Information Processing Systems 12.
 
 Algorithms for categorial data:
 
