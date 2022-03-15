@@ -48,8 +48,9 @@ The data set has been [archived at Zenodo](https://zenodo.org/record/6355684), w
 
 Recommended citation:
 
-*Erich Schubert and Arthur Zimek*\\
-**ELKI Multi-View Clustering Data Sets Based on the Amsterdam Library of Object Images (ALOI)** Zenodo, 2010. <https://doi.org/10.5281/zenodo.6355684>
+> *Erich Schubert and Arthur Zimek*:\\
+> **ELKI Multi-View Clustering Data Sets Based on the Amsterdam Library of Object Images (ALOI)**.\\
+> Zenodo, 2010. <https://doi.org/10.5281/zenodo.6355684>
 
 Alternatively, you can cite the publications listed below.
 
@@ -62,19 +63,19 @@ The data set has a rather unique property for its size: there are around 100 dif
 
 For multiview research, we offer a number of feature vectors for evaluating this data set. Some of these were used in:
 
-*M. E. Houle, H.-P. Kriegel, P. Kröger, E. Schubert, A. Zimek*\\
-**Can Shared-Neighbor Distances Defeat the Curse of Dimensionality?**\\
-In Proceedings of the 22nd International Conference on Scientific and Statistical Database Management (SSDBM), Heidelberg, Germany, 2010.
+> *M. E. Houle, H.-P. Kriegel, P. Kröger, E. Schubert, A. Zimek*:\\
+> **Can Shared-Neighbor Distances Defeat the Curse of Dimensionality?**\\
+> In Proceedings of the 22nd International Conference on Scientific and Statistical Database Management (SSDBM), Heidelberg, Germany, 2010.
 
-*H.-P. Kriegel, E. Schubert, A. Zimek*\\
-**Evaluation of Multiple Clustering Solutions**\\
-In 2nd MultiClust Workshop: Discovering, Summarizing and Using Multiple Clusterings Held in Conjunction with ECML PKDD 2011, Athens, Greece, 2011.
+> *H.-P. Kriegel, E. Schubert, A. Zimek*:\\
+> **Evaluation of Multiple Clustering Solutions**.\\
+> In 2nd MultiClust Workshop: Discovering, Summarizing and Using Multiple Clusterings Held in Conjunction with ECML PKDD 2011, Athens, Greece, 2011.
 
-*E. Schubert, R. Wojdanowski, A. Zimek, H.-P. Kriegel*\\
-**On Evaluation of Outlier Rankings and Outlier Scores**\\
-In Proceedings of the 12th SIAM International Conference on Data Mining (SDM), Anaheim, CA, 2012.
+> *E. Schubert, R. Wojdanowski, A. Zimek, H.-P. Kriegel*:\\
+> **On Evaluation of Outlier Rankings and Outlier Scores**.\\
+> In Proceedings of the 12th SIAM International Conference on Data Mining (SDM), Anaheim, CA, 2012.
 
-The first article studied the effects of dimensionality on this data set. In the second article we offer some initial thoughts about evaluating clusters on this data set.
+The first article studied the effects of dimensionality on this data set. In the second article we offer some initial thoughts about evaluating clusters on this data set. The third introduced the outlier detection subsets.
 
 | Feature type | Description | Files |
 |----|----|----|
