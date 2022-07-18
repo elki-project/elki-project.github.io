@@ -94,6 +94,9 @@ Perhaps you will be among this herd of elks soon?
 <li><img title="Alan Mazankiewicz" src="img/elk200.png" alt="External contributor: MCDE dependence" width="50" /></li>
 <li><img title="Edouard Fouché" src="img/elk200.png" alt="External contributor: MCDE dependence" width="50" /></li>
 <li><img title="Robert Gehde" src="img/elk200.png" alt="Student contributor: unit tests" width="50" /></li>
+<li><img title="Erik Thordsen" src="img/elk200.png" alt="Team contributor: intrinsic dimensionality estimation" width="50" /></li>
+<li><img title="Andreas Lang" src="img/elk200.png" alt="Team contributor: BETULA and BIRCH clustering" width="50" /></li>
+<li><img title="Braulio Sanchez" src="img/elk200.png" alt="External contributor: clustering based outlier detection" width="50" /></li>
 </ul>
 <div class="caption"><div class=".caption-container"><h3>ELKI contributors</h3><p></p></div></div>
 <script src="//code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
