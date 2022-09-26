@@ -39,17 +39,25 @@ The following list are project ideas for *students that want to get started* wit
 
   C. B. Lucasius, and A. D. Dane, and G. Kateman. "On k-medoid clustering of large data sets with the aid of a genetic algorithm: background, feasiblity and comparison." Analytica Chimica Acta 282.3 (1993): 647-669.
 
-- Modification of PAM to optimize the Silhouette:
-
-  M. Van der Laan, and K. Pollard, and J. Bryan. "A new partitioning around medoids algorithm." Journal of Statistical Computation and Simulation, 73(8) (2003): 575-584.
-
 - "Trimmed k-means":
 
   J. A. Cuesta-Albertos, A. Gordaliza, and C. Matrán. "Trimmed k-means: an attempt to robustify quantizers." The Annals of Statistics, 25(2) (1997): 553-576.
 
 - K-Harmonic Means:
 
-  Zhang, B., Hsu, M., & Dayal, U. (2000, September). K-harmonic means-a spatial clustering algorithm with boosting. In International Workshop on Temporal, Spatial, and Spatio-Temporal Data Mining (pp. 31-45). Springer, Berlin, Heidelberg.
+  Zhang, B., Hsu, M., & Dayal, U. (2000, September). K-harmonic means-a spatial clustering algorithm with boosting. In International Workshop on Temporal, Spatial, and Spatio-Temporal Data Mining (pp. 31-45).
+
+- Clustering using von Mises-Fisher distributions (EM based):
+
+  Banerjee, A., Dhillon, I. S., Ghosh, J., Sra, S., & Ridgeway, G. (2005). Clustering on the Unit Hypersphere using von Mises-Fisher Distributions. Journal of Machine Learning Research, 6(9).
+
+- Summation-bAsed Incremental Learning (SAIL):
+
+  Wu, Junjie. "Information-Theoretic K-means for Text Clustering." Advances in K-means Clustering. Springer, Berlin, Heidelberg, 2012. 69-98.
+
+- K-Nearest-neighbor Consistency:
+
+  Ding, C., & He, X. (2004, March). K-nearest-neighbor consistency in data clustering: incorporating local information into global optimization. In Proceedings of the 2004 ACM symposium on Applied computing (pp. 584-589).
 
 ### Hierarchical clustering variations
 
@@ -220,6 +228,7 @@ These probably are primarily of interest to the history of clustering.
   Uhlmann, Jeffrey K. "Satisfying general proximity/similarity queries with metric trees." Information processing letters 40.4 (1991): 175-179.
   
 ### Evaluation
+
 - Cluster evaluation by connectivity (internal):
 
   Handl, J., Knowles, J., & Kell, D. B. (2005). "Computational cluster validation in post-genomic data analysis." Bioinformatics, 21(15), 3201-3212.
