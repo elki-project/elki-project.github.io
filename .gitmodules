@@ -10,3 +10,7 @@
 	path = releases/release0.7.5
 	url = https://github.com/elki-project/elki-release-archive.git
 	branch = release0.7.5
+[submodule "releases/release0.8.0"]
+	path = releases/release0.8.0
+	url = https://github.com/elki-project/elki-release-archive.git
+	branch = release0.8.0

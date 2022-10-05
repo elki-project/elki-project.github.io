@@ -12,6 +12,13 @@ Publications
 
 The following publications accompanied the given [releases](/releases). Please use one of these publications, according to the release you are using, for citing ELKI to give credit. Thank you. For other papers using or referencing ELKI, see [our references](/references).
 
+[ELKI 0.8.0] <span id="release0.8.0"></span>
+
+: Erich Schubert:\\
+**Automatic Indexing for Similarity Search in ELKI**.\\
+Int. Conf. Similarity Search and Applications, 2022\\
+\[ [EE (Springer)](https://doi.org/10.1007/978-3-031-17849-8_16) | [Bibtex (DBLP)](https://dblp.org/rec/bibtex/conf/sisap/Schubert22) \]
+
 [ELKI 0.7.5] <span id="release0.7.5"></span>
 
 : Erich Schubert and Arthur Zimek:\\

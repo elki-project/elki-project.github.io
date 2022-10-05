@@ -28,7 +28,7 @@ A fair and useful comparison of these algorithms is difficult due to several rea
 
 On the other hand, efficient data management tools like index-structures can show considerable impact on data mining tasks and are therefore useful for a broad variety of algorithms.
 
-In ELKI, data mining algorithms and data management tasks are separated and allow for an independent evaluation. This separation makes ELKI unique among data mining frameworks like Weka or Rapidminer and frameworks for index structures like GiST. At the same time, ELKI is open to arbitrary data types, distance or similarity measures, or file formats. The fundamental approach is the independence of file parsers or database connections, data types, distances, distance functions, and data mining algorithms. Helper classes, e.g. for algebraic or analytic computations are available for all algorithms on equal terms.
+In ELKI, data mining algorithms and data management tasks are separated and allow for an independent evaluation. This separation makes ELKI unique among data mining frameworks like Weka or Rapidminer and frameworks for index structures like GiST. At the same time, ELKI is open to arbitrary data types, distance or similarity measures, or file formats. The fundamental approach is the independence of file parsers or database connections, data types, distances, distance functions, and data mining algorithms. Helper classes, e.g., for algebraic or analytic computations are available for all algorithms on equal terms.
 
 With the development and publication of ELKI, we humbly hope to serve the data mining and database research community beneficially. The framework is **free** for scientific usage ("free" as in "open source", see [ELKI license](/license) for details). In case of application of ELKI in scientific publications, we would appreciate credit in form of a [citation](/publications) of the appropriate publication (see [ELKI publications](/publications)), that is, the publication related to the release of ELKI you were using.
 
@@ -49,23 +49,25 @@ Getting ELKI: Download and Citation Policy
 You can download ELKI including source code on the [releases](/releases) page.
 ELKI uses the AGPLv3 [license](/license), a well-known open source license.
 
-ELKI is available on [GitHub](https://github.com/elki-project/elki) and [Maven](https://search.maven.org/#artifactdetails%7Cde.lmu.ifi.dbs.elki%7Celki%7C0.7.5%7Cjar).
+<span style="font-color:red">Version 0.8.0 is currently not yet available via Maven, because of the group name change.</span>
+
+ELKI is available on [GitHub](https://github.com/elki-project/elki) and [Maven](https://search.maven.org/#artifactdetails%7Celki%7Celki%7C0.8.0%7Cjar).
 You can [clone an example project](https://github.com/elki-project/example-elki-project) to get started.
 
 Gradle:
 {% highlight gradle %}
 dependencies {
-    compile group: 'de.lmu.ifi.dbs.elki', name: 'elki', version:'0.7.5'
+    compile group: 'elki', name: 'elki', version:'0.8.0'
 }
 {% endhighlight %}
 
 Maven:
 {% highlight xml %}
-<!-- https://mvnrepository.com/artifact/de.lmu.ifi.dbs.elki/elki -->
+<!-- https://mvnrepository.com/artifact/elki/elki -->
 <dependency>
-    <groupId>de.lmu.ifi.dbs.elki</groupId>
+    <groupId>elki</groupId>
     <artifactId>elki</artifactId>
-    <version>0.7.5</version>
+    <version>0.8.0</version>
 </dependency>
 {% endhighlight %}
 

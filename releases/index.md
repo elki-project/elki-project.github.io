@@ -9,6 +9,36 @@ section: releases
 Release History
 ===============
 
+**0.8.0 (2022, October 5)**
+
+: Release 0.8.0 (cite as [release 0.8.0](/publications#release0.8.0))
+
+  * Full package:
+    * [complete package](/releases/release0.8.0/elki-0.8.0.tar.gz) (contains source-code, [JavaDoc](/dev/javadoc) and dependencies, includes batik [visualization](/algorithms/visualization) and libsvm extensions)
+    * [executable archive](/releases/release0.8.0/elki-bundle-0.8.0.jar) (single jar, with dependencies, includes batik visualization and libsvm extensions, no source code)
+    * [JavaDoc archive](/releases/release0.8.0/elki-bundle-0.8.0-javadoc.jar)
+    * [sources only](/releases/release0.8.0/elki-0.8.0-sources.tar.gz) (package to build from source)
+  * [online documentation](/releases/release0.8.0/javadoc/index.html)
+  * [release notes](/releases/release_notes_0.8.0)
+
+<span style="font-color:red">Version 0.8.0 is currently not yet available via Maven/Gradle, because of the group id change.</span>
+
+Gradle:
+{% highlight gradle %}
+dependencies {
+    compile group: 'elki', name: 'elki', version:'0.8.0'
+}
+{% endhighlight %}
+
+  Maven:
+  {% highlight xml %}
+<!-- https://mvnrepository.com/artifact/de.lmu.ifi.dbs.elki/elki -->
+<dependency>
+    <groupId>elki</groupId>
+    <artifactId>elki</artifactId>
+    <version>0.8.0</version>
+</dependency>{% endhighlight %}
+
 **0.7.5 (2019, February 15)**
 
 : Bug fix and enhancement release 0.7.5 (cite as [release 0.7.5](/publications#release0.7.5))
