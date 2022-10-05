@@ -92,15 +92,6 @@ You can [browse the open bug reports and create new issues](https://github.com/e
 We also appreciate any comments, suggestions and code contributions.\\
 You can contact the core development team by e-mail: <span class="maillink">elki () dbs ifi lmu de</span>
 
-You can also subscribe to the user mailing list, by sending an email to
-<span class="maillink">elki-user-request () lists ifi lmu de</span>
-with the subject "subscribe" or "unsubscribe"
-([Mailman manual](https://www.gnu.org/software/mailman/mailman-member/node10.html)).
-You may use this list to exchange questions and ideas among other users or to
-get announcements (e.g., new releases, major changes) by the ELKI team.
-
-Our primary "support" medium is this *community* mailing list. We appreciate if you share experiences and also success stories there that might help other users. This project makes a lot of progress, and information can get outdated rather quickly. If you prefer a web forum, you can *try* asking at [StackOverflow](http://stackoverflow.com/questions/tagged/elki), but you should understand that this is a general (and third-party operated) *programming* community; questions just on how to use it may be considered off-topic there.
-
 Design Goals
 ------------
 
