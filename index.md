@@ -49,7 +49,7 @@ Getting ELKI: Download and Citation Policy
 You can download ELKI including source code on the [releases](/releases) page.
 ELKI uses the AGPLv3 [license](/license), a well-known open source license.
 
-<span style="font-color:red">Version 0.8.0 is currently not yet available via Maven, because of the group name change.</span>
+<span style="color:red">Version 0.8.0 is currently not yet available via Maven, because of the group name change.</span>
 
 ELKI is available on [GitHub](https://github.com/elki-project/elki) and [Maven](https://search.maven.org/#artifactdetails%7Celki%7Celki%7C0.8.0%7Cjar).
 You can [clone an example project](https://github.com/elki-project/example-elki-project) to get started.

@@ -21,7 +21,7 @@ Release History
   * [online documentation](/releases/release0.8.0/javadoc/index.html)
   * [release notes](/releases/release_notes_0.8.0)
 
-<span style="font-color:red">Version 0.8.0 is currently not yet available via Maven/Gradle, because of the group id change.</span>
+<span style="color:red">Version 0.8.0 is currently not yet available via Maven/Gradle, because of the group id change.</span>
 
 Gradle:
 {% highlight gradle %}
