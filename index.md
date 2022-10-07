@@ -51,21 +51,21 @@ ELKI uses the AGPLv3 [license](/license), a well-known open source license.
 
 <span style="color:red">Version 0.8.0 is currently not yet available via Maven, because of the group name change.</span>
 
-ELKI is available on [GitHub](https://github.com/elki-project/elki) and [Maven](https://search.maven.org/#artifactdetails%7Celki%7Celki%7C0.8.0%7Cjar).
+ELKI is available on [GitHub](https://github.com/elki-project/elki) and [Maven](https://search.maven.org/#artifactdetails%7Cio.github.elki-project%7Celki%7C0.8.0%7Cjar).
 You can [clone an example project](https://github.com/elki-project/example-elki-project) to get started.
 
 Gradle:
 {% highlight gradle %}
 dependencies {
-    compile group: 'elki', name: 'elki', version:'0.8.0'
+    compile group: 'io.github.elki-project', name: 'elki', version:'0.8.0'
 }
 {% endhighlight %}
 
 Maven:
 {% highlight xml %}
-<!-- https://mvnrepository.com/artifact/elki/elki -->
+<!-- https://mvnrepository.com/artifact/io.github.elki-project/elki -->
 <dependency>
-    <groupId>elki</groupId>
+    <groupId>io.github.elki-project</groupId>
     <artifactId>elki</artifactId>
     <version>0.8.0</version>
 </dependency>

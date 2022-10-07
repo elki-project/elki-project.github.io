@@ -26,15 +26,15 @@ Release History
 Gradle:
 {% highlight gradle %}
 dependencies {
-    compile group: 'elki', name: 'elki', version:'0.8.0'
+    compile group: 'io.github.elki-project', name: 'elki', version:'0.8.0'
 }
 {% endhighlight %}
 
   Maven:
   {% highlight xml %}
-<!-- https://mvnrepository.com/artifact/de.lmu.ifi.dbs.elki/elki -->
+<!-- https://mvnrepository.com/artifact/io.github.elki-project/elki -->
 <dependency>
-    <groupId>elki</groupId>
+    <groupId>io.github.elki-project</groupId>
     <artifactId>elki</artifactId>
     <version>0.8.0</version>
 </dependency>{% endhighlight %}

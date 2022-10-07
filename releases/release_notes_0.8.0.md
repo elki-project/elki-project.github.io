@@ -17,9 +17,9 @@ Gradle:
 {% highlight gradle %}
 dependencies {
     // All the core parts, without visualization:
-    compile group: 'elki', name: 'elki', version:'0.8.0'
+    compile group: 'io.github.elki-project', name: 'elki', version:'0.8.0'
     // If you want to use visualization:
-    compile group: 'elki', name: 'elki-batik-visualization', version:'0.8.0'
+    compile group: 'io.github.elki-project', name: 'elki-batik-visualization', version:'0.8.0'
 }
 {% endhighlight %}
 
@@ -27,13 +27,13 @@ Maven:
 {% highlight xml %}
 <!-- ELKI core, without visualization -->
 <dependency>
-    <groupId>elki</groupId>
+    <groupId>io.github.elki-project</groupId>
     <artifactId>elki</artifactId>
     <version>0.8.0</version>
 </dependency>
 <!-- You only need this dependency if you need visualization -->
 <dependency>
-    <groupId>elki</groupId>
+    <groupId>io.github.elki-project</groupId>
     <artifactId>elki-batik-visualization</artifactId>
     <version>0.8.0</version>
 </dependency>
