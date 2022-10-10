@@ -9,8 +9,6 @@ navigation: -80
 ELKI 0.8.0 release notes
 ========================
 
-<span style="color:red">Version 0.8.0 is currently not yet available via Maven, because of the group name change.</span>
-
 ELKI 0.8.0 is available on Maven and on our [releases web page](/releases):
 
 Gradle:
