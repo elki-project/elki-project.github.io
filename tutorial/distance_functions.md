@@ -10,7 +10,7 @@ navigation: 10
 Writing a custom distance function
 ==================================
 
-Version information: Updated for ELKI 0.6.5~20141030
+Version information: Updated for ELKI 0.8.0
 {: class="versioninfo" }
 
 For many real-world applications, a domain expert may be able to define a domain-specific distance function. For the following, let us assume we are working with 2D data, and the domain expert has decided that an appropriate distance function is `dx*dx+abs(dy)`, so taking the difference on the x axis to the square and the y axis linearly.
@@ -18,15 +18,15 @@ For many real-world applications, a domain expert may be able to define a domain
 Basic distance function
 -----------------------
 
-Most distances are defined on real-number vectors and return double values. There is a convenient abstract class for this that we can use: [AbstractNumberVectorDistanceFunction](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/AbstractNumberVectorDistanceFunction.html). Let's start a new class for this, and see what Eclipse generates for us:
+Most distances are defined on real-number vectors and return double values. There is a convenient abstract class for this that we can use: [AbstractNumberVectorDistance](/releases/current/javadoc/elki/distance/AbstractNumberVectorDistance.html). Let's start a new class for this, and see what Eclipse generates for us:
 
 {% highlight java %}
 package tutorial.distancefunction;
 
-import de.lmu.ifi.dbs.elki.data.NumberVector;
-import de.lmu.ifi.dbs.elki.distance.distancefunction.AbstractNumberVectorDistanceFunction;
+import elki.data.NumberVector;
+import distance.AbstractNumberVectorDistance;
 
-public class TutorialDistanceFunction extends AbstractNumberVectorDistanceFunction {
+public class TutorialDistance extends AbstractNumberVectorDistance {
   @Override
   public double distance(NumberVector o1, NumberVector o2) {
     // TODO Auto-generated method stub
@@ -66,9 +66,9 @@ public class TutorialDistanceFunction extends AbstractNumberVectorDistanceFuncti
 
   @Override
   public SimpleTypeInformation<? super NumberVector> getInputTypeRestriction() {
-    return VectorFieldTypeInformation.typeRequest(NumberVector.class, 2, 2);
-    // alternative:
-    // return TypeUtil.NUMBER_VECTOR_FIELD_2D;
+    return TypeUtil.NUMBER_VECTOR_FIELD_2D;
+    // shortcut for:
+    // return VectorFieldTypeInformation.typeRequest(NumberVector.class, 2, 2);
   }
 }
 {% endhighlight %}
@@ -78,7 +78,7 @@ We now also override the method `makeOptions` to configure the variable `ps`:
 With this statement, we specify three requirements for the input data:
 
 * The vectors must be a *vector field* (i.e. have the same dimensionality)
-* The input data must be [NumberVector](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/data/NumberVector.html)s (of arbirary type: Float, Double, Integer...)
+* The input data must be [NumberVector](/releases/current/javadoc/elki/data/NumberVector.html)s (of arbirary type: Float, Double, Integer...)
 * The dimensionality must be exactly 2.
 
 If this distance function were metrical, we would also override `isMetric()` to contain `return true` (this distance function however is not metrical).
@@ -95,10 +95,10 @@ So here is a more complex variation of Lp norms where we can specify a different
 {% highlight java %}
 package tutorial.distancefunction;
 
-import de.lmu.ifi.dbs.elki.data.NumberVector;
-import de.lmu.ifi.dbs.elki.distance.distancefunction.AbstractNumberVectorDistanceFunction;
+import elki.data.NumberVector;
+import elki.distance.distancefunction.AbstractNumberVectorDistance;
 
-public class MultiLPNorm extends AbstractNumberVectorDistanceFunction {
+public class MultiLPNorm extends AbstractNumberVectorDistance {
   /**
    * The exponents
    */
@@ -155,12 +155,12 @@ However, when you try to select this class in the ELKI UI, you will see this err
 
 > Error instantiating class - no usable public constructor.
 
-So we need to add a [Parameterization](/dev/parameterization) helper next, based on [AbstractParameterizer](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/utilities/optionhandling/AbstractParameterizer.html). The generated stub looks like this:
+So we need to add a [Parameterization](/dev/parameterization) helper next. The generated stub looks like this:
 
 {% highlight java %}
-  public static class Parameterizer extends AbstractParameterizer {
+  public static class Par implements Parameterizer {
     @Override
-    protected Object makeInstance() {
+    public Object make() {
       // TODO Auto-generated method stub
       return null;
     }
@@ -170,26 +170,26 @@ So we need to add a [Parameterization](/dev/parameterization) helper next, based
 Make sure that you define the class as `public static`. Now you *must* change the return type to your actual class (MultiLPNorm in this case), so it will now look like this:
 
 {% highlight java %}
-  public static class Parameterizer extends AbstractParameterizer {
+  public static class Par implements Parameterizer {
     double[] ps;
 
     // ... we still need to initialize "ps"!
     
     @Override
-    protected MultiLPNorm makeInstance() {
+    public MultiLPNorm make() {
       return new MultiLPNorm(ps);
     }
   }
 {% endhighlight %}
 
-In order to setup the parameters, we have to override the `makeOptions` method, and add our options there. Parameterization consists of multiple parts:
+In order to setup the parameters, we have to override the `configure` method, and add our options there. Parameterization consists of multiple parts:
 
-1. Define a public static [OptionID](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/utilities/optionhandling/OptionID.html) for the parameter (so it can be referenced from other classes!)
-2. Create an option parameter. Here we need a list of doubles, which is parsed by [DoubleListParameter](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/utilities/optionhandling/parameters/DoubleListParameter.html).
+1. Define a public static [OptionID](/releases/current/javadoc/elki/utilities/optionhandling/OptionID.html) for the parameter (so it can be referenced from other classes!)
+2. Create an option parameter. Here we need a list of doubles, which is parsed by [DoubleListParameter](/releases/current/javadoc/elki/utilities/optionhandling/parameters/DoubleListParameter.html).
 3. Get the options value from the config object using `grab`. If the value is unavailable, an error will automatically reported, since this parameter was not optional. (Do not throw an exception, so multiple errors can be reported!)
 
 {% highlight java %}
-  public static class Parameterizer extends AbstractParameterizer {
+  public static class Par implements Parameterizer {
     /**
      * Option ID for the exponents
      */
@@ -202,13 +202,13 @@ In order to setup the parameters, we have to override the `makeOptions` method, 
     double[] ps;
 
     @Override
-    protected void makeOptions(Parameterization config) {
-      super.makeOptions(config);
-      DoubleListParameter ps_param = new DoubleListParameter(EXPONENTS_ID);
-      if(config.grab(ps_param)) {
-        ps = ArrayLikeUtil.toPrimitiveDoubleArray(ps_param.getValue());
-      }
+    public void configure(Parameterization config) {
+      new DoubleListParameter(EXPONENTS_ID).grab(config, x -> ps = x);
     }
-    // ... as above
+
+    @Override
+    public MultiLPNorm make() {
+      return new MultiLPNorm(ps);
+    }
   }
 {% endhighlight %}

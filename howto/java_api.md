@@ -17,7 +17,7 @@ You can easily use ELKI from Java - it has a [standard Java API](#PureJavaAPI). 
 
 You can even embed ELKI into your application (if you accept the [AGPL-3 license](/license)), but we currently do not (yet) recommend to do so, because the API is still changing substantially.
 
-But in many cases, using the MiniGUI or the command line interface to run your experiments will be better, even when writing custom extensions in Java. If you want a custom output format, this is best done e.g. as a custom [ResultHandler](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/result/ResultHandler.html) or just by using the [ResultWriter](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/result/ResultWriter.html) and parsing the resulting files afterwards.
+But in many cases, using the MiniGUI or the command line interface to run your experiments will be better, even when writing custom extensions in Java. If you want a custom output format, this is best done e.g. as a custom [ResultHandler](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/result/ResultHandler.html) or just by using the [ResultWriter](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/result/ResultWriter.html) and parsing the resulting files afterwards.
 
 The reasons why we recommend "loose coupling" with ELKI are:
 
@@ -58,7 +58,7 @@ done
 
 ### Extending ELKI {#ExtendingELKI}
 
-A neat trick to use ELKI for your own experiments is to hook into the API by the regular extension points, such as [ResultHandler](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/result/ResultHandler.html) (for customizing output), [Parser](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/datasource/parser/Parser.html) (for custom input file formats), and [DatabaseConnection](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/datasource/DatabaseConnection.html) (for custom data sources). You can then use `ResultUtil` to select the results that you want to **output in your own preferred format** or analyze:
+A neat trick to use ELKI for your own experiments is to hook into the API by the regular extension points, such as [ResultHandler](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/result/ResultHandler.html) (for customizing output), [Parser](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/datasource/parser/Parser.html) (for custom input file formats), and [DatabaseConnection](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/datasource/DatabaseConnection.html) (for custom data sources). You can then use `ResultUtil` to select the results that you want to **output in your own preferred format** or analyze:
 
 {% highlight java %}
 public class MyCustomHandler implements ResultHandler {
@@ -85,7 +85,7 @@ It's main drawback is that it is *unusual* by Java conventions. A more Java-like
 
 ### Creating a database
 
-This is the basic setup for getting a [Database](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/database/Database.html) and [Relation](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/database/relation/Relation.html):
+This is the basic setup for getting a [Database](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/database/Database.html) and [Relation](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/database/relation/Relation.html):
 
 {% highlight java %}
 // Setup parameters:
@@ -102,7 +102,7 @@ Relation<NumberVector> vectors = db.getRelation(TypeUtil.NUMBER_VECTOR_FIELD);
 Relation<LabelList> labels = db.getRelation(TypeUtil.LABELLIST);
 {% endhighlight %}
 
-If you want to program more general, write your program to use a [NumberVector](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/data/NumberVector.html) instead of a more specific type such as `DoubleVector`.
+If you want to program more general, write your program to use a [NumberVector](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/data/NumberVector.html) instead of a more specific type such as `DoubleVector`.
 
 Note that we did **not use the Java constructors**, which need *more complicated* parameters. The parameterization API takes care of creating objects and setting default parameters.
 
@@ -162,7 +162,7 @@ As you can see, this API requires you to *specify more parameters*. You need to 
 
 ### Processing the result
 
-ELKI stores data in [Relation](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/database/relation/Relation.html)s. They are similar but not identical to "data frames" in other languages, or "column groups" in modern column store databases. They are a uniform, typed collection of objects, such as a vector field *or* labels. However, we do not mix data types: the numerical vectors and the associated labels are separate relations. This model is a hybrid of a relational data store (where often different data types would be in the same SQL table) and column stores (where often each dimension would be a separate table). This midway solution (which also resembles [normal forms of databases](https://en.wikipedia.org/wiki/Database_normalization)) was found both beneficial in NoSQL databases (c.f. column groups) and for our purposes, since e.g. k-means works on numerical data, and not on the labels.
+ELKI stores data in [Relation](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/database/relation/Relation.html)s. They are similar but not identical to "data frames" in other languages, or "column groups" in modern column store databases. They are a uniform, typed collection of objects, such as a vector field *or* labels. However, we do not mix data types: the numerical vectors and the associated labels are separate relations. This model is a hybrid of a relational data store (where often different data types would be in the same SQL table) and column stores (where often each dimension would be a separate table). This midway solution (which also resembles [normal forms of databases](https://en.wikipedia.org/wiki/Database_normalization)) was found both beneficial in NoSQL databases (c.f. column groups) and for our purposes, since e.g. k-means works on numerical data, and not on the labels.
 
 [DBIDs](/dev/dbids) may not start with 0. In particular if you do multiple invocations, ELKI will continue enumerating where it left off. However, for a static context your DBIDs will be continuous, and can be efficiently mapped back to an offset in your data set. In this example, we will process a clustering result and output the object offsets:
 

@@ -14,9 +14,9 @@ Many data mining algorithms can be accelerated by using appropriate index struct
 
 Common types of queries that can be accelerated include:
 
-- k nearest neighbor queries [KNNQuery](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/database/query/knn/KNNQuery.html)
-- range queries [RangeQuery](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/database/query/range/RangeQuery.html)
-- reverse k nearest neighbor queries [RKNNQuery](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/database/query/rknn/RKNNQuery.html)
+- k nearest neighbor queries [KNNQuery](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/database/query/knn/KNNQuery.html)
+- range queries [RangeQuery](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/database/query/range/RangeQuery.html)
+- reverse k nearest neighbor queries [RKNNQuery](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/database/query/rknn/RKNNQuery.html)
 - window queries (currently not yet implemented, similar to range queries)
 
 Not every index can accelerated each query equally well (or at all). In particular reverse kNN queries need highly specialized index structures.
@@ -26,9 +26,9 @@ R-Trees
 
 The R-tree family is a very well established index structure. With algorithms such as Sort-Tile-Recursive the tree can very efficiently bulk-loaded, while the R\*-tree tries to keep the tree efficient while performing modifications to it.
 
-R-trees are very flexible, and can accelerate any distance function for wich a reasonable *point to rectangle minimum distance* can be defined. In ELKI, any class implementing the [SpatialPrimitiveDistanceFunction](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/SpatialPrimitiveDistanceFunction.html) can be used. This includes in particular Euclidean and other Minkowski norms, but to some extend also cosine distance can be accelerated. In contrast to M-trees below, the index supports *all of these distances at the same time*.
+R-trees are very flexible, and can accelerate any distance function for wich a reasonable *point to rectangle minimum distance* can be defined. In ELKI, any class implementing the [SpatialPrimitiveDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/SpatialPrimitiveDistanceFunction.html) can be used. This includes in particular Euclidean and other Minkowski norms, but to some extend also cosine distance can be accelerated. In contrast to M-trees below, the index supports *all of these distances at the same time*.
 
-Using R-trees in ELKI is simple, you just need to enable the [RStarTreeFactory](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/index/tree/spatial/rstarvariants/rstar/RStarTreeFactory.html) via the parameters:
+Using R-trees in ELKI is simple, you just need to enable the [RStarTreeFactory](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/index/tree/spatial/rstarvariants/rstar/RStarTreeFactory.html) via the parameters:
 
 <pre>
 -db.index tree.spatial.rstarvariants.rstar.RStarTreeFactory
@@ -36,14 +36,14 @@ Using R-trees in ELKI is simple, you just need to enable the [RStarTreeFactory](
 -spatial.bulkstrategy SortTileRecursiveBulkSplit
 </pre>
 
-The optimal page size is data set and use dependant, in particular the dimensionality and the average number of objects to return in each query play an important role. Since most users are using a static data set, using a bulk load such as [SortTileRecursiveBulkSplit](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/index/tree/spatial/rstarvariants/strategies/bulk/SortTileRecursiveBulkSplit.html) is recommended.
+The optimal page size is data set and use dependant, in particular the dimensionality and the average number of objects to return in each query play an important role. Since most users are using a static data set, using a bulk load such as [SortTileRecursiveBulkSplit](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/index/tree/spatial/rstarvariants/strategies/bulk/SortTileRecursiveBulkSplit.html) is recommended.
 
 M-Trees
 -------
 
 M-Trees, also known as Ball-tree, are specialized trees. They can be used with any distance function that is *metrical*, i.e. that satisfies the triangle inequality. Futhermore, *an M-tree needs to know the distance function at construction time*, it cannot be queried with arbitrary distances.
 
-To use an M-Tree, again set the `-db.index` parameter to the appropriate factory class [MTreeFactory](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/index/tree/metrical/mtreevariants/mtree/MTreeFactory.html):
+To use an M-Tree, again set the `-db.index` parameter to the appropriate factory class [MTreeFactory](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/index/tree/metrical/mtreevariants/mtree/MTreeFactory.html):
 
 <pre>
 -db.index tree.metrical.mtreevariants.mtree.MTreeFactory
@@ -70,18 +70,18 @@ See [DistanceFunctions](/algorithms/distances) for the full list of available di
 
 | Distance Function                                                                                                                                                           | R-Tree | M-Tree | VA-File | k-d-tree | LSH |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|-----------|--|--|--|
-|[EuclideanDistanceFunction](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/EuclideanDistanceFunction.html) | Y | Y | Y | Y | Y |
-|[ManhattanDistanceFunction](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/ManhattanDistanceFunction.html)| Y | Y | Y | Y | Y |
-|[LPNormDistanceFunction](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/LPNormDistanceFunction.html)| Y | \* | Y | Y | \* |
-|[MaximumDistanceFunction](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/MaximumDistanceFunction.html)| Y | Y | ? | Y | ? |
-|[MinimumDistanceFunction](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/MinimumDistanceFunction.html)| Y | N | ? | ? | ? |
-|[SquaredEuclideanDistanceFunction](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/SquaredEuclideanDistanceFunction.html)| Y | N | ? | Y | ? |
-|[ArcCosineDistanceFunction](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/ArcCosineDistanceFunction.html)| Y | \* | ? | ? | ? |
-|[CosineDistanceFunction](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/CosineDistanceFunction.html)| Y | \* | ? | ? | ? |
-|[CanberraDistanceFunction](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/CanberraDistanceFunction.html)| Y | Y | ? | ? | ? |
-|[LatLngDistanceFunction](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/geo/LatLngDistanceFunction.html)| Y | Y | ? | ? | ? |
-|[LngLatDistanceFunction](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/geo/LngLatDistanceFunction.html)| Y | Y | ? | ? | ? |
-|[HistogramIntersectionDistanceFunction](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/colorhistogram/HistogramIntersectionDistanceFunction.html)| Y | Y | ? | ? | ? |
+|[EuclideanDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/EuclideanDistanceFunction.html) | Y | Y | Y | Y | Y |
+|[ManhattanDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/ManhattanDistanceFunction.html)| Y | Y | Y | Y | Y |
+|[LPNormDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/LPNormDistanceFunction.html)| Y | \* | Y | Y | \* |
+|[MaximumDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/MaximumDistanceFunction.html)| Y | Y | ? | Y | ? |
+|[MinimumDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/MinimumDistanceFunction.html)| Y | N | ? | ? | ? |
+|[SquaredEuclideanDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/SquaredEuclideanDistanceFunction.html)| Y | N | ? | Y | ? |
+|[ArcCosineDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/ArcCosineDistanceFunction.html)| Y | \* | ? | ? | ? |
+|[CosineDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/CosineDistanceFunction.html)| Y | \* | ? | ? | ? |
+|[CanberraDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/CanberraDistanceFunction.html)| Y | Y | ? | ? | ? |
+|[LatLngDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/geo/LatLngDistanceFunction.html)| Y | Y | ? | ? | ? |
+|[LngLatDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/geo/LngLatDistanceFunction.html)| Y | Y | ? | ? | ? |
+|[HistogramIntersectionDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/colorhistogram/HistogramIntersectionDistanceFunction.html)| Y | Y | ? | ? | ? |
 
 | Flag| Meaning|
 |-----|--------|

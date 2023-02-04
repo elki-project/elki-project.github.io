@@ -13,7 +13,7 @@ Implementing Hierarchical Clustering
 Version information: Updated for ELKI 0.7.1
 {: class="versioninfo" }
 
-In this tutorial, we will implement the *naive approach* to hierarchical clustering. It is naive in the sense that it is a fairly general procedure, which unfortunately operates in O(n<sup>3</sup>) runtime and O(n<sup>2</sup>) memory, so it does not scale very well. For some linkage criteria, there exist optimized algorithms such as [SLINK](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/SLINK.html), which computes single-link clustering in low O(n<sup>2</sup>) runtime and O(n) memory.
+In this tutorial, we will implement the *naive approach* to hierarchical clustering. It is naive in the sense that it is a fairly general procedure, which unfortunately operates in O(n<sup>3</sup>) runtime and O(n<sup>2</sup>) memory, so it does not scale very well. For some linkage criteria, there exist optimized algorithms such as [SLINK](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/SLINK.html), which computes single-link clustering in low O(n<sup>2</sup>) runtime and O(n) memory.
 
 We will initially construct a very simple algorithm, then improve on it in multiple steps. This material was prepared for the tutorials to the KDD lecture at LMU.
 
@@ -32,7 +32,7 @@ However, we will see that there is more to the algorithm, such as the need to tr
 
 ### Auto-generated code
 
-First of all, we start a new class, `NaiveAgglomerativeHierarchicalClustering`, extending [AbstractDistanceBasedAlgorithm](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/algorithm/AbstractDistanceBasedAlgorithm.html). We accept any type of object `O` (as long as we have a distance function), and for now the output type is the abstract type `Result` (for the initial version, we could have used `Clustering<Model>`, too). After having eclipse auto-generate method stubs and constructor, the template code looks like this:
+First of all, we start a new class, `NaiveAgglomerativeHierarchicalClustering`, extending [AbstractDistanceBasedAlgorithm](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/algorithm/AbstractDistanceBasedAlgorithm.html). We accept any type of object `O` (as long as we have a distance function), and for now the output type is the abstract type `Result` (for the initial version, we could have used `Clustering<Model>`, too). After having eclipse auto-generate method stubs and constructor, the template code looks like this:
 
 {% highlight java %}
 package tutorial.clustering;
@@ -88,7 +88,7 @@ We can immediately fill the two stub methods (we will come to the constructor la
 
 ### The `run` method
 
-The `run` method is the heart of the algorithm. However, due to limitations of the Java language, eclipse will not be able to automatically infer the signature of this method. Note that there exists a `Result run(Database db);` method we inherited from [AbstractAlgorithm](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/algorithm/AbstractAlgorithm.html), which we do not want to override. Instead, our run method uses the following signature:
+The `run` method is the heart of the algorithm. However, due to limitations of the Java language, eclipse will not be able to automatically infer the signature of this method. Note that there exists a `Result run(Database db);` method we inherited from [AbstractAlgorithm](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/algorithm/AbstractAlgorithm.html), which we do not want to override. Instead, our run method uses the following signature:
 
 {% highlight java %}
     public Result run(Database db, Relation<O> relation) {
@@ -113,9 +113,9 @@ For the actual algorithm, we will be using a matrix of distances. For efficiency
     LOG.verbose("Notice: SLINK is a much faster algorithm for single-linkage clustering!");
 {% endhighlight %}
 
-Most of the time, this will be a no-op. But if we e.g. were processing data streams, the ids could have been a hash set, for example. The [ArrayDBIDs](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/database/ids/ArrayDBIDs.html) API will allow us indexed access into the DBIDs, which we will use to map column and row numbers to actual objects. We also put in a warning to tell users that this algorithm is slow, and there exists a much faster alternative.
+Most of the time, this will be a no-op. But if we e.g. were processing data streams, the ids could have been a hash set, for example. The [ArrayDBIDs](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/database/ids/ArrayDBIDs.html) API will allow us indexed access into the DBIDs, which we will use to map column and row numbers to actual objects. We also put in a warning to tell users that this algorithm is slow, and there exists a much faster alternative.
 
-In order to refer to the `i`th element, we will be using an [DBIDArrayIter](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/database/ids/DBIDArrayIter.html). This is similar to a `java.util.ListIterator<DBID>`, but it will avoid generating objects and is substantially faster this way. The Java `java.util.Iterator` API is good when you have large objects, but not for primitives such as these object references. You can learn more about this API on the [Development/DBIDs](/dev/dbids) page. With `iter.seek(i)` we can seek to a particular position, while with `iter.advance()` we can proceed to the next element.
+In order to refer to the `i`th element, we will be using an [DBIDArrayIter](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/database/ids/DBIDArrayIter.html). This is similar to a `java.util.ListIterator<DBID>`, but it will avoid generating objects and is substantially faster this way. The Java `java.util.Iterator` API is good when you have large objects, but not for primitives such as these object references. You can learn more about this API on the [Development/DBIDs](/dev/dbids) page. With `iter.seek(i)` we can seek to a particular position, while with `iter.advance()` we can proceed to the next element.
 
 ### Computing the distance matrix
 
@@ -256,7 +256,7 @@ This code will become more messy when we add support for other linkage formulas.
 
 At this point, the main clustering algorithm will run. But the result will be hard to use, as it is stored in a `height` array, a parent object reference and cluster member sets. In order to exploit the visualization and evaluation capabilites of ELKI, we need to produce a simpler structure. For the first version, we want to keep the effort to a minimum, and we will just return the existing clusters appropriately. We can't make use of the height and parent IDs this way, though.
 
-Instead of coming up with our own representation of a dendrogram, we will for now just produce a flat clustering, by looking up all non-merged clusters (i.e. with `height[x]` infinity) and produce a [Cluster](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/data/Cluster.html) object for each.
+Instead of coming up with our own representation of a dendrogram, we will for now just produce a flat clustering, by looking up all non-merged clusters (i.e. with `height[x]` infinity) and produce a [Cluster](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/data/Cluster.html) object for each.
 
 {% highlight java %}
     final Clustering<Model> dendrogram = new Clustering<>(
@@ -276,7 +276,7 @@ Instead of coming up with our own representation of a dendrogram, we will for no
     return dendrogram;
 {% endhighlight %}
 
-The parameters of the [Clustering](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/data/Clustering.html) will identify the result in the visualization and output. The first is meant to be a user-friendly name for menus, the second should be suitable for file names.
+The parameters of the [Clustering](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/data/Clustering.html) will identify the result in the visualization and output. The first is meant to be a user-friendly name for menus, the second should be suitable for file names.
 
 ### Updating the constructor
 
@@ -556,7 +556,7 @@ In order to choose the linkage, we need to update the constructor and `Parameter
   }
 {% endhighlight %}
 
-For the Parameterizer, we need to add a new [OptionID](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/utilities/optionhandling/OptionID.html), and for an enum we can use the convenient [EnumParameter](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/utilities/optionhandling/parameters/EnumParameter.html), which will produce a dropdown menu. We'll set the default to Ward linkage, although we have not yet implemented it in the tutorial.
+For the Parameterizer, we need to add a new [OptionID](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/utilities/optionhandling/OptionID.html), and for an enum we can use the convenient [EnumParameter](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/utilities/optionhandling/parameters/EnumParameter.html), which will produce a dropdown menu. We'll set the default to Ward linkage, although we have not yet implemented it in the tutorial.
 
 {% highlight java %}
     public static final OptionID LINKAGE_ID = new OptionID(
@@ -670,7 +670,7 @@ Improving the output - producing a hierarchy and a dendrogram
 
 ELKI already comes with hierarchical clustering, and by producing the same output format, we can make use of the existing tools for extracting clusters from the hierarchy, but also for visualization. The preferred format of ELKI is the representation used by the efficient SLINK algorithm, and coincidentially also what we alreday obtained above in form of the `parent` and `height` values.
 
-In order to pass these values to other classes in ELKI, we have to use the [DataStore](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/database/datastore/DataStore.html) API. The purpose of these classes is to facilitate the storage of data by DBID - similar to a hash map. While the API looks like a hash map, the ELKI engine will for static databases actually use an array store, so at runtime this will not change a lot (unless we use dynamic database, that is).
+In order to pass these values to other classes in ELKI, we have to use the [DataStore](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/database/datastore/DataStore.html) API. The purpose of these classes is to facilitate the storage of data by DBID - similar to a hash map. While the API looks like a hash map, the ELKI engine will for static databases actually use an array store, so at runtime this will not change a lot (unless we use dynamic database, that is).
 
 ### Using ELKI `DataStore`s
 
@@ -694,7 +694,7 @@ The new data storage initialization looks like this (note that we also no longer
 
 We could have used `WritableDataStore<>` in each case, but that would occur a memory management overhead. For primitive types such as IDs, double-valued distances and integer counts, these optimized APIs perform better.
 
-Note that we created the first two using `HINT_STATIC`, the last using `HINT_TEMP` (the hints are documented in [DataStoreFactory](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/database/datastore/DataStoreFactory.html)). The reason is that we are going to pass the first two outside, but we will drop the last one. On the long run, this is supposed to help the optimizer to decide which data to write to disk.
+Note that we created the first two using `HINT_STATIC`, the last using `HINT_TEMP` (the hints are documented in [DataStoreFactory](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/database/datastore/DataStoreFactory.html)). The reason is that we are going to pass the first two outside, but we will drop the last one. On the long run, this is supposed to help the optimizer to decide which data to write to disk.
 
 By initializing the cluster counts with `1`, we can actually drop the complex case distinction we used in the first version. The new ELKI data structures are now no longer indexed by the integer offset, but by `DBID`, so we will be using the iterators more than before.
 
@@ -724,7 +724,7 @@ The code for finding the minimum distance now becomes this:
       }
 {% endhighlight %}
 
-Note that the loops now are using the ELKI/Trove/C++ style iterators (see [Iter](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/utilities/datastructures/iterator/Iter.html)). Since these iterators are [ArrayIter](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/utilities/datastructures/iterator/ArrayIter.html)s, we can access their offset using `getOffset()`. For consistency with SLINK, we will find the *last* minimum instead of the first minimum now.
+Note that the loops now are using the ELKI/Trove/C++ style iterators (see [Iter](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/utilities/datastructures/iterator/Iter.html)). Since these iterators are [ArrayIter](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/utilities/datastructures/iterator/ArrayIter.html)s, we can access their offset using `getOffset()`. For consistency with SLINK, we will find the *last* minimum instead of the first minimum now.
 
 Merging the clusters becomes simpler, as we stopped tracking the exact members, but only the cluster sizes:
 
@@ -796,7 +796,7 @@ public class NaiveAgglomerativeHierarchicalClustering<O>
 
 We can now also drop the `numclusters` parameter, as we want to use the existing ELKI classes for extracting flat clusterings out of our hierarchy.
 
-We can now use this implementation in combination with [CutDendrogramByNumberOfClusters](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/extraction/CutDendrogramByNumberOfClusters.html):
+We can now use this implementation in combination with [CutDendrogramByNumberOfClusters](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/extraction/CutDendrogramByNumberOfClusters.html):
 
 {% highlight shell %}
 elki -dbc.in mickey-mouse.csv \

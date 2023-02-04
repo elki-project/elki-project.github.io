@@ -113,7 +113,7 @@ We now add these fields and a constructor:
    * Distance cutoff.
    */
   protected double dc;
-  
+
   /**
    * Number of clusters to find.
    */

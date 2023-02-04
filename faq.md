@@ -13,7 +13,7 @@ How do I use ELKI?
 
 Just run the jar file, either by double-clicking it or via command line: `java -jar elki.jar`. Obviously, you need to have a Java Runtime Environment installed. A window should open that assists you with parameterizing all algorithms released with ELKI.
 
-When developing ELKI, you can run the [de.lmu.ifi.dbs.elki.gui.minigui.MiniGUI](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/gui/minigui/MiniGUI.html) class to get the GUI.
+When developing ELKI, you can run the [de.lmu.ifi.dbs.elki.gui.minigui.MiniGUI](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/gui/minigui/MiniGUI.html) class to get the GUI.
 
 How do I run ELKI on my corporate database?
 -------------------------------------------
@@ -33,14 +33,14 @@ Choose the `ResultVisualizer` for the `resulthandler` parameter (in the MiniGUI,
 I'd like to script ELKI calls - is there a command line?
 --------------------------------------------------------
 
-ELKI also comes with a powerful command line, accessible as [de.lmu.ifi.dbs.elki.application.KDDCLIApplication](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/application/KDDCLIApplication.html). Use a command such as `java -cp elki.jar de.lmu.ifi.dbs.elki.application.KDDCLIApplication <parameters>` to run ELKI without the tabular UI. Starting with ELKI 0.5.5 there also is a shorthand `java -jar elki.jar KDDCLIApplication`, and the Debian and Ubuntu packages come with a command `elki-cli` preinstalled.
+ELKI also comes with a powerful command line, accessible as [de.lmu.ifi.dbs.elki.application.KDDCLIApplication](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/application/KDDCLIApplication.html). Use a command such as `java -cp elki.jar de.lmu.ifi.dbs.elki.application.KDDCLIApplication <parameters>` to run ELKI without the tabular UI. Starting with ELKI 0.5.5 there also is a shorthand `java -jar elki.jar KDDCLIApplication`, and the Debian and Ubuntu packages come with a command `elki-cli` preinstalled.
 
 You can find out about parameters using the `--help` switch, find a complete list in the documentation, or copy the command line shown in the first line of the MiniGUI log window.
 
 Is there a complete list of parameters?
 ---------------------------------------
 
-Of course. It can be found in the [JavaDoc](/dev/javadoc) of the release that you are using. Here are the lists for the current release [sorted by class name](/releases/0.7.5/doc/parameters-byclass.html) and [sorted by option name](/releases/0.7.5/doc/parameters-byopt.html). The list is automatically generated from the parameterization classes, so it is fairly complete.
+Of course. It can be found in the [JavaDoc](/dev/javadoc) of the release that you are using. Here are the lists for the current release [sorted by class name](/releases/release0.7.5/javadoc/parameters-byclass.html) and [sorted by option name](/releases/release0.7.5/javadoc/parameters-byopt.html). The list is automatically generated from the parameterization classes, so it is fairly complete.
 
 What is the `NoSupportedDataTypeException`?
 -------------------------------------------

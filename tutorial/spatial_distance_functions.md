@@ -40,7 +40,7 @@ The numerator obivously is the Manhattan distance, while the denominator is the 
 Implementing the distance
 -------------------------
 
-First of all, we will implement the regular distance function. To minimize the amount of work we need to do, we will use the most specific abstract base class: [AbstractNumberVectorDistanceFunction](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/AbstractNumberVectorDistanceFunction.html) which is good for distance functions that have continuous numerical vectors as input and return double valued results.
+First of all, we will implement the regular distance function. To minimize the amount of work we need to do, we will use the most specific abstract base class: [AbstractNumberVectorDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/AbstractNumberVectorDistanceFunction.html) which is good for distance functions that have continuous numerical vectors as input and return double valued results.
 
 {% highlight java %}
 package tutorial;
@@ -80,7 +80,7 @@ After implementing this class, we can immediately run our algorithms with it. Si
 Support for spatial indexes
 ---------------------------
 
-In order to accelerate distance based algorithms (e.g. DBSCAN, LOF) using this distance function, we need to implent a **lower-bound on the rectangle-to-rectangle distances**. This is often called the "minDist". We additionally implement the interface [SpatialPrimitiveDistanceFunction](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/SpatialPrimitiveDistanceFunction.html), and have eclipse generate the missing method. After adding the usual safety checks, it looks like this:
+In order to accelerate distance based algorithms (e.g. DBSCAN, LOF) using this distance function, we need to implent a **lower-bound on the rectangle-to-rectangle distances**. This is often called the "minDist". We additionally implement the interface [SpatialPrimitiveDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/SpatialPrimitiveDistanceFunction.html), and have eclipse generate the missing method. After adding the usual safety checks, it looks like this:
 
 {% highlight java %}
   @Override

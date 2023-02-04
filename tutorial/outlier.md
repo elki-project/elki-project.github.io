@@ -15,12 +15,12 @@ Version information: Updated for ELKI 0.6.5~20141030
 
 In this tutorial, we want to implement a new outlier detection method. The outlier definition used in this example is to use the standard deviation of the distances to the k nearest neighbors. Inliers are expected to have a low standard deviation, outliers to have a higher standard deviation (note: in reality, it probably is not that easy, but this is good enough for this tutorial).
 
-The two key APIs in ELKI are the [Algorithm](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/algorithm/Algorithm.html) interface (and the associated abstract classes and specializations) and the [OutlierResult](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/result/outlier/OutlierResult.html) classes for output.
+The two key APIs in ELKI are the [Algorithm](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/algorithm/Algorithm.html) interface (and the associated abstract classes and specializations) and the [OutlierResult](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/result/outlier/OutlierResult.html) classes for output.
 
 The auto-generated code
 -----------------------
 
-Again we start with a stub class. As base class we chose [AbstractDistanceBasedAlgorithm](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/algorithm/AbstractDistanceBasedAlgorithm.html), and implementing the [OutlierAlgorithm](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/OutlierAlgorithm.html) interface forces us to use the result type [OutlierResult](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/result/outlier/OutlierResult.html). The full stub looks like this:
+Again we start with a stub class. As base class we chose [AbstractDistanceBasedAlgorithm](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/algorithm/AbstractDistanceBasedAlgorithm.html), and implementing the [OutlierAlgorithm](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/OutlierAlgorithm.html) interface forces us to use the result type [OutlierResult](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/result/outlier/OutlierResult.html). The full stub looks like this:
 
 {% highlight java %}
 package tutorial.outlier;
@@ -123,7 +123,7 @@ public class DistanceStddevOutlier<O>
 Adding the `run` method
 -----------------------
 
-Now we need to implement the main method. Since we have extended [AbstractAlgorithm](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/algorithm/AbstractAlgorithm.html), we actually have three options for this. The exact signature *cannot* be defined in Java:
+Now we need to implement the main method. Since we have extended [AbstractAlgorithm](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/algorithm/AbstractAlgorithm.html), we actually have three options for this. The exact signature *cannot* be defined in Java:
 
 {% highlight java %}
   // Java interface version, but implemented in AbstractAlgorithm
@@ -192,7 +192,7 @@ Finally, we fill in the actual outlier detection algorithm:
 Adding a parameterizer
 ----------------------
 
-Right now, we can invoke the algorithm from Java (albeit a bit tricky), but we also want to be able to use the GUI and command line interface. For this we need to implement [Parameterization](/dev/parameterization), namely add an [AbstractParameterizer](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/utilities/optionhandling/AbstractParameterizer.html). This is as *public static inner class named `Parameterizer`* (otherwise it will not be found!). The stub obtained from extracting the superclass parameterizer is:
+Right now, we can invoke the algorithm from Java (albeit a bit tricky), but we also want to be able to use the GUI and command line interface. For this we need to implement [Parameterization](/dev/parameterization), namely add an [AbstractParameterizer](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/utilities/optionhandling/AbstractParameterizer.html). This is as *public static inner class named `Parameterizer`* (otherwise it will not be found!). The stub obtained from extracting the superclass parameterizer is:
 
 {% highlight java %}
   public static class Parameterizer<O>

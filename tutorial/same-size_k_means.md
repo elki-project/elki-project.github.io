@@ -46,7 +46,7 @@ Room for improvement: better logic for finding optimal transfers, e.g. by solvin
 Auto-generated code
 -------------------
 
-Since this is a K-means variant, we can use the base class [AbstractKMeans](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/AbstractKMeans.html). Generating the standard methods, adding a logger and choosing the generics yields the following code blueprint.
+Since this is a K-means variant, we can use the base class [AbstractKMeans](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/kmeans/AbstractKMeans.html). Generating the standard methods, adding a logger and choosing the generics yields the following code blueprint.
 
 For the generics, we want to allow arbitrary vector types: `V extends NumberVector`.The cluster model will be a simple `MeanModel` (using a `KMeansModel` instead would trigger Voronoi cell visualization, which is no longer appropriate). The reason why we have to choose these generics is that the abstract class `AbstractKMeans` is also used e.g. for KMedians and similar algorithms with looser constraints than KMeans or our new variation.
 
@@ -519,7 +519,7 @@ We have now seen all the main parts of the algorithm, and only need to put these
 
 Don't mind the odd signature of `initializer.chooseInitialMeans`. The reason for this is that we want to allow *both* random generated means, samples from the database, optimized means as produced by k-means++ etc. - for now, we will only need them to be "numerical vectors of some kind", which is what this type says.
 
-The main thing we have not seen yet is how to package the final result for the ELKI framework. As we want the visualization and evaluation procedures to be able to use our result, we need to wrap it in the appropriate classes. The outer class is [Clustering](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/data/Clustering.html), and represents the result as a whole. We then need to produce the individual [Cluster](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/data/Cluster.html) objects. In ELKI, each cluster has a [Model](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/data/model/Model.html), in our case the model will store the cluster mean.
+The main thing we have not seen yet is how to package the final result for the ELKI framework. As we want the visualization and evaluation procedures to be able to use our result, we need to wrap it in the appropriate classes. The outer class is [Clustering](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/data/Clustering.html), and represents the result as a whole. We then need to produce the individual [Cluster](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/data/Cluster.html) objects. In ELKI, each cluster has a [Model](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/data/model/Model.html), in our case the model will store the cluster mean.
 
 {% highlight java %}
     // Wrap result
