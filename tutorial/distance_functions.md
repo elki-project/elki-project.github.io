@@ -18,7 +18,7 @@ For many real-world applications, a domain expert may be able to define a domain
 Basic distance function
 -----------------------
 
-Most distances are defined on real-number vectors and return double values. There is a convenient abstract class for this that we can use: [AbstractNumberVectorDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/AbstractNumberVectorDistanceFunction.html). Let's start a new class for this, and see what Eclipse generates for us:
+Most distances are defined on real-number vectors and return double values. There is a convenient abstract class for this that we can use: [AbstractNumberVectorDistanceFunction](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/AbstractNumberVectorDistanceFunction.html). Let's start a new class for this, and see what Eclipse generates for us:
 
 {% highlight java %}
 package tutorial.distancefunction;
@@ -78,7 +78,7 @@ We now also override the method `makeOptions` to configure the variable `ps`:
 With this statement, we specify three requirements for the input data:
 
 * The vectors must be a *vector field* (i.e. have the same dimensionality)
-* The input data must be [NumberVector](/releases/current/doc/de/lmu/ifi/dbs/elki/data/NumberVector.html)s (of arbirary type: Float, Double, Integer...)
+* The input data must be [NumberVector](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/data/NumberVector.html)s (of arbirary type: Float, Double, Integer...)
 * The dimensionality must be exactly 2.
 
 If this distance function were metrical, we would also override `isMetric()` to contain `return true` (this distance function however is not metrical).
@@ -155,7 +155,7 @@ However, when you try to select this class in the ELKI UI, you will see this err
 
 > Error instantiating class - no usable public constructor.
 
-So we need to add a [Parameterization](/dev/parameterization) helper next, based on [AbstractParameterizer](/releases/current/doc/de/lmu/ifi/dbs/elki/utilities/optionhandling/AbstractParameterizer.html). The generated stub looks like this:
+So we need to add a [Parameterization](/dev/parameterization) helper next, based on [AbstractParameterizer](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/utilities/optionhandling/AbstractParameterizer.html). The generated stub looks like this:
 
 {% highlight java %}
   public static class Parameterizer extends AbstractParameterizer {
@@ -184,8 +184,8 @@ Make sure that you define the class as `public static`. Now you *must* change th
 
 In order to setup the parameters, we have to override the `makeOptions` method, and add our options there. Parameterization consists of multiple parts:
 
-1. Define a public static [OptionID](/releases/current/doc/de/lmu/ifi/dbs/elki/utilities/optionhandling/OptionID.html) for the parameter (so it can be referenced from other classes!)
-2. Create an option parameter. Here we need a list of doubles, which is parsed by [DoubleListParameter](/releases/current/doc/de/lmu/ifi/dbs/elki/utilities/optionhandling/parameters/DoubleListParameter.html).
+1. Define a public static [OptionID](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/utilities/optionhandling/OptionID.html) for the parameter (so it can be referenced from other classes!)
+2. Create an option parameter. Here we need a list of doubles, which is parsed by [DoubleListParameter](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/utilities/optionhandling/parameters/DoubleListParameter.html).
 3. Get the options value from the config object using `grab`. If the value is unavailable, an error will automatically reported, since this parameter was not optional. (Do not throw an exception, so multiple errors can be reported!)
 
 {% highlight java %}

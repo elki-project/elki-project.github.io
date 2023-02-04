@@ -15,6 +15,7 @@ Browse
 
 ELKI JavaDoc documentation can be found here:
 
+-   [JavaDoc Release 0.8.0](/releases/release0.8.0/doc/index.html)
 -   [JavaDoc Release 0.7.5](/releases/release0.7.5/doc/index.html)
 -   [JavaDoc Release 0.7.1](/releases/release0.7.1/doc/index.html)
 -   [JavaDoc Release 0.7.0](/releases/release0.7.0/doc/index.html)
@@ -31,12 +32,12 @@ ELKI JavaDoc documentation can be found here:
 Some essential packages
 -----------------------
 
-| [de.lmu.ifi.dbs.elki](/releases/current/javadoc/de/lmu/ifi/dbs/elki/package-summary.html)                                     | starting page                                        |
+| [elki](/releases/current/javadoc/elki/package-summary.html)                                     | starting page                                        |
 |-----------------------------------------------------------------------------------------------------------|------------------------------------------------------|
-| [de.lmu.ifi.dbs.elki.datasource.parser](/releases/current/javadoc/de/lmu/ifi/dbs/elki/datasource/parser/package-summary.html) &nbsp; | parsers and [InputFormat](/howto/inputformat) description |
-| [de.lmu.ifi.dbs.elki.distance.distancefunction](/releases/current/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/package-summary.html)                   |                                                      |
-| [de.lmu.ifi.dbs.elki.algorithm](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/package-summary.html)                 |                                                      |
-| [de.lmu.ifi.dbs.elki.index](/releases/current/javadoc/de/lmu/ifi/dbs/elki/index/package-summary.html)                         | index structures                                     |
-| [de.lmu.ifi.dbs.elki.utilities](/releases/current/javadoc/de/lmu/ifi/dbs/elki/utilities/package-summary.html)                 |                                                      |
+| [elki.datasource.parser](/releases/current/javadoc/elki/datasource/parser/package-summary.html) &nbsp; | parsers and [InputFormat](/howto/inputformat) description |
+| [elki.distance](/releases/current/javadoc/elki/distance/package-summary.html)                   |                                                      |
+| [elki.algorithm](/releases/current/javadoc/elki/algorithm/package-summary.html)                 |                                                      |
+| [elki.index](/releases/current/javadoc/elki/index/package-summary.html)                         | index structures                                     |
+| [elki.utilities](/releases/current/javadoc/elki/utilities/package-summary.html)                 |                                                      |
 
 

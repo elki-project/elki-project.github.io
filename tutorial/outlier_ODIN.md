@@ -21,7 +21,7 @@ This tutorial was developed for the KDD I class summer term 2013 and the ELKI 0.
 Algorithm stub
 --------------
 
-We create a new class named ODIN. As base class we chose [AbstractDistanceBasedAlgorithm](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/AbstractDistanceBasedAlgorithm.html), and implementing the [OutlierAlgorithm](/releases/current/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/OutlierAlgorithm.html) interface forces us to use the result type [OutlierResult](/releases/current/doc/de/lmu/ifi/dbs/elki/result/outlier/OutlierResult.html). The full stub looks like this:
+We create a new class named ODIN. As base class we chose [AbstractDistanceBasedAlgorithm](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/algorithm/AbstractDistanceBasedAlgorithm.html), and implementing the [OutlierAlgorithm](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/algorithm/outlier/OutlierAlgorithm.html) interface forces us to use the result type [OutlierResult](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/result/outlier/OutlierResult.html). The full stub looks like this:
 
 {% highlight java %}
 package tutorial.outlier;
@@ -181,7 +181,7 @@ We can inherit the distance function from the Parameterizer of the super class, 
   }
 {% endhighlight %}
 
-We now need to add a Parameter for `k`. We need a static [OptionID](/releases/current/doc/de/lmu/ifi/dbs/elki/utilities/optionhandling/OptionID.html), which consists of the parameter name and a description, and a Java variable to store the value in.
+We now need to add a Parameter for `k`. We need a static [OptionID](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/utilities/optionhandling/OptionID.html), which consists of the parameter name and a description, and a Java variable to store the value in.
 
 {% highlight java %}
     public static final OptionID K_ID = new OptionID("odin.k",
@@ -205,7 +205,7 @@ Now we can "get" the parameter in the `makeOptions` method:
     }
 {% endhighlight %}
 
-we *keep* the super method invokation, as this is where the distance function parameter is being set. For the `k` parameter, we use an [IntParameter](/releases/current/doc/de/lmu/ifi/dbs/elki/utilities/optionhandling/parameters/IntParameter.html). Furthermore we add the constraint that k must be at least 2: in a database, the query object will be its own nearest neighbor! `config.grab(param)` will try to set the parameter, and when successful we can access its value. If the parameter was not set, `config` will keep track of the error. We do not want to throw an exception here - instead, all errors should be reported to the `config` object, so they can all be reported at *once*.
+we *keep* the super method invokation, as this is where the distance function parameter is being set. For the `k` parameter, we use an [IntParameter](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/utilities/optionhandling/parameters/IntParameter.html). Furthermore we add the constraint that k must be at least 2: in a database, the query object will be its own nearest neighbor! `config.grab(param)` will try to set the parameter, and when successful we can access its value. If the parameter was not set, `config` will keep track of the error. We do not want to throw an exception here - instead, all errors should be reported to the `config` object, so they can all be reported at *once*.
 
 Now we have the distance function and `k` and can instantiate our class in the `makeInstance` method:
 

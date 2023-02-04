@@ -17,37 +17,37 @@ Loading sparse data
 
 While for dense vectors there is the common format of CSV files (or whitespace separated, as in Gnuplot), for sparse vectors there are multiple more or less compatible formats. You will have to choose the appropriate input format first (or write your own parser!)
 
-- CSV with sparse vectors. The format understood by [SparseNumberVectorLabelParser](/releases/current/doc/de/lmu/ifi/dbs/elki/datasource/parser/SparseNumberVectorLabelParser.html) looks roughly like this:
+- CSV with sparse vectors. The format understood by [SparseNumberVectorLabelParser](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/datasource/parser/SparseNumberVectorLabelParser.html) looks roughly like this:
   <pre>
   3 11 1.1 13 2.2 17 3.3 objlabel
   </pre>
   where `3` gives the number of non-zero attributes, then there are three pairs of format "`anum val`" containing attribute number and value. Finally, zero or more (optional) *non-numeric* labels.
 
-- Named columns and text data. [TermFrequencyParser](/releases/current/doc/de/lmu/ifi/dbs/elki/datasource/parser/TermFrequencyParser.html) was written with text data in mind, but can of course be used for arbitrary data of the format
+- Named columns and text data. [TermFrequencyParser](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/datasource/parser/TermFrequencyParser.html) was written with text data in mind, but can of course be used for arbitrary data of the format
   <pre>
   att11 1.1 att13 2.2 att17 3.3 objlabel
   objlabel att11 1.1 att13 2.2 att17 3.3
   </pre>
   where attributes come in pairs of the format "`non-numeric numeric`" where the non-numeric part is the column identifier. Non-numeric words that are not followed by a number a considered object labels.
 
-- ARFF files, defined by Weka, can have sparse vectors. The ELKI [ArffParser](/releases/current/doc/de/lmu/ifi/dbs/elki/datasource/parser/ArffParser.html) supports this.
+- ARFF files, defined by Weka, can have sparse vectors. The ELKI [ArffParser](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/datasource/parser/ArffParser.html) supports this.
 
 Memory representation
 ---------------------
 
-ELKI 0.5.0 includes two types of true sparse vectors, [SparseFloatVector](/releases/current/doc/de/lmu/ifi/dbs/elki/data/SparseFloatVector.html) and [SparseDoubleVector](/releases/current/doc/de/lmu/ifi/dbs/elki/data/SparseDoubleVector.html) that vary obvious in memory and precision. Further releases may also include different variants because of memory and performance differences. Some parsers can also produce bit vectors and dense vectors, if needed.
+ELKI 0.5.0 includes two types of true sparse vectors, [SparseFloatVector](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/data/SparseFloatVector.html) and [SparseDoubleVector](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/data/SparseDoubleVector.html) that vary obvious in memory and precision. Further releases may also include different variants because of memory and performance differences. Some parsers can also produce bit vectors and dense vectors, if needed.
 
 Data filtering
 --------------
 
-ELKI parsers try to operate streaming. As such, sparse vectors will vary in dimensionality, and not form a vector *field*. Some algorithms and distance functions expect all vectors to have the same dimensionality. The filter [SparseVectorFieldFilter](/releases/current/doc/de/lmu/ifi/dbs/elki/datasource/filter/typeconversions/SparseVectorFieldFilter.html) will trivially set the maximum dimensionality by re-scanning the data set in memory.
+ELKI parsers try to operate streaming. As such, sparse vectors will vary in dimensionality, and not form a vector *field*. Some algorithms and distance functions expect all vectors to have the same dimensionality. The filter [SparseVectorFieldFilter](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/datasource/filter/typeconversions/SparseVectorFieldFilter.html) will trivially set the maximum dimensionality by re-scanning the data set in memory.
 
-For text data, a common normalization of data is TF-IDF. The filter [InverseDocumentFrequencyNormalization](/releases/current/doc/de/lmu/ifi/dbs/elki/datasource/filter/normalization/columnwise/InverseDocumentFrequencyNormalization.html) will normalize vectors by their IDF accordingly.
+For text data, a common normalization of data is TF-IDF. The filter [InverseDocumentFrequencyNormalization](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/datasource/filter/normalization/columnwise/InverseDocumentFrequencyNormalization.html) will normalize vectors by their IDF accordingly.
 
 Distance functions
 ------------------
 
-While most distance functions will accept any number vector *field*, there are a number of distance functions implemented that are optimized for sparse vectors and allow the dimensionality of the two vectors to vary. [SparseEuclideanDistanceFunction](/releases/current/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/SparseEuclideanDistanceFunction.html) for example is faster for sparse vectors and does not have this restriction. We appreciate contributions of additional optimized implementations to ELKI!
+While most distance functions will accept any number vector *field*, there are a number of distance functions implemented that are optimized for sparse vectors and allow the dimensionality of the two vectors to vary. [SparseEuclideanDistanceFunction](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/distance/distancefunction/minkowski/SparseEuclideanDistanceFunction.html) for example is faster for sparse vectors and does not have this restriction. We appreciate contributions of additional optimized implementations to ELKI!
 
 Two views of sparse data
 ------------------------

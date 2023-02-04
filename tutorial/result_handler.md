@@ -12,7 +12,7 @@ Write a custom result handler
 Version information: Updated for ELKI 0.6.5~20141030
 {: class="versioninfo" }
 
-The simples API for accessing ELKI results is the [ResultHandler](/releases/current/doc/de/lmu/ifi/dbs/elki/result/ResultHandler.html) API.
+The simples API for accessing ELKI results is the [ResultHandler](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/result/ResultHandler.html) API.
 
 In this tutorial, we will implement a custom result handler to output data in our preferred custom format.
 
@@ -37,7 +37,7 @@ public class SimpleScoreDumper implements ResultHandler {
 Finding Outlier Results
 -----------------------
 
-For this example, we want to access the result of an outlier detection algorithm. First of all, we will need to scan the current result tree for appropriate outlier detection results. Fortunately, the [ResultUtil](/releases/current/doc/de/lmu/ifi/dbs/elki/result/ResultUtil.html) class already implements this job for us:
+For this example, we want to access the result of an outlier detection algorithm. First of all, we will need to scan the current result tree for appropriate outlier detection results. Fortunately, the [ResultUtil](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/result/ResultUtil.html) class already implements this job for us:
 
 {% highlight java %}
     ArrayList<OutlierResult> ors = ResultUtil.filterResults(newResult, OutlierResult.class);
@@ -98,7 +98,7 @@ Since there is an implicit parameterless public constructor, it can automaticall
 Dumping clusterings
 -------------------
 
-Similarly, we could search for [Clustering](/releases/current/doc/de/lmu/ifi/dbs/elki/data/Clustering.html) results, iterate over the clusters and print each clusters object IDs:
+Similarly, we could search for [Clustering](/releases/0.7.5/doc/de/lmu/ifi/dbs/elki/data/Clustering.html) results, iterate over the clusters and print each clusters object IDs:
 
 {% highlight java %}
     ArrayList<Clustering<?>> cs = ResultUtil.filterResults(newResult, Clustering.class);

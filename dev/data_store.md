@@ -9,7 +9,7 @@ navigation: -80
 DataStore API
 =============
 
-The [DataStore](/releases/current/javadoc/de/lmu/ifi/dbs/elki/database/datastore/DataStore.html) API was created with two primary goals in mind:
+The [DataStore](/releases/current/javadoc/elki/database/datastore/DataStore.html) API was created with two primary goals in mind:
 
 * Memory- and performance-optimized storage to avoid Java boxing/unboxing cost
 * Increased type safety to avoid programming errors
@@ -19,10 +19,10 @@ Note: the current API is not *automatically* synchronized. This is intentional, 
 
 Again we have a number of interfaces to consider:
 
-* [DataStore](/releases/current/javadoc/de/lmu/ifi/dbs/elki/database/datastore/DataStore.html) read-only, general
-* [WritableDataStore](/releases/current/javadoc/de/lmu/ifi/dbs/elki/database/datastore/WritableDataStore.html) writable, general
-* [DoubleDataStore](/releases/current/javadoc/de/lmu/ifi/dbs/elki/database/datastore/DoubleDataStore.html) read-only, double-optimized (ELKI 0.5)
-* [WritableDoubleDataStore](/releases/current/javadoc/de/lmu/ifi/dbs/elki/database/datastore/WritableDoubleDataStore.html) writable, double-optimized (ELKI 0.5)
+* [DataStore](/releases/current/javadoc/elki/database/datastore/DataStore.html) read-only, general
+* [WritableDataStore](/releases/current/javadoc/elki/database/datastore/WritableDataStore.html) writable, general
+* [DoubleDataStore](/releases/current/javadoc/elki/database/datastore/DoubleDataStore.html) read-only, double-optimized (ELKI 0.5)
+* [WritableDoubleDataStore](/releases/current/javadoc/elki/database/datastore/WritableDoubleDataStore.html) writable, double-optimized (ELKI 0.5)
 
 Implementations (as of ELKI 0.5) include plain array-storage (for static, continuous range DBIDs), GNU Trove optimized HashMaps (using significantly less memory) and regular Java HashMaps (as fallback).
 
@@ -31,7 +31,7 @@ Factory
 
 Again we follow the common factory pattern for creating data stores. This allows for better optimization.
 
-A real example from [LOF](/releases/current/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/lof/LOF.html) (as in ELKI 0.5):
+A real example from [LOF](/releases/release0.5.0/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/lof/LOF.html) (as in ELKI 0.5):
 
 {% highlight java %}
 WritableDoubleDataStore vals = DataStoreUtil.makeDoubleStorage(ids,
@@ -47,4 +47,4 @@ Storing doubles can come at a surprisingly high cost. A Java `HashMap<Integer, D
 
 For static-range DBIDs, we can save storing the keys and need no extra overhead - we are then close to the raw 8 bytes per double by using a raw array.
 
-To benefit from this, you should use the [WritableDoubleDataStore](/releases/current/javadoc/de/lmu/ifi/dbs/elki/database/datastore/WritableDoubleDataStore.html) for storing Double values, and always use the optimized getters and setters `doubleValue(id)` and `putDouble(id, value)` to avoid creating boxed Double objects. (Life would be a bit easier here if we would be using C++).
+To benefit from this, you should use the [WritableDoubleDataStore](/releases/current/javadoc/elki/database/datastore/WritableDoubleDataStore.html) for storing Double values, and always use the optimized getters and setters `doubleValue(id)` and `putDouble(id, value)` to avoid creating boxed Double objects. (Life would be a bit easier here if we would be using C++).
