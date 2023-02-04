@@ -15,36 +15,36 @@ Specialized Geo data mining algorithms
 --------------------------------------
 
 Outlier detection:
-- [CTLuGLSBackwardSearchAlgorithm](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/spatial/CTLuGLSBackwardSearchAlgorithm.html)
-- [CTLuMeanMultipleAttributes](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/spatial/CTLuMeanMultipleAttributes.html)
-- [CTLuMedianAlgorithm](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/spatial/CTLuMedianAlgorithm.html)
-- [CTLuMedianMultipleAttributes](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/spatial/CTLuMedianMultipleAttributes.html)
-- [CTLuMoranScatterplotOutlier](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/spatial/CTLuMoranScatterplotOutlier.html)
-- [CTLuRandomWalkEC](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/spatial/CTLuRandomWalkEC.html)
-- [CTLuScatterplotOutlier](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/spatial/CTLuScatterplotOutlier.html)
-- [CTLuZTestOutlier](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/spatial/CTLuZTestOutlier.html)
-- [SLOM](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/spatial/SLOM.html)
-- [SOF](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/spatial/SOF.html)
-- [TrimmedMeanApproach](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/algorithm/outlier/spatial/TrimmedMeanApproach.html)
+- [CTLuGLSBackwardSearchAlgorithm](/releases/current/javadoc/elki/algorithm/outlier/spatial/CTLuGLSBackwardSearchAlgorithm.html)
+- [CTLuMeanMultipleAttributes](/releases/current/javadoc/elki/algorithm/outlier/spatial/CTLuMeanMultipleAttributes.html)
+- [CTLuMedianAlgorithm](/releases/current/javadoc/elki/algorithm/outlier/spatial/CTLuMedianAlgorithm.html)
+- [CTLuMedianMultipleAttributes](/releases/current/javadoc/elki/algorithm/outlier/spatial/CTLuMedianMultipleAttributes.html)
+- [CTLuMoranScatterplotOutlier](/releases/current/javadoc/elki/algorithm/outlier/spatial/CTLuMoranScatterplotOutlier.html)
+- [CTLuRandomWalkEC](/releases/current/javadoc/elki/algorithm/outlier/spatial/CTLuRandomWalkEC.html)
+- [CTLuScatterplotOutlier](/releases/current/javadoc/elki/algorithm/outlier/spatial/CTLuScatterplotOutlier.html)
+- [CTLuZTestOutlier](/releases/current/javadoc/elki/algorithm/outlier/spatial/CTLuZTestOutlier.html)
+- [SLOM](/releases/current/javadoc/elki/algorithm/outlier/spatial/SLOM.html)
+- [SOF](/releases/current/javadoc/elki/algorithm/outlier/spatial/SOF.html)
+- [TrimmedMeanApproach](/releases/current/javadoc/elki/algorithm/outlier/spatial/TrimmedMeanApproach.html)
 
-Additionally, you can use existing data mining [Algorithms](/algorithms) via specialized [DistanceFunctions](/algorithms/distances).
+Additionally, you can use existing data mining [Algorithms](/algorithms) via specialized [Distances](/algorithms/distances).
 
 Geo distance functions
 ----------------------
 
 Defined for latitude-longitude pairs:
 
-- [DimensionSelectingLatLngDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/geo/DimensionSelectingLatLngDistanceFunction.html)
-- [LatLngDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/geo/LatLngDistanceFunction.html)
-- [LngLatDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/geo/LngLatDistanceFunction.html)
+- [DimensionSelectingLatLngDistance](/releases/current/javadoc/elki/distance/geo/DimensionSelectingLatLngDistance.html)
+- [LatLngDistance](/releases/current/javadoc/elki/distance/geo/LatLngDistance.html)
+- [LngLatDistance](/releases/current/javadoc/elki/distance/geo/LngLatDistance.html)
 
-See [DistanceFunctions](/algorithms/distances) for other distance functions.
+See [Distances](/algorithms/distances) for other distance functions.
 
 Geo data types
 --------------
 
-- Regular number vectors (e.g. 2-d with longitude and latitude meaning)
-- [Multi-Polygons](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/data/spatial/PolygonsObject.html)
+- Regular number vectors (e.g., 2-d with longitude and latitude meaning)
+- [Multi-Polygons](/releases/current/javadoc/elki/data/spatial/PolygonsObject.html)
 
 See [DataTypes](/datatypes) for a complete overview.
 
@@ -60,5 +60,5 @@ Output support
 
 ELKI has specialized output support for geo data:
 
-- [de.lmu.ifi.dbs.elki.result.KMLOutputHandler](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/result/KMLOutputHandler.html) for producing KML output files
+- [elki.result.KMLOutputHandler](/releases/current/javadoc/elki/result/KMLOutputHandler.html) for producing KML output files
 

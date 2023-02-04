@@ -9,10 +9,10 @@ navigation: 50
 Write a custom result handler
 =============================
 
-Version information: Updated for ELKI 0.6.5~20141030
+Version information: Updated for ELKI 0.8.0
 {: class="versioninfo" }
 
-The simples API for accessing ELKI results is the [ResultHandler](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/result/ResultHandler.html) API.
+The simples API for accessing ELKI results is the [ResultHandler](/releases/current/javadoc/elki/result/ResultHandler.html) API.
 
 In this tutorial, we will implement a custom result handler to output data in our preferred custom format.
 
@@ -22,13 +22,11 @@ Auto-generated code
 Implementing the interface yields the following template stub:
 
 {% highlight java %}
-import de.lmu.ifi.dbs.elki.result.HierarchicalResult;
-import de.lmu.ifi.dbs.elki.result.Result;
-import de.lmu.ifi.dbs.elki.result.ResultHandler;
+import elki.result.ResultHandler;
 
 public class SimpleScoreDumper implements ResultHandler {
   @Override
-  public void processNewResult(HierarchicalResult baseResult, Result newResult) {
+  public void processNewResult(Object newResult) {
     // TODO: implement
   }
 }
@@ -37,7 +35,7 @@ public class SimpleScoreDumper implements ResultHandler {
 Finding Outlier Results
 -----------------------
 
-For this example, we want to access the result of an outlier detection algorithm. First of all, we will need to scan the current result tree for appropriate outlier detection results. Fortunately, the [ResultUtil](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/result/ResultUtil.html) class already implements this job for us:
+For this example, we want to access the result of an outlier detection algorithm. First of all, we will need to scan the current result tree for appropriate outlier detection results. Fortunately, the [ResultUtil](/releases/current/javadoc/elki/result/ResultUtil.html) class already implements this job for us:
 
 {% highlight java %}
     ArrayList<OutlierResult> ors = ResultUtil.filterResults(newResult, OutlierResult.class);
@@ -66,18 +64,16 @@ The complete class looks like this:
 {% highlight java %}
 import java.util.ArrayList;
 
-import de.lmu.ifi.dbs.elki.database.ids.DBIDIter;
-import de.lmu.ifi.dbs.elki.database.ids.DBIDUtil;
-import de.lmu.ifi.dbs.elki.database.relation.Relation;
-import de.lmu.ifi.dbs.elki.result.HierarchicalResult;
-import de.lmu.ifi.dbs.elki.result.Result;
-import de.lmu.ifi.dbs.elki.result.ResultHandler;
-import de.lmu.ifi.dbs.elki.result.ResultUtil;
-import de.lmu.ifi.dbs.elki.result.outlier.OutlierResult;
+import elki.database.ids.DBIDIter;
+import elki.database.ids.DBIDUtil;
+import elki.database.relation.DoubleRelation;
+import elki.result.ResultHandler;
+import elki.result.ResultUtil;
+import elki.result.outlier.OutlierResult;
 
 public class SimpleScoreDumper implements ResultHandler {
   @Override
-  public void processNewResult(HierarchicalResult baseResult, Result newResult) {
+  public void processNewResult(Object newResult) {
     // Get all new outlier results
     ArrayList<OutlierResult> ors = ResultUtil.filterResults(newResult, OutlierResult.class);
     for (OutlierResult o : ors) {
@@ -98,14 +94,14 @@ Since there is an implicit parameterless public constructor, it can automaticall
 Dumping clusterings
 -------------------
 
-Similarly, we could search for [Clustering](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/data/Clustering.html) results, iterate over the clusters and print each clusters object IDs:
+Similarly, we could search for [Clustering](/releases/current/javadoc/elki/data/Clustering.html) results, iterate over the clusters and print each clusters object IDs:
 
 {% highlight java %}
     ArrayList<Clustering<?>> cs = ResultUtil.filterResults(newResult, Clustering.class);
     for (Clustering<?> c : cs) {
       for (Cluster<?> cluster : c.getAllClusters()) {
         for (DBIDIter iter = cluster.getIDs().iter(); iter.valid(); iter.advance()) {
-          System.out.print(DBIDUtil.toString(iter)+" ");
+          System.out.print(DBIDUtil.toString(iter));
         }
         System.out.println();
       }

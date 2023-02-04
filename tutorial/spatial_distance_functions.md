@@ -9,7 +9,7 @@ navigation: 60
 Implementing a spatial distance function
 ========================================
 
-Version information: Updated for ELKI 0.6.5~20141030
+Version information: Updated for ELKI 0.8.0
 {: class="versioninfo" }
 
 In the tutorial on [distance functions](distance_functions) we already implemented a custom, domain-specific distance function.
@@ -40,14 +40,14 @@ The numerator obivously is the Manhattan distance, while the denominator is the 
 Implementing the distance
 -------------------------
 
-First of all, we will implement the regular distance function. To minimize the amount of work we need to do, we will use the most specific abstract base class: [AbstractNumberVectorDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/AbstractNumberVectorDistanceFunction.html) which is good for distance functions that have continuous numerical vectors as input and return double valued results.
+First of all, we will implement the regular distance function. To minimize the amount of work we need to do, we will use the most specific abstract base class: [AbstractNumberVectorDistance](/releases/current/javadoc/elki/distance/AbstractNumberVectorDistance.html) which is good for distance functions that have continuous numerical vectors as input and return double valued results.
 
 {% highlight java %}
 package tutorial;
 
-import de.lmu.ifi.dbs.elki.distance.distancefunction.AbstractNumberVectorDistanceFunction;
+import elki.distance.AbstractNumberVectorDistance;
 
-public class BrayCurtisDistanceFunction extends AbstractNumberVectorDistanceFunction {
+public class BrayCurtisDistance extends AbstractNumberVectorDistance {
   @Override
   public double distance(NumberVector v1, NumberVector v2) {
     // TODO
@@ -61,17 +61,14 @@ this very simple signature is all that we need to fill. We can pretty much strai
 {% highlight java %}
   @Override
   public double distance(NumberVector v1, NumberVector v2) {
-    final int dim1 = v1.getDimensionality();
-    if (dim1 != v2.getDimensionality()) {
-      throw new IllegalArgumentException("Dimensionalities do not agree!");
-    }
+    final int dim = dimensionality(v1, v2);
     double sumdiff = 0., sumsum = 0.;
-    for (int d = 0; d < dim1; d++) {
+    for(int d = 0; d < dim; d++) {
       double xd = v1.doubleValue(d), yd = v2.doubleValue(d);
       sumdiff += Math.abs(xd - yd);
       sumsum += Math.abs(xd) + Math.abs(yd);
     }
-    return sumdiff / sumsum;
+    return sumsum > 0 ? sumdiff / sumsum : 0;
   }
 {% endhighlight %}
 
@@ -80,7 +77,7 @@ After implementing this class, we can immediately run our algorithms with it. Si
 Support for spatial indexes
 ---------------------------
 
-In order to accelerate distance based algorithms (e.g. DBSCAN, LOF) using this distance function, we need to implent a **lower-bound on the rectangle-to-rectangle distances**. This is often called the "minDist". We additionally implement the interface [SpatialPrimitiveDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/SpatialPrimitiveDistanceFunction.html), and have eclipse generate the missing method. After adding the usual safety checks, it looks like this:
+In order to accelerate distance based algorithms (e.g., DBSCAN, LOF) using this distance function, we need to implent a **lower-bound on the rectangle-to-rectangle distances**. This is often called the "minDist". We additionally implement the interface [SpatialPrimitiveDistance](/releases/current/javadoc/elki/distance/SpatialPrimitiveDistance.html), and have eclipse generate the missing method. After adding the usual safety checks, it looks like this:
 
 {% highlight java %}
   @Override
@@ -88,10 +85,7 @@ In order to accelerate distance based algorithms (e.g. DBSCAN, LOF) using this d
     if (mbr1 instanceof NumberVector && mbr2 instanceof NumberVector) {
       return distance((NumberVector) mbr1, (NumberVector) mbr2);
     }
-    final int dim1 = mbr1.getDimensionality();
-    if (dim1 != mbr2.getDimensionality()) {
-      throw new IllegalArgumentException("Dimensionalities do not agree!");
-    }
+    final int dim = dimensionality(mbr1, mbr2);
     double sumdiff = 0., sumsum = 0.;
     // TODO: compute lower bound for sumdiff
     // TODO: compute upper bound for sumsum
@@ -107,10 +101,10 @@ For the upper bound on the lengths, we can exploit that either `-min1` or `+max2
 
 {% highlight java %}
     double sumdiff = 0., sumsum = 0.;
-    for (int d = 0; d < dim1; d++) {
+    for(int d = 0; d < dim; d++) {
       final double min1 = mbr1.getMin(d), max1 = mbr1.getMax(d);
       final double min2 = mbr2.getMin(d), max2 = mbr2.getMax(d);
-      if (max1 < min2) {
+      if(max1 < min2) {
         sumdiff += min2 - max1;
       } else if (min1 > max2) {
         sumdiff += min1 - max2;
@@ -141,7 +135,7 @@ In order to fully ELKIfy the implementation, we should add a static instance (si
   /**
    * Static instance.
    */
-  public static final BrayCurtisDistanceFunction STATIC = new BrayCurtisDistanceFunction();
+  public static final BrayCurtisDistance STATIC = new BrayCurtisDistance();
 
   /**
    * Constructor.
@@ -149,17 +143,17 @@ In order to fully ELKIfy the implementation, we should add a static instance (si
    * @deprecated Use {@link #STATIC} instance instead.
    */
   @Deprecated
-  public BrayCurtisDistanceFunction() {
+  public BrayCurtisDistance() {
     super();
   }
 
   /**
    * Parameterization class.
    */
-  public static class Parameterizer extends AbstractParameterizer {
+  public static class Par implements Parameterizer {
     @Override
-    protected BrayCurtisDistanceFunction makeInstance() {
-      return BrayCurtisDistanceFunction.STATIC;
+    public BrayCurtisDistance make() {
+      return BrayCurtisDistance.STATIC;
     }
   }
 {% endhighlight %}

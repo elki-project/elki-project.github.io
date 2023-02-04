@@ -10,19 +10,19 @@ navigation: 50
 How to use precomputed distances in ELKI
 ========================================
 
-Version information: Updated for ELKI 0.6.5~20141030
+Version information: Updated for ELKI 0.8.0
 {: class="versioninfo" }
 
 In many situations, computing the object distances will be a major part of the algorithm runtimes. If you have enough disk space, it may be desirable to compute the distances only once and store them on the harddisk.
 
 ELKI comes with a number of classes related to precomputed distances:
 
-- [CacheDoubleDistanceInOnDiskMatrix](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/application/cache/CacheDoubleDistanceInOnDiskMatrix.html)
-- [CacheFloatDistanceInOnDiskMatrix](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/application/cache/CacheFloatDistanceInOnDiskMatrix.html)
-- [DiskCacheBasedDoubleDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/DiskCacheBasedDoubleDistanceFunction.html)
-- [DiskCacheBasedFloatDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/DiskCacheBasedFloatDistanceFunction.html)
-- [FileBasedSparseDoubleDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/FileBasedSparseDoubleDistanceFunction.html)
-- [FileBasedSparseFloatDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/FileBasedSparseFloatDistanceFunction.html)
+- [CacheDoubleDistanceInOnDiskMatrix](/releases/current/javadoc/elki/application/cache/CacheDoubleDistanceInOnDiskMatrix.html)
+- [CacheFloatDistanceInOnDiskMatrix](/releases/current/javadoc/elki/application/cache/CacheFloatDistanceInOnDiskMatrix.html)
+- [DiskCacheBasedDoubleDistance](/releases/current/javadoc/elki/distance/external/DiskCacheBasedDoubleDistance.html)
+- [DiskCacheBasedFloatDistance](/releases/current/javadoc/elki/distance/external/DiskCacheBasedFloatDistance.html)
+- [FileBasedSparseDoubleDistance](/releases/current/javadoc/elki/distance/external/FileBasedSparseDoubleDistance.html)
+- [FileBasedSparseFloatDistance](/releases/current/javadoc/elki/distance/external/FileBasedSparseFloatDistance.html)
 
 The first two are "applications", i.e. standalone tasks that do nothing but precompute the distance matrix and write it to disk, using a *binary* file format ("DiskCache") The last four are distance functions that access/load different input formats. The "FileBasedSparse" classes use a simpler, but much less efficient, ascii format.
 
@@ -37,10 +37,10 @@ de.lmu.ifi.dbs.elki.application.cache.CacheDoubleDistanceInOnDiskMatrix
 -dbc.in inputfile.ascii
 -dbc.filter FixedDBIDsFilter -dbc.startid 0
 -loader.diskcache matrix.dat
--loader.distance CosineDistanceFunction
+-loader.distance CosineDistance
 </pre>
 
-Using the [FixedDBIDsFilter](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/datasource/filter/FixedDBIDsFilter.html) is only necessary if you need to offset values. However, I recommend using this filter *whenever* using precomputed distances to avoid indexing issues.
+Using the [FixedDBIDsFilter](/releases/current/javadoc/elki/datasource/filter/FixedDBIDsFilter.html) is only necessary if you need to offset values. However, I recommend using this filter *whenever* using precomputed distances to avoid indexing issues.
 
 Note that you will need on the order of `n * n / 2 * 8` bytes for a matrix storing doubles, and half of that for float distances. As a rule of thumb, 32000 objects with double precision will use about 4 GB (which may be an operating system limit!)
 
@@ -51,11 +51,11 @@ To use the precomputed distance matrix, set the following parameters
 
 <pre>
 -dbc.filter FixedDBIDsFilter -dbc.startid 0
--algorithm.distancefunction external.DiskCacheBasedDoubleDistanceFunction
+-algorithm.distancefunction external.DiskCacheBasedDoubleDistance
 -distance.matrix matrix.dat
 </pre>
 
-Note that you *really* should set the [FixedDBIDsFilter](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/datasource/filter/FixedDBIDsFilter.html), in particular when using the MiniGUI. Otherwise, a second run will use different object IDs and will likely produce errors because the matrix does not store the desired distances!
+Note that you *really* should set the [FixedDBIDsFilter](/releases/current/javadoc/elki/datasource/filter/FixedDBIDsFilter.html), in particular when using the MiniGUI. Otherwise, a second run will use different object IDs and will likely produce errors because the matrix does not store the desired distances!
 
 You need to choose the appropriate class for the data precision you generated the matrix with: Double for double precision matrixes, Float for float precision matrixes. It may be possible to use 4 GB matrixes on systems with less than 4 GB of memory, as the matrixes are mapped into memory by the operating system, instead of using physical memory.
 
@@ -66,8 +66,8 @@ The binary matrix format used by ELKI (actually an upper triangle matrix) is not
 
 This will however need more memory than the binary format above, which can be mapped directly from the file system, thus this approach is really meant for using *external* distance information.
 
-- [FileBasedSparseDoubleDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/FileBasedSparseDoubleDistanceFunction.html)
-- [FileBasedSparseFloatDistanceFunction](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/FileBasedSparseFloatDistanceFunction.html)
+- [FileBasedSparseDoubleDistance](/releases/current/javadoc/elki/distance/external/FileBasedSparseDoubleDistance.html)
+- [FileBasedSparseFloatDistance](/releases/current/javadoc/elki/distance/external/FileBasedSparseFloatDistance.html)
 
 require a different amount of *Java memory*, while they use the same input format (this is different from the distance matrixes above, which actually use a different file format).
 
@@ -77,17 +77,17 @@ The default file format is ascii text, three columns, where the first two column
 0 1 0.12345
 </pre>
 
-thus specifies that the objects 0 and 1 have a distance of 0.12345. Details can be found in the class [AsciiDistanceParser](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/AsciiDistanceParser.html), or you can provide your own implementation of the [DistanceParser](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/distance/distancefunction/external/DistanceParser.html) interface.
+thus specifies that the objects 0 and 1 have a distance of 0.12345. Details can be found in the class [AsciiDistanceParser](/releases/current/javadoc/elki/distance/external/AsciiDistanceParser.html), or you can provide your own implementation of the [DistanceParser](/releases/current/javadoc/elki/distance/distancefunction/external/DistanceParser.html) interface.
 
 Note that the current implementation requires you to also specify the distance from an object to itself.
 
-In order to specify the exact meaning of the object numbers, you need to use the [FixedDBIDsFilter](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/datasource/filter/FixedDBIDsFilter.html)!
+In order to specify the exact meaning of the object numbers, you need to use the [FixedDBIDsFilter](/releases/current/javadoc/elki/datasource/filter/FixedDBIDsFilter.html)!
 
 Here are the key parameters needed for using a text based distance matrix:
 
 <pre>
 -dbc.filter FixedDBIDsFilter -dbc.startid 0
--algorithm.distancefunction external.FileBasedSparseDoubleDistanceFunction
+-algorithm.distancefunction external.FileBasedSparseDoubleDistance
 -distance.matrix /tmp/simple.ascii
 </pre>
 

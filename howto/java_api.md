@@ -17,21 +17,21 @@ You can easily use ELKI from Java - it has a [standard Java API](#PureJavaAPI). 
 
 You can even embed ELKI into your application (if you accept the [AGPL-3 license](/license)), but we currently do not (yet) recommend to do so, because the API is still changing substantially.
 
-But in many cases, using the MiniGUI or the command line interface to run your experiments will be better, even when writing custom extensions in Java. If you want a custom output format, this is best done e.g. as a custom [ResultHandler](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/result/ResultHandler.html) or just by using the [ResultWriter](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/result/ResultWriter.html) and parsing the resulting files afterwards.
+But in many cases, using the MiniGUI or the command line interface to run your experiments will be better, even when writing custom extensions in Java. If you want a custom output format, this is best done e.g. as a custom [ResultHandler](/releases/current/javadoc/elki/result/ResultHandler.html) or just by using the [ResultWriter](/releases/current/javadoc/elki/result/ResultWriter.html) and parsing the resulting files afterwards.
 
-The reasons why we recommend "loose coupling" with ELKI are:
+The reasons why we recommend "loose coupling" over "tight integration" with ELKI are:
 
 1.  The API is still changing a lot, because we keep on adding options and optimizations, and we **do not (yet) provide a stable API** (this will be the 1.0 release). The command line / MiniGUI / Parameterization is much more stable, because of the handling of default values and aliases - the parameterization only lists the non-default parameters, so only if the defaults change you'll notice.
 
 2.  **Memory usage:** data mining is quite memory intensive. If you use the MiniGUI or command line, you have a good *cleanup* when the task is finished. If you invoke it from Java, changes are *really high* that you keep some reference somewhere, and end up leaking *lots* of memory. So **when using the Java API, *you* need to ensure that the objects are properly cleaned up and garbage collected**!
 
-    By running ELKI from the command line, you get two things for free: a. no memory leaks. When the task is finished, the process quits and frees all memory. b. no need to rerun it twice for the same data. Subsequent analysis does not need to rerun the algorithm.
+    By running ELKI from the command line, you get two things for free: a. no memory leaks. When the task is finished, the process quits and frees all memory. b. no need to rerun it twice for the same data. Subsequent analysis does not need to rerun the algorithm, just re-read the output.
 
-3.  ELKI is **not designed as embeddable library**. It can be used, but it is not designed to be used this way. ELKI has tons of options and functionality, and this comes at a price, both in runtime (although it can easily [outperform R and Weka](/benchmarking), for example!) memory usage and in particular in code complexity.
+3.  ELKI is **not designed as embeddable library**. It can be used, but it is not primarily designed to be used this way. ELKI has tons of options and functionality, and this comes at a price, both in runtime (although it can easily [outperform R and Weka](/benchmarking), for example!) memory usage and in particular in code complexity. You may not need all of this power.
 
     ELKI was **designed for research in data mining algorithms**, not for making them easy to include in arbitrary applications. Instead, if you have a particular problem, you should use ELKI to find out *which* approach works good, then *reimplement that approach in an optimized manner for your problem* (maybe even in C++ then, to further reduce memory and runtime).
 
-4.  ELKI is [AGPL licensed](/license). This is a variant of the GPL license, and requires you to license your code the same way as ELKI. If you embed ELKI into your application, and distribute this combination, then **you agree to license your code** with a compatible license (e.g. GPL, AGPL, BSD). In particular for commercial users this may not be acceptable, and if you include/use code written by others you may not be allowed to relicense their code at all. This licensing restriction should not matter much for research and academic usage. It also does not apply if ELKI is run as a separate application (e.g. via [command line scripts](#CommandLineScripting)).
+4.  ELKI is [AGPL licensed](/license). This is a variant of the GPL license, and requires you to license your code the same way as ELKI. If you embed ELKI into your application, and distribute this combination, then **you agree to license your code** with a compatible license (e.g., GPL, AGPL, BSD). In particular for commercial users this may not be acceptable, and if you include/use code written by others you may not be allowed to relicense their code at all. This licensing restriction should not matter much for research and academic usage. It also does not apply if ELKI is run as a separate application (e.g., via [command line scripts](#CommandLineScripting)).
 
 Recommended Solutions {#Recommended}
 ---------------------
@@ -40,7 +40,7 @@ The *two* recommended approaches of automating ELKI processing are by using [com
 
 ### Command Line Scripting ELKI {#CommandLineScripting}
 
-The **simplest way of automating ELKI** is using the command line. Any operating system has a powerful scriping language. In the following examples, we will be using common POSIX shell scripting (e.g. bash on Linux). And for shell scripts, you have a wide variety of tools available, such as [clusterssh](http://sourceforge.net/projects/clusterssh/) or the [Oracle Grid Engine](https://en.wikipedia.org/wiki/Oracle_Grid_Engine) for distributed running on ELKI jobs.
+The **simplest way of automating ELKI** is using the command line. Any operating system has a powerful scriping language. In the following examples, we will be using common POSIX shell scripting (e.g., bash on Linux). And for shell scripts, you have a wide variety of tools available, such as [clusterssh](http://sourceforge.net/projects/clusterssh/) or the [Oracle Grid Engine](https://en.wikipedia.org/wiki/Oracle_Grid_Engine) for distributed running on ELKI jobs.
 
 The MiniGUI is essentially an assisted command line builder. While it is a visual tool in the end it builds a list of parameters that would make up a command line.
 
@@ -49,7 +49,7 @@ The MiniGUI is essentially an assisted command line builder. While it is a visua
 for k in $( seq 3 40 ); do
   java -jar elki.jar KDDCLIApplication \
     -dbc.in mouse.csv \
-    -algorithm clustering.kmeans.KMedoidsEM \
+    -algorithm clustering.kmeans.ExponionKMeans \
     -kmeans.k $k \
     -resulthandler ResultWriter -out.gzip \
     -out output/k-$k 
@@ -58,7 +58,7 @@ done
 
 ### Extending ELKI {#ExtendingELKI}
 
-A neat trick to use ELKI for your own experiments is to hook into the API by the regular extension points, such as [ResultHandler](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/result/ResultHandler.html) (for customizing output), [Parser](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/datasource/parser/Parser.html) (for custom input file formats), and [DatabaseConnection](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/datasource/DatabaseConnection.html) (for custom data sources). You can then use `ResultUtil` to select the results that you want to **output in your own preferred format** or analyze:
+A neat trick to use ELKI for your own experiments is to hook into the API by the regular extension points, such as [ResultHandler](/releases/current/javadoc/elki/result/ResultHandler.html) (for customizing output), [Parser](/releases/current/javadoc/elki/datasource/parser/Parser.html) (for custom input file formats), and [DatabaseConnection](/releases/current/javadoc/elki/datasource/DatabaseConnection.html) (for custom data sources). You can then use `ResultUtil` to select the results that you want to **output in your own preferred format** or analyze:
 
 {% highlight java %}
 public class MyCustomHandler implements ResultHandler {
@@ -85,7 +85,7 @@ It's main drawback is that it is *unusual* by Java conventions. A more Java-like
 
 ### Creating a database
 
-This is the basic setup for getting a [Database](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/database/Database.html) and [Relation](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/database/relation/Relation.html):
+This is the basic setup for getting a [Database](/releases/current/javadoc/elki/database/Database.html) and [Relation](/releases/current/javadoc/elki/database/relation/Relation.html):
 
 {% highlight java %}
 // Setup parameters:
@@ -102,7 +102,7 @@ Relation<NumberVector> vectors = db.getRelation(TypeUtil.NUMBER_VECTOR_FIELD);
 Relation<LabelList> labels = db.getRelation(TypeUtil.LABELLIST);
 {% endhighlight %}
 
-If you want to program more general, write your program to use a [NumberVector](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/data/NumberVector.html) instead of a more specific type such as `DoubleVector`.
+If you want to program more general, write your program to use a [NumberVector](/releases/current/javadoc/elki/data/NumberVector.html) instead of a more specific type such as `DoubleVector`.
 
 Note that we did **not use the Java constructors**, which need *more complicated* parameters. The parameterization API takes care of creating objects and setting default parameters.
 
@@ -147,22 +147,22 @@ Here you have to specify a number of parameters that would have default values i
 
 {% highlight java %}
 // K-means should be used with squared Euclidean (least squares):
-SquaredEuclideanDistanceFunction dist = SquaredEuclideanDistanceFunction.STATIC;
+SquaredEuclideanDistance dist = SquaredEuclideanDistance.STATIC;
 // Default initialization, using global random:
 // To fix the random seed, use: new RandomFactory(seed);
-RandomlyGeneratedInitialMeans init = new RandomlyGeneratedInitialMeans(RandomFactory.DEFAULT);
+RandomUniformGenerated init = new RandomUniformGenerated(RandomFactory.DEFAULT);
 
 // Setup textbook k-means clustering:
-KMeansLloyd<NumberVector> km = new KMeansLloyd<>(dist, 3, 0, init);
+LloydKMeans<NumberVector> km = new LloydKMeans<>(dist, 3, 0, init);
 // Run the algorithm:
-Clustering<KMeansModel> c = km.run(db);
+Clustering<KMeansModel> c = km.autorun(db);
 {% endhighlight %}
 
-As you can see, this API requires you to *specify more parameters*. You need to be explicit about the distance function (although squared Euclidean is the reasonable default; with other distances k-means may fail), the maximum number of iterations, and the initialization method, the random generator used for initialization. Once we add a parameter to control how empty clusters are handled (on our TODO list), you will need to update your code, too!
+As you can see, this API requires you to *specify more parameters*. You need to be explicit about the distance function (although squared Euclidean is the reasonable default; with other distances k-means may fail), the maximum number of iterations, and the initialization method, the random generator used for initialization. Once we add a parameter to control how empty clusters are handled (on our wishlist), you will need to update your code, too!
 
 ### Processing the result
 
-ELKI stores data in [Relation](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/database/relation/Relation.html)s. They are similar but not identical to "data frames" in other languages, or "column groups" in modern column store databases. They are a uniform, typed collection of objects, such as a vector field *or* labels. However, we do not mix data types: the numerical vectors and the associated labels are separate relations. This model is a hybrid of a relational data store (where often different data types would be in the same SQL table) and column stores (where often each dimension would be a separate table). This midway solution (which also resembles [normal forms of databases](https://en.wikipedia.org/wiki/Database_normalization)) was found both beneficial in NoSQL databases (c.f. column groups) and for our purposes, since e.g. k-means works on numerical data, and not on the labels.
+ELKI stores data in [Relation](/releases/current/javadoc/elki/database/relation/Relation.html)s. They are similar but not identical to "data frames" in other languages, or "column groups" in modern column store databases. They are a uniform, typed collection of objects, such as a vector field *or* labels. However, we do not mix data types: the numerical vectors and the associated labels are separate relations. This model is a hybrid of a relational data store (where often different data types would be in the same SQL table) and column stores (where often each dimension would be a separate table). This midway solution (which also resembles [normal forms of databases](https://en.wikipedia.org/wiki/Database_normalization)) was found both beneficial in NoSQL databases (c.f. column groups) and for our purposes, since e.g. k-means works on numerical data, and not on the labels.
 
 [DBIDs](/dev/dbids) may not start with 0. In particular if you do multiple invocations, ELKI will continue enumerating where it left off. However, for a static context your DBIDs will be continuous, and can be efficiently mapped back to an offset in your data set. In this example, we will process a clustering result and output the object offsets:
 

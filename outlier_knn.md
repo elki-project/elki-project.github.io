@@ -7,7 +7,7 @@ hideparent: algorithms
 
 
 Important note: this information is for ELKI 0.7.\\
-Progress to unify these parameters is still underway!
+Progress to unify these parameters is still underway, and ELKI 0.8.0 will be very different!
 {: class="box-warn" }
 
 Overview of kNN interpretation across algorithms
