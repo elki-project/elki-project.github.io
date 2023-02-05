@@ -9,7 +9,7 @@ navigation: 2
 ELKI License
 ============
 
-Important Note: This page documents the *default* license applied to the ELKI source code only (i.e. classes in the de.lmu.ifi.dbs.elki namespace). The ELKI 0.4 tarball **includes parts that are licensed using different terms**, such as the [Apache License](http://en.wikipedia.org/wiki/Apache_License), [BSD licenses](http://en.wikipedia.org/wiki/BSD_licenses) or also public domain. We tried to document the legal status of the included files in the subdirectory "`legal`" or "`license`" of the jar file. It remains your responsibility to verify the license status when using or redistributing any of the files included. Using any of these files is WITHOUT ANY WARRANTY.
+Important Note: This page documents the *default* license applied to the ELKI source code only (i.e. classes in the elki namespace). The ELKI tarball **includes parts that are licensed using different terms**, such as the [Apache License](http://en.wikipedia.org/wiki/Apache_License), [BSD licenses](http://en.wikipedia.org/wiki/BSD_licenses) or also public domain. We tried to document the legal status of the included files in the subdirectory "`legal`" or "`license`" of the jar file. It remains your responsibility to verify the license status when using or redistributing any of the files included. Using any of these files is WITHOUT ANY WARRANTY.
 {: class="box-warn" }
 
 ELKI release 0.4 and onward source code is licensed using the well-known\\

@@ -89,7 +89,7 @@ Next, we choose the `algorithm` parameter. When we click the row, a similar butt
 ### K-Means Clustering
 
 ELKI contains many different k-Means algorithm. The standard algorithm, often attributed to Lloyd is one of the slowest. The first choice in the
-`clustering.kmeans` package (a shortened name for the Java package name `de.lmu.ifi.dbs.elki.algorithm.clustering.kmeans`) is one of the better
+`clustering.kmeans` package (a shortened name for the Java package name `elki.clustering.kmeans`) is one of the better
 algorithms, `KMeansSort`. Other good alternatives include `KMeansAnnulus` and `KMeansExponion`. Most of these will give the exact same result,
 and only differ in their run time.
 

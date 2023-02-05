@@ -35,13 +35,13 @@ public class TutorialDistance extends AbstractNumberVectorDistance {
 }
 {% endhighlight %}
 
-Now lets implement the doubleDistance method:
+Now lets implement the distance method:
 
 {% highlight java %}
 package tutorial.distancefunction;
 
-import de.lmu.ifi.dbs.elki.data.NumberVector;
-import de.lmu.ifi.dbs.elki.distance.distancefunction.AbstractNumberVectorDistanceFunction;
+import elki.data.NumberVector;
+import elki.distance.AbstractNumberVectorDistance;
 
 public class TutorialDistanceFunction extends AbstractNumberVectorDistanceFunction {
   @Override

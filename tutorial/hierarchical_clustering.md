@@ -10,12 +10,12 @@ navigation: 40
 Implementing Hierarchical Clustering
 ====================================
 
-Version information: Updated for ELKI 0.7.1
+Version information: Updated for ELKI 0.8.0
 {: class="versioninfo" }
 
-In this tutorial, we will implement the *naive approach* to hierarchical clustering. It is naive in the sense that it is a fairly general procedure, which unfortunately operates in O(n<sup>3</sup>) runtime and O(n<sup>2</sup>) memory, so it does not scale very well. For some linkage criteria, there exist optimized algorithms such as [SLINK](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/SLINK.html), which computes single-link clustering in low O(n<sup>2</sup>) runtime and O(n) memory.
+In this tutorial, we will implement the *naive approach* to hierarchical clustering. It is naive in the sense that it is a fairly general procedure, which unfortunately operates in O(n<sup>3</sup>) runtime and O(n<sup>2</sup>) memory, so it does not scale very well. For some linkage criteria, there exist optimized algorithms such as [SLINK](/releases/current/javadoc/elki/algorithm/clustering/hierarchical/SLINK.html), which computes single-link clustering in low O(n<sup>2</sup>) runtime and O(n) memory.
 
-We will initially construct a very simple algorithm, then improve on it in multiple steps. This material was prepared for the tutorials to the KDD lecture at LMU.
+We will initially construct a very simple algorithm, then improve on it in multiple steps. This material was prepared for the tutorials to the KDD lecture at LMU Munich University.
 
 Initial Version
 ---------------
@@ -32,66 +32,37 @@ However, we will see that there is more to the algorithm, such as the need to tr
 
 ### Auto-generated code
 
-First of all, we start a new class, `NaiveAgglomerativeHierarchicalClustering`, extending [AbstractDistanceBasedAlgorithm](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/algorithm/AbstractDistanceBasedAlgorithm.html). We accept any type of object `O` (as long as we have a distance function), and for now the output type is the abstract type `Result` (for the initial version, we could have used `Clustering<Model>`, too). After having eclipse auto-generate method stubs and constructor, the template code looks like this:
+First of all, we start a new class, `NaiveAgglomerativeHierarchicalClustering`, implementing [Algorithm](/releases/current/javadoc/elki/algorithm/Algorithm.html).
+We add a class logger, a field for the distance function, using a generic and unspecific data type `<O>`.
+The input type must of course be appropriate for our distance function.
+We will come to the constructor later.
 
 {% highlight java %}
 package tutorial.clustering;
 
-import de.lmu.ifi.dbs.elki.algorithm.AbstractDistanceBasedAlgorithm;
-import de.lmu.ifi.dbs.elki.data.type.TypeInformation;
-import de.lmu.ifi.dbs.elki.distance.distancefunction.DistanceFunction;
-import de.lmu.ifi.dbs.elki.logging.Logging;
-import de.lmu.ifi.dbs.elki.result.Result;
+import elki.data.type.TypeInformation;
 
-public class NaiveAgglomerativeHierarchicalClustering<O>
-  extends AbstractDistanceBasedAlgorithm<O, Result> {
+public class NaiveAgglomerativeHierarchicalClustering<O> implements Algorithm {
+  private static final Logging LOG = Logging.getLogger(NaiveAgglomerativeHierarchicalClustering.class);
 
-  protected NaiveAgglomerativeHierarchicalClustering(DistanceFunction<? super O> distanceFunction) {
-    super(distanceFunction);
-    // TODO Auto-generated constructor stub
-  }
+  Distance<? super O> distance;
 
   @Override
   public TypeInformation[] getInputTypeRestriction() {
-    // TODO Auto-generated method stub
-    return null;
-  }
-
-  @Override
-  protected Logging getLogger() {
-    // TODO Auto-generated method stub
-    return null;
+    return TypeUtil.array(distance.getInputTypeRestriction());
   }
 }
 {% endhighlight %}
 
-We can immediately fill the two stub methods (we will come to the constructor later) - the input type must of course be appropriate for our distance function, and we use a standard class logger for error reporting:
-
-{% highlight java %}
-  /**
-   * Static class logger.
-   */
-  private static final Logging LOG = Logging.getLogger(NaiveAgglomerativeHierarchicalClustering.class);
-
-  @Override
-  protected Logging getLogger() {
-    return LOG;
-  }
-
-  @Override
-  public TypeInformation[] getInputTypeRestriction() {
-    return TypeUtil.array(
-       getDistanceFunction().getInputTypeRestriction()
-    );
-  }
-{% endhighlight %}
-
 ### The `run` method
 
-The `run` method is the heart of the algorithm. However, due to limitations of the Java language, eclipse will not be able to automatically infer the signature of this method. Note that there exists a `Result run(Database db);` method we inherited from [AbstractAlgorithm](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/algorithm/AbstractAlgorithm.html), which we do not want to override. Instead, our run method uses the following signature:
+The `run` method is the heart of the algorithm.
+However, due to limitations of the Java language, Eclipse will not be able to automatically infer the signature of this method.
+Note that there exists a `Result autorun(Database db);` method we inherited from the [Algorithm](/releases/current/javadoc/elki/algorithm/Algorithm.html) interface, which we do not want to override.
+Instead, our run method uses the following simple signature:
 
 {% highlight java %}
-    public Result run(Database db, Relation<O> relation) {
+    public Clustering<Model> run(Relation<O> relation) {
       return null;
     }
 {% endhighlight %}
@@ -101,7 +72,7 @@ Where `Relation<O>` will be of the type requested by `getInputTypeRestriction()`
 In order to compute distances, we need to connect the distance function to this relation. This will allow ELKI to choose an optimized implementation where appropriate. Fortunately, as this is a very common procedure, it is just a single line:
 
 {% highlight java %}
-    DistanceQuery<O> dq = db.getDistanceQuery(relation, getDistanceFunction());
+    DistanceQuery<O> dq = new QueryBuilder<>(relation, distance).distanceQuery();
 {% endhighlight %}
 
 For the actual algorithm, we will be using a matrix of distances. For efficiency, we will be using the raw type of `double[][]` (we will be further optimizing this to `double[]` later). For this to work, we need a unique mapping of objects to columns and rows in this matrix, and back. For this, we force the database IDs to be a static array:
@@ -113,9 +84,9 @@ For the actual algorithm, we will be using a matrix of distances. For efficiency
     LOG.verbose("Notice: SLINK is a much faster algorithm for single-linkage clustering!");
 {% endhighlight %}
 
-Most of the time, this will be a no-op. But if we e.g. were processing data streams, the ids could have been a hash set, for example. The [ArrayDBIDs](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/database/ids/ArrayDBIDs.html) API will allow us indexed access into the DBIDs, which we will use to map column and row numbers to actual objects. We also put in a warning to tell users that this algorithm is slow, and there exists a much faster alternative.
+Most of the time, this will be a no-op. But if we e.g. were processing data streams, the ids could have been a hash set, for example. The [ArrayDBIDs](/releases/current/javadoc/elki/database/ids/ArrayDBIDs.html) API will allow us indexed access into the DBIDs, which we will use to map column and row numbers to actual objects. We also put in a warning to tell users that this algorithm is slow, and there exists a much faster alternative.
 
-In order to refer to the `i`th element, we will be using an [DBIDArrayIter](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/database/ids/DBIDArrayIter.html). This is similar to a `java.util.ListIterator<DBID>`, but it will avoid generating objects and is substantially faster this way. The Java `java.util.Iterator` API is good when you have large objects, but not for primitives such as these object references. You can learn more about this API on the [Development/DBIDs](/dev/dbids) page. With `iter.seek(i)` we can seek to a particular position, while with `iter.advance()` we can proceed to the next element.
+In order to refer to the `i`th element, we will be using an [DBIDArrayIter](/releases/current/javadoc/elki/database/ids/DBIDArrayIter.html). This is similar to a `java.util.ListIterator<DBID>`, but it will avoid generating objects and is substantially faster this way. The Java `java.util.Iterator` API is good when you have large objects, but not for primitives such as these object references. You can learn more about this API on the [Development/DBIDs](/dev/dbids) page. With `iter.seek(i)` we can seek to a particular position, while with `iter.advance()` we can proceed to the next element.
 
 ### Computing the distance matrix
 
@@ -173,13 +144,9 @@ For the initial version, we will be using a parameter `numclusters`, with the nu
 
       // TODO: update distance matrix
 
-      if(prog != null) {
-        prog.incrementProcessed(LOG);
-      }
+      LOG.incrementProcessed(prog);
     }
-    if(prog != null) {
-      prog.ensureCompleted(LOG);
-    }
+    LOG.ensureCompleted(prog);
 {% endhighlight %}
 
 So now we need to implement the three key steps of the algorithm: find two clusters to merge, and then update the matrix. Finding the minimum distance is fairly obvious, except that we need to skip some rows and columns (because they have already been merged). This of course depends on our choice of memory representation. We decided to go with a static allocated matrix, to avoid repeated allocation of memory, which can be rather expensive in Java. Instead, the `height` will serve as a lookup table of which rows and columns to skip.
@@ -256,11 +223,11 @@ This code will become more messy when we add support for other linkage formulas.
 
 At this point, the main clustering algorithm will run. But the result will be hard to use, as it is stored in a `height` array, a parent object reference and cluster member sets. In order to exploit the visualization and evaluation capabilites of ELKI, we need to produce a simpler structure. For the first version, we want to keep the effort to a minimum, and we will just return the existing clusters appropriately. We can't make use of the height and parent IDs this way, though.
 
-Instead of coming up with our own representation of a dendrogram, we will for now just produce a flat clustering, by looking up all non-merged clusters (i.e. with `height[x]` infinity) and produce a [Cluster](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/data/Cluster.html) object for each.
+Instead of coming up with our own representation of a dendrogram, we will for now just produce a flat clustering, by looking up all non-merged clusters (i.e. with `height[x]` infinity) and produce a [Cluster](/releases/current/javadoc/elki/data/Cluster.html) object for each.
 
 {% highlight java %}
-    final Clustering<Model> dendrogram = new Clustering<>(
-      "Hierarchical-Clustering", "hierarchical-clustering");
+    final Clustering<Model> dendrogram = new Clustering<>();
+    Metadata.of(dendrogram).setLongName("Hierarchical-Clustering");
     for(int x = 0; x < size; x++) {
       if(height[x] == Double.POSITIVE_INFINITY) {
         DBIDs cids = clusters.get(x);
@@ -276,7 +243,7 @@ Instead of coming up with our own representation of a dendrogram, we will for no
     return dendrogram;
 {% endhighlight %}
 
-The parameters of the [Clustering](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/data/Clustering.html) will identify the result in the visualization and output. The first is meant to be a user-friendly name for menus, the second should be suitable for file names.
+The parameters of the [Clustering](/releases/current/javadoc/elki/data/Clustering.html) will identify the result in the visualization and output. The first is meant to be a user-friendly name for menus, the second should be suitable for file names.
 
 ### Updating the constructor
 
@@ -284,20 +251,19 @@ We can now update the constructor. We added a parameter, the desired number of c
 
 {% highlight java %}
   /**
-   * Threshold, how many clusters to extract.
+   * Desired number of clusters.
    */
-  int numclusters;
+  protected int numclusters;
 
   /**
    * Constructor.
    * 
-   * @param distanceFunction Distance function to use
+   * @param distance Distance function to use
    * @param numclusters Number of clusters
    */
   public NaiveAgglomerativeHierarchicalClustering(
-      DistanceFunction<? super O> distanceFunction,
-      int numclusters) {
-    super(distanceFunction);
+      Distance<? super O> distance, int numclusters) {
+    this.distance = distance;
     this.numclusters = numclusters;
   }
 {% endhighlight %}
@@ -307,27 +273,29 @@ We can now update the constructor. We added a parameter, the desired number of c
 So how are we getting this algorithm to show up in the MiniGUI for experiments? We need to add a [Parameterization](/dev/parameterization) class. Parameterizers serve the purpose of allowing the automatic generation of command line and UI code for an algorithm. Without a Parameterizer, we could only invoke the algorithm from Java. Fortunately, the parameterizer we need is not particularly difficult - we only added a single integer option.
 
 {% highlight java %}
-  public static class Parameterizer<O>
-    extends AbstractDistanceBasedAlgorithm.Parameterizer<O> {
+  public static class Par<O> implements Parameterizer {
+    /**
+     * The distance function to use.
+     */
+    protected Distance<? super O> distance;
 
     /**
      * Desired number of clusters.
      */
-    int numclusters = 0;
+    protected int numclusters = 0;
 
     @Override
-    protected void makeOptions(Parameterization config) {
-      super.makeOptions(config);
-      IntParameter numclustersP = new IntParameter(CutDendrogramByNumberOfClusters.Parameterizer.MINCLUSTERS_ID) //
-          .addConstraint(CommonConstraints.GREATER_EQUAL_ONE_INT);
-      if(config.grab(numclustersP)) {
-        numclusters = numclustersP.intValue();
-      }
+    public void configure(Parameterization config) {
+      new ObjectParameter<Distance<? super O>>(Algorithm.Utils.DISTANCE_FUNCTION_ID, Distance.class, EuclideanDistance.class) //
+          .grab(config, x -> distance = x);
+      new IntParameter(CutDendrogramByNumberOfClusters.Par.MINCLUSTERS_ID) //
+          .addConstraint(CommonConstraints.GREATER_EQUAL_ONE_INT) //
+          .grab(config, x -> numclusters = x);
     }
 
     @Override
-    protected NaiveAgglomerativeHierarchicalClustering<O> makeInstance() {
-      return new NaiveAgglomerativeHierarchicalClustering<>(distanceFunction, numclusters);
+    public NaiveAgglomerativeHierarchicalClustering<O> make() {
+      return new NaiveAgglomerativeHierarchicalClustering<>(distance, numclusters);
     }
   }
 {% endhighlight %}
@@ -468,13 +436,13 @@ Therefore, we add an `enum linkage`:
       public double combine(int sizex, double dx, int sizey, double dy, int sizej, double dxy) {
         return Math.min(dx, dy);
       }
-    },
+    }, // single-linkage hierarchical clustering
     COMPLETE {
       @Override
       public double combine(int sizex, double dx, int sizey, double dy, int sizej, double dxy) {
         return Math.max(dx, dy);
       }
-    };
+    }; // complete-linkage hierarchical clustering
     abstract public double combine(int sizex, double dx, int sizey, double dy, int sizej, double dxy);
   }
 {% endhighlight %}
@@ -548,15 +516,15 @@ In order to choose the linkage, we need to update the constructor and `Parameter
 
 {% highlight java %}
   public NaiveAgglomerativeHierarchicalClustering(
-        DistanceFunction<? super O> distanceFunction,
+        Distance<? super O> distance,
         int numclusters, Linkage linkage) {
-    super(distanceFunction);
+    this.distance = distance;
     this.numclusters = numclusters;
     this.linkage = linkage;
   }
 {% endhighlight %}
 
-For the Parameterizer, we need to add a new [OptionID](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/utilities/optionhandling/OptionID.html), and for an enum we can use the convenient [EnumParameter](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/utilities/optionhandling/parameters/EnumParameter.html), which will produce a dropdown menu. We'll set the default to Ward linkage, although we have not yet implemented it in the tutorial.
+For the Parameterizer, we need to add a new [OptionID](/releases/current/javadoc/elki/utilities/optionhandling/OptionID.html), and for an enum we can use the convenient [EnumParameter](/releases/current/javadoc/elki/utilities/optionhandling/parameters/EnumParameter.html), which will produce a dropdown menu. We'll set the default to Ward linkage, although we have not yet implemented it in the tutorial.
 
 {% highlight java %}
     public static final OptionID LINKAGE_ID = new OptionID(
@@ -566,24 +534,20 @@ For the Parameterizer, we need to add a new [OptionID](/releases/release0.7.5/ja
     protected Linkage linkage = Linkage.SINGLE;
 
     @Override
-    protected void makeOptions(Parameterization config) {
-      super.makeOptions(config);
-      IntParameter numclustersP = new IntParameter(CutDendrogramByNumberOfClusters.Parameterizer.MINCLUSTERS_ID) //
-          .addConstraint(CommonConstraints.GREATER_EQUAL_ONE_INT);
-      if(config.grab(numclustersP)) {
-        numclusters = numclustersP.intValue();
-      }
-
-      EnumParameter<Linkage> linkageP = new EnumParameter<>(LINKAGE_ID, Linkage.class) //
-          .setDefaultValue(Linkage.WARD);
-      if(config.grab(linkageP)) {
-        linkage = linkageP.getValue();
-      }
+    public void configure(Parameterization config) {
+      new ObjectParameter<Distance<? super O>>(Algorithm.Utils.DISTANCE_FUNCTION_ID, Distance.class, EuclideanDistance.class) //
+          .grab(config, x -> distance = x);
+      new IntParameter(CutDendrogramByNumberOfClusters.Par.MINCLUSTERS_ID) //
+          .addConstraint(CommonConstraints.GREATER_EQUAL_ONE_INT) //
+          .grab(config, x -> numclusters = x);
+      new EnumParameter<Linkage>(LINKAGE_ID, Linkage.class) //
+          .setDefaultValue(Linkage.WARD) //
+          .grab(config, x -> linkage = x);
     }
 
     @Override
-    protected NaiveAgglomerativeHierarchicalClustering3<O> makeInstance() {
-      return new NaiveAgglomerativeHierarchicalClustering3<>(distanceFunction, numclusters, linkage);
+    public NaiveAgglomerativeHierarchicalClustering<O> make() {
+      return new NaiveAgglomerativeHierarchicalClustering<>(distance, numclusters, linkage);
     }
 {% endhighlight %}
 
@@ -605,13 +569,13 @@ Additional linkage strategies can now be added simply be adding them to the enum
         final double wy = sizey / (double) (sizex + sizey);
         return wx * dx + wy * dy;
       }
-    },
+    }, // average-linkage hierarchical clustering
     WEIGHTED_AVERAGE {
       @Override
       public double combine(int sizex, double dx, int sizey, double dy, int sizej, double dxy) {
         return .5 * (dx + dy);
       }
-    },
+    }, // a more naive variant, McQuitty (1966)
     CENTROID {
       @Override
       public double combine(int sizex, double dx, int sizey, double dy, int sizej, double dxy) {
@@ -620,13 +584,13 @@ Additional linkage strategies can now be added simply be adding them to the enum
         final double beta = (sizex * sizey) / (double) ((sizex + sizey) * (sizex + sizey));
         return wx * dx + wy * dy - beta * dxy;
       }
-    },
+    }, // Sokal and Michener (1958), Gower (1967)
     MEDIAN {
       @Override
       public double combine(int sizex, double dx, int sizey, double dy, int sizej, double dxy) {
         return .5 * (dx + dy) - .25 * dxy;
       }
-    },
+    }, // Gower (1967)
     WARD {
       @Override
       public double combine(int sizex, double dx, int sizey, double dy, int sizej, double dxy) {
@@ -644,7 +608,7 @@ Ward linkage is still somewhat special: for Ward, the distance matrix should be 
 
 {% highlight java %}
     boolean square = Linkage.WARD.equals(linkage) &&
-       !(SquaredEuclideanDistanceFunction.class.isInstance(getDistanceFunction()));
+       !(SquaredEuclideanDistance.class.isInstance(distance));
 {% endhighlight %}
 
 (assuming that a user that chose squared Euclidean distance meant to use it just squared once.)
@@ -668,135 +632,104 @@ With ward linkage, the mouse data set will cluster surprisingly well:
 Improving the output - producing a hierarchy and a dendrogram
 -------------------------------------------------------------
 
-ELKI already comes with hierarchical clustering, and by producing the same output format, we can make use of the existing tools for extracting clusters from the hierarchy, but also for visualization. The preferred format of ELKI is the representation used by the efficient SLINK algorithm, and coincidentially also what we alreday obtained above in form of the `parent` and `height` values.
-
-In order to pass these values to other classes in ELKI, we have to use the [DataStore](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/database/datastore/DataStore.html) API. The purpose of these classes is to facilitate the storage of data by DBID - similar to a hash map. While the API looks like a hash map, the ELKI engine will for static databases actually use an array store, so at runtime this will not change a lot (unless we use dynamic database, that is).
-
-### Using ELKI `DataStore`s
-
-The new data storage initialization looks like this (note that we also no longer track the cluster membery, but the cluster sizes only!):
-
-{% highlight java %}
-    WritableDBIDDataStore parent = DataStoreUtil.makeDBIDStorage(ids,
-        DataStoreFactory.HINT_HOT | DataStoreFactory.HINT_STATIC);
-    WritableDoubleDataStore height = DataStoreUtil.makeDoubleStorage(ids,
-        DataStoreFactory.HINT_HOT | DataStoreFactory.HINT_STATIC);
-    WritableIntegerDataStore csize = DataStoreUtil.makeIntegerStorage(ids,
-        DataStoreFactory.HINT_HOT | DataStoreFactory.HINT_TEMP);
-
-    // Initialize the contents: parent(p)=p, height=+inf, size=1
-    for(DBIDIter it = ids.iter(); it.valid(); it.advance()) {
-      parent.put(it, it);
-      height.put(it, Double.POSITIVE_INFINITY);
-      csize.put(it, 1);
-    }
-{% endhighlight %}
-
-We could have used `WritableDataStore<>` in each case, but that would occur a memory management overhead. For primitive types such as IDs, double-valued distances and integer counts, these optimized APIs perform better.
-
-Note that we created the first two using `HINT_STATIC`, the last using `HINT_TEMP` (the hints are documented in [DataStoreFactory](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/database/datastore/DataStoreFactory.html)). The reason is that we are going to pass the first two outside, but we will drop the last one. On the long run, this is supposed to help the optimizer to decide which data to write to disk.
-
-By initializing the cluster counts with `1`, we can actually drop the complex case distinction we used in the first version. The new ELKI data structures are now no longer indexed by the integer offset, but by `DBID`, so we will be using the iterators more than before.
-
-### Further ELKIfication of the implementation - more iterator usage
+ELKI already comes with hierarchical clustering, and by producing the same output format, we can make use of the existing tools for extracting clusters from the hierarchy, but also for visualization.
+The preferred format today are merge lists, which store the two clusters merged (where 0..n-1 indicate the original data points, and n..n-2 are the clusters obtained by the merges),
+the merge height, and the resulting cluster sizes.
+ELKI contains a class to conveniently build these lists called
+[ClusterMergeHistoryBuilder](/releases/current/javadoc/elki/clustering/hierarchical/ClusterMergeHistoryBuilder.html).
 
 The code for finding the minimum distance now becomes this:
 
 {% highlight java %}
+    int[] cidx = MathUtil.sequence(0, size);
+    for(int i = 1; i < size; i++) { // n-1 merges
       double min = Double.POSITIVE_INFINITY;
       int minx = -1, miny = -1;
-      for(ix.seek(0); ix.valid(); ix.advance()) {
-        if(height.doubleValue(ix) < Double.POSITIVE_INFINITY) {
-          continue;
-        }
-        final int xbase = triangleSize(ix.getOffset());
-        for(iy.seek(0); iy.getOffset() < ix.getOffset(); iy.advance()) {
-          if(height.doubleValue(iy) < Double.POSITIVE_INFINITY) {
-            continue;
-          }
-          final int idx = xbase + iy.getOffset();
-          if(scratch[idx] <= min) {
-            min = scratch[idx];
-            minx = ix.getOffset();
-            miny = iy.getOffset();
+      for(int x = 1; x < size; x++) {
+        if(cidx[x] >= 0) {
+          final int xbase = triangleSize(x);
+          for(int y = 0; y < x; y++) {
+            if(cidx[y] >= 0) {
+              final int idx = xbase + y;
+              if(scratch[idx] <= min) {
+                min = scratch[idx];
+                minx = x;
+                miny = y;
+              }
+            }
           }
         }
       }
 {% endhighlight %}
 
-Note that the loops now are using the ELKI/Trove/C++ style iterators (see [Iter](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/utilities/datastructures/iterator/Iter.html)). Since these iterators are [ArrayIter](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/utilities/datastructures/iterator/ArrayIter.html)s, we can access their offset using `getOffset()`. For consistency with SLINK, we will find the *last* minimum instead of the first minimum now.
-
-Merging the clusters becomes simpler, as we stopped tracking the exact members, but only the cluster sizes:
+The [ClusterMergeHistoryBuilder](/releases/current/javadoc/elki/clustering/hierarchical/ClusterMergeHistoryBuilder.html)
+also keeps track of the cluster sizes
 
 {% highlight java %}
-      // Avoid allocating memory, by reusing existing iterators:
-      ix.seek(minx);
-      iy.seek(miny);
       // Perform merge in data structure: x -> y
       // Since y < x, prefer keeping y, dropping x.
-      int sizex = csize.intValue(ix), sizey = csize.intValue(iy);
+      final int sizex = builder.getSize(minx), sizey = builder.getSize(miny);
       height.put(ix, min);
       parent.put(ix, iy);
       csize.put(iy, sizex + sizey);
 {% endhighlight %}
 
-The changes for updating the similariy matrix are similar: it is now more convenient to use an `DBIDArrayIter ij` to iterate, and access the offset position using `ij.getOffset()`:
+The changes for updating the similariy matrix remains similar:
 
 {% highlight java %}
       final int xbase = triangleSize(minx), ybase = triangleSize(miny);
       // Write to (y, j), with j < y
-      for(ij.seek(0); ij.getOffset() < miny; ij.advance()) {
-        if(height.doubleValue(ij) < Double.POSITIVE_INFINITY) continue;
-        final int sizej = csize.intValue(ij);
-        scratch[ybase + ij.getOffset()] = linkage.combine(
-          sizex, scratch[xbase + ij.getOffset()],
-          sizey, scratch[ybase + ij.getOffset()], sizej, min);
+      for(int j = 0; j < miny; j++) {
+        if(cidx[j] >= 0) {
+          scratch[ybase + j] = linkage.combine(sizex, scratch[xbase + j], sizey, scratch[ybase + j], builder.getSize(j), min);
+        }
       }
       // Write to (j, y), with y < j < x
-      for(ij.seek(miny + 1); ij.getOffset() < minx; ij.advance()) {
-        if(height.doubleValue(ij) < Double.POSITIVE_INFINITY) continue;
-        final int jbase = triangleSize(ij.getOffset());
-        final int sizej = csize.intValue(ij);
-        scratch[jbase + miny] = linkage.combine(
-          sizex, scratch[xbase + ij.getOffset()],
-          sizey, scratch[jbase + miny], sizej, min);
+      for(int j = miny + 1; j < minx; j++) {
+        if(cidx[j] >= 0) {
+          final int jbase = triangleSize(j);
+          scratch[jbase + miny] = linkage.combine(sizex, scratch[xbase + j], sizey, scratch[jbase + miny], builder.getSize(j), min);
+        }
       }
       // Write to (j, y), with y < x < j
-      for(ij.seek(minx + 1); ij.valid(); ij.advance()) {
-        if(height.doubleValue(ij) < Double.POSITIVE_INFINITY) continue;
-        final int jbase = triangleSize(ij.getOffset());
-        final int sizej = csize.intValue(ij);
-        scratch[jbase + miny] = linkage.combine(
-          sizex, scratch[jbase + minx],
-          sizey, scratch[jbase + miny], sizej, min);
+      for(int j = minx + 1; j < size; j++) {
+        if(cidx[j] >= 0) {
+          final int jbase = triangleSize(j);
+          scratch[jbase + miny] = linkage.combine(sizex, scratch[jbase + minx], sizey, scratch[jbase + miny], builder.getSize(j), min);
+        }
       }
 {% endhighlight %}
+
+We `add` merges to the builder, and get the new cluster id in return.
+
+{% highlight java %}
+      int zz = builder.add(minx, square ? Math.sqrt(min) : min, miny);
+      cidx[minx] = -1;
+      cidx[miny] = zz;
+{% endhighlight %}
+
 
 ### Implementing the `HierarchicalClusteringAlgorithm` interface
 
-Instead of extracting our own `Clustering<Model>` result, we just return the hierarchy:
+Finally, we want our algorithm to implement the `HierarchicalClusteringAlgorithm` interface, which requires to change the return type of the run method.
 
-{% highlight java %}
-return new PointerHierarchyRepresentationResult(ids, parent, height, dq.getDistanceFunction().isSquared());
-{% endhighlight %}
-
-(which obviously is substantially less code than in \[\#ReturningaClustering\])
-
-Finally, we want our algorithm to implement the `HierarchicalClusteringAlgorithm` interface, which requires some simple changes to the parent class generics, and the return type of the run method.
+Instead of extracting our own `Clustering<Model>` result, we now return the `ClusterMergeHistory`
+produced by the builder
+(which obviously is substantially less code than in \[\#ReturningaClustering\]).
 
 {% highlight java %}
 public class NaiveAgglomerativeHierarchicalClustering<O>
-    extends AbstractDistanceBasedAlgorithm<O, PointerHierarchyRepresentationResult>
     implements HierarchicalClusteringAlgorithm {
 ...
-  public PointerHierarchyRepresentationResult run(Database db, Relation<O> relation) {
+  public ClusterMergeHistory run(Database db, Relation<O> relation) {
 ...
+    return builder.complete();
   }
 {% endhighlight %}
 
 We can now also drop the `numclusters` parameter, as we want to use the existing ELKI classes for extracting flat clusterings out of our hierarchy.
 
-We can now use this implementation in combination with [CutDendrogramByNumberOfClusters](/releases/release0.7.5/javadoc/de/lmu/ifi/dbs/elki/algorithm/clustering/hierarchical/extraction/CutDendrogramByNumberOfClusters.html):
+We can now use this implementation in combination with [CutDendrogramByNumberOfClusters](/releases/current/javadoc/elki/algorithm/clustering/hierarchical/extraction/CutDendrogramByNumberOfClusters.html):
 
 {% highlight shell %}
 elki -dbc.in mickey-mouse.csv \
