@@ -15,8 +15,8 @@ Browse
 
 ELKI JavaDoc documentation can be found here:
 
--   [JavaDoc Release 0.8.0](/releases/release0.8.0/doc/index.html)
--   [JavaDoc Release 0.7.5](/releases/release0.7.5/doc/index.html)
+-   [JavaDoc Release 0.8.0](/releases/release0.8.0/javadoc/index.html)
+-   [JavaDoc Release 0.7.5](/releases/release0.7.5/javadoc/index.html)
 -   [JavaDoc Release 0.7.1](/releases/release0.7.1/doc/index.html)
 -   [JavaDoc Release 0.7.0](/releases/release0.7.0/doc/index.html)
 -   [JavaDoc Release 0.6.0](http://elki.dbs.ifi.lmu.de/releases/release0.6.0/doc/index.html)
