@@ -13,7 +13,7 @@ Implementing Hierarchical Clustering
 Version information: Updated for ELKI 0.8.0
 {: class="versioninfo" }
 
-In this tutorial, we will implement the *naive approach* to hierarchical clustering. It is naive in the sense that it is a fairly general procedure, which unfortunately operates in O(n<sup>3</sup>) runtime and O(n<sup>2</sup>) memory, so it does not scale very well. For some linkage criteria, there exist optimized algorithms such as [SLINK](/releases/current/javadoc/elki/algorithm/clustering/hierarchical/SLINK.html), which computes single-link clustering in low O(n<sup>2</sup>) runtime and O(n) memory.
+In this tutorial, we will implement the *naive approach* to hierarchical clustering. It is naive in the sense that it is a fairly general procedure, which unfortunately operates in O(n<sup>3</sup>) runtime and O(n<sup>2</sup>) memory, so it does not scale very well. For some linkage criteria, there exist optimized algorithms such as [SLINK](/releases/current/javadoc/elki/clustering/hierarchical/SLINK.html), which computes single-link clustering in low O(n<sup>2</sup>) runtime and O(n) memory.
 
 We will initially construct a very simple algorithm, then improve on it in multiple steps. This material was prepared for the tutorials to the KDD lecture at LMU Munich University.
 
@@ -32,7 +32,7 @@ However, we will see that there is more to the algorithm, such as the need to tr
 
 ### Auto-generated code
 
-First of all, we start a new class, `NaiveAgglomerativeHierarchicalClustering`, implementing [Algorithm](/releases/current/javadoc/elki/algorithm/Algorithm.html).
+First of all, we start a new class, `NaiveAgglomerativeHierarchicalClustering`, implementing [Algorithm](/releases/current/javadoc/elki/Algorithm.html).
 We add a class logger, a field for the distance function, using a generic and unspecific data type `<O>`.
 The input type must of course be appropriate for our distance function.
 We will come to the constructor later.
@@ -58,7 +58,7 @@ public class NaiveAgglomerativeHierarchicalClustering<O> implements Algorithm {
 
 The `run` method is the heart of the algorithm.
 However, due to limitations of the Java language, Eclipse will not be able to automatically infer the signature of this method.
-Note that there exists a `Result autorun(Database db);` method we inherited from the [Algorithm](/releases/current/javadoc/elki/algorithm/Algorithm.html) interface, which we do not want to override.
+Note that there exists a `Result autorun(Database db);` method we inherited from the [Algorithm](/releases/current/javadoc/elki/Algorithm.html) interface, which we do not want to override.
 Instead, our run method uses the following simple signature:
 
 {% highlight java %}
@@ -729,7 +729,7 @@ public class NaiveAgglomerativeHierarchicalClustering<O>
 
 We can now also drop the `numclusters` parameter, as we want to use the existing ELKI classes for extracting flat clusterings out of our hierarchy.
 
-We can now use this implementation in combination with [CutDendrogramByNumberOfClusters](/releases/current/javadoc/elki/algorithm/clustering/hierarchical/extraction/CutDendrogramByNumberOfClusters.html):
+We can now use this implementation in combination with [CutDendrogramByNumberOfClusters](/releases/current/javadoc/elki/clustering/hierarchical/extraction/CutDendrogramByNumberOfClusters.html):
 
 {% highlight shell %}
 elki -dbc.in mickey-mouse.csv \
