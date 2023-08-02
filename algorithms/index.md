@@ -236,7 +236,7 @@ Outlier Detection
   - [TrivialNoOutlier](/releases/current/javadoc/elki/outlier/trivial/TrivialNoOutlier.html)
   - [TrivialGeneratedOutlier](/releases/current/javadoc/elki/outlier/trivial/TrivialGeneratedOutlier.html)
   - [TrivialAverageCoordinateOutlier](/releases/current/javadoc/elki/outlier/trivial/TrivialAverageCoordinateOutlier.html)
-  
+
 Classification algorithms (for use with [ClassifierHoldoutEvaluationTask](/releases/current/javadoc/elki/application/ClassifierHoldoutEvaluationTask.html))
 
 - [KNNClassifier](/releases/current/javadoc/elki/classification/KNNClassifier.html)
@@ -267,9 +267,9 @@ Other:
 
 Benchmarking algorithms:
 
-- [KNNBenchmarkAlgorithm](/releases/current/javadoc/elki/benchmark/KNNBenchmarkAlgorithm.html)
-- [RangeQueryBenchmarkAlgorithm](/releases/current/javadoc/elki/benchmark/RangeQueryBenchmarkAlgorithm.html)
-- [ValidateApproximativeKNNIndex](/releases/current/javadoc/elki/benchmark/ValidateApproximativeKNNIndex.html)
+- [KNNBenchmarkAlgorithm](/releases/current/javadoc/elki/application/benchmark/KNNBenchmarkAlgorithm.html)
+- [RangeQueryBenchmarkAlgorithm](/releases/current/javadoc/elki/application/benchmark/RangeQueryBenchmarkAlgorithm.html)
+- [ValidateApproximativeKNNIndex](/releases/current/javadoc/elki/application/benchmark/ValidateApproximativeKNNIndex.html)
 
 Data set statistics:
 
