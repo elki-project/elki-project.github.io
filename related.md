@@ -565,7 +565,7 @@ In: Pattern Recognition With Fuzzy Objective Function Algorithms\
 G. Hamerly and C. Elkan\
 **Learning the k in k-means**\
 In: Neural Information Processing Systems\
-Online: <https://www.researchgate.net/publication/2869155_Learning_the_K_in_K-Means>\
+Online: <https://papers.nips.cc/paper_files/paper/2003/hash/234833147b97bb6aed53a8f4f1c7a7d8-Abstract.html>\
 [DBLP:conf/nips/HamerlyE03](https://dblp.org/rec/bibtex/conf/nips/HamerlyE03)
 
 [elki.clustering.kmeans.HamerlyKMeans](./releases/current/doc/elki/clustering/kmeans/HamerlyKMeans.html)\
@@ -885,9 +885,9 @@ In: Proc. 12th Int. Conf. Similarity Search and Applications (SISAP'2019)\
 [elki.clustering.kmedoids.FasterPAM](./releases/current/doc/elki/clustering/kmedoids/FasterPAM.html)\
 Erich Schubert and Peter J. Rousseeuw\
 **Fast and Eager k-Medoids Clustering: O(k) Runtime Improvement of the PAM, CLARA, and CLARANS Algorithms**\
-In: arXiv preprint\
-Online: <https://arxiv.org/abs/2008.05171>\
-[DBLP:journals/corr/abs-2008-05171](https://dblp.org/rec/bibtex/journals/corr/abs-2008-05171)
+In: Information Systems 101\
+[DOI:10.1016/j.is.2021.101804](https://doi.org/10.1016/j.is.2021.101804)\
+[DBLP:journals/is/SchubertR21](https://dblp.org/rec/bibtex/journals/is/SchubertR21)
 
 [elki.clustering.kmedoids.initialization.AlternateRefinement](./releases/current/doc/elki/clustering/kmedoids/initialization/AlternateRefinement.html),\
 [elki.clustering.kmedoids.initialization.GreedyG](./releases/current/doc/elki/clustering/kmedoids/initialization/GreedyG.html)\
@@ -1298,9 +1298,9 @@ S. Kullback\
 [elki.distance.probabilistic.TriangularDistance](./releases/current/doc/elki/distance/probabilistic/TriangularDistance.html)\
 R. Connor, F. A. Cardillo, L. Vadicamo, F. Rabitti\
 **Hilbert Exclusion: Improved Metric Search through Finite Isometric Embeddings**\
-In: arXiv preprint arXiv:1604.08640\
-Online: <http://arxiv.org/abs/1604.08640>\
-[DBLP:journals/corr/ConnorCVR16](https://dblp.org/rec/bibtex/journals/corr/ConnorCVR16)
+In: ACM Trans. Inf. Syst.\
+[DOI:10.1145/3001583](http://doi.org/10.1145/3001583)\
+[DBLP:journals/tois/ConnorCVR17](https://dblp.org/rec/bibtex/journals/tois/ConnorCVR17)
 
 [elki.distance.set.HammingDistance](./releases/current/doc/elki/distance/set/HammingDistance.html)\
 R. W. Hamming\
